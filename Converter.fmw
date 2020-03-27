@@ -1,0 +1,3374 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
+#              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
+#              --worldName "individualId"
+#              --worldSize "64"
+#              --SourceDataset_CSV2_5 "C:\Users\Matt\Documents\FME Projects\Converter\SAMPLE_FME_POINTS_HORT_ADJUSTED.csv"
+#              --xyScaleWithZ "no"
+#              --worldHeight "64"
+#              --SourceDataset_POINTCLOUDXYZ_5 "C:\Users\Matt\Documents\FME Projects\Converter\pointsCsv.csv"
+#              --pointReduction "10"
+#              --SourceDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\pointsCsv.csv"
+#              --SourceDataset_CSV2_7 "C:\Users\Matt\Documents\FME Projects\Converter\67_Civi_Topo.csv"
+#              --SourceDataset_CSV2_6 "C:\Users\Matt\Documents\FME Projects\Converter\Aries_Estates_3.csv"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="5882.19 2943.53"
+#!   DOC_TOP_LEFT="-2573.87 -1138.3"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20200"
+#!   FME_DOCUMENT_GUID="87b620d8-204e-4a3c-8e43-219c9ed57240"
+#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
+#!   LAST_SAVE_DATE="2020-03-27T11:28:02"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="NO"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-956.26 2068.77"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="CSV2"
+#!   DATASET="$(SourceDataset_CSV2_5)"
+#!   KEYWORD="CSV2_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_text_size string fme_secondary_axis string multi_reader_id string fme_rotation string fme_fill_color string fme_geometry string csv_total_number_of_columns uint32 csv_skipped_line string fme_sweep_angle string fme_feature_type string multi_reader_keyword string multi_reader_type string csv_number_of_fields uint32 fme_basename string fme_primary_axis string multi_reader_full_id string csv_line_number uint64 csv_type string fme_dataset string fme_text_string string fme_color string fme_start_angle string fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_ATTR_TYPE"
+#!   VALUE="string"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the CSV file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="POINTCLOUDXYZ"
+#!   DATASET="$(SourceDataset_POINTCLOUDXYZ_5)"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_secondary_axis number(31,15) multi_reader_id number(11,0) fme_rotation number(31,15) fme_fill_color char(50) fme_geometry char(50) fme_sweep_angle number(31,15) pointcloudxyz_type char(32) fme_feature_type char(50) multi_reader_keyword char(50) multi_reader_type char(50) fme_basename char(50) fme_primary_axis number(31,15) multi_reader_full_id number(11,0) fme_dataset char(50) fme_text_string char(50) fme_color char(50) fme_start_angle number(31,15) fme_type char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS="*XY-FT*"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="POINTCLOUDXYZ_IN_ENCODING POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS POINTCLOUDXYZ_OUT_ENCODING POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM POINTCLOUDXYZ_OUT_END_OF_LINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="xyz file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Point Cloud File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="text/csv"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Point Cloud XYZ file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the Point Cloud XYZ file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="CSV2"
+#!   DATASET="$(SourceDataset_CSV2)"
+#!   KEYWORD="CSV2_2"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_text_size string fme_secondary_axis string multi_reader_id string fme_rotation string fme_fill_color string fme_geometry string csv_total_number_of_columns uint32 csv_skipped_line string fme_sweep_angle string fme_feature_type string multi_reader_keyword string multi_reader_type string csv_number_of_fields uint32 fme_basename string fme_primary_axis string multi_reader_full_id string csv_line_number uint64 csv_type string fme_dataset string fme_text_string string fme_color string fme_start_angle string fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS="*XY-FT*"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_ATTR_TYPE"
+#!   VALUE="string"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the CSV file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="CSV2"
+#!   DATASET="$(SourceDataset_CSV2_7)"
+#!   KEYWORD="CSV2_3"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_text_size string fme_secondary_axis string multi_reader_id string fme_rotation string fme_fill_color string fme_geometry string csv_total_number_of_columns uint32 csv_skipped_line string fme_sweep_angle string fme_feature_type string multi_reader_keyword string multi_reader_type string csv_number_of_fields uint32 fme_basename string fme_primary_axis string multi_reader_full_id string csv_line_number uint64 csv_type string fme_dataset string fme_text_string string fme_color string fme_start_angle string fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS="*XY-FT*"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_ATTR_TYPE"
+#!   VALUE="string"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the CSV file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="CSV2"
+#!   DATASET="$(SourceDataset_CSV2_6)"
+#!   KEYWORD="CSV2_4"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_text_size string fme_secondary_axis string multi_reader_id string fme_rotation string fme_fill_color string fme_geometry string csv_total_number_of_columns uint32 csv_skipped_line string fme_sweep_angle string fme_feature_type string multi_reader_keyword string multi_reader_type string csv_number_of_fields uint32 fme_basename string fme_primary_axis string multi_reader_full_id string csv_line_number uint64 csv_type string fme_dataset string fme_text_string string fme_color string fme_start_angle string fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS="*XY-FT*"
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ATTRIBUTE_READING"
+#!   VALUE="DEFLINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="csv file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DEFAULT_ATTR_TYPE"
+#!   VALUE="string"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="CSV File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the CSV file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the CSV file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="MINECRAFT"
+#!   DATASET="$(DestDataset_MINECRAFT)"
+#!   KEYWORD="MINECRAFT_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="60"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_text_size double minecraft_populate_terrain string fme_secondary_axis double fme_rotation double fme_fill_color string fme_geometry string minecraft_generator_name string fme_sweep_angle double minecraft_center_point_cloud string fme_feature_type string fme_basename string minecraft_type string minecraft_world_name string minecraft_fill_block short fme_primary_axis double minecraft_generator_options string minecraft_fill_under string minecraft_generator_seed long fme_dataset string fme_text_string string fme_color string fme_start_angle double fme_type string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="MINECRAFT_OUT_FILL_BLOCK"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="World1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="World"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename string"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the Minecraft World"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="x_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="y_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="z_coordinate"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int8"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint8"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="CSV2"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="double"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="long"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="short"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="byte"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="long"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="short"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="short"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="byte"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="MINECRAFT"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_feature_table"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_map"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="csv_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="CSV2"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="pointcloudxyz_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="minecraft_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="MINECRAFT"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="MINECRAFT"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="civilSectionShiftUp"
+#!   FEATURE_TYPE_NAME="$(worldName)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="5"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="2612.4951249512505 1220.4309033566526"
+#!   BOUNDING_RECT="2612.4951249512505 1220.4309033566526 499.09999999999997 71"
+#!   ORDER="500000000000105"
+#!   COLLAPSED="true"
+#!   KEYWORD="MINECRAFT_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="minecraft_type" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="minecraft_world_name" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="CSV"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="44"
+#!   FEAT_GEOMTYPE="csv_none csv_point"
+#!   POSITION="-1838.11461260446 1245.0147501474999"
+#!   BOUNDING_RECT="-1838.11461260446 1245.0147501474999 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="CSV2_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="x" ATTR_TYPE="x_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="y" ATTR_TYPE="y_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="z" ATTR_TYPE="z_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="r" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="g" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="b" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="POINTCLOUDXYZ"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="75"
+#!   FEAT_GEOMTYPE="pointcloudxyz_point_cloud"
+#!   POSITION="-1872.2146126044599 1053.8722113411607"
+#!   BOUNDING_RECT="-1872.2146126044599 1053.8722113411607 488.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="CSV"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="77"
+#!   FEAT_GEOMTYPE="csv_none csv_point"
+#!   POSITION="-1838.11461260446 503.84367415102724"
+#!   BOUNDING_RECT="-1838.11461260446 503.84367415102724 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="CSV2_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col0" ATTR_TYPE="x_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col1" ATTR_TYPE="y_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col2" ATTR_TYPE="z_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col3" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col4" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col5" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col6" ATTR_TYPE="uint8" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="CSV"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="62"
+#!   FEAT_GEOMTYPE="csv_none csv_point"
+#!   POSITION="-2531.8715501738366 1346.2201355346883"
+#!   BOUNDING_RECT="-2531.8715501738366 1346.2201355346883 454 71"
+#!   ORDER="500000000000099"
+#!   COLLAPSED="true"
+#!   KEYWORD="CSV2_3"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col0" ATTR_TYPE="x_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col1" ATTR_TYPE="y_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col2" ATTR_TYPE="z_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="CSV"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="60"
+#!   FEAT_GEOMTYPE="csv_none csv_point"
+#!   POSITION="-2531.8715501738366 919.49586757772317"
+#!   BOUNDING_RECT="-2531.8715501738366 919.49586757772317 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="CSV2_4"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   READ_SELECT_ATTRS="true"
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col0" ATTR_TYPE="x_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col1" ATTR_TYPE="y_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="col2" ATTR_TYPE="z_coordinate" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="CSV2_3"
+#!   OVERRIDE="-CSV2_3_DATASET"
+#!   DATASET="CSV2_3/67_Civi_Topo.csv"
+#! />
+#! <DATASET
+#!   NAME="CSV2_4"
+#!   OVERRIDE="-CSV2_4_DATASET"
+#!   DATASET="CSV2_4/Aries_Estates_3.csv"
+#! />
+#! <DATASET
+#!   NAME="CSV2_2"
+#!   OVERRIDE="-CSV2_2_DATASET"
+#!   DATASET="CSV2_2/pointsCsv.csv"
+#! />
+#! <DATASET
+#!   NAME="POINTCLOUDXYZ_1"
+#!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
+#!   DATASET="POINTCLOUDXYZ_1/pointsCsv.csv"
+#! />
+#! <DATASET
+#!   NAME="CSV2_1"
+#!   OVERRIDE="-CSV2_1_DATASET"
+#!   DATASET="CSV2_1/SAMPLE_FME_POINTS_HORT_ADJUSTED.csv"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="MINECRAFT_1"
+#!   OVERRIDE="-MINECRAFT_1_DATASET"
+#!   DATASET="MINECRAFT_1/saves"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:"
+#!   DEFAULT_VALUE="C:\Users\Matt\AppData\Roaming\.minecraft\saves"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
+#!   DEFAULT_VALUE="individualId"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI RANGE_SLIDER_OR_ATTR worldSize &quot;RANGE:(0,]&quot; Enter world size to scale to (positive integer):"
+#!   DEFAULT_VALUE="64"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_CSV2_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)SAMPLE_FME_POINTS_HORT_ADJUSTED.csv"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI LITERAL CHOICE xyScaleWithZ yes%no Should the height axis be scaled the same as other axes?"
+#!   DEFAULT_VALUE="no"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI RANGE_SLIDER_OR_ATTR worldHeight &quot;RANGE:[1,128)&quot; Enter the height to scale points to (1 to 127):"
+#!   DEFAULT_VALUE="64"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)pointsCsv.csv"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI RANGE_SLIDER_OR_ATTR pointReduction &quot;RANGE:(0,]&quot; enter point reduction factor (larger number: fewer points, but faster; smaller number: keep more points, but slower):"
+#!   DEFAULT_VALUE="10"
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_CSV2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)pointsCsv.csv"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_CSV2_7 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)67_Civi_Topo.csv"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_CSV2_6 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)Aries_Estates_3.csv"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="17"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use Minecraft version 1.7.* to run&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2498.9833231665662 1023.1349137300899"
+#!   TOP_LEFT="2498.9833231665662 1023.1349137300899"
+#!   BOTTOM_RIGHT="3248.9833231665662 973.13491373008992"
+#!   BOUNDING_RECT="2498.9833231665662 1023.1349137300899 750 50"
+#!   ORDER="500000000000008"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="24"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Writer automatically handles axis swapping (Y and Z).&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Complains about having to cast coordinate datatypes, but explicitly casting caused bounding errors, so leave it to the writer to perform casting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2448.9828231615643 1635.184215889778"
+#!   TOP_LEFT="2448.9828231615643 1635.184215889778"
+#!   BOTTOM_RIGHT="3198.9828231615643 1585.184215889778"
+#!   BOUNDING_RECT="2448.9828231615643 1635.184215889778 750 50"
+#!   ORDER="500000000000033"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="19"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Currently, you have to manually add the x, y, and z headers to the data source file for this to work.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1898.8335994193289 1578.3514168475003"
+#!   TOP_LEFT="-1898.8335994193289 1578.3514168475003"
+#!   BOTTOM_RIGHT="-1347.8335994193289 1577.3514168475003"
+#!   BOUNDING_RECT="-1898.8335994193289 1578.3514168475003 551 1"
+#!   ORDER="500000000000053"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="44"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="30"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Many operations appear to require a point cloud to work.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1173.0347798716039 1610.9267709343762"
+#!   TOP_LEFT="-1173.0347798716039 1610.9267709343762"
+#!   BOTTOM_RIGHT="-724.03477987160386 1609.9267709343762"
+#!   BOUNDING_RECT="-1173.0347798716039 1610.9267709343762 449 1"
+#!   ORDER="500000000000055"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="7"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="34"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Find the lowest and heighest coordinate  in the cloud along each axis...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="321.82502682169616 1647.1439138200906"
+#!   TOP_LEFT="321.82502682169616 1647.1439138200906"
+#!   BOTTOM_RIGHT="751.82502682169616 1646.1439138200906"
+#!   BOUNDING_RECT="321.82502682169616 1647.1439138200906 430 1"
+#!   ORDER="500000000000057"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="21"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="35"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shift all the points up so that the lowest point is at z-coordinate 0, since Minecraft doesn&apos;t support negative heights.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="294.72514644789271 1129.4316533641525"
+#!   TOP_LEFT="294.72514644789271 1129.4316533641525"
+#!   BOTTOM_RIGHT="748.72514644789271 1128.4316533641525"
+#!   BOUNDING_RECT="294.72514644789271 1129.4316533641525 454 1"
+#!   ORDER="500000000000058"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="28"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="25"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Scale everything uniformly based on the optimal scale factor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1116.6398280947096 -474.87183633741074"
+#!   TOP_LEFT="1116.6398280947096 -474.87183633741074"
+#!   BOTTOM_RIGHT="1570.6398280947096 -475.87183633741074"
+#!   BOUNDING_RECT="1116.6398280947096 -474.87183633741074 454 1"
+#!   ORDER="500000000000059"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="31"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="37"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Find the current dimensions of the point cloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1099.9578081495099 1660.6417887988405"
+#!   TOP_LEFT="1099.9578081495099 1660.6417887988405"
+#!   BOTTOM_RIGHT="1529.9578081495099 1659.6417887988405"
+#!   BOUNDING_RECT="1099.9578081495099 1660.6417887988405 430 1"
+#!   ORDER="500000000000061"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="32"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="40"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate the factors each axis would need to be multiplied by to scale them to their ideal size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1099.9735395568239 1258.5569346169652"
+#!   TOP_LEFT="1099.9735395568239 1258.5569346169652"
+#!   BOTTOM_RIGHT="1529.9735395568239 1257.5569346169652"
+#!   BOUNDING_RECT="1099.9735395568239 1258.5569346169652 430 1"
+#!   ORDER="500000000000063"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="38"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="43"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate the best scale to size X and Y axis to such that they fit within the world bounds entered by the user. Ignore z-axis for now.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1140.5989458108866 725.72089292321505"
+#!   TOP_LEFT="1140.5989458108866 725.72089292321505"
+#!   BOTTOM_RIGHT="1570.5989458108866 724.72089292321505"
+#!   BOUNDING_RECT="1140.5989458108866 725.72089292321505 430 1"
+#!   ORDER="500000000000065"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="41"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="48"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate how to scale x- and y-axes based on whether or not the z-axis should scale with them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1116.6240966873954 90.133163712589294"
+#!   TOP_LEFT="1116.6240966873954 90.133163712589294"
+#!   BOTTOM_RIGHT="1570.6240966873954 89.133163712589294"
+#!   BOUNDING_RECT="1116.6240966873954 90.133163712589294 454 1"
+#!   ORDER="500000000000067"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="46"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="54"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Convert to mesh to fill in gaps. Doesn&apos;t work completely yet, just leaving a few holes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-448.711867321054 1136.686190195235"
+#!   TOP_LEFT="-448.711867321054 1136.686190195235"
+#!   BOTTOM_RIGHT="78.388132678946022 1135.686190195235"
+#!   BOUNDING_RECT="-448.711867321054 1136.686190195235 527.10000000000002 1"
+#!   ORDER="500000000000072"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="49"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="55"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Convert back to point cloud so it can later be written to Minecraft. Also easier to manipulate than a mesh I think.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-413.65631551553599 503.84367415102724"
+#!   TOP_LEFT="-413.65631551553599 503.84367415102724"
+#!   BOTTOM_RIGHT="40.343684484464006 502.84367415102724"
+#!   BOUNDING_RECT="-413.65631551553599 503.84367415102724 454 1"
+#!   ORDER="500000000000073"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="51"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="61"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Reduce the number of points in the point cloud so that it doesn&apos;t exceed the maximum number of blocks in the world.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1117.4341548653538 1132.4601979353124"
+#!   TOP_LEFT="-1117.4341548653538 1132.4601979353124"
+#!   BOTTOM_RIGHT="-663.43415486535378 1131.4601979353124"
+#!   BOUNDING_RECT="-1117.4341548653538 1132.4601979353124 454 1"
+#!   ORDER="500000000000087"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="45"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="64"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;If the magnifying glass is yellow after running, that is because this uses User Parameters, which are reset after every run, so the cache is stale, not because of any errors. You can circumvent this by checking the &amp;quot;Save as User Parameter Default Values&amp;quot; option when running.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1117.4341548653538 506.91914585812447"
+#!   TOP_LEFT="-1117.4341548653538 506.91914585812447"
+#!   BOTTOM_RIGHT="-663.43415486535378 505.91914585812447"
+#!   BOUNDING_RECT="-1117.4341548653538 506.91914585812447 454 1"
+#!   ORDER="500000000000088"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="45"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="71"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;surface builder whines without this.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-416.55631551553597 1616.8913512944653"
+#!   TOP_LEFT="-416.55631551553597 1616.8913512944653"
+#!   BOTTOM_RIGHT="13.443684484464029 1615.8913512944653"
+#!   BOUNDING_RECT="-416.55631551553597 1616.8913512944653 430 1"
+#!   ORDER="500000000000090"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="65"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="78"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;When importing a file into the workspace, specify the reader as CSV reader to get data on all the points, not just a point cloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-1880.11461260446 874.8465491797773"
+#!   TOP_LEFT="-1880.11461260446 874.8465491797773"
+#!   BOTTOM_RIGHT="-1384.11461260446 873.8465491797773"
+#!   BOUNDING_RECT="-1880.11461260446 874.8465491797773 496 1"
+#!   ORDER="500000000000095"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="77"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="83"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;CSV: 67_Civi_Topo.&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Cryptic error message:&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#f54a4a;&quot;&gt;MINECRAFT writer: Internal Error: Failed to create a valid block index in regionX: &apos;-1&apos;, regionZ: &apos;-1&apos;, chunkX: &apos;31&apos;, chunkZ: &apos;30&apos;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2573.8715501738366 1782.8486668200014"
+#!   TOP_LEFT="-2573.8715501738366 1782.8486668200014"
+#!   BOTTOM_RIGHT="-2022.8715501738366 1781.8486668200014"
+#!   BOUNDING_RECT="-2573.8715501738366 1782.8486668200014 551 1"
+#!   ORDER="500000000000097"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="62"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="66"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;CSV: Aries_Estates_3 &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Same cryptic error&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="-2573.8715501738366 1115.4969925889732"
+#!   TOP_LEFT="-2573.8715501738366 1115.4969925889732"
+#!   BOTTOM_RIGHT="-1984.8715501738366 1114.4969925889732"
+#!   BOUNDING_RECT="-2573.8715501738366 1115.4969925889732 589 1"
+#!   ORDER="500000000000101"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="60"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="85"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Currently, sets each block to an Emerald block, but this will be changed in later versions to convert RGB values to a block of approximately the same color.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1820.79834988826 1472.1569287121433"
+#!   TOP_LEFT="1820.79834988826 1472.1569287121433"
+#!   BOTTOM_RIGHT="2250.79834988826 1471.1569287121433"
+#!   BOUNDING_RECT="1820.79834988826 1472.1569287121433 430 1"
+#!   ORDER="500000000000107"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="82"
+#! />
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="67"
+#!   NAME="Source data sets"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-1939.4897063553972 1805.2263855971894"
+#!   ORDER="500000000000084"
+#!   PALETTE_COLOR="Reader/Writer"
+#!   BOTTOM_RIGHT="-1288.5081340396741 -1053.5819643910725"
+#!   BOUNDING_RECT="-1939.4897063553972 1805.2263855971894 650.98157231572304 2858.8083499882619"
+#!   STICKY="true"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
+#!   CONTENTS="78 77 19 44 75 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="68"
+#!   NAME="Set block type"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="1769.2688126881271 1757.5611846594652"
+#!   ORDER="500000000000085"
+#!   PALETTE_COLOR="Color1"
+#!   BOTTOM_RIGHT="2387.2688126881271 -1138.3011072967879"
+#!   BOUNDING_RECT="1769.2688126881271 1757.5611846594652 618 2895.8622919562531"
+#!   STICKY="true"
+#!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
+#!   CONTENTS="82 85 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="69"
+#!   NAME="Convert to point cloud"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-1267.8698215553586 1782.8486668200014"
+#!   ORDER="500000000000086"
+#!   PALETTE_COLOR="Color2"
+#!   BOTTOM_RIGHT="-517.86982155535861 -1126.4066162090191"
+#!   BOUNDING_RECT="-1267.8698215553586 1782.8486668200014 750 2909.2552830290206"
+#!   STICKY="true"
+#!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,1"
+#!   CONTENTS="61 7 64 45 63 30 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="70"
+#!   NAME="Fill in gaps"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-481.45631551553595 1757.5611846594652"
+#!   ORDER="500000000000092.13"
+#!   PALETTE_COLOR="Color3"
+#!   BOTTOM_RIGHT="179.4660803750894 -1133.9399108276798"
+#!   BOUNDING_RECT="-481.45631551553595 1757.5611846594652 660.92239589062535 2891.501095487145"
+#!   STICKY="true"
+#!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,1"
+#!   CONTENTS="55 65 54 80 49 51 71 81 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="72"
+#!   NAME="Perform z-shift"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="204.61514138950906 1757.5611846594652"
+#!   ORDER="500000000000091"
+#!   PALETTE_COLOR="Color4"
+#!   BOTTOM_RIGHT="954.61514138950906 -1129.4755804700903"
+#!   BOUNDING_RECT="204.61514138950906 1757.5611846594652 750 2887.0367651295555"
+#!   STICKY="true"
+#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,1"
+#!   CONTENTS="21 27 28 35 34 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="73"
+#!   NAME="Scale everything"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="982.74792271732258 1757.5611846594652"
+#!   ORDER="500000000000093"
+#!   PALETTE_COLOR="Color5"
+#!   BOTTOM_RIGHT="1732.7479227173226 -1126.7969822555369"
+#!   BOUNDING_RECT="982.74792271732258 1757.5611846594652 750 2884.3581669150021"
+#!   STICKY="true"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,1"
+#!   CONTENTS="48 33 41 39 47 43 31 32 38 37 46 25 42 40 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="74"
+#!   NAME="Create the world"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="2408.357916912501 1757.5611846594652"
+#!   ORDER="500000000000094"
+#!   PALETTE_COLOR="Reader/Writer"
+#!   BOTTOM_RIGHT="3308.3165883742176 -1120.7540551595998"
+#!   BOUNDING_RECT="2408.357916912501 1757.5611846594652 899.95867146171668 2878.315239819065"
+#!   STICKY="true"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
+#!   CONTENTS="24 17 5 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="-1135.0347798716039 1389.675208418751"
+#!   BOUNDING_RECT="-1135.0347798716039 1389.675208418751 447.09999999999997 71"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="convertToPointCloud"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="31"
+#!   TYPE="Scaler"
+#!   VERSION="4"
+#!   POSITION="1140.5989458108866 -780.54316971741082"
+#!   BOUNDING_RECT="1140.5989458108866 -780.54316971741082 454 71"
+#!   ORDER="500000000000037"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="SCALED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_SCALE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINT_CLOUD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_SCALING" PARM_VALUE="Extents"/>
+#!     <XFORM_PARM PARM_NAME="SCALEFACTOR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SCALE_ORIGIN" PARM_VALUE="0,0"/>
+#!     <XFORM_PARM PARM_NAME="TEXT_LOC_ONLY" PARM_VALUE="Location and Size"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Scaler"/>
+#!     <XFORM_PARM PARM_NAME="XSCALE" PARM_VALUE="@Value(optimalScaleXY)"/>
+#!     <XFORM_PARM PARM_NAME="YSCALE" PARM_VALUE="@Value(optimalScaleXY)"/>
+#!     <XFORM_PARM PARM_NAME="ZSCALE" PARM_VALUE="@Value(zScale)"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="21"
+#!   TYPE="PointCloudPropertyExtractor"
+#!   VERSION="3"
+#!   POSITION="321.82502682169616 1382.1419138000904"
+#!   BOUNDING_RECT="321.82502682169616 1382.1419138000904 454 71"
+#!   ORDER="500000000000039"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CALCULATE_EXTENTS_DISPLAY" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS" PARM_VALUE="x   MINMAX y   MINMAX z   MINMAX"/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="findLimits"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="28"
+#!   TYPE="Offsetter"
+#!   VERSION="1"
+#!   POSITION="361.95080807950922 684.26494503040237"
+#!   BOUNDING_RECT="361.95080807950922 684.26494503040237 454 71"
+#!   ORDER="500000000000051"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OFFSET"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="AZIMUTH_2D" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AZIMUTH_3D" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CARTESIAN_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_OFFSET" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ELEVATION_3D" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="Cartesian Coordinate"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINT_CLOUD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POLAR_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RADIUS_2D" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RADIUS_3D" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SPHERICAL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Offsetter"/>
+#!     <XFORM_PARM PARM_NAME="XOFF" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="YOFF" PARM_VALUE="0"/>
+#!     <XFORM_PARM PARM_NAME="ZOFF" PARM_VALUE="@Evaluate(-@Value(_z_min))"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="32"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="1099.9578081495099 1439.3902262832153"
+#!   BOUNDING_RECT="1099.9578081495099 1439.3902262832153 430 71"
+#!   ORDER="500000000000060"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; width SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_x_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_x_min&lt;closeparen&gt;&lt;closeparen&gt;  depth SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_y_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_y_min&lt;closeparen&gt;&lt;closeparen&gt;  height SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_z_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_z_min&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Dimensions"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="38"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="1140.5832144035724 899.17834083102707"
+#!   BOUNDING_RECT="1140.5832144035724 899.17834083102707 430 71"
+#!   ORDER="500000000000062"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; xScale SET_TO &lt;at&gt;div&lt;openparen&gt;$(worldSize)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;width&lt;closeparen&gt;&lt;closeparen&gt;  yScale SET_TO &lt;at&gt;div&lt;openparen&gt;$(worldSize)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;depth&lt;closeparen&gt;&lt;closeparen&gt;  zScale SET_TO &lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;div&lt;openparen&gt;$(worldHeight)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;height&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CalculateScales"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="41"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="1099.9735395568239 267.34029911727697"
+#!   BOUNDING_RECT="1099.9735395568239 267.34029911727697 526.10000000000002 71"
+#!   ORDER="500000000000064"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; idealScaleXYNoZ SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Value&lt;openparen&gt;yScale&lt;closeparen&gt;&apos;BOOL_OP;AND;COMPOSITE_TEST;1;NUM_TEST &lt;at&gt;Value&lt;openparen&gt;xScale&lt;closeparen&gt; &lt; &lt;at&gt;Value&lt;openparen&gt;yScale&lt;closeparen&gt;&apos;&lt;at&gt;Value&lt;openparen&gt;xScale&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FindOptimalScaleIgnoreZ"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="46"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="1140.5832144035724 -265.49474256647341"
+#!   BOUNDING_RECT="1140.5832144035724 -265.49474256647341 454 71"
+#!   ORDER="500000000000066"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; optimalScaleXY SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Value&lt;openparen&gt;idealScaleXYNoZ&lt;closeparen&gt;&apos;BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST $(xyScaleWithZ) = yes;TEST &lt;at&gt;Value&lt;openparen&gt;idealScaleXYNoZ&lt;closeparen&gt; &gt;= &lt;at&gt;Value&lt;openparen&gt;zScale&lt;closeparen&gt;&apos;&lt;at&gt;Value&lt;openparen&gt;zScale&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FindOptimalScaleXY"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="49"
+#!   TYPE="PointCloudSurfaceBuilder"
+#!   VERSION="0"
+#!   POSITION="-413.65631551553599 827.93375267085969"
+#!   BOUNDING_RECT="-413.65631551553599 827.93375267085969 527.10000000000002 71"
+#!   ORDER="500000000000070"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="SURFACE"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="CLIP_DISTANCE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CLIP_OUTPUT_MESH" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="CONFIDENCE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="CONSISTENT_NORMALS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONSISTENT_VERTEX_ORDERING" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GRID_RES_X" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GRID_RES_Y" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GRID_RES_Z" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ISO_DIVIDE" PARM_VALUE="8"/>
+#!     <XFORM_PARM PARM_NAME="ISO_LEVEL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="K_SEARCH_RADIUS" PARM_VALUE="20"/>
+#!     <XFORM_PARM PARM_NAME="MANIFOLD" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="MARCHINGCUBES_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="MAX_ANGLE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MAX_DEPTH" PARM_VALUE="8"/>
+#!     <XFORM_PARM PARM_NAME="MAX_NEAREST_NEIGHBORS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MAX_SURFACE_ANGLE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MIN_ANGLE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MIN_DEPTH" PARM_VALUE="5"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="Poisson"/>
+#!     <XFORM_PARM PARM_NAME="MU" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_POLYGONS" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PERCENTAGE_EXTEND_GRID" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="POINT_WEIGHT" PARM_VALUE="4"/>
+#!     <XFORM_PARM PARM_NAME="POISSON_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="SAMPLES_PER_NODE" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="SCALE" PARM_VALUE="1.1"/>
+#!     <XFORM_PARM PARM_NAME="SEARCH_RADIUS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SOLVER_DIVIDE" PARM_VALUE="8"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRIANGULATION_GROUP" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudSurfaceBuilder"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="51"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="-378.55631551553597 151.34079912227685"
+#!   BOUNDING_RECT="-378.55631551553597 151.34079912227685 454 71"
+#!   ORDER="500000000000071"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="45"
+#!   TYPE="PointCloudThinner"
+#!   VERSION="2"
+#!   POSITION="-1079.4341548653538 779.95732290656224"
+#!   BOUNDING_RECT="-1079.4341548653538 779.95732290656224 454 71"
+#!   ORDER="500000000000078"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="THINNED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MAX_NUM_POINTS" PARM_VALUE="@mult($(worldSize),$(worldSize),$(worldHeight), @div(1.0,$(pointReduction)))"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="Every Nth point (Maximum Number of Points)"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudThinner"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="65"
+#!   TYPE="PointCloudComponentTypeCoercer"
+#!   VERSION="1"
+#!   POSITION="-378.55631551553597 1439.3902262832153"
+#!   BOUNDING_RECT="-378.55631551553597 1439.3902262832153 430 71"
+#!   ORDER="500000000000083"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE" PARM_VALUE="x,Real32,BOUNDEDCAST,&lt;Unused&gt;,y,Real32,BOUNDEDCAST,&lt;Unused&gt;,z,Real32,BOUNDEDCAST,&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="real64ToReal32"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="82"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="3"
+#!   POSITION="1858.79834988826 988.40274117026797"
+#!   BOUNDING_RECT="1858.79834988826 988.40274117026797 430 71"
+#!   ORDER="500000000000106"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="RESULT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="blockID Preserve 133 blockData Preserve 0"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="setBlockId"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="76"
+#!   SOURCE_NODE="75"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="63"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="45"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="21"
+#!   TARGET_NODE="28"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="29"
+#!   SOURCE_NODE="28"
+#!   TARGET_NODE="32"
+#!   SOURCE_PORT_DESC="fo 0 OFFSET"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="59"
+#!   SOURCE_NODE="31"
+#!   TARGET_NODE="82"
+#!   SOURCE_PORT_DESC="fo 0 SCALED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="33"
+#!   SOURCE_NODE="32"
+#!   TARGET_NODE="38"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="39"
+#!   SOURCE_NODE="38"
+#!   TARGET_NODE="41"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="42"
+#!   SOURCE_NODE="41"
+#!   TARGET_NODE="46"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="79"
+#!   SOURCE_NODE="45"
+#!   TARGET_NODE="65"
+#!   SOURCE_PORT_DESC="fo 0 THINNED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="47"
+#!   SOURCE_NODE="46"
+#!   TARGET_NODE="31"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="81"
+#!   SOURCE_NODE="49"
+#!   TARGET_NODE="51"
+#!   SOURCE_PORT_DESC="fo 0 SURFACE"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="53"
+#!   SOURCE_NODE="51"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="80"
+#!   SOURCE_NODE="65"
+#!   TARGET_NODE="49"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="84"
+#!   SOURCE_NODE="82"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE SourceDataset_CSV2_1,CSV2_IN_FIELDS_GROUP_CSV2_1,CSV2_IN_DELIMITER_CSV2_1,CSV2_IN_FIELD_NAMES_LINE_CSV2_1,CSV2_IN_DATA_START_LINE_CSV2_1,CSV2_IN_ADVANCED_GROUP_CSV2_1,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_IN_FIELD_NAMES_GROUP_CSV2_1,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1,CSV2_IN_FIELD_VALUES_GROUP_CSV2_1,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1,CSV2_IN_ENCODING_GROUP_CSV2_1,CSV2_IN_ENCODING_CSV2_1,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1,CSV2_IN_READ_SKIPPED_LINES_CSV2_1,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1,SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,SourceDataset_CSV2_2,CSV2_IN_FIELDS_GROUP_CSV2_2,CSV2_IN_DELIMITER_CSV2_2,CSV2_IN_FIELD_NAMES_LINE_CSV2_2,CSV2_IN_DATA_START_LINE_CSV2_2,CSV2_IN_ADVANCED_GROUP_CSV2_2,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2,CSV2_IN_FIELD_NAMES_GROUP_CSV2_2,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2,CSV2_IN_FIELD_VALUES_GROUP_CSV2_2,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2,CSV2_IN_ENCODING_GROUP_CSV2_2,CSV2_IN_ENCODING_CSV2_2,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2,CSV2_IN_READ_SKIPPED_LINES_CSV2_2,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2,SourceDataset_CSV2_3,CSV2_IN_FIELDS_GROUP_CSV2_3,CSV2_IN_DELIMITER_CSV2_3,CSV2_IN_FIELD_NAMES_LINE_CSV2_3,CSV2_IN_DATA_START_LINE_CSV2_3,CSV2_IN_ADVANCED_GROUP_CSV2_3,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_3,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_3,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_3,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_3,CSV2_IN_FIELD_NAMES_GROUP_CSV2_3,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_3,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_3,CSV2_IN_FIELD_VALUES_GROUP_CSV2_3,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_3,CSV2_IN_ENCODING_GROUP_CSV2_3,CSV2_IN_ENCODING_CSV2_3,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_3,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_3,CSV2_IN_READ_SKIPPED_LINES_CSV2_3,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_3,SourceDataset_CSV2_4,CSV2_IN_FIELDS_GROUP_CSV2_4,CSV2_IN_DELIMITER_CSV2_4,CSV2_IN_FIELD_NAMES_LINE_CSV2_4,CSV2_IN_DATA_START_LINE_CSV2_4,CSV2_IN_ADVANCED_GROUP_CSV2_4,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_4,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_4,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_4,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_4,CSV2_IN_FIELD_NAMES_GROUP_CSV2_4,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_4,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_4,CSV2_IN_FIELD_VALUES_GROUP_CSV2_4,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_4,CSV2_IN_ENCODING_GROUP_CSV2_4,CSV2_IN_ENCODING_CSV2_4,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_4,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_4,CSV2_IN_READ_SKIPPED_LINES_CSV2_4,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_4,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
+DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
+GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
+DEFAULT_MACRO worldName individualId
+GUI STRING worldName Enter the name of the world to save this data as:
+DEFAULT_MACRO worldSize 64
+GUI RANGE_SLIDER worldSize "RANGE:_0,]" Enter world size to scale to (positive integer):
+DEFAULT_MACRO SourceDataset_CSV2_5 $(FME_MF_DIR)SAMPLE_FME_POINTS_HORT_ADJUSTED.csv
+GUI MULTIFILE SourceDataset_CSV2_5 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO xyScaleWithZ no
+GUI CHOICE xyScaleWithZ yes%no Should the height axis be scaled the same as other axes?
+DEFAULT_MACRO worldHeight 64
+GUI RANGE_SLIDER worldHeight "RANGE:[1,128_" Enter the height to scale points to (1 to 127):
+DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_5 $(FME_MF_DIR)pointsCsv.csv
+GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):
+DEFAULT_MACRO pointReduction 10
+GUI RANGE_SLIDER pointReduction "RANGE:_0,]" enter point reduction factor (larger number: fewer points, but faster; smaller number: keep more points, but slower):
+DEFAULT_MACRO SourceDataset_CSV2 $(FME_MF_DIR)pointsCsv.csv
+GUI MULTIFILE SourceDataset_CSV2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO SourceDataset_CSV2_7 $(FME_MF_DIR)67_Civi_Topo.csv
+GUI MULTIFILE SourceDataset_CSV2_7 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO SourceDataset_CSV2_6 $(FME_MF_DIR)Aries_Estates_3.csv
+GUI MULTIFILE SourceDataset_CSV2_6 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):
+INCLUDE [ if {{$(DestDataset_MINECRAFT)} == {}} { puts_real {Parameter 'DestDataset_MINECRAFT' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(worldName)} == {}} { puts_real {Parameter 'worldName' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(worldSize)} == {}} { puts_real {Parameter 'worldSize' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV2_5)} == {}} { puts_real {Parameter 'SourceDataset_CSV2_5' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(xyScaleWithZ)} == {}} { puts_real {Parameter 'xyScaleWithZ' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(worldHeight)} == {}} { puts_real {Parameter 'worldHeight' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_POINTCLOUDXYZ_5)} == {}} { puts_real {Parameter 'SourceDataset_POINTCLOUDXYZ_5' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(pointReduction)} == {}} { puts_real {Parameter 'pointReduction' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV2)} == {}} { puts_real {Parameter 'SourceDataset_CSV2' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV2_7)} == {}} { puts_real {Parameter 'SourceDataset_CSV2_7' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_CSV2_6)} == {}} { puts_real {Parameter 'SourceDataset_CSV2_6' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} NULL
+MULTI_READER_FORMAT{0} CSV2
+MULTI_READER_KEYWORD{0} CSV2_1
+MULTI_READER_GEN_DIRECTIVES{0} SCAN_TYPES,Yes,FIELD_NAMES_GROUP,,SKIPPED_LINES_GROUP,,FIELD_QUALIFIER_ESCAPE_CHARACTER,<lt>quote<gt>,FIELD_SEPARATION_GROUP,,TRIM_FIELD_VALUE_QUALIFIERS,Yes,SCHEMA_GENERATION_GROUP,,DATASET_GROUP,,PREVIEW_PLACEHOLDER,,TRIM_FIELD_NAME_QUALIFIERS,Yes,FIELD_NAMES_LINE,1,CASE_SENSITIVE_FIELD_NAMES,Yes,ENCODING,windows-1252,FEATURE_TYPE_NAME,FORMAT_NAME,_MERGE_SCHEMAS,YES,FIELD_QUALIFIER_CHARACTER,<lt>quote<gt>,SCAN_MAX_ROWS,10000,FIELD_VALUES_GROUP,,DATA_START_LINE,2,FIELDS_GROUP,,EXPOSE_ATTRS_GROUP,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,ENFORCE_STRICT_SCHEMA,No,PRESERVE_SOURCE_ENCODING,No,SKIP_DUPLICATE_DELIMITERS,No,ENCODING_GROUP,,READ_SKIPPED_LINES,No,USE_CUSTOM_SCHEMA,NO,SCAN_ADDITIONAL_FIELDS,No,SCHEMA,,CSV2_EXPOSE_FORMAT_ATTRS,,ADVANCED_GROUP,,DELIMITER,auto
+MULTI_READER_TYPE{1} POINTCLOUDXYZ
+MULTI_READER_KEYWORD{1} POINTCLOUDXYZ_1
+MULTI_READER_GEN_DIRECTIVES{1} UPDATE_FEATURE_TYPES,yes,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,FIELD_NAMES,NO,CLIP_TO_ENVELOPE,NO,SKIP_LINES,0,SEARCH_ENVELOPE_MAXX,0,FIELD_NAMES_AFTER_HEADER,no,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,USE_SEARCH_ENVELOPE,NO,SEPARATOR,auto,LINES_TO_SKIP_GROUP,,SKIP_FOOTER,0,STRING_DATA_CONTAINS_DELIMS,yes,READER_META_ATTRIBUTES,fme_dataset<space>fme_basename,FIELD_SEPARATION_GROUP,,_MERGE_SCHEMAS,YES,COLUMN_TO_PCCOMPONENT,x<comma>col0<comma>Real64<comma>y<comma>col1<comma>Real64<comma>z<comma>col2<comma>Real64<comma>color_red<comma>col3<comma>UInt8<comma>color_green<comma>col4<comma>UInt8<comma>color_blue<comma>col5<comma>UInt8,STRIP_QUOTES,no,PREVIEW_PLACEHOLDER,,SEARCH_ENVELOPE_MAXY,0,POINTCLOUDXYZ_EXPOSE_FORMAT_ATTRS,,COLUMN_TO_PCCOMPONENT_HAS_TYPES,yes,ENCODING,windows-1252,DUPLICATE_DELIMS,no,SCAN_GROUP,FME_DISCLOSURE_CLOSED,MAX_LINES,,SCAN_MAX_LINES,10000,SEARCH_ENVELOPE_MINY,0,POINTCLOUDXYZ_RDR_ADV_PARM_GROUP,FME_DISCLOSURE_OPEN
+MULTI_READER_TYPE{2} NULL
+MULTI_READER_FORMAT{2} CSV2
+MULTI_READER_KEYWORD{2} CSV2_2
+MULTI_READER_GEN_DIRECTIVES{2} FIELD_VALUES_GROUP,,ENCODING,windows-1252,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,TRIM_FIELD_VALUE_QUALIFIERS,Yes,FIELD_NAMES_GROUP,,SKIP_DUPLICATE_DELIMITERS,No,_MERGE_SCHEMAS,YES,DATA_START_LINE,1,ENFORCE_STRICT_SCHEMA,No,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,ADVANCED_GROUP,,SCAN_ADDITIONAL_FIELDS,No,SCAN_MAX_ROWS,10000,DATASET_GROUP,,TRIM_FIELD_NAME_QUALIFIERS,Yes,FIELD_QUALIFIER_ESCAPE_CHARACTER,<lt>quote<gt>,FIELD_NAMES_LINE,,FEATURE_TYPE_NAME,FORMAT_NAME,SCHEMA_GENERATION_GROUP,,ENCODING_GROUP,,SCHEMA,col0<comma>x_coordinate<comma>YES<semicolon>col1<comma>y_coordinate<comma>YES<semicolon>col2<comma>z_coordinate<comma>YES<semicolon>col3<comma>uint8<comma>YES<semicolon>col4<comma>uint8<comma>YES<semicolon>col5<comma>uint8<comma>YES<semicolon>col6<comma>uint8<comma>YES,DELIMITER,auto,CASE_SENSITIVE_FIELD_NAMES,Yes,FIELDS_GROUP,,USE_CUSTOM_SCHEMA,YES,FIELD_SEPARATION_GROUP,,PRESERVE_SOURCE_ENCODING,No,SCAN_TYPES,Yes,FIELD_QUALIFIER_CHARACTER,<lt>quote<gt>,READ_SKIPPED_LINES,No,PREVIEW_PLACEHOLDER,,CSV2_EXPOSE_FORMAT_ATTRS,,SKIPPED_LINES_GROUP,
+MULTI_READER_TYPE{3} NULL
+MULTI_READER_FORMAT{3} CSV2
+MULTI_READER_KEYWORD{3} CSV2_3
+MULTI_READER_GEN_DIRECTIVES{3} ADVANCED_GROUP,,FIELD_QUALIFIER_CHARACTER,<lt>quote<gt>,READ_SKIPPED_LINES,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,CSV2_EXPOSE_FORMAT_ATTRS,,FIELD_NAMES_LINE,,SCHEMA_GENERATION_GROUP,,DATA_START_LINE,1,USE_CUSTOM_SCHEMA,YES,FIELD_VALUES_GROUP,,FIELDS_GROUP,,SCAN_ADDITIONAL_FIELDS,No,SKIP_DUPLICATE_DELIMITERS,No,FIELD_NAMES_GROUP,,PRESERVE_SOURCE_ENCODING,No,FIELD_QUALIFIER_ESCAPE_CHARACTER,<lt>quote<gt>,ENCODING_GROUP,,SCHEMA,col0<comma>x_coordinate<comma>YES<semicolon>col1<comma>y_coordinate<comma>YES<semicolon>col2<comma>z_coordinate<comma>YES,_MERGE_SCHEMAS,YES,DELIMITER,auto,CASE_SENSITIVE_FIELD_NAMES,Yes,ENCODING,windows-1252,DATASET_GROUP,,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,FEATURE_TYPE_NAME,FORMAT_NAME,TRIM_FIELD_NAME_QUALIFIERS,Yes,SCAN_TYPES,Yes,FIELD_SEPARATION_GROUP,,SKIPPED_LINES_GROUP,,ENFORCE_STRICT_SCHEMA,No,PREVIEW_PLACEHOLDER,
+MULTI_READER_TYPE{4} NULL
+MULTI_READER_FORMAT{4} CSV2
+MULTI_READER_KEYWORD{4} CSV2_4
+MULTI_READER_GEN_DIRECTIVES{4} ADVANCED_GROUP,,FIELD_QUALIFIER_CHARACTER,<lt>quote<gt>,READ_SKIPPED_LINES,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,CSV2_EXPOSE_FORMAT_ATTRS,,FIELD_NAMES_LINE,,SCHEMA_GENERATION_GROUP,,DATA_START_LINE,1,USE_CUSTOM_SCHEMA,YES,FIELD_VALUES_GROUP,,FIELDS_GROUP,,SCAN_ADDITIONAL_FIELDS,No,SKIP_DUPLICATE_DELIMITERS,No,FIELD_NAMES_GROUP,,PRESERVE_SOURCE_ENCODING,No,FIELD_QUALIFIER_ESCAPE_CHARACTER,<lt>quote<gt>,ENCODING_GROUP,,SCHEMA,col0<comma>x_coordinate<comma>YES<semicolon>col1<comma>y_coordinate<comma>YES<semicolon>col2<comma>z_coordinate<comma>YES,_MERGE_SCHEMAS,YES,DELIMITER,auto,CASE_SENSITIVE_FIELD_NAMES,Yes,ENCODING,windows-1252,DATASET_GROUP,,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,FEATURE_TYPE_NAME,FORMAT_NAME,TRIM_FIELD_NAME_QUALIFIERS,Yes,SCAN_TYPES,Yes,FIELD_SEPARATION_GROUP,,SKIPPED_LINES_GROUP,,ENFORCE_STRICT_SCHEMA,No,PREVIEW_PLACEHOLDER,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} MINECRAFT
+MULTI_WRITER_KEYWORD{0} MINECRAFT_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV2_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_1
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source CSV file.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV2_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_1
+DEFAULT_MACRO SourceDataset_CSV2_1 $(SourceDataset_CSV2_5)
+GUI MULTIFILE SourceDataset_CSV2_1 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_1 FORMAT_NAME
+CSV2_1_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_1 CSV2_IN_DELIMITER_CSV2_1%CSV2_IN_FIELD_NAMES_LINE_CSV2_1%CSV2_IN_DATA_START_LINE_CSV2_1 Fields
+DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_1 auto
+CSV2_1_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_1)"
+GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_1 auto%,%;%|%space%tab Delimiter Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_1 1
+CSV2_1_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_1)"
+GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_1 None%1%2%3%4%5 Field Names Line:
+GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_1 None, 
+DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_1 2
+CSV2_1_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_1)"
+GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_1 1%MAX%0 Data Start Line:
+DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1%CSV2_IN_FIELD_NAMES_GROUP_CSV2_1%CSV2_IN_FIELD_VALUES_GROUP_CSV2_1%CSV2_IN_ENCODING_GROUP_CSV2_1%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
+DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 Field Separation
+DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1 No
+CSV2_1_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1)"
+GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1 Yes%No Skip Duplicate Delimiters:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1 <quote>
+CSV2_1_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1 Field Qualifier Character:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 <quote>
+CSV2_1_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1 Field Qualifier Escape Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 Field Names
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_1 Yes
+CSV2_1_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1 Yes
+CSV2_1_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1)"
+GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1 Yes%No Case Sensitive Field Names:
+DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 No
+CSV2_1_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1)"
+GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1 Yes%No Enforce Strict Schema:
+DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Field Values
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Yes
+CSV2_1_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1)"
+GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1 Yes%No Trim Field Qualifier Characters:
+DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_1%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 Encoding
+DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_1 windows-1252
+CSV2_1_ENCODING "$(CSV2_IN_ENCODING_CSV2_1)"
+GUI STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_1 fme-system%* Character Encoding:
+DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 No
+CSV2_1_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1)"
+GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1 Yes%No Preserve Source Encoding:
+DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_1 Skipped Lines
+DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_1 No
+CSV2_1_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_1)"
+GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_1 Yes%No Read Skipped Lines:
+DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_1 10000
+CSV2_1_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_1 Yes
+CSV2_1_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_1 No
+CSV2_1_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_1 
+CSV2_1_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_1)"
+DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_1 Yes
+CSV2_1_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_1)"
+# ===========================================================================
+DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1 
+CSV2_1_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1)"
+GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_1 DEFLINE
+CSV2_1_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_1)"
+# ============================================================================ 
+CSV2_1_GENERATE_FME_BUILD_NUM 20200
+CSV2_1_DATASET "$(SourceDataset_CSV2_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source of the CSV files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_1 $(SourceDataset_POINTCLOUDXYZ_5)
+GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_1 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|All_Files|* Point Cloud XYZ File(s):
+# ============================================================================
+# Hardcode the settings that were used to generate this mapping file
+#
+DEFAULT_MACRO SKIP_LINES_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SKIP_LINES $(SKIP_LINES_POINTCLOUDXYZ_1)
+DEFAULT_MACRO SKIP_FOOTER_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SKIP_FOOTER $(SKIP_FOOTER_POINTCLOUDXYZ_1)
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or csv_.
+POINTCLOUDXYZ_1_UNENCODED_ATTR_PREFIX fme_ pointcloudxyz_
+DEFAULT_MACRO POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_1 fme_dataset fme_basename
+POINTCLOUDXYZ_1_READER_META_ATTRIBUTES "$(POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 Field Separation
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1 auto
+POINTCLOUDXYZ_1_SEPARATOR "$(POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1)"
+GUI STRING_OR_CHOICE_ENCODED POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1 auto%,%;%|%space%tab Separator Character:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_DUPLICATE_DELIMS "$(POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1 yes%no Remove Duplicate Separators:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_STRIP_QUOTES "$(POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 yes%no Strip Quotes:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_FIELD_NAMES "$(POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1)"
+GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 File Has Field Names
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_FIELD_NAMES_AFTER_HEADER "$(POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 yes%no Field Names Follow Header
+GUI LOOKUP POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 <Unused>,no 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_SKIP_LINES%POINTCLOUDXYZ_IN_SKIP_FOOTER%POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 Lines to Skip
+DEFAULT_MACRO POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_MAX_LINES "$(POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1)"
+GUI OPTIONAL INTEGER POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 Maximum Lines to Read:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 Point Cloud Component Map
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 x,col0,Real64,y,col1,Real64,z,col2,Real64,color_red,col3,UInt8,color_green,col4,UInt8,color_blue,col5,UInt8
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1)"
+GUI OPTIONAL GUI_LINE_TABLE POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 NO_MOVE%NO_LABEL%ROW_DELIM:,%COL_DELIM:,%COL_DISPLAY_ORDER:1,0,2%"Component"%"PC_COMPONENT_ENCODED PC_COMPONENT x%y%z%*"%"Column Name"%"STRING_ENCODED COLUMN_NAME"%"Data Type"%"PC_TYPE PC_TYPE *%String" Component Mapping:
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_USE_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1)"
+GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_METHOD%POINTCLOUDXYZ_IN_SEARCH_METHOD_FILTER%POINTCLOUDXYZ_IN_SEARCH_ORDER%POINTCLOUDXYZ_IN_SEARCH_FEATURE%POINTCLOUDXYZ_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 <Unused>, 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1)"
+GUI OPTIONAL COORDSYS POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 <Unused>,NO 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_CLIP_TO_ENVELOPE "$(POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 YES%NO Clip to Search Envelope
+DEFAULT_MACRO POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 Advanced
+DEFAULT_MACRO POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1 windows-1252
+POINTCLOUDXYZ_1_ENCODING "$(POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1)"
+GUI STRING_OR_ENCODING POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1 fme-system%* Character Encoding:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_STRING_DATA_CONTAINS_DELIMS "$(POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 yes%no String Data Contains Separators:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_1 FME_DISCLOSURE_OPEN
+POINTCLOUDXYZ_1_EXPOSE_ATTRS_GROUP "$(POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT_HAS_TYPES "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_1)"
+# ===========================================================================
+DEFAULT_MACRO POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_NETWORK_AUTHENTICATION "$(POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1)"
+GUI OPTIONAL AUTHENTICATOR POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_1 ALL
+POINTCLOUDXYZ_1_ATTRIBUTE_READING "$(POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_1)"
+# ============================================================================ 
+POINTCLOUDXYZ_1_GENERATE_FME_BUILD_NUM 20200
+GUI INTEGER SKIP_LINES_POINTCLOUDXYZ_1 Number of Lines to Skip:
+GUI INTEGER SKIP_FOOTER_POINTCLOUDXYZ_1 Number of Footer Lines to Skip:
+POINTCLOUDXYZ_1_DATASET "$(SourceDataset_POINTCLOUDXYZ_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV2_2"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_2
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source CSV file.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV2_2 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_2
+DEFAULT_MACRO SourceDataset_CSV2_2 $(SourceDataset_CSV2)
+GUI MULTIFILE SourceDataset_CSV2_2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_2 FORMAT_NAME
+CSV2_2_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_2 CSV2_IN_DELIMITER_CSV2_2%CSV2_IN_FIELD_NAMES_LINE_CSV2_2%CSV2_IN_DATA_START_LINE_CSV2_2 Fields
+DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_2 auto
+CSV2_2_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_2)"
+GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_2 auto%,%;%|%space%tab Delimiter Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_2 
+CSV2_2_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_2)"
+GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_2 None%1%2%3%4%5 Field Names Line:
+GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_2 None, 
+DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_2 1
+CSV2_2_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_2)"
+GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_2 1%MAX%0 Data Start Line:
+DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2%CSV2_IN_FIELD_NAMES_GROUP_CSV2_2%CSV2_IN_FIELD_VALUES_GROUP_CSV2_2%CSV2_IN_ENCODING_GROUP_CSV2_2%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
+DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 Field Separation
+DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2 No
+CSV2_2_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2)"
+GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_2 Yes%No Skip Duplicate Delimiters:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2 <quote>
+CSV2_2_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_2 Field Qualifier Character:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 <quote>
+CSV2_2_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_2 Field Qualifier Escape Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 Field Names
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_2 Yes
+CSV2_2_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2 Yes
+CSV2_2_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2)"
+GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_2 Yes%No Case Sensitive Field Names:
+DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 No
+CSV2_2_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2)"
+GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_2 Yes%No Enforce Strict Schema:
+DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Field Values
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Yes
+CSV2_2_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2)"
+GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_2 Yes%No Trim Field Qualifier Characters:
+DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_2%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 Encoding
+DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_2 windows-1252
+CSV2_2_ENCODING "$(CSV2_IN_ENCODING_CSV2_2)"
+GUI STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_2 fme-system%* Character Encoding:
+DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 No
+CSV2_2_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2)"
+GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_2 Yes%No Preserve Source Encoding:
+DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_2 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_2 Skipped Lines
+DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_2 No
+CSV2_2_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_2)"
+GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_2 Yes%No Read Skipped Lines:
+DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_2 10000
+CSV2_2_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_2 Yes
+CSV2_2_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_2 No
+CSV2_2_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_2 FME_DISCLOSURE_OPEN
+CSV2_2_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_2)"
+DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_2 Yes
+CSV2_2_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_2)"
+# ===========================================================================
+DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2 
+CSV2_2_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2)"
+GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_2 DEFLINE
+CSV2_2_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_2)"
+# ============================================================================ 
+CSV2_2_GENERATE_FME_BUILD_NUM 20200
+CSV2_2_DATASET "$(SourceDataset_CSV2_2)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV2_3"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_3
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source CSV file.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV2_3 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_3
+DEFAULT_MACRO SourceDataset_CSV2_3 $(SourceDataset_CSV2_7)
+GUI MULTIFILE SourceDataset_CSV2_3 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_3 FORMAT_NAME
+CSV2_3_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_3 CSV2_IN_DELIMITER_CSV2_3%CSV2_IN_FIELD_NAMES_LINE_CSV2_3%CSV2_IN_DATA_START_LINE_CSV2_3 Fields
+DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_3 auto
+CSV2_3_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_3)"
+GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_3 auto%,%;%|%space%tab Delimiter Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_3 
+CSV2_3_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_3)"
+GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_3 None%1%2%3%4%5 Field Names Line:
+GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_3 None, 
+DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_3 1
+CSV2_3_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_3)"
+GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_3 1%MAX%0 Data Start Line:
+DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_3%CSV2_IN_FIELD_NAMES_GROUP_CSV2_3%CSV2_IN_FIELD_VALUES_GROUP_CSV2_3%CSV2_IN_ENCODING_GROUP_CSV2_3%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_3%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
+DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_3%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_3%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_3 Field Separation
+DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_3 No
+CSV2_3_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_3)"
+GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_3 Yes%No Skip Duplicate Delimiters:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_3 <quote>
+CSV2_3_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_3)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_3 Field Qualifier Character:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_3 <quote>
+CSV2_3_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_3)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_3 Field Qualifier Escape Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_3%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_3 Field Names
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_3 Yes
+CSV2_3_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_3 Yes
+CSV2_3_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_3)"
+GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_3 Yes%No Case Sensitive Field Names:
+DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_3 No
+CSV2_3_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_3)"
+GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_3 Yes%No Enforce Strict Schema:
+DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_3 Field Values
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_3 Yes
+CSV2_3_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_3)"
+GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_3 Yes%No Trim Field Qualifier Characters:
+DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_3%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_3 Encoding
+DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_3 windows-1252
+CSV2_3_ENCODING "$(CSV2_IN_ENCODING_CSV2_3)"
+GUI STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_3 fme-system%* Character Encoding:
+DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_3 No
+CSV2_3_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_3)"
+GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_3 Yes%No Preserve Source Encoding:
+DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_3 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_3 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_3 Skipped Lines
+DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_3 No
+CSV2_3_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_3)"
+GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_3 Yes%No Read Skipped Lines:
+DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_3 10000
+CSV2_3_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_3 Yes
+CSV2_3_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_3 No
+CSV2_3_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_3 
+CSV2_3_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_3)"
+DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_3 Yes
+CSV2_3_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_3)"
+# ===========================================================================
+DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_3 
+CSV2_3_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_3)"
+GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_3 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_3 DEFLINE
+CSV2_3_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_3)"
+# ============================================================================ 
+CSV2_3_GENERATE_FME_BUILD_NUM 20200
+CSV2_3_DATASET "$(SourceDataset_CSV2_3)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "CSV2_4"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_4
+# =====================================================================
+# The following GUI line prompts for a file to be used as the source CSV file.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_CSV2_4 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER CSV2 CSV2_4
+DEFAULT_MACRO SourceDataset_CSV2_4 $(SourceDataset_CSV2_6)
+GUI MULTIFILE SourceDataset_CSV2_4 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|All_Files|* Source CSV (Comma Separated Value) File(s):
+DEFAULT_MACRO CSV2_IN_FEATURE_TYPE_NAME_CSV2_4 FORMAT_NAME
+CSV2_4_FEATURE_TYPE_NAME "$(CSV2_IN_FEATURE_TYPE_NAME_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_FIELDS_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELDS_GROUP_CSV2_4 CSV2_IN_DELIMITER_CSV2_4%CSV2_IN_FIELD_NAMES_LINE_CSV2_4%CSV2_IN_DATA_START_LINE_CSV2_4 Fields
+DEFAULT_MACRO CSV2_IN_DELIMITER_CSV2_4 auto
+CSV2_4_DELIMITER "$(CSV2_IN_DELIMITER_CSV2_4)"
+GUI STRING_OR_CHOICE_ENCODED CSV2_IN_DELIMITER_CSV2_4 auto%,%;%|%space%tab Delimiter Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_LINE_CSV2_4 
+CSV2_4_FIELD_NAMES_LINE "$(CSV2_IN_FIELD_NAMES_LINE_CSV2_4)"
+GUI OPTIONAL INT_OR_CHOICE CSV2_IN_FIELD_NAMES_LINE_CSV2_4 None%1%2%3%4%5 Field Names Line:
+GUI LOOKUP CSV2_IN_FIELD_NAMES_LINE_CSV2_4 None, 
+DEFAULT_MACRO CSV2_IN_DATA_START_LINE_CSV2_4 1
+CSV2_4_DATA_START_LINE "$(CSV2_IN_DATA_START_LINE_CSV2_4)"
+GUI RANGE_SLIDER CSV2_IN_DATA_START_LINE_CSV2_4 1%MAX%0 Data Start Line:
+DEFAULT_MACRO CSV2_IN_ADVANCED_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ADVANCED_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_4%CSV2_IN_FIELD_NAMES_GROUP_CSV2_4%CSV2_IN_FIELD_VALUES_GROUP_CSV2_4%CSV2_IN_ENCODING_GROUP_CSV2_4%CSV2_IN_SKIPPED_LINES_GROUP_CSV2_4%CSV2_IN_SCHEMA_GENERATION_GROUP Advanced
+DEFAULT_MACRO CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_4%CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_4%CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_4 Field Separation
+DEFAULT_MACRO CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_4 No
+CSV2_4_SKIP_DUPLICATE_DELIMITERS "$(CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_4)"
+GUI CHOICE CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_4 Yes%No Skip Duplicate Delimiters:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_4 <quote>
+CSV2_4_FIELD_QUALIFIER_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_4)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_4 Field Qualifier Character:
+DEFAULT_MACRO CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_4 <quote>
+CSV2_4_FIELD_QUALIFIER_ESCAPE_CHARACTER "$(CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_4)"
+GUI OPTIONAL STRING_ENCODED CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_4 Field Qualifier Escape Character:
+DEFAULT_MACRO CSV2_IN_FIELD_NAMES_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_NAMES_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_4%CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_4 Field Names
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_4 Yes
+CSV2_4_TRIM_FIELD_NAME_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_NAME_QUALIFIERS_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_4 Yes
+CSV2_4_CASE_SENSITIVE_FIELD_NAMES "$(CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_4)"
+GUI CHOICE CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_4 Yes%No Case Sensitive Field Names:
+DEFAULT_MACRO CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_4 No
+CSV2_4_ENFORCE_STRICT_SCHEMA "$(CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_4)"
+GUI CHOICE CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_4 Yes%No Enforce Strict Schema:
+DEFAULT_MACRO CSV2_IN_FIELD_VALUES_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_FIELD_VALUES_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_4 Field Values
+DEFAULT_MACRO CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_4 Yes
+CSV2_4_TRIM_FIELD_VALUE_QUALIFIERS "$(CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_4)"
+GUI CHOICE CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_4 Yes%No Trim Field Qualifier Characters:
+DEFAULT_MACRO CSV2_IN_ENCODING_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_ENCODING_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_ENCODING_CSV2_4%CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_4 Encoding
+DEFAULT_MACRO CSV2_IN_ENCODING_CSV2_4 windows-1252
+CSV2_4_ENCODING "$(CSV2_IN_ENCODING_CSV2_4)"
+GUI STRING_OR_ENCODING CSV2_IN_ENCODING_CSV2_4 fme-system%* Character Encoding:
+DEFAULT_MACRO CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_4 No
+CSV2_4_PRESERVE_SOURCE_ENCODING "$(CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_4)"
+GUI CHOICE CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_4 Yes%No Preserve Source Encoding:
+DEFAULT_MACRO CSV2_IN_SKIPPED_LINES_GROUP_CSV2_4 
+GUI OPTIONAL DISCLOSUREGROUP CSV2_IN_SKIPPED_LINES_GROUP_CSV2_4 FME_DISCLOSURE_CLOSED%CSV2_IN_READ_SKIPPED_LINES_CSV2_4 Skipped Lines
+DEFAULT_MACRO CSV2_IN_READ_SKIPPED_LINES_CSV2_4 No
+CSV2_4_READ_SKIPPED_LINES "$(CSV2_IN_READ_SKIPPED_LINES_CSV2_4)"
+GUI CHOICE CSV2_IN_READ_SKIPPED_LINES_CSV2_4 Yes%No Read Skipped Lines:
+DEFAULT_MACRO CSV2_IN_SCAN_MAX_ROWS_CSV2_4 10000
+CSV2_4_SCAN_MAX_ROWS "$(CSV2_IN_SCAN_MAX_ROWS_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_SCAN_TYPES_CSV2_4 Yes
+CSV2_4_SCAN_TYPES "$(CSV2_IN_SCAN_TYPES_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_4 No
+CSV2_4_SCAN_ADDITIONAL_FIELDS "$(CSV2_IN_SCAN_ADDITIONAL_FIELDS_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_4 
+CSV2_4_EXPOSE_ATTRS_GROUP "$(CSV2_IN_EXPOSE_ATTRS_GROUP_CSV2_4)"
+DEFAULT_MACRO CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_4 Yes
+CSV2_4_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS "$(CSV2_IN_QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS_CSV2_4)"
+# ===========================================================================
+DEFAULT_MACRO CSV2_IN_NETWORK_AUTHENTICATION_CSV2_4 
+CSV2_4_NETWORK_AUTHENTICATION "$(CSV2_IN_NETWORK_AUTHENTICATION_CSV2_4)"
+GUI OPTIONAL AUTHENTICATOR CSV2_IN_NETWORK_AUTHENTICATION_CSV2_4 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO CSV2_IN_ATTRIBUTE_READING_CSV2_4 DEFLINE
+CSV2_4_ATTRIBUTE_READING "$(CSV2_IN_ATTRIBUTE_READING_CSV2_4)"
+# ============================================================================ 
+CSV2_4_GENERATE_FME_BUILD_NUM 20200
+CSV2_4_DATASET "$(SourceDataset_CSV2_4)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "MINECRAFT_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER MINECRAFT MINECRAFT_1
+# The following GUI lines prompt for a Minecraft file to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_MINECRAFT_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER MINECRAFT MINECRAFT_1
+DEFAULT_MACRO DestDataset_MINECRAFT_1 $(DestDataset_MINECRAFT)
+GUI DIRNAME DestDataset_MINECRAFT_1 Destination Minecraft Folder:
+MINECRAFT_1_PLUGIN_MAX_CHANNELS 100
+DEFAULT_MACRO MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1 MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1%MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1%MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1%MINECRAFT_OUT_BIOME_MINECRAFT_1 Terrain Generation
+DEFAULT_MACRO MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1 no
+MINECRAFT_1_POPULATE_TERRAIN "$(MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1 yes%no Populate Terrain
+DEFAULT_MACRO MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1 no
+MINECRAFT_1_FILL_UNDER "$(MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1 yes%no Fill Under Point Cloud
+DEFAULT_MACRO MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1 yes
+MINECRAFT_1_CENTER_POINT_CLOUD "$(MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1)"
+GUI CHOICE MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1 yes%no Center Point Cloud at 0,0
+DEFAULT_MACRO MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1 MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1%MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 Generator Settings
+DEFAULT_MACRO MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1 flat
+MINECRAFT_1_GENERATOR_NAME "$(MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1)"
+GUI ACTIVECHOICE_LOOKUP MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1 Default,default,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1%Amplified,amplified,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1%Large<space>Biomes,largeBiomes,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1%Flat,flat Generator Name
+DEFAULT_MACRO MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 2;7,2x3,2;1;village
+MINECRAFT_1_GENERATOR_OPTIONS "$(MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1)"
+GUI OPTIONAL STRING_OR_CHOICE_ENCODED MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 Classic<space>Flat%Tunnelers'<space>Dream%Water<space>World%Overworld%Snowy<space>Kingdom%Bottomless<space>Pit%Desert%Redstone<space>Ready Generator Options
+GUI LOOKUP MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1 <Unused>,%Classic<space>Flat,"2;7,2x3,2;1;village"%Tunnelers'<space>Dream,"2;7,230x1,5x3,2;3;stronghold,biome_1,decoration,dungeon,mineshaft"%Water<space>World,"2;7,5x1,5x3,5x12,90x9;1;biome_1,village"%Overworld,"2;7,59x1,3x3,2;1;stronghold,biome_1,village,decoration,dungeon,lake,mineshaft,lava_lake"%Snowy<space>Kingdom,"2;7,59x1,3x3,2,78;12;biome_1,village"%Bottomless<space>Pit,"2;2x4,3x3,2;1;biome_1,village"%Desert,"2;7,3x1,52x24,8x12;2;stronghold,biome_1,village,decoration,dungeon,mineshaft"%Redstone<space>Ready,"2;7,3x1,52x24;2;" 
+DEFAULT_MACRO MINECRAFT_OUT_BIOME_MINECRAFT_1 1
+MINECRAFT_1_BIOME "$(MINECRAFT_OUT_BIOME_MINECRAFT_1)"
+GUI LOOKUP_CHOICE MINECRAFT_OUT_BIOME_MINECRAFT_1 Ocean,0%Plains,1%Desert,2%Extreme<space>Hills,3%Forest,4%Taiga,5%Swampland,6%River,7%Nether,8%End,9%Frozen<space>Ocean,10%Frozen<space>River,11%Ice<space>Plains,12%Ice<space>Mountains,13%Mushroom<space>Island,14%Mushroom<space>Island<space>Shore,15%Beach,16%Desert<space>Hills,17%Forest<space>Hills,18%Taiga<space>Hills,19%Extreme<space>Hills<space>Edge,20%Jungle,21%Jungle<space>Hills,22%Jungle<space>Edge,23%Deep<space>Ocean,24%Stone<space>Beach,25%Cold<space>Beach,26%Birch<space>Forest,27%Birch<space>Forest<space>Hills,28%Roofed<space>Forest,29%Cold<space>Taiga,30%Cold<space>Taiga<space>Hills,31%Mega<space>Taiga,32%Mega<space>Taiga<space>Hills,33%Extreme<space>Hills+,34%Savanna,35%Savanna<space>Plateau,36%Mesa,37%Mesa<space>Plateau<space>F,38%Mesa<space>Plateau,39%Sunflower<space>Plains,129%Desert<space>M,130%Extreme<space>Hills<space>M,131%Flower<space>Forest,132%Taiga<space>M,133%Swampland<space>M,134%Ice<space>Plains<space>Spikes,140%Jungle<space>M,149%JungleEdge<space>M,151%Birch<space>Forest<space>M,155%Birch<space>Forest<space>Hills<space>M,156%Roofed<space>Forest<space>M,157%Cold<space>Taiga<space>M,158%Mega<space>Spruce<space>Taiga,160%Redwood<space>Taiga<space>Hills<space>M,161%Extreme<space>Hills+<space>M,162%Savanna<space>M,163%Savanna<space>Plateau<space>M,164%Mesa<space>(Bryce),165%Mesa<space>Plateau<space>F<space>M,166%Mesa<space>Plateau<space>M,167 Biome
+DEFAULT_MACRO MINECRAFT_OUT_ADVANCED_MINECRAFT_1 FME_DISCLOSURE_OPEN
+GUI OPTIONAL DISCLOSUREGROUP MINECRAFT_OUT_ADVANCED_MINECRAFT_1 MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1 Advanced
+DEFAULT_MACRO MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1 1
+MINECRAFT_1_FILL_BLOCK "$(MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1)"
+GUI INTEGER MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1 Fill Block
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO MINECRAFT_OUT_DESTINATION_DATASETTYPE_VALIDATION_MINECRAFT_1 Yes
+MINECRAFT_1_DESTINATION_DATASETTYPE_VALIDATION "$(MINECRAFT_OUT_DESTINATION_DATASETTYPE_VALIDATION_MINECRAFT_1)"
+DEFAULT_MACRO MINECRAFT_OUT_COORDINATE_SYSTEM_GRANULARITY_MINECRAFT_1 FEATURE
+MINECRAFT_1_COORDINATE_SYSTEM_GRANULARITY "$(MINECRAFT_OUT_COORDINATE_SYSTEM_GRANULARITY_MINECRAFT_1)"
+# ============================================================================ 
+MINECRAFT_1_GENERATE_FME_BUILD_NUM 20200
+MINECRAFT_1_DATASET "$(DestDataset_MINECRAFT_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)Converter.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_CSV2_1 CSV2_1
+DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
+DEFAULT_MACRO DATASET_KEYWORD_CSV2_2 CSV2_2
+DEFAULT_MACRO DATASET_KEYWORD_CSV2_3 CSV2_3
+DEFAULT_MACRO DATASET_KEYWORD_CSV2_4 CSV2_4
+DEFAULT_MACRO DATASET_KEYWORD_MINECRAFT_1 MINECRAFT_1
+# -------------------------------------------------------------------------
+
+CSV2_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+POINTCLOUDXYZ_1_READER_META_ATTRIBUTES fme_basename fme_feature_type
+
+# -------------------------------------------------------------------------
+
+CSV2_2_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+CSV2_3_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+CSV2_4_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-FT*
+CSV2_2_COORDINATE_SYSTEM *XY-FT*
+CSV2_3_COORDINATE_SYSTEM *XY-FT*
+CSV2_4_COORDINATE_SYSTEM *XY-FT*
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME Converter
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+POINTCLOUDXYZ_1_DEF POINTCLOUDXYZ
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE POINTCLOUDXYZ POINTCLOUDXYZ_1::POINTCLOUDXYZ multi_reader_keyword,$(DATASET_KEYWORD_POINTCLOUDXYZ_1) TO FME_GENERIC ::POINTCLOUDXYZ ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+CSV2_1_MERGE_DEF CSV2_1::CSV EXACT CSV
+POINTCLOUDXYZ_1_MERGE_DEF POINTCLOUDXYZ_1::POINTCLOUDXYZ EXACT POINTCLOUDXYZ
+CSV2_2_MERGE_DEF CSV2_2::CSV EXACT CSV
+CSV2_3_MERGE_DEF CSV2_3::CSV EXACT CSV
+CSV2_4_MERGE_DEF CSV2_4::CSV EXACT CSV
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "CSV(CSV2_3) Splitter"    INPUT FEATURE_TYPE CSV      multi_reader_keyword $(DATASET_KEYWORD_CSV2_3)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "CSV(CSV2_2) Splitter"    INPUT FEATURE_TYPE CSV      multi_reader_keyword $(DATASET_KEYWORD_CSV2_2)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "CSV(CSV2_4) Splitter"    INPUT FEATURE_TYPE CSV      multi_reader_keyword $(DATASET_KEYWORD_CSV2_4)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "POINTCLOUDXYZ(POINTCLOUDXYZ_1) Splitter"    INPUT FEATURE_TYPE POINTCLOUDXYZ    OUTPUT FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "CSV(CSV2_1) Splitter"    INPUT FEATURE_TYPE CSV      multi_reader_keyword $(DATASET_KEYWORD_CSV2_1)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME convertToPointCloud___VectorMerger    INPUT  FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA yes    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE convertToPointCloud___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,convertToPointCloud)
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME convertToPointCloud___Combiner    INPUT FEATURE_TYPE convertToPointCloud___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE convertToPointCloud_OUTPUT
+# -------------------------------------------------------------------------
+INCLUDE [ if {[string equal {MAXNUMPOINTS} {KEEPNPOINT}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"<Unused>"}; } elseif {[string equal {MAXNUMPOINTS} {MAXNUMPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {FIRSTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {LASTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudThinner    INPUT  FEATURE_TYPE convertToPointCloud_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ThinPointCloud(REJECTABLE, $(THIN_ARGS))
+FACTORY_DEF * TestFactory    FACTORY_NAME PointCloudThinner_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE PointCloudThinner_THINNED       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME real64ToReal32    INPUT  FEATURE_TYPE PointCloudThinner_THINNED    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @PointCloudInterpretation(REJECTABLE,CONVERT,x,Real32,BOUNDEDCAST,<Unused>,y,Real32,BOUNDEDCAST,<Unused>,z,Real32,BOUNDEDCAST,<Unused>)
+FACTORY_DEF * TestFactory    FACTORY_NAME real64ToReal32_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE real64ToReal32_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+# -------------------------------------------------------------------------
+FACTORY_DEF * PointCloudManipulatorFactory    FACTORY_NAME PointCloudSurfaceBuilder    INPUT  FEATURE_TYPE real64ToReal32_OUTPUT    MODE CONSTRUCT_SURFACE_POISSON    K_SEARCH_RADIUS "20"    CLIP_OUTPUT_MESH "No"    CLIP_DISTANCE "<Unused>"    MAX_DEPTH "8"    MIN_DEPTH "5"    POINT_WEIGHT "4"    SCALE "1.1"    SOLVER_DIVIDE "8"    ISO_DIVIDE "8"    SAMPLES_PER_NODE "1.0"    CONFIDENCE No    OUTPUT_POLYGONS No    DEGREE 2    MANIFOLD Yes    OUTPUT SURFACE FEATURE_TYPE PointCloudSurfaceBuilder_SURFACE
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE PointCloudSurfaceBuilder_SURFACE    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT
+# -------------------------------------------------------------------------
+DEFAULT_MACRO findLimits_EXISTENCE_LIST
+DEFAULT_MACRO findLimits_PROPERTIES_LIST
+DEFAULT_MACRO findLimits_MINMAX_LIST
+INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x   MINMAX y   MINMAX z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO findLimits_${listName}_LIST \"$lists($listName)\"";    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME findLimits    INPUT  FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(findLimits_EXISTENCE_LIST),$(findLimits_PROPERTIES_LIST),$(findLimits_MINMAX_LIST),DoNotUpdateExtents)
+FACTORY_DEF * TestFactory    FACTORY_NAME findLimits_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE findLimits_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+# -------------------------------------------------------------------------
+INCLUDE [    if { {CARTESIAN} == {CARTESIAN} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } elseif { {CARTESIAN} == {POLAR} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>")};    } elseif { {CARTESIAN} == {SPHERICAL} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>","<Unused>")};    } else {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_OffsetterInput    INPUT  FEATURE_TYPE findLimits_OUTPUT    OUTPUT FEATURE_TYPE ___TOOFFSETTER___
+FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_Offsetter    INPUT FEATURE_TYPE ___TOOFFSETTER___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)    OUTPUT FEATURE_TYPE ___TOREJECTOR___       $(Offsetter_OFFSET)
+FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Offsetter_Offset       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_PointCloudOffsetter    INPUT FEATURE_TYPE Offsetter_Offset    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Offsetter_OFFSET       @TransformPointCloud(OFFSET,)    OUTPUT FAILED FEATURE_TYPE Offsetter_OFFSET
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME Dimensions    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Offsetter_OFFSET    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "width" "SET_TO" "<at>sub<openparen><at>Value<openparen>_x_max<closeparen><comma><at>Value<openparen>_x_min<closeparen><closeparen>" }      ATTR_ACTION { "" "depth" "SET_TO" "<at>sub<openparen><at>Value<openparen>_y_max<closeparen><comma><at>Value<openparen>_y_min<closeparen><closeparen>" }      ATTR_ACTION { "" "height" "SET_TO" "<at>sub<openparen><at>Value<openparen>_z_max<closeparen><comma><at>Value<openparen>_z_min<closeparen><closeparen>" }    OUTPUT OUTPUT FEATURE_TYPE Dimensions_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME CalculateScales    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Dimensions_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "xScale" "SET_TO" "<at>div<openparen>$(worldSize$encode)<comma><at>Value<openparen>width<closeparen><closeparen>" }      ATTR_ACTION { "" "yScale" "SET_TO" "<at>div<openparen>$(worldSize$encode)<comma><at>Value<openparen>depth<closeparen><closeparen>" }      ATTR_ACTION { "" "zScale" "SET_TO" "<at>Evaluate<openparen><at>div<openparen>$(worldHeight$encode)<comma><at>Value<openparen>height<closeparen><closeparen><closeparen>" }    OUTPUT OUTPUT FEATURE_TYPE CalculateScales_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME FindOptimalScaleIgnoreZ    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE CalculateScales_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "idealScaleXYNoZ" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Value<openparen>yScale<closeparen>'BOOL_OP;AND;COMPOSITE_TEST;1;NUM_TEST <at>Value<openparen>xScale<closeparen> < <at>Value<openparen>yScale<closeparen>'<at>Value<openparen>xScale<closeparen>'FME_NUM_CONDITIONS2___" }    OUTPUT OUTPUT FEATURE_TYPE FindOptimalScaleIgnoreZ_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME FindOptimalScaleXY    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE FindOptimalScaleIgnoreZ_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "optimalScaleXY" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Value<openparen>idealScaleXYNoZ<closeparen>'BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST $(xyScaleWithZ$encode) = yes;TEST <at>Value<openparen>idealScaleXYNoZ<closeparen> >= <at>Value<openparen>zScale<closeparen>'<at>Value<openparen>zScale<closeparen>'FME_NUM_CONDITIONS2___" }    OUTPUT OUTPUT FEATURE_TYPE FindOptimalScaleXY_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler_ScalerInput    INPUT  FEATURE_TYPE FindOptimalScaleXY_OUTPUT    OUTPUT FEATURE_TYPE ___TOINPUT___
+FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler_Input    INPUT FEATURE_TYPE ___TOINPUT___    @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)    OUTPUT FEATURE_TYPE Scaler_ExecuteScale
+FACTORY_DEF __DISABLED__ TeeFactory    FACTORY_NAME Scaler_Geometry_CenterPointCalculator    INPUT  FEATURE_TYPE Scaler_ExecuteScale    OUTPUT FEATURE_TYPE Scaler_ExecuteCenterPointScale         @ConvertToPoint(CENTER_OF_GRAVITY, __CPx__, __CPy__, __CPz__)
+FACTORY_DEF __DISABLED__ TeeFactory    FACTORY_NAME Scaler_CenterPointScaler    INPUT  FEATURE_TYPE Scaler_ExecuteCenterPointScale         @Scale(REJECTABLE,ALLOW_NULLS,"@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>zScale<closeparen>,Scaler)",@Value(__CPx__),@Value(__CPy__),@Value(__CPz__),RASTER_EXTENTS)    OUTPUT FEATURE_TYPE ___TOREJECTOR___        @RemoveAttributes(__CPx__,__CPy__,__CPz__)
+FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler    INPUT  FEATURE_TYPE Scaler_ExecuteScale    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @Scale(REJECTABLE,ALLOW_NULLS,"@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>zScale<closeparen>,Scaler)",RASTER_EXTENTS)
+FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Scaler_Scaled       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_PointCloudScaler    INPUT FEATURE_TYPE Scaler_Scaled    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Scaler_SCALED       @TransformPointCloud(SCALE,)    OUTPUT FAILED FEATURE_TYPE Scaler_SCALED
+# -------------------------------------------------------------------------
+DEFAULT_MACRO setBlockId_COMPONENT_LIST
+DEFAULT_MACRO setBlockId_COMPONENT_TYPE_LIST
+DEFAULT_MACRO setBlockId_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {blockID Preserve 133 blockData Preserve 0}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO setBlockId_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME setBlockId    INPUT  FEATURE_TYPE Scaler_SCALED    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(setBlockId_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(setBlockId_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(setBlockId_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE setBlockId_RESULT
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC setBlockId_RESULT TO MINECRAFT __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>civilSectionShiftUp<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(worldName$encode$encode)<comma>civilSectionShiftUp<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+MINECRAFT_1_DEF civilSectionShiftUp
