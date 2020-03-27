@@ -12,3 +12,12 @@ In order to run the converter program, you will need FME Desktop installed. You 
 
 In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this). The files created by the program have only been tested in Minecraft version 1.7.10, which you can download and enable in the "installations" section of the Minecraft launcher.
 
+## Contributing
+
+Since this project is the property of the American River College Design Hub, it is not open to contributions by developers outside the company. If you are an intern or employee of the Design Hub, and are interested in working on the project, please contact Matt Crow (w# is 1599227), and he can get you set up.
+
+## Project Contributors
+
+* **Matt Crow** - *Initial work* - [IronHeart7334](https://github.com/IronHeart7334)
+
+See also the list of [contributors](https://github.com/design-hub-arc/ARCDHWebAutomator/contributors) who participated in this project.
