@@ -9,3 +9,6 @@ Three dimensional coordinate files are used frequently in the American River Col
 ## Getting Started
 
 In order to run the converter program, you will need FME Desktop installed. You can start a free trial of FME Desktop [here](https://www.safe.com/fme/fme-desktop/), but it will require purchasing a license to continue using the application after the free trial expires. Contact a Design Hub supervisor for more details.
+
+In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this). The files created by the program have only been tested in Minecraft version 1.7.10, which you can download and enable in the "installations" section of the Minecraft launcher.
+
