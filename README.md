@@ -12,6 +12,17 @@ In order to run the converter program, you will need FME Desktop installed. You 
 
 In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this). The files created by the program have only been tested in Minecraft version 1.7.10, which you can download and enable in the "installations" section of the Minecraft launcher.
 
+## User Parameters
+When running the program, the user will be asked for a series of parameters.
+* Destination Minecraft Folder: the "saves" folder under the user's minecraft folder. Be sure to change this value when you first download the program from GitHub.
+* World name: the name of the minecraft world to output data to. Note that FME will create the world if it does not yet exist, or overwrite the world if it does.
+* Point cloud file: the CSV file to convert. Currently, the program does not require headers, it only requires that the file follow the guidelines stated above.
+* World size: The width and depth to scale points to. Essentially, if you were to set 64 as the world size, imagine a 64 by 64 block box around all the x-y points in the data set, where  the smallest x and y coordinates mark one corner of the box, and the largest mark the diagonal opposite corner.
+* Height scale: The maximum height to scale z-coordinates to after shifting, in blocks. The lowest point in the point cloud will be scaled and shifted to have a z-coordinate of 0, while the highest point will be scaled and shifted to have a z-coordinate of this height scale value, with all points in between being adjusted accordingly.
+* "Should the height axis scale with the other axes?": Since z-coordinates are restricted in their values, but x- and y-coordinates are not, vastly spread out z-coordinates will require a small scaling factor, which will also force x- and y-coordinates to a small scaling factor to maintain scale. Selecting "no" for this parameter will cause the z-axis to scale independent of the x- and y-axes, whereas selecting "yes" will force all three axes to maintain the same scaling factor.
+* Point reduction factor: Used to calculate the maximum number of points to include in the point cloud after thinning, with larger point reduction factors yielding fewer maximum points. For example, given a world size of 64x64x64, and a point reduction factor of 100, the point cloud will be thinned to at most (643)/100=2621points.
+
+
 ## Contributing
 
 Since this project is the property of the American River College Design Hub, it is not open to contributions by developers outside the company. If you are an intern or employee of the Design Hub, and are interested in working on the project, please contact Matt Crow (w# is 1599227), and he can get you set up.
