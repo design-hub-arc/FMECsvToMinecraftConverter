@@ -3,7 +3,7 @@
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
 #              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
-#              --worldName "shiftAfterScaling"
+#              --worldName "round"
 #              --worldSize "64"
 #              --xyScaleWithZ "no"
 #              --worldHeight "64"
@@ -17,7 +17,7 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="5247.81 3295.08"
+#!   DOC_EXTENTS="5394.68 3295.08"
 #!   DOC_TOP_LEFT="-1939.49 -1537.52"
 #!   END_PYTHON=""
 #!   END_TCL=""
@@ -33,7 +33,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-03-30T09:14:08"
+#!   LAST_SAVE_DATE="2020-03-30T09:37:53"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,7 +52,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-1362.51 1303.14"
+#!   VIEW_POSITION="803.133 1725.02"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -647,9 +647,9 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="5"
 #!   FEAT_GEOMTYPE="All"
-#!   POSITION="2612.4951249512505 1220.4309033566526"
-#!   BOUNDING_RECT="2612.4951249512505 1220.4309033566526 499.09999999999997 71"
-#!   ORDER="500000000000110"
+#!   POSITION="2759.3715937159377 1220.4309033566526"
+#!   BOUNDING_RECT="2759.3715937159377 1220.4309033566526 499.09999999999997 71"
+#!   ORDER="500000000000117"
 #!   COLLAPSED="true"
 #!   KEYWORD="MINECRAFT_1"
 #!   PARMS_EDITED="true"
@@ -709,7 +709,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
-#!   DEFAULT_VALUE="shiftAfterScaling"
+#!   DEFAULT_VALUE="round"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -742,10 +742,10 @@
 #! <COMMENT
 #!   IDENTIFIER="17"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use Minecraft version 1.7.* to run&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="2498.9833231665662 1023.1349137300899"
-#!   TOP_LEFT="2498.9833231665662 1023.1349137300899"
-#!   BOTTOM_RIGHT="3248.9833231665662 973.13491373008992"
-#!   BOUNDING_RECT="2498.9833231665662 1023.1349137300899 750 50"
+#!   POSITION="2645.8597919312533 1023.1349137300899"
+#!   TOP_LEFT="2645.8597919312533 1023.1349137300899"
+#!   BOTTOM_RIGHT="3395.8597919312533 973.13491373008992"
+#!   BOUNDING_RECT="2645.8597919312533 1023.1349137300899 750 50"
 #!   ORDER="500000000000008"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -757,10 +757,10 @@
 #! <COMMENT
 #!   IDENTIFIER="24"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Writer automatically handles axis swapping (Y and Z).&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Complains about having to cast coordinate datatypes, but explicitly casting caused bounding errors, so leave it to the writer to perform casting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="2448.9828231615643 1635.184215889778"
-#!   TOP_LEFT="2448.9828231615643 1635.184215889778"
-#!   BOTTOM_RIGHT="3198.9828231615643 1585.184215889778"
-#!   BOUNDING_RECT="2448.9828231615643 1635.184215889778 750 50"
+#!   POSITION="2595.8592919262514 1635.184215889778"
+#!   TOP_LEFT="2595.8592919262514 1635.184215889778"
+#!   BOTTOM_RIGHT="3345.8592919262514 1585.184215889778"
+#!   BOUNDING_RECT="2595.8592919262514 1635.184215889778 750 50"
 #!   ORDER="500000000000033"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -802,10 +802,10 @@
 #! <COMMENT
 #!   IDENTIFIER="35"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shift all the points up so that the lowest point is at z-coordinate 0, since Minecraft doesn&apos;t support negative heights.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1088.9827090235183 1121.8861012419654"
-#!   TOP_LEFT="1088.9827090235183 1121.8861012419654"
-#!   BOTTOM_RIGHT="1542.9827090235183 1120.8861012419654"
-#!   BOUNDING_RECT="1088.9827090235183 1121.8861012419654 454 1"
+#!   POSITION="1110.857927775706 175.00163239727704"
+#!   TOP_LEFT="1110.857927775706 175.00163239727704"
+#!   BOTTOM_RIGHT="1564.857927775706 174.00163239727704"
+#!   BOUNDING_RECT="1110.857927775706 175.00163239727704 454 1"
 #!   ORDER="500000000000058"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -982,10 +982,10 @@
 #! <COMMENT
 #!   IDENTIFIER="85"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Currently, sets each block to an Emerald block, but this will be changed in later versions to convert RGB values to a block of approximately the same color.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1820.79834988826 1472.1569287121433"
-#!   TOP_LEFT="1820.79834988826 1472.1569287121433"
-#!   BOTTOM_RIGHT="2250.79834988826 1471.1569287121433"
-#!   BOUNDING_RECT="1820.79834988826 1472.1569287121433 430 1"
+#!   POSITION="1955.1746936516993 1472.1569287121433"
+#!   TOP_LEFT="1955.1746936516993 1472.1569287121433"
+#!   BOTTOM_RIGHT="2385.1746936516993 1471.1569287121433"
+#!   BOUNDING_RECT="1955.1746936516993 1472.1569287121433 430 1"
 #!   ORDER="500000000000107"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -1012,10 +1012,10 @@
 #! <COMMENT
 #!   IDENTIFIER="60"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Since everything has been scaled, need to recalculate the lowest z-value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1074.9418267396954 1605.4329033766528"
-#!   TOP_LEFT="1074.9418267396954 1605.4329033766528"
-#!   BOTTOM_RIGHT="1504.9418267396954 1604.4329033766528"
-#!   BOUNDING_RECT="1074.9418267396954 1605.4329033766528 430 1"
+#!   POSITION="1140.0835894073225 724.17409078852688"
+#!   TOP_LEFT="1140.0835894073225 724.17409078852688"
+#!   BOTTOM_RIGHT="1570.0835894073225 723.17409078852688"
+#!   BOUNDING_RECT="1140.0835894073225 724.17409078852688 430 1"
 #!   ORDER="500000000000112"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -1023,6 +1023,36 @@
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
 #!   SIZE_POLICY="10"
 #!   ANCHORED_NODE="57"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="77"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Round points in the point cloud to have integer coordinates, as Minecraft does not have decimal coordinates. These data types are the ones used by the Minecraft writer. Note that casting is done after scaling to prevent rounding mishaps.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="1048.9580581520099 1635.184215889778"
+#!   TOP_LEFT="1048.9580581520099 1635.184215889778"
+#!   BOTTOM_RIGHT="1840.6434064340642 1273.9309033566526"
+#!   BOUNDING_RECT="1048.9580581520099 1635.184215889778 791.68534828205429 361.25331253312532"
+#!   ORDER="500000000000115"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="62"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="83"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;still whines about having to cast from Real64, despite the fact that I have confirmed the point cloud components are the proper data types. Probably just a heisenbug involving data caching or something dumb like that.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2637.851899352328 811.67496579727697"
+#!   TOP_LEFT="2637.851899352328 811.67496579727697"
+#!   BOTTOM_RIGHT="3395.851899352328 810.67496579727697"
+#!   BOUNDING_RECT="2637.851899352328 811.67496579727697 758 1"
+#!   ORDER="500000000000120"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
 #! />
 #! </COMMENTS>
 #! <CONSTANTS>
@@ -1046,11 +1076,11 @@
 #!   IDENTIFIER="68"
 #!   NAME="Set block type"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="1769.2688126881271 1757.5611846594652"
+#!   TOP_LEFT="1903.6451564515664 1757.5611846594652"
 #!   ORDER="500000000000085"
 #!   PALETTE_COLOR="Color1"
-#!   BOTTOM_RIGHT="2387.2688126881271 -987.50987509875085"
-#!   BOUNDING_RECT="1769.2688126881271 1757.5611846594652 618 2745.0710597582161"
+#!   BOTTOM_RIGHT="2521.6451564515664 -987.50987509875085"
+#!   BOUNDING_RECT="1903.6451564515664 1757.5611846594652 618 2745.0710597582161"
 #!   STICKY="true"
 #!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
 #!   CONTENTS="85 82 "
@@ -1102,28 +1132,28 @@
 #!   IDENTIFIER="73"
 #!   NAME="perform shifting"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="982.74792271732258 1757.5611846594652"
+#!   TOP_LEFT="998.37307896888524 1757.5611846594652"
 #!   ORDER="500000000000093"
 #!   PALETTE_COLOR="Color5"
-#!   BOTTOM_RIGHT="1732.7479227173226 -1006.260062600626"
-#!   BOUNDING_RECT="982.74792271732258 1757.5611846594652 750 2763.8212472600912"
+#!   BOTTOM_RIGHT="1896.8939689396893 -1006.260062600626"
+#!   BOUNDING_RECT="998.37307896888524 1757.5611846594652 898.52088997080409 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,1"
-#!   CONTENTS="28 60 57 35 "
+#!   CONTENTS="58 28 77 60 57 35 62 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
 #!   IDENTIFIER="74"
 #!   NAME="Create the world"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="2408.357916912501 1757.5611846594652"
+#!   TOP_LEFT="2555.2343856771881 1757.5611846594652"
 #!   ORDER="500000000000094"
 #!   PALETTE_COLOR="Reader/Writer"
-#!   BOTTOM_RIGHT="3308.3165883742176 -975.00975009750118"
-#!   BOUNDING_RECT="2408.357916912501 1757.5611846594652 899.95867146171668 2732.5709347569664"
+#!   BOTTOM_RIGHT="3455.1930571389048 -975.00975009750118"
+#!   BOUNDING_RECT="2555.2343856771881 1757.5611846594652 899.95867146171668 2732.5709347569664"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="17 5 24 "
+#!   CONTENTS="17 5 24 83 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -1268,8 +1298,8 @@
 #!   IDENTIFIER="28"
 #!   TYPE="Offsetter"
 #!   VERSION="1"
-#!   POSITION="1156.2083706551348 676.71939290821524"
-#!   BOUNDING_RECT="1156.2083706551348 676.71939290821524 454 71"
+#!   POSITION="1178.0835894073225 -270.16507593647316"
+#!   BOUNDING_RECT="1178.0835894073225 -270.16507593647316 454 71"
 #!   ORDER="500000000000051"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1623,8 +1653,8 @@
 #!   IDENTIFIER="82"
 #!   TYPE="PointCloudExpressionEvaluator"
 #!   VERSION="3"
-#!   POSITION="1858.79834988826 988.40274117026797"
-#!   BOUNDING_RECT="1858.79834988826 988.40274117026797 430 71"
+#!   POSITION="1993.1746936516993 988.40274117026797"
+#!   BOUNDING_RECT="1993.1746936516993 988.40274117026797 430 71"
 #!   ORDER="500000000000106"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1677,8 +1707,8 @@
 #!   IDENTIFIER="57"
 #!   TYPE="PointCloudPropertyExtractor"
 #!   VERSION="3"
-#!   POSITION="1112.9418267396954 1340.4309033566526"
-#!   BOUNDING_RECT="1112.9418267396954 1340.4309033566526 430 71"
+#!   POSITION="1178.0835894073225 459.17209076852669"
+#!   BOUNDING_RECT="1178.0835894073225 459.17209076852669 430 71"
 #!   ORDER="500000000000111"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1729,6 +1759,60 @@
 #!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="recalculateMinZ"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="62"
+#!   TYPE="PointCloudComponentTypeCoercer"
+#!   VERSION="1"
+#!   POSITION="1140.0835894073225 1136.686190195235"
+#!   BOUNDING_RECT="1140.0835894073225 1136.686190195235 430 71"
+#!   ORDER="500000000000114"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE" PARM_VALUE="x,Int32,BOUNDEDCAST,ROUND,y,Int32,BOUNDEDCAST,ROUND,z,UInt8,BOUNDEDCAST,FLOOR"/>
+#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="castCoordsToInt"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -1795,7 +1879,7 @@
 #! <FEAT_LINK
 #!   IDENTIFIER="59"
 #!   SOURCE_NODE="31"
-#!   TARGET_NODE="57"
+#!   TARGET_NODE="62"
 #!   SOURCE_PORT_DESC="fo 0 SCALED"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
@@ -1928,6 +2012,21 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="66"
+#!   SOURCE_NODE="62"
+#!   TARGET_NODE="57"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="80"
 #!   SOURCE_NODE="65"
 #!   TARGET_NODE="49"
@@ -1972,7 +2071,7 @@ FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
 DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
 GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
-DEFAULT_MACRO worldName shiftAfterScaling
+DEFAULT_MACRO worldName round
 GUI STRING worldName Enter the name of the world to save this data as:
 DEFAULT_MACRO worldSize 64
 GUI RANGE_SLIDER worldSize "RANGE:_0,]" Enter world size to scale to (positive integer):
@@ -2263,11 +2362,14 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler    INPUT  FEATURE_TYPE Scaler_Ex
 FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Scaler_Scaled       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_PointCloudScaler    INPUT FEATURE_TYPE Scaler_Scaled    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Scaler_SCALED       @TransformPointCloud(SCALE,)    OUTPUT FAILED FEATURE_TYPE Scaler_SCALED
 # -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME castCoordsToInt    INPUT  FEATURE_TYPE Scaler_SCALED    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @PointCloudInterpretation(REJECTABLE,CONVERT,x,Int32,BOUNDEDCAST,ROUND,y,Int32,BOUNDEDCAST,ROUND,z,UInt8,BOUNDEDCAST,FLOOR)
+FACTORY_DEF * TestFactory    FACTORY_NAME castCoordsToInt_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE castCoordsToInt_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+# -------------------------------------------------------------------------
 DEFAULT_MACRO recalculateMinZ_EXISTENCE_LIST
 DEFAULT_MACRO recalculateMinZ_PROPERTIES_LIST
 DEFAULT_MACRO recalculateMinZ_MINMAX_LIST
 INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO recalculateMinZ_${listName}_LIST \"$lists($listName)\"";    }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME recalculateMinZ    INPUT  FEATURE_TYPE Scaler_SCALED    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(recalculateMinZ_EXISTENCE_LIST),$(recalculateMinZ_PROPERTIES_LIST),$(recalculateMinZ_MINMAX_LIST),DoNotUpdateExtents)
+FACTORY_DEF * TeeFactory    FACTORY_NAME recalculateMinZ    INPUT  FEATURE_TYPE castCoordsToInt_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(recalculateMinZ_EXISTENCE_LIST),$(recalculateMinZ_PROPERTIES_LIST),$(recalculateMinZ_MINMAX_LIST),DoNotUpdateExtents)
 FACTORY_DEF * TestFactory    FACTORY_NAME recalculateMinZ_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE recalculateMinZ_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 # -------------------------------------------------------------------------
 INCLUDE [    if { {CARTESIAN} == {CARTESIAN} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } elseif { {CARTESIAN} == {POLAR} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>")};    } elseif { {CARTESIAN} == {SPHERICAL} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>","<Unused>")};    } else {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } ]
