@@ -1,0 +1,1957 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\revitNativeToPointCloudXYZ.fmw"
+#              --SourceDataset_REVITNATIVE "C:\Users\Matt\Documents\FME Projects\Converter\DESGN100_Sample.rvt"
+#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
+#              --file_name "revitTest"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="2715.75 1787"
+#!   DOC_TOP_LEFT="-132 -2022"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20200"
+#!   FME_DOCUMENT_GUID="be997ec9-a87c-4a59-9961-630392a05406"
+#!   FME_DOCUMENT_PRIORGUID="24028cbd-4f9a-4f5d-a93f-3a07afe3689b,c5702db2-bbc3-4bac-bd8c-4e1c6e0a7349"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
+#!   LAST_SAVE_DATE="2020-03-31T08:44:11"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-775.008 -203.127"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="REVITNATIVE"
+#!   DATASET="$(SourceDataset_REVITNATIVE)"
+#!   KEYWORD="REVITNATIVE_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="multi_reader_type string(50) fme_primary_axis float64 multi_reader_id int32 fme_secondary_axis float64 fme_feature_type string(50) fme_color string(50) fme_basename string(50) fme_sweep_angle float64 fme_dataset string(50) fme_text_size float64 multi_reader_keyword string(50) fme_rotation float64 multi_reader_full_id int32 fme_type string(50) fme_geometry string(50) fme_fill_color string(50) fme_text_string string(50) fme_start_angle float64"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="revit native file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Revit Native File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Revit Project (RVT) or Template (RTE) file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify the Revit Project (RVT) file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="POINTCLOUDXYZ"
+#!   DATASET="$(DestDataset_POINTCLOUDXYZ)"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="32"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="pointcloudxyz_type char(32) fme_type char(50) fme_basename char(50) fme_fill_color char(50) fme_primary_axis number(31,15) fme_color char(50) fme_secondary_axis number(31,15) fme_text_size number(31,15) fme_start_angle number(31,15) fme_feature_type char(50) fme_dataset char(50) fme_sweep_angle number(31,15) fme_geometry char(50) fme_rotation number(31,15) fme_text_string char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION=""
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="POINTCLOUDXYZ_IN_ENCODING POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS POINTCLOUDXYZ_OUT_ENCODING POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM POINTCLOUDXYZ_OUT_END_OF_LINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="xyz file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Point Cloud File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="text/csv"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Point Cloud XYZ file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the Point Cloud XYZ file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="float64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_feature_table"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="SOURCE_GEOMTYPE"
+#!   FORMAT="REVITNATIVE"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="pointcloudxyz_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Metadata.FileInformation"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="2"
+#!   FEAT_GEOMTYPE="fme_no_geom"
+#!   POSITION="-87 -1665"
+#!   BOUNDING_RECT="-87 -1665 620.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DocVer" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DocUpdate" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AuthorUsername" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedBy" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CentralModelPath" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsCentralModel" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsCreatedLocally" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 1" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 2" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Author" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.BuildingName" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OrganizationDescription" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OrganizationName" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ClientName" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectAddress" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectIssueDate" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectName" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectNumber" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectStatus" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Metadata.ViewInformation"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="3"
+#!   FEAT_GEOMTYPE="fme_no_geom"
+#!   POSITION="-111 -1808"
+#!   BOUNDING_RECT="-111 -1808 644.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DetailLevel" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsTemplateView" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="char(36)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Orientation" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Scale" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Template" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Type" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewDepth.Level" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewDepth.Offset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeBottom.Level" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeBottom.Offset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeCutPlane.Level" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeCutPlane.Offset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeTop.Level" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeTop.Offset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="SurveyPoint"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="4"
+#!   FEAT_GEOMTYPE="fme_point"
+#!   POSITION="79.100000000000023 -1951"
+#!   BOUNDING_RECT="79.100000000000023 -1951 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Roofs"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="5"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="23.000000000000114 -950"
+#!   BOUNDING_RECT="23.000000000000114 -950 510.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseOffsetFromLevel" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.CutoffOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.FasciaDepth" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.MaximumRidgeHeight" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RafterCut" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RafterorTruss" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(17)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Doors"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="6"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="20 -235"
+#!   BOUNDING_RECT="20 -235 513.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.AnalyticConstruction" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.ConstructionTypeId" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.Function" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.WallClosure" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Height" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Thickness" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionExt" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionInt" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimWidth" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Width" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostFeatureType" ATTR_TYPE="char(19)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassNumber" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassTitle" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.DoorMaterial" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.FrameMaterial" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Windows"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="7"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="-36 -1518.8749687496872"
+#!   BOUNDING_RECT="-36 -1518.8749687496872 569.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.AnalyticConstruction" ATTR_TYPE="char(32)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.ConstructionTypeId" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.WallClosure" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.DefaultSillHeight" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Height" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Width" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.WindowInset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostFeatureType" ATTR_TYPE="char(19)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Mark" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassNumber" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassTitle" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.SashMaterial" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Walls"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="8"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="30.000000000000114 -1379"
+#!   BOUNDING_RECT="30.000000000000114 -1379 503.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseExtensionDistance" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.TopExtensionDistance" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.TopOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.UnconnectedHeight" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_BASE_OFFSET_COMPUTED" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_HEIGHT_PARAM" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.GenericModels"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="9"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="-132 -378"
+#!   BOUNDING_RECT="-132 -378 665.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.DefaultElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Height" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Width" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.BaseMaterial" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.FieldMaterial" ATTR_TYPE="char(12)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.Lettering" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Text.SignText" ATTR_TYPE="char(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Ramps"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="10"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="3 -807"
+#!   BOUNDING_RECT="3 -807 530.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.TopOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Width" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Downarrow" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Downlabel" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Downtext" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.ShowUparrowinallviews" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Uparrow" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Uplabel" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Uptext" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Planting"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="11"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="-15 -664"
+#!   BOUNDING_RECT="-15 -664 548.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.DefaultElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Height" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassNumber" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassTitle" ATTR_TYPE="char(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.RenderAppearance" ATTR_TYPE="char(39)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.RenderAppearanceProperties" ATTR_TYPE="char(2198)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.TypeComments" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Lines"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="12"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="33.000000000000114 -521"
+#!   BOUNDING_RECT="33.000000000000114 -521 500.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Site"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="13"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="58.000000000000114 -1093"
+#!   BOUNDING_RECT="58.000000000000114 -1093 475.09999999999997 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Architectural.Topography"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="14"
+#!   FEAT_GEOMTYPE="fme_surface"
+#!   POSITION="-88 -1236"
+#!   BOUNDING_RECT="-88 -1236 621.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="REVITNATIVE_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="false"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="number(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="number(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(11)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.Material" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(40)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="File1"
+#!   FEATURE_TYPE_NAME="$(file_name)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="29"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#!   POSITION="1915.6451564515646 -694.37959379593804"
+#!   BOUNDING_RECT="1915.6451564515646 -694.37959379593804 668.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="REVITNATIVE_1"
+#!   OVERRIDE="-REVITNATIVE_1_DATASET"
+#!   DATASET="REVITNATIVE_1/DESGN100_Sample.rvt"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="POINTCLOUDXYZ_1"
+#!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
+#!   DATASET="POINTCLOUDXYZ_1/converted"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_REVITNATIVE RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Revit Project File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)DESGN100_Sample.rvt"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR file_name Enter file name to export as:"
+#!   DEFAULT_VALUE="revitTest"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="15"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="1015.6351563515636 -612.50612506125071"
+#!   BOUNDING_RECT="1015.6351563515636 -612.50612506125071 454 71"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="DetailLevel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Discipline" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IsTemplateView" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Orientation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Scale" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Template" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Offset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ObjectId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelElevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelRoomOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BaseCategory" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Category" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedPhase" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Height" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="ElementType" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Family" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="FamilyType" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Function" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassTitle" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="InExteriorShell" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="WorksetName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.DefaultElevation" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BaseMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FieldMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Lettering" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Text.SignText" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.CutoffOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.FasciaDepth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.MaximumRidgeHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterCut" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterorTruss" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DocVer" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="DocUpdate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AuthorUsername" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedBy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="CentralModelPath" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IsCentralModel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IsCreatedLocally" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 1" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Author" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.BuildingName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationDescription" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ClientName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectAddress" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectIssueDate" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectName" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectNumber" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectStatus" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearanceProperties" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.TypeComments" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.UnconnectedHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_BASE_OFFSET_COMPUTED" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_HEIGHT_PARAM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="DetailLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Discipline" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsTemplateView" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Orientation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Scale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Template" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ObjectId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelRoomOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseCategory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Category" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedPhase" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ElementType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Family" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="FamilyType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassTitle" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="InExteriorShell" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WorksetName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.DefaultElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BaseMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FieldMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Lettering" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Text.SignText" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.CutoffOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.FasciaDepth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.MaximumRidgeHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterCut" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterorTruss" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DocVer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DocUpdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AuthorUsername" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedBy" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CentralModelPath" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsCentralModel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsCreatedLocally" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Author" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.BuildingName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ClientName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectAddress" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectIssueDate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectStatus" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearanceProperties" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.TypeComments" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.UnconnectedHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_BASE_OFFSET_COMPUTED" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_HEIGHT_PARAM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="26"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="27"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="28"
+#!   SOURCE_NODE="4"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="21"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="16"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="25"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="24"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="17"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="20"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="19"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="18"
+#!   SOURCE_NODE="12"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="22"
+#!   SOURCE_NODE="13"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="23"
+#!   SOURCE_NODE="14"
+#!   TARGET_NODE="15"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="30"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE SourceDataset_REVITNATIVE_1,REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1,REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1,REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1,REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1,REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1,REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
+DEFAULT_MACRO SourceDataset_REVITNATIVE $(FME_MF_DIR)DESGN100_Sample.rvt
+GUI MULTIFILE SourceDataset_REVITNATIVE RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Revit Project File(s):
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
+GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
+DEFAULT_MACRO file_name revitTest
+GUI STRING file_name Enter file name to export as:
+INCLUDE [ if {{$(SourceDataset_REVITNATIVE)} == {}} { puts_real {Parameter 'SourceDataset_REVITNATIVE' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(file_name)} == {}} { puts_real {Parameter 'file_name' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} REVITNATIVE
+MULTI_READER_KEYWORD{0} REVITNATIVE_1
+MULTI_READER_GEN_DIRECTIVES{0} COORD_SYS_MODE,Project,ONLY_READ_EXTERIOR_SHELL,No,USE_SEARCH_ENVELOPE,NO,_MERGE_SCHEMAS,YES,DETAIL_LEVEL_SETTING,Use_view_setting,GEOM_HANDLING_MODE,Surface,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,READ_FILE_AND_VIEW_METADATA,Yes,PERFORM_OCCLUSION,<lt>Unused<gt>,SEARCH_ENVELOPE_MAXY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINX,0,REVITNATIVE_EXPOSE_FORMAT_ATTRS,,CREATE_FEATURE_TABLES_FROM_DATA,Yes,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINY,0,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SELECTED_VIEW,<lt>Unused<gt>,READ_SELECTED_VIEW,NO
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} POINTCLOUDXYZ
+MULTI_WRITER_KEYWORD{0} POINTCLOUDXYZ_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "REVITNATIVE_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER REVITNATIVE REVITNATIVE_1
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_REVITNATIVE_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER REVITNATIVE REVITNATIVE_1
+DEFAULT_MACRO SourceDataset_REVITNATIVE_1 $(SourceDataset_REVITNATIVE)
+GUI MULTIFILE SourceDataset_REVITNATIVE_1 RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|All_Files|* Revit Project File(s):
+# =====================================================================
+# Provide some control over what attributes have the user-selected
+# encoding applied. Normally all attributes are updated after being
+# read, but the following lines exclude from this treatment all
+# attributes whose names start with fme_ or revitnative_.
+REVITNATIVE_1_UNENCODED_ATTR_PREFIX fme_ revitnative_
+DEFAULT_MACRO REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1 
+GUI OPTIONAL DISCLOSUREGROUP REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1 REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1%REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1%REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1%REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1%REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1 Reader Parameters
+#=============================================================================
+# Read only the exterior shell
+DEFAULT_MACRO REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1 No
+REVITNATIVE_1_ONLY_READ_EXTERIOR_SHELL "$(REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1)"
+GUI LOOKUP_CHOICE REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1 All<space>Elements,No%Exterior<space>Shell<space>Only,Yes Read:
+#=============================================================================
+# Geometry handling modes
+DEFAULT_MACRO REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1 Surface
+REVITNATIVE_1_GEOM_HANDLING_MODE "$(REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1)"
+GUI ACTIVECHOICE_LOOKUP REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1 Surfaces,Surface,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,++REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1+%Wireframes,Wireframe,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,++REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1+%Floor<space>Plans,Floorplan,++REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1+%Non-spatial,Nonspatial,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,++REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1+ Read Geometry As:
+#=============================================================================
+# Specify a detail level to read elements in
+DEFAULT_MACRO REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1 Use_view_setting
+REVITNATIVE_1_DETAIL_LEVEL_SETTING "$(REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1)"
+GUI LOOKUP_CHOICE REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1 Respect<space>Original<space>View<space>Setting,Use_view_setting%Fine,Fine%Medium,Medium%Coarse,Coarse Geometry Detail Level:
+#=============================================================================
+# Read and project into coordinate system
+DEFAULT_MACRO REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1 Project
+REVITNATIVE_1_COORD_SYS_MODE "$(REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1)"
+GUI LOOKUP_CHOICE REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1 Project,Project%Georeferenced,Georeferenced Revit Coordinate System to Read:
+# ============================================================================
+# Give the user the ability to turn occlusion on or off
+DEFAULT_MACRO REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1 <Unused>
+REVITNATIVE_1_PERFORM_OCCLUSION "$(REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1)"
+GUI LOOKUP_CHOICE REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1 Hidden<space>Line,yes%Wireframe,no Floorplan Render Mode
+# Should we read only a certain view?
+DEFAULT_MACRO REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1 NO
+REVITNATIVE_1_READ_SELECTED_VIEW "$(REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1)"
+GUI ACTIVEDISCLOSUREGROUP REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1 REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1 Specify View to Read
+# Indicate which view we will read
+DEFAULT_MACRO REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1 <Unused>
+REVITNATIVE_1_SELECTED_VIEW "$(REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1)"
+GUI DYNAMIC_SINGLE_SELECT_ENCODED REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1 $[SourceDataset_REVITNATIVE_1],READ_VIEW_NAMES,VIEW_NAMES,GEOM_HANDLING_MODE,$[REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1],_FORMAT_OVERRIDE_,REVITNATIVE View
+# Include this file in source setting section to add external search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+DEFAULT_MACRO REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1 NO
+REVITNATIVE_1_USE_SEARCH_ENVELOPE "$(REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1)"
+GUI ACTIVEDISCLOSUREGROUP REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1 REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1%REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1%REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1%REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1%REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1%REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1%REVITNATIVE_IN_SEARCH_METHOD%REVITNATIVE_IN_SEARCH_METHOD_FILTER%REVITNATIVE_IN_SEARCH_ORDER%REVITNATIVE_IN_SEARCH_FEATURE%REVITNATIVE_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+# ===========================================================================
+GUI LOOKUP REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1 <Unused>,0 
+DEFAULT_MACRO REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1 0
+REVITNATIVE_1_SEARCH_ENVELOPE "$(REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1)"
+GUI OPTIONAL FLOAT REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1 Minimum X:
+# ===========================================================================
+GUI LOOKUP REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1 <Unused>,0 
+DEFAULT_MACRO REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1 0
+REVITNATIVE_1_SEARCH_ENVELOPE "$(REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1)"
+GUI OPTIONAL FLOAT REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1 Minimum Y:
+# ===========================================================================
+GUI LOOKUP REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1 <Unused>,0 
+DEFAULT_MACRO REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1 0
+REVITNATIVE_1_SEARCH_ENVELOPE "$(REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1)"
+GUI OPTIONAL FLOAT REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1 Maximum X:
+# ===========================================================================
+GUI LOOKUP REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1 <Unused>,0 
+DEFAULT_MACRO REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1 0
+REVITNATIVE_1_SEARCH_ENVELOPE "$(REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1)"
+GUI OPTIONAL FLOAT REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1 Maximum Y:
+# ===========================================================================
+GUI LOOKUP REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1 <Unused>, 
+DEFAULT_MACRO REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1 
+REVITNATIVE_1_SEARCH_ENVELOPE "$(REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1)"
+GUI OPTIONAL COORDSYS REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1 Search Envelope Coordinate System:
+# ===========================================================================
+# BUG18999: We now have a soft clip to fall back on like native spatial index
+# thus we are reintroducing the clip to envelop as an option for users.
+# Defualt to soft clip as per the existing database readers we are emulating
+GUI LOOKUP REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1 <Unused>,NO 
+DEFAULT_MACRO REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1 NO
+REVITNATIVE_1_CLIP_TO_ENVELOPE "$(REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1)"
+GUI OPTIONAL CHECKBOX REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1 YES%NO Clip to Search Envelope
+DEFAULT_MACRO REVITNATIVE_IN_EXPOSE_ATTRS_GROUP_REVITNATIVE_1 FME_DISCLOSURE_OPEN
+REVITNATIVE_1_EXPOSE_ATTRS_GROUP "$(REVITNATIVE_IN_EXPOSE_ATTRS_GROUP_REVITNATIVE_1)"
+DEFAULT_MACRO REVITNATIVE_IN_CREATE_FEATURE_TABLES_FROM_DATA_REVITNATIVE_1 Yes
+REVITNATIVE_1_CREATE_FEATURE_TABLES_FROM_DATA "$(REVITNATIVE_IN_CREATE_FEATURE_TABLES_FROM_DATA_REVITNATIVE_1)"
+DEFAULT_MACRO REVITNATIVE_IN_READ_FILE_AND_VIEW_METADATA_REVITNATIVE_1 Yes
+REVITNATIVE_1_READ_FILE_AND_VIEW_METADATA "$(REVITNATIVE_IN_READ_FILE_AND_VIEW_METADATA_REVITNATIVE_1)"
+# ===========================================================================
+DEFAULT_MACRO REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1 
+REVITNATIVE_1_NETWORK_AUTHENTICATION "$(REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1)"
+GUI OPTIONAL AUTHENTICATOR REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO REVITNATIVE_IN_ATTRIBUTE_READING_REVITNATIVE_1 ALL
+REVITNATIVE_1_ATTRIBUTE_READING "$(REVITNATIVE_IN_ATTRIBUTE_READING_REVITNATIVE_1)"
+# ============================================================================ 
+REVITNATIVE_1_GENERATE_FME_BUILD_NUM 20200
+REVITNATIVE_1_DATASET "$(SourceDataset_REVITNATIVE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+# ============================================================================
+# The following GUI line prompts for a folder where the
+# XYZ files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_POINTCLOUDXYZ_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ_1 $(DestDataset_POINTCLOUDXYZ)
+GUI DIRNAME DestDataset_POINTCLOUDXYZ_1 Destination Point Cloud XYZ Folder:
+# ============================================================================
+# The following choice determines the extension
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1 csv
+POINTCLOUDXYZ_1_EXTENSION "$(POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1)"
+GUI TEXT POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1 Extension:
+# ============================================================================
+# The following choice determines the separator
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1 space
+POINTCLOUDXYZ_1_SEPARATOR "$(POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1)"
+GUI STRING_OR_CHOICE POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1 ,%;%|%space%tab Separator Character:
+# ============================================================================
+# The following choice determines if field names should be output
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_INCLUDE_FIELD_NAME "$(POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1 yes%no Output Field Name on First Line:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 x,x,y,y,z,z,color_red,r,color_green,g,color_blue,b,intensity,a
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT "$(POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1)"
+GUI GUI_LINE_TABLE POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 NO_LABEL%COL_DELIM:,%ROW_DELIM:,%Component%"PC_COMPONENT_ENCODED comp x%y%z%*"%"Column name"%"STRING_ENCODED col_IDENTIFIER" Component mapping:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 Output File Parameters
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 Point Cloud Components To Output
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 Quote Settings
+# ============================================================================
+# The following choice determines whether to append to the destination file
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1 No
+POINTCLOUDXYZ_1_APPEND "$(POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1 Yes%No Append to File:
+# ============================================================================
+# The following choice determines if field names on the first row
+# should be quoted or not.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1 if_needed
+POINTCLOUDXYZ_1_QUOTE_FIELD_NAMES "$(POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1 yes%no%if_needed Quote Field Names:
+# ============================================================================
+# The following choice determines if field values should be quoted or not.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 if_needed
+POINTCLOUDXYZ_1_QUOTE_OUTPUT "$(POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 yes%no%if_needed Quote Output Values:
+# =====================================================================
+# Allows to set Line termination type
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_END_OF_LINE "$(POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHOICE POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 Windows%Unix%Macintosh Line Termination:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 Advanced
+# ============================================================================
+# PR 15909
+# The following choice determines if the byte order mark should be written
+# when using UTF-8 encoding. By default BOM is written, so _WRITE_UTF8_BOM should be yes.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_WRITE_UTF8_BOM "$(POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1 yes%no Write UTF-8 Byte Order Mark
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1 UTF-8
+POINTCLOUDXYZ_1_ENCODING "$(POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1)"
+GUI STRING_OR_ENCODING POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1 fme-system%* Character Encoding:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_DESTINATION_DATASETTYPE_VALIDATION_POINTCLOUDXYZ_1 Yes
+POINTCLOUDXYZ_1_DESTINATION_DATASETTYPE_VALIDATION "$(POINTCLOUDXYZ_OUT_DESTINATION_DATASETTYPE_VALIDATION_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_COORDINATE_SYSTEM_GRANULARITY_POINTCLOUDXYZ_1 FEATURE
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM_GRANULARITY "$(POINTCLOUDXYZ_OUT_COORDINATE_SYSTEM_GRANULARITY_POINTCLOUDXYZ_1)"
+# ============================================================================ 
+POINTCLOUDXYZ_1_GENERATE_FME_BUILD_NUM 20200
+POINTCLOUDXYZ_1_DATASET "$(DestDataset_POINTCLOUDXYZ_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)revitNativeToPointCloudXYZ.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_REVITNATIVE_1 REVITNATIVE_1
+DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
+# -------------------------------------------------------------------------
+
+REVITNATIVE_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME revitNativeToPointCloudXYZ
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Site   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(4)   BuildingLevel                char(7)   Category                     char(4)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(15)   FamilyType                   char(15)   Function                     char(8)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Topography   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(10)   Category                     char(10)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(11)   Family                       char(0)   FamilyType                   char(0)   InExteriorShell              char(3)   MaterialsandFinishes.Material char(21)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Ramps   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   Category                     char(5)   Constraints.BaseOffset       number(31,15)   Constraints.TopOffset        number(31,15)   CreatedPhase                 char(16)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(4)   Family                       char(0)   FamilyType                   char(6)   Graphics.Downarrow           boolean   Graphics.Downlabel           boolean   Graphics.Downtext            char(2)   Graphics.ShowUparrowinallviews boolean   Graphics.Uparrow             boolean   Graphics.Uplabel             boolean   Graphics.Uptext              char(0)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Lines   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   Category                     char(5)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(9)   Family                       char(0)   FamilyType                   char(0)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Metadata.ViewInformation   DetailLevel                  char(6)   Discipline                   char(13)   IsTemplateView               boolean   Name                         char(36)   Orientation                  char(13)   Scale                        char(7)   Template                     char(4)   Type                         char(16)   ViewDepth.Level              char(21)   ViewDepth.Offset             number(31,15)   ViewRangeBottom.Level        char(21)   ViewRangeBottom.Offset       number(31,15)   ViewRangeCutPlane.Level      char(21)   ViewRangeCutPlane.Offset     number(31,15)   ViewRangeTop.Level           char(21)   ViewRangeTop.Offset          number(31,15)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Windows   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(32)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(7)   BuildingLevel                char(7)   Category                     char(7)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.DefaultSillHeight number(31,15)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Dimensions.WindowInset       number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(5)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(7)   IdentityData.Mark            char(1)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(13)   InExteriorShell              char(3)   MaterialsandFinishes.GlassPaneMaterial char(5)   MaterialsandFinishes.SashMaterial char(4)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Walls   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Constraints.BaseExtensionDistance number(31,15)   Constraints.BaseOffset       number(31,15)   Constraints.TopExtensionDistance number(31,15)   Constraints.TopOffset        number(31,15)   Constraints.UnconnectedHeight number(31,15)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(5)   Family                       char(10)   FamilyType                   char(18)   Function                     char(8)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   InExteriorShell              char(3)   Other.WALL_BASE_OFFSET_COMPUTED number(31,15)   Other.WALL_HEIGHT_PARAM      number(31,15)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF SurveyPoint
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Planting   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(8)   BuildingLevel                char(7)   Category                     char(8)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(20)   FamilyType                   char(22)   Function                     char(8)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(8)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(15)   IdentityData.RenderAppearance char(39)   IdentityData.RenderAppearanceProperties char(2198)   IdentityData.TypeComments    char(16)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Metadata.FileInformation   DocVer                       char(18)   DocUpdate                    char(14)   AuthorUsername               char(0)   CreatedBy                    char(14)   CentralModelPath             char(0)   IsCentralModel               boolean   IsCreatedLocally             boolean   "LevelElevationInfo.Level 1" number(31,15)   "LevelElevationInfo.Level 2" number(31,15)   IdentityData.Author          char(0)   IdentityData.BuildingName    char(0)   IdentityData.OrganizationDescription char(0)   IdentityData.OrganizationName char(0)   Other.ClientName             char(5)   Other.ProjectAddress         char(18)   Other.ProjectIssueDate       char(10)   Other.ProjectName            char(12)   Other.ProjectNumber          char(14)   Other.ProjectStatus          char(14)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Roofs   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Constraints.BaseOffsetFromLevel number(31,15)   Constraints.CutoffOffset     number(31,15)   Construction.FasciaDepth     number(31,15)   Construction.MaximumRidgeHeight number(31,15)   Construction.RafterCut       number(10,0)   Construction.RafterorTruss   number(10,0)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(11)   Family                       char(10)   FamilyType                   char(13)   Function                     char(8)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(17)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.GenericModels   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(14)   BuildingLevel                char(7)   Category                     char(14)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(13)   FamilyType                   char(13)   Function                     char(8)   InExteriorShell              char(3)   MaterialsandFinishes.BaseMaterial char(29)   MaterialsandFinishes.FieldMaterial char(12)   MaterialsandFinishes.Lettering char(13)   Text.SignText                char(9)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Doors   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(5)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Construction.Function        number(10,0)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Thickness         number(31,15)   Dimensions.TrimProjectionExt number(31,15)   Dimensions.TrimProjectionInt number(31,15)   Dimensions.TrimWidth         number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(12)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   IdentityData.OmniclassNumber char(11)   IdentityData.OmniclassTitle  char(5)   InExteriorShell              char(3)   MaterialsandFinishes.DoorMaterial char(12)   MaterialsandFinishes.FrameMaterial char(12)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_REVITNATIVE_1)   INPUT FEATURE_TYPE *    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Site multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Site ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Topography multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Topography ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Ramps multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Ramps ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Lines multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Lines ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.ViewInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.ViewInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Windows multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Windows ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Walls multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Walls ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::SurveyPoint multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::SurveyPoint ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Planting multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Planting ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.FileInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.FileInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Roofs multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Roofs ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.GenericModels multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.GenericModels ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Doors multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Doors ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Site EXACT Architectural.Site
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Topography EXACT Architectural.Topography
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Ramps EXACT Architectural.Ramps
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Lines EXACT Architectural.Lines
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Metadata.ViewInformation EXACT Metadata.ViewInformation
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Windows EXACT Architectural.Windows
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Walls EXACT Architectural.Walls
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::SurveyPoint EXACT SurveyPoint
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Planting EXACT Architectural.Planting
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Metadata.FileInformation EXACT Metadata.FileInformation
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Roofs EXACT Architectural.Roofs
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.GenericModels EXACT Architectural.GenericModels
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Doors EXACT Architectural.Doors
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Doors(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Doors    OUTPUT FEATURE_TYPE Architectural.Doors_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.GenericModels(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.GenericModels    OUTPUT FEATURE_TYPE Architectural.GenericModels_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Lines(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Lines    OUTPUT FEATURE_TYPE Architectural.Lines_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Planting(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Planting    OUTPUT FEATURE_TYPE Architectural.Planting_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Ramps(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Ramps    OUTPUT FEATURE_TYPE Architectural.Ramps_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Roofs(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Roofs    OUTPUT FEATURE_TYPE Architectural.Roofs_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Site(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Site    OUTPUT FEATURE_TYPE Architectural.Site_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Topography(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Topography    OUTPUT FEATURE_TYPE Architectural.Topography_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Walls(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Walls    OUTPUT FEATURE_TYPE Architectural.Walls_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Windows(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Windows    OUTPUT FEATURE_TYPE Architectural.Windows_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.FileInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.FileInformation    OUTPUT FEATURE_TYPE Metadata.FileInformation_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.ViewInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.ViewInformation    OUTPUT FEATURE_TYPE Metadata.ViewInformation_REVITNATIVE_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "SurveyPoint(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE SurveyPoint    OUTPUT FEATURE_TYPE SurveyPoint_REVITNATIVE_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE Architectural.Doors_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.GenericModels_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Lines_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Planting_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Ramps_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Roofs_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Site_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Topography_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Walls_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Windows_REVITNATIVE_1    INPUT  FEATURE_TYPE Metadata.FileInformation_REVITNATIVE_1    INPUT  FEATURE_TYPE Metadata.ViewInformation_REVITNATIVE_1    INPUT  FEATURE_TYPE SurveyPoint_REVITNATIVE_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCombiner_<Rejected> INPUT FEATURE_TYPE PointCloudCombiner_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCombiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(file_name$encode$encode)<comma>File1<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+POINTCLOUDXYZ_1_DEF File1
