@@ -2,8 +2,9 @@
 #! <WORKSPACE
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\objToPointCloudXYZ.fmw"
-#              --SourceDataset_OBJ "C:\Users\Matt\Documents\FME Projects\Converter\aerospaceMuseumAirplane.obj"
 #              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
+#              --writtenFileName "dsgn100Sample"
+#              --SourceDataset_OBJ_3 "C:\Users\Matt\Documents\FME Projects\Converter\objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -12,14 +13,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="2326.34 430.752"
-#!   DOC_TOP_LEFT="-22 -179.123"
+#!   DOC_EXTENTS="2600.6 446.377"
+#!   DOC_TOP_LEFT="-296.267 -179.123"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="660802e6-3f09-4f5f-a0e1-699e1e487861"
-#!   FME_DOCUMENT_PRIORGUID="163222b4-5235-43fa-bb6e-4d751d46cf0c,11214f71-68f0-434a-9c4b-878c37e925eb"
+#!   FME_DOCUMENT_GUID="07308cac-ff97-4765-ae86-51605f765d99"
+#!   FME_DOCUMENT_PRIORGUID="163222b4-5235-43fa-bb6e-4d751d46cf0c,11214f71-68f0-434a-9c4b-878c37e925eb,660802e6-3f09-4f5f-a0e1-699e1e487861,c0a47f8d-82f9-4947-a5d4-fb17de5270ba"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -28,7 +29,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-03-31T08:30:53"
+#!   LAST_SAVE_DATE="2020-03-31T12:56:21"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -47,7 +48,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-575.006 453.13"
+#!   VIEW_POSITION="-584.381 340.628"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -57,8 +58,8 @@
 #!   IS_SOURCE="true"
 #!   ROLE="READER"
 #!   FORMAT="OBJ"
-#!   DATASET="$(SourceDataset_OBJ)"
-#!   KEYWORD="OBJ_1"
+#!   DATASET="$(SourceDataset_OBJ_3)"
+#!   KEYWORD="OBJ_2"
 #!   MULTI_GEOM_ALLOWED="false"
 #!   ATTR_MAX_LENGTH="0"
 #!   ATTR_CASE="ANY"
@@ -66,7 +67,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="multi_reader_type string fme_secondary_axis string fme_sweep_angle string obj_type string fme_text_size string multi_reader_id string fme_fill_color string fme_color string fme_text_string string multi_reader_full_id string fme_basename string multi_reader_keyword string fme_type string fme_dataset string fme_feature_type string fme_start_angle string fme_geometry string fme_primary_axis string fme_rotation string"
+#!   EXPOSABLE_ATTRS="fme_dataset string fme_basename string obj_type string fme_color string fme_start_angle string fme_secondary_axis string fme_primary_axis string fme_type string fme_text_string string fme_text_size string fme_feature_type string multi_reader_keyword string fme_geometry string fme_fill_color string fme_sweep_angle string multi_reader_type string multi_reader_full_id string fme_rotation string multi_reader_id string"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -121,7 +122,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_text_string char(50) fme_dataset char(50) pointcloudxyz_type char(32) fme_geometry char(50) fme_sweep_angle number(31,15) fme_color char(50) fme_secondary_axis number(31,15) fme_feature_type char(50) fme_basename char(50) fme_text_size number(31,15) fme_fill_color char(50) fme_start_angle number(31,15) fme_primary_axis number(31,15) fme_rotation number(31,15) fme_type char(50)"
+#!   EXPOSABLE_ATTRS="fme_feature_type char(50) fme_primary_axis number(31,15) fme_sweep_angle number(31,15) fme_start_angle number(31,15) fme_basename char(50) fme_fill_color char(50) pointcloudxyz_type char(32) fme_text_size number(31,15) fme_text_string char(50) fme_geometry char(50) fme_type char(50) fme_dataset char(50) fme_rotation number(31,15) fme_color char(50) fme_secondary_axis number(31,15)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -635,35 +636,13 @@
 #! </GEOM_TYPES>
 #! <FEATURE_TYPES>
 #! <FEATURE_TYPE
-#!   IS_SOURCE="true"
-#!   NODE_NAME="aerospaceMuseumAirplane"
-#!   FEATURE_TYPE_NAME=""
-#!   FEATURE_TYPE_NAME_QUALIFIER=""
-#!   IS_EDITABLE="false"
-#!   IDENTIFIER="2"
-#!   FEAT_GEOMTYPE="obj_point obj_line obj_face obj_collection"
-#!   POSITION="20 11.877468774687742"
-#!   BOUNDING_RECT="20 11.877468774687742 648.10000000000002 71"
-#!   ORDER="500000000000000"
-#!   COLLAPSED="true"
-#!   KEYWORD="OBJ_1"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   HIDDEN_USER_ATTRS=""
-#!   MERGE_FILTER=""
-#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
-#!   MERGE_FILTER_CASE_SENSITIVE="false"
-#!   DYNAMIC_SCHEMA="false"
-#! >
-#! </FEATURE_TYPE>
-#! <FEATURE_TYPE
 #!   IS_SOURCE="false"
 #!   NODE_NAME="aerospaceMuseumAirplane"
-#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME="$(writtenFileName)"
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="5"
-#!   FEAT_GEOMTYPE="fme_no_map"
+#!   FEAT_GEOMTYPE="All"
 #!   POSITION="1656.2355623556232 -108.12253122531226"
 #!   BOUNDING_RECT="1656.2355623556232 -108.12253122531226 648.10000000000002 71"
 #!   ORDER="500000000000122"
@@ -674,13 +653,35 @@
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
 #! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="AnyConv.com__DESGN100_Sample - 3D View - {3D}"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="8"
+#!   FEAT_GEOMTYPE="obj_point obj_line obj_face obj_collection"
+#!   POSITION="-289.37809378093777 -31.872968729687301"
+#!   BOUNDING_RECT="-289.37809378093777 -31.872968729687301 1121.0999999999999 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="OBJ_2"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
 #! <READER_DATASETS>
 #! <DATASET
-#!   NAME="OBJ_1"
-#!   OVERRIDE="-OBJ_1_DATASET"
-#!   DATASET="OBJ_1/aerospaceMuseumAirplane.obj"
+#!   NAME="OBJ_2"
+#!   OVERRIDE="-OBJ_2_DATASET"
+#!   DATASET="OBJ_2/AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
@@ -693,13 +694,18 @@
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI MULTIFILE SourceDataset_OBJ OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)aerospaceMuseumAirplane.obj"
+#!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
+#!   GUI_LINE="GUI STRING_OR_ATTR writtenFileName enter a name for the written file:"
+#!   DEFAULT_VALUE="dsgn100Sample"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_OBJ_3 OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -707,17 +713,17 @@
 #! <COMMENT
 #!   IDENTIFIER="7"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Apparently, OBJ files don&apos;t contain color: we need an MTL file for that. Read more here: https://www.loc.gov/preservation/digital/formats/fdd/fdd000507.shtml &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="-22 251.62903129031289"
-#!   TOP_LEFT="-22 251.62903129031289"
-#!   BOTTOM_RIGHT="1106 250.62903129031289"
-#!   BOUNDING_RECT="-22 251.62903129031289 1128 1"
+#!   POSITION="-296.26738929889314 267.25418754187541"
+#!   TOP_LEFT="-296.26738929889314 267.25418754187541"
+#!   BOTTOM_RIGHT="831.73261070110686 266.25418754187541"
+#!   BOUNDING_RECT="-296.26738929889314 267.25418754187541 1128 1"
 #!   ORDER="500000000000124"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
 #!   CUSTOM_USER_COLOR="false"
 #!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
 #!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="2"
+#!   ANCHORED_NODE="8"
 #! />
 #! </COMMENTS>
 #! <CONSTANTS>
@@ -729,8 +735,8 @@
 #!   IDENTIFIER="3"
 #!   TYPE="PointCloudCombiner"
 #!   VERSION="6"
-#!   POSITION="890.63390633906329 11.877468774687742"
-#!   BOUNDING_RECT="890.63390633906329 11.877468774687742 454 71"
+#!   POSITION="978.13478134781371 -31.872968729687301"
+#!   BOUNDING_RECT="978.13478134781371 -31.872968729687301 454 71"
 #!   ORDER="500000000000121"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -762,8 +768,8 @@
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
-#!   IDENTIFIER="4"
-#!   SOURCE_NODE="2"
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="8"
 #!   TARGET_NODE="3"
 #!   SOURCE_PORT_DESC="-1"
 #!   TARGET_PORT_DESC="fi 0 "
@@ -803,19 +809,22 @@
 #! </WORKSPACE>
 
 FME_PYTHON_VERSION 37
-GUI IGNORE SourceDataset_OBJ_1,OBJ_IN_FME_GROUP_NAMED1_OBJ_1,OBJ_IN_MERGE_MESH_PARTS_OBJ_1,OBJ_IN_FME_GROUP_NAMED2_OBJ_1,OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1,OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1,OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1,OBJ_IN_NETWORK_AUTHENTICATION_OBJ_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
-DEFAULT_MACRO SourceDataset_OBJ $(FME_MF_DIR)aerospaceMuseumAirplane.obj
-GUI MULTIFILE SourceDataset_OBJ OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:
+GUI IGNORE SourceDataset_OBJ_2,OBJ_IN_FME_GROUP_NAMED1_OBJ_2,OBJ_IN_MERGE_MESH_PARTS_OBJ_2,OBJ_IN_FME_GROUP_NAMED2_OBJ_2,OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_2,OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_2,OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2,OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2,OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2,OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2,OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2,OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2,OBJ_IN_NETWORK_AUTHENTICATION_OBJ_2,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
 DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
 GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
-INCLUDE [ if {{$(SourceDataset_OBJ)} == {}} { puts_real {Parameter 'SourceDataset_OBJ' must be given a value.}; exit 1; }; ]
+DEFAULT_MACRO writtenFileName dsgn100Sample
+GUI STRING writtenFileName enter a name for the written file:
+DEFAULT_MACRO SourceDataset_OBJ_3 $(FME_MF_DIR)objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj
+GUI MULTIFILE SourceDataset_OBJ_3 OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:
 INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(writtenFileName)} == {}} { puts_real {Parameter 'writtenFileName' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_OBJ_3)} == {}} { puts_real {Parameter 'SourceDataset_OBJ_3' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
 MULTI_READER_TYPE{0} OBJ
-MULTI_READER_KEYWORD{0} OBJ_1
-MULTI_READER_GEN_DIRECTIVES{0} SEARCH_ENVELOPE_COORDINATE_SYSTEM,,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,CLIP_TO_ENVELOPE,NO,_MERGE_SCHEMAS,YES,SEARCH_ENVELOPE_MINY,0,VARIABLE_FEATURE_TYPES,yes,MOVE_TO_WORLD_COORDSYS,Yes,SEARCH_ENVELOPE_MAXX,0,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,MERGE_MESH_PARTS,No,OBJ_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_MAXY,0
+MULTI_READER_KEYWORD{0} OBJ_2
+MULTI_READER_GEN_DIRECTIVES{0} MOVE_TO_WORLD_COORDSYS,Yes,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,VARIABLE_FEATURE_TYPES,yes,SEARCH_ENVELOPE_MINX,0,MERGE_MESH_PARTS,No,SEARCH_ENVELOPE_MAXY,0,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINY,0,OBJ_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_MAXX,0,_MERGE_SCHEMAS,YES,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,CLIP_TO_ENVELOPE,NO
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
@@ -823,82 +832,82 @@ MULTI_WRITER_TYPE{0} POINTCLOUDXYZ
 MULTI_WRITER_KEYWORD{0} POINTCLOUDXYZ_1
 #! END_WB_HEADER
 #! START_WB_HEADER
-MACRO WB_KEYWORD "OBJ_1"
+MACRO WB_KEYWORD "OBJ_2"
 #! END_WB_HEADER
-#! START_SOURCE_HEADER OBJ OBJ_1
+#! START_SOURCE_HEADER OBJ OBJ_2
 # The dataset this mapping file was generated from was:
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 DEFAULT_MACRO SourceDataset
 INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
- puts {DEFAULT_MACRO SourceDataset_OBJ_1 $(SourceDataset)}     \
+ puts {DEFAULT_MACRO SourceDataset_OBJ_2 $(SourceDataset)}     \
  } ]
 #! END_WB_HEADER
-#! START_SOURCE_HEADER OBJ OBJ_1
-DEFAULT_MACRO SourceDataset_OBJ_1 $(SourceDataset_OBJ)
-GUI MULTIFILE SourceDataset_OBJ_1 OBJ_Files(*.obj)|*.obj|All_Files(*)|* Source OBJ File:
-DEFAULT_MACRO OBJ_IN_VARIABLE_FEATURE_TYPES_OBJ_1 yes
-OBJ_1_VARIABLE_FEATURE_TYPES "$(OBJ_IN_VARIABLE_FEATURE_TYPES_OBJ_1)"
-DEFAULT_MACRO OBJ_IN_FME_GROUP_NAMED1_OBJ_1 
-GUI OPTIONAL DISCLOSUREGROUP OBJ_IN_FME_GROUP_NAMED1_OBJ_1 OBJ_IN_MERGE_MESH_PARTS_OBJ_1 Optimization
-DEFAULT_MACRO OBJ_IN_MERGE_MESH_PARTS_OBJ_1 No
-OBJ_1_MERGE_MESH_PARTS "$(OBJ_IN_MERGE_MESH_PARTS_OBJ_1)"
-GUI CHOICE OBJ_IN_MERGE_MESH_PARTS_OBJ_1 Yes%No Merge Mesh Parts:
-DEFAULT_MACRO OBJ_IN_FME_GROUP_NAMED2_OBJ_1 
-GUI OPTIONAL DISCLOSUREGROUP OBJ_IN_FME_GROUP_NAMED2_OBJ_1 OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1 Coordinate System
-DEFAULT_MACRO OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1 Yes
-OBJ_1_MOVE_TO_WORLD_COORDSYS "$(OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1)"
-GUI CHOICE OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1 Yes%No Move to World Coordinate System:
-DEFAULT_MACRO OBJ_IN_EXPOSE_ATTRS_GROUP_OBJ_1 FME_DISCLOSURE_OPEN
-OBJ_1_EXPOSE_ATTRS_GROUP "$(OBJ_IN_EXPOSE_ATTRS_GROUP_OBJ_1)"
+#! START_SOURCE_HEADER OBJ OBJ_2
+DEFAULT_MACRO SourceDataset_OBJ_2 $(SourceDataset_OBJ_3)
+GUI MULTIFILE SourceDataset_OBJ_2 OBJ_Files(*.obj)|*.obj|All_Files(*)|* Source OBJ File:
+DEFAULT_MACRO OBJ_IN_VARIABLE_FEATURE_TYPES_OBJ_2 yes
+OBJ_2_VARIABLE_FEATURE_TYPES "$(OBJ_IN_VARIABLE_FEATURE_TYPES_OBJ_2)"
+DEFAULT_MACRO OBJ_IN_FME_GROUP_NAMED1_OBJ_2 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_IN_FME_GROUP_NAMED1_OBJ_2 OBJ_IN_MERGE_MESH_PARTS_OBJ_2 Optimization
+DEFAULT_MACRO OBJ_IN_MERGE_MESH_PARTS_OBJ_2 No
+OBJ_2_MERGE_MESH_PARTS "$(OBJ_IN_MERGE_MESH_PARTS_OBJ_2)"
+GUI CHOICE OBJ_IN_MERGE_MESH_PARTS_OBJ_2 Yes%No Merge Mesh Parts:
+DEFAULT_MACRO OBJ_IN_FME_GROUP_NAMED2_OBJ_2 
+GUI OPTIONAL DISCLOSUREGROUP OBJ_IN_FME_GROUP_NAMED2_OBJ_2 OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_2 Coordinate System
+DEFAULT_MACRO OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_2 Yes
+OBJ_2_MOVE_TO_WORLD_COORDSYS "$(OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_2)"
+GUI CHOICE OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_2 Yes%No Move to World Coordinate System:
+DEFAULT_MACRO OBJ_IN_EXPOSE_ATTRS_GROUP_OBJ_2 FME_DISCLOSURE_OPEN
+OBJ_2_EXPOSE_ATTRS_GROUP "$(OBJ_IN_EXPOSE_ATTRS_GROUP_OBJ_2)"
 # Include this file in source setting section to add external search envelope processing
 # Zero as a default means we don't do any search -- this makes workbench happier
-DEFAULT_MACRO OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_1 NO
-OBJ_1_USE_SEARCH_ENVELOPE "$(OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_1)"
-GUI ACTIVEDISCLOSUREGROUP OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_1 OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1%OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1%OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1%OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1%OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1%OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1%OBJ_IN_SEARCH_METHOD%OBJ_IN_SEARCH_METHOD_FILTER%OBJ_IN_SEARCH_ORDER%OBJ_IN_SEARCH_FEATURE%OBJ_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+DEFAULT_MACRO OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_2 NO
+OBJ_2_USE_SEARCH_ENVELOPE "$(OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_2)"
+GUI ACTIVEDISCLOSUREGROUP OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_2 OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2%OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2%OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2%OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2%OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2%OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2%OBJ_IN_SEARCH_METHOD%OBJ_IN_SEARCH_METHOD_FILTER%OBJ_IN_SEARCH_ORDER%OBJ_IN_SEARCH_FEATURE%OBJ_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
 # ===========================================================================
-GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1 <Unused>,0 
-DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1 0
-OBJ_1_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1)"
-GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1 Minimum X:
+GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2 <Unused>,0 
+DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2 0
+OBJ_2_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2)"
+GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_2 Minimum X:
 # ===========================================================================
-GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1 <Unused>,0 
-DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1 0
-OBJ_1_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1)"
-GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1 Minimum Y:
+GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2 <Unused>,0 
+DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2 0
+OBJ_2_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2)"
+GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_2 Minimum Y:
 # ===========================================================================
-GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1 <Unused>,0 
-DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1 0
-OBJ_1_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1)"
-GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1 Maximum X:
+GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2 <Unused>,0 
+DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2 0
+OBJ_2_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2)"
+GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_2 Maximum X:
 # ===========================================================================
-GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1 <Unused>,0 
-DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1 0
-OBJ_1_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1)"
-GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1 Maximum Y:
+GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2 <Unused>,0 
+DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2 0
+OBJ_2_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2)"
+GUI OPTIONAL FLOAT OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_2 Maximum Y:
 # ===========================================================================
-GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1 <Unused>, 
-DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1 
-OBJ_1_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1)"
-GUI OPTIONAL COORDSYS OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1 Search Envelope Coordinate System:
+GUI LOOKUP OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2 <Unused>, 
+DEFAULT_MACRO OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2 
+OBJ_2_SEARCH_ENVELOPE "$(OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2)"
+GUI OPTIONAL COORDSYS OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_2 Search Envelope Coordinate System:
 # ===========================================================================
 # BUG18999: We now have a soft clip to fall back on like native spatial index
 # thus we are reintroducing the clip to envelop as an option for users.
 # Defualt to soft clip as per the existing database readers we are emulating
-GUI LOOKUP OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1 <Unused>,NO 
-DEFAULT_MACRO OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1 NO
-OBJ_1_CLIP_TO_ENVELOPE "$(OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1)"
-GUI OPTIONAL CHECKBOX OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1 YES%NO Clip to Search Envelope
+GUI LOOKUP OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2 <Unused>,NO 
+DEFAULT_MACRO OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2 NO
+OBJ_2_CLIP_TO_ENVELOPE "$(OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2)"
+GUI OPTIONAL CHECKBOX OBJ_IN_CLIP_TO_ENVELOPE_OBJ_2 YES%NO Clip to Search Envelope
 # ===========================================================================
-DEFAULT_MACRO OBJ_IN_NETWORK_AUTHENTICATION_OBJ_1 
-OBJ_1_NETWORK_AUTHENTICATION "$(OBJ_IN_NETWORK_AUTHENTICATION_OBJ_1)"
-GUI OPTIONAL AUTHENTICATOR OBJ_IN_NETWORK_AUTHENTICATION_OBJ_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+DEFAULT_MACRO OBJ_IN_NETWORK_AUTHENTICATION_OBJ_2 
+OBJ_2_NETWORK_AUTHENTICATION "$(OBJ_IN_NETWORK_AUTHENTICATION_OBJ_2)"
+GUI OPTIONAL AUTHENTICATOR OBJ_IN_NETWORK_AUTHENTICATION_OBJ_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
 # ============================================================================ 
-DEFAULT_MACRO OBJ_IN_ATTRIBUTE_READING_OBJ_1 ALL
-OBJ_1_ATTRIBUTE_READING "$(OBJ_IN_ATTRIBUTE_READING_OBJ_1)"
+DEFAULT_MACRO OBJ_IN_ATTRIBUTE_READING_OBJ_2 ALL
+OBJ_2_ATTRIBUTE_READING "$(OBJ_IN_ATTRIBUTE_READING_OBJ_2)"
 # ============================================================================ 
-OBJ_1_GENERATE_FME_BUILD_NUM 20200
-OBJ_1_DATASET "$(SourceDataset_OBJ_1)"
+OBJ_2_GENERATE_FME_BUILD_NUM 20200
+OBJ_2_DATASET "$(SourceDataset_OBJ_2)"
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
@@ -999,11 +1008,11 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
-DEFAULT_MACRO DATASET_KEYWORD_OBJ_1 OBJ_1
+DEFAULT_MACRO DATASET_KEYWORD_OBJ_2 OBJ_2
 DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
 # -------------------------------------------------------------------------
 
-OBJ_1_READER_META_ATTRIBUTES fme_feature_type
+OBJ_2_READER_META_ATTRIBUTES fme_feature_type
 
 # -------------------------------------------------------------------------
 
@@ -1014,23 +1023,23 @@ MULTI_READER_CONTINUE_ON_READER_FAILURE No
 MACRO WORKSPACE_NAME objToPointCloudXYZ
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
-OBJ_1_DEF aerospaceMuseumAirplane
+OBJ_2_DEF "AnyConv.com__DESGN100_Sample - 3D View - {3D}"
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_OBJ_1)   INPUT FEATURE_TYPE *    ROUTE OBJ OBJ_1::aerospaceMuseumAirplane multi_reader_keyword,$(DATASET_KEYWORD_OBJ_1) TO FME_GENERIC ::aerospaceMuseumAirplane ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-OBJ_1_MERGE_DEF OBJ_1::aerospaceMuseumAirplane EXACT aerospaceMuseumAirplane
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_OBJ_2)   INPUT FEATURE_TYPE *    ROUTE OBJ "OBJ_2::AnyConv.com__DESGN100_Sample - 3D View - {3D}" multi_reader_keyword,$(DATASET_KEYWORD_OBJ_2) TO FME_GENERIC "::AnyConv.com__DESGN100_Sample - 3D View - {3D}" ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+OBJ_2_MERGE_DEF "OBJ_2::AnyConv.com__DESGN100_Sample - 3D View - {3D}" EXACT AnyConv.com__DESGN100_Sample<space>-<space>3D<space>View<space>-<space><opencurly>3D<closecurly>
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "aerospaceMuseumAirplane(OBJ_1) Splitter"    INPUT FEATURE_TYPE aerospaceMuseumAirplane    OUTPUT FEATURE_TYPE aerospaceMuseumAirplane_OBJ_1
+FACTORY_DEF * TeeFactory    FACTORY_NAME "AnyConv.com__DESGN100_Sample - 3D View - {3D}(OBJ_2) Splitter"    INPUT FEATURE_TYPE "AnyConv.com__DESGN100_Sample - 3D View - {3D}"    OUTPUT FEATURE_TYPE "AnyConv.com__DESGN100_Sample - 3D View - {3D}_OBJ_2"
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
-FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE aerospaceMuseumAirplane_OBJ_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE "AnyConv.com__DESGN100_Sample - 3D View - {3D}_OBJ_2"    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
 FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
 DEFAULT_MACRO _WB_BYPASS_TERMINATION No
 FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCombiner_<Rejected> INPUT FEATURE_TYPE PointCloudCombiner_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCombiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>aerospaceMuseumAirplane<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>aerospaceMuseumAirplane<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(writtenFileName$encode$encode)<comma>aerospaceMuseumAirplane<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
