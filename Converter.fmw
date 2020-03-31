@@ -3,7 +3,7 @@
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
 #              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
-#              --worldName "thisWillFail"
+#              --worldName "fail"
 #              --worldSize "64"
 #              --xyScaleWithZ "no"
 #              --worldHeight "64"
@@ -23,8 +23,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="070a770d-be2f-4595-8b9b-bc9485955e71"
-#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1"
+#!   FME_DOCUMENT_GUID="4e68c10c-f837-4c48-9987-36a726b8736d"
+#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1,070a770d-be2f-4595-8b9b-bc9485955e71"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -33,7 +33,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-03-31T09:12:12"
+#!   LAST_SAVE_DATE="2020-03-31T10:38:33"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,7 +52,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-1518.77 1956.27"
+#!   VIEW_POSITION="1581.27 1415.64"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -71,7 +71,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_primary_axis number(31,15) fme_start_angle number(31,15) pointcloudxyz_type char(32) multi_reader_id number(11,0) fme_basename char(50) multi_reader_type char(50) fme_color char(50) fme_type char(50) multi_reader_full_id number(11,0) fme_secondary_axis number(31,15) fme_feature_type char(50) multi_reader_keyword char(50) fme_sweep_angle number(31,15) fme_text_size number(31,15) fme_text_string char(50) fme_rotation number(31,15) fme_dataset char(50) fme_geometry char(50) fme_fill_color char(50)"
+#!   EXPOSABLE_ATTRS="fme_primary_axis number(31,15) fme_dataset char(50) pointcloudxyz_type char(32) fme_feature_type char(50) fme_basename char(50) fme_fill_color char(50) fme_type char(50) multi_reader_type char(50) fme_secondary_axis number(31,15) fme_color char(50) fme_text_string char(50) multi_reader_full_id number(11,0) multi_reader_keyword char(50) fme_text_size number(31,15) fme_sweep_angle number(31,15) multi_reader_id number(11,0) fme_geometry char(50) fme_rotation number(31,15) fme_start_angle number(31,15)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -138,7 +138,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="minecraft_fill_under string minecraft_populate_terrain string fme_primary_axis double minecraft_type string fme_start_angle double fme_basename string minecraft_generator_seed long minecraft_fill_block short minecraft_generator_name string fme_color string fme_type string fme_secondary_axis double fme_feature_type string fme_sweep_angle double fme_text_size double minecraft_generator_options string fme_text_string string fme_rotation double fme_dataset string minecraft_center_point_cloud string fme_geometry string minecraft_world_name string fme_fill_color string"
+#!   EXPOSABLE_ATTRS="fme_primary_axis double minecraft_fill_block short fme_dataset string fme_feature_type string minecraft_center_point_cloud string fme_basename string fme_fill_color string fme_type string minecraft_type string fme_secondary_axis double fme_color string fme_text_string string minecraft_populate_terrain string minecraft_fill_under string minecraft_generator_seed long fme_text_size double fme_sweep_angle double fme_geometry string minecraft_generator_options string minecraft_world_name string fme_rotation double minecraft_generator_name string fme_start_angle double"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -656,9 +656,6 @@
 #!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="minecraft_type" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="minecraft_world_name" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
-#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="true"
@@ -709,7 +706,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
-#!   DEFAULT_VALUE="thisWillFail"
+#!   DEFAULT_VALUE="fail"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -802,10 +799,10 @@
 #! <COMMENT
 #!   IDENTIFIER="35"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shift all the points up so that the lowest point is at z-coordinate 0, since Minecraft doesn&apos;t support negative heights.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1110.857927775706 175.00163239727704"
-#!   TOP_LEFT="1110.857927775706 175.00163239727704"
-#!   BOTTOM_RIGHT="1564.857927775706 174.00163239727704"
-#!   BOUNDING_RECT="1110.857927775706 175.00163239727704 454 1"
+#!   POSITION="1188.9837090335186 725.0071324522778"
+#!   TOP_LEFT="1188.9837090335186 725.0071324522778"
+#!   BOTTOM_RIGHT="1642.9837090335186 724.0071324522778"
+#!   BOUNDING_RECT="1188.9837090335186 725.0071324522778 454 1"
 #!   ORDER="500000000000058"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -1012,10 +1009,10 @@
 #! <COMMENT
 #!   IDENTIFIER="60"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Since everything has been scaled, need to recalculate the lowest z-value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1140.0835894073225 724.17409078852688"
-#!   TOP_LEFT="1140.0835894073225 724.17409078852688"
-#!   BOTTOM_RIGHT="1570.0835894073225 723.17409078852688"
-#!   BOUNDING_RECT="1140.0835894073225 724.17409078852688 430 1"
+#!   POSITION="1218.2093706651351 1288.1369137500899"
+#!   TOP_LEFT="1218.2093706651351 1288.1369137500899"
+#!   BOTTOM_RIGHT="1648.2093706651351 1287.1369137500899"
+#!   BOUNDING_RECT="1218.2093706651351 1288.1369137500899 430 1"
 #!   ORDER="500000000000112"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -1023,21 +1020,6 @@
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
 #!   SIZE_POLICY="10"
 #!   ANCHORED_NODE="57"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="77"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Round points in the point cloud to have integer coordinates, as Minecraft does not have decimal coordinates. These data types are the ones used by the Minecraft writer. Note that casting is done after scaling to prevent rounding mishaps.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1048.9580581520099 1635.184215889778"
-#!   TOP_LEFT="1048.9580581520099 1635.184215889778"
-#!   BOTTOM_RIGHT="1840.6434064340642 1273.9309033566526"
-#!   BOUNDING_RECT="1048.9580581520099 1635.184215889778 791.68534828205429 361.25331253312532"
-#!   ORDER="500000000000115"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="62"
 #! />
 #! <COMMENT
 #!   IDENTIFIER="83"
@@ -1069,7 +1051,7 @@
 #!   BOUNDING_RECT="-1939.4897063553972 1756.2675626756268 650.98157231572304 2750.0275002750022"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="86 78 75 "
+#!   CONTENTS="78 75 86 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1083,7 +1065,7 @@
 #!   BOUNDING_RECT="1903.6451564515664 1757.5611846594652 618 2745.0710597582161"
 #!   STICKY="true"
 #!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
-#!   CONTENTS="85 82 "
+#!   CONTENTS="82 85 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1097,7 +1079,7 @@
 #!   BOUNDING_RECT="-1267.8698215553586 1756.2675626756268 750 2750.0275002750022"
 #!   STICKY="true"
 #!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,1"
-#!   CONTENTS="45 64 7 30 63 61 "
+#!   CONTENTS="63 30 64 45 61 7 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1111,7 +1093,7 @@
 #!   BOUNDING_RECT="-481.45631551553595 1757.5611846594652 660.92239589062535 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,1"
-#!   CONTENTS="49 54 80 81 51 71 65 55 "
+#!   CONTENTS="51 81 49 65 71 55 80 54 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1125,7 +1107,7 @@
 #!   BOUNDING_RECT="204.61514138950906 1757.5611846594652 750 3295.0765598132166"
 #!   STICKY="true"
 #!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,1"
-#!   CONTENTS="38 21 46 37 32 42 47 25 48 27 34 31 39 41 33 43 40 "
+#!   CONTENTS="32 46 40 47 33 41 34 37 27 31 42 38 48 43 39 25 21 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1139,7 +1121,7 @@
 #!   BOUNDING_RECT="998.37307896888524 1757.5611846594652 898.52088997080409 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,1"
-#!   CONTENTS="60 35 66 57 77 62 28 58 "
+#!   CONTENTS="66 58 87 57 35 28 60 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1153,7 +1135,7 @@
 #!   BOUNDING_RECT="2555.2343856771881 1757.5611846594652 899.95867146171668 2732.5709347569664"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="17 5 83 24 "
+#!   CONTENTS="24 5 17 83 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -1298,8 +1280,8 @@
 #!   IDENTIFIER="28"
 #!   TYPE="Offsetter"
 #!   VERSION="1"
-#!   POSITION="1178.0835894073225 -270.16507593647316"
-#!   BOUNDING_RECT="1178.0835894073225 -270.16507593647316 454 71"
+#!   POSITION="1256.2093706651351 279.84042411852738"
+#!   BOUNDING_RECT="1256.2093706651351 279.84042411852738 454 71"
 #!   ORDER="500000000000051"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1707,8 +1689,8 @@
 #!   IDENTIFIER="57"
 #!   TYPE="PointCloudPropertyExtractor"
 #!   VERSION="3"
-#!   POSITION="1178.0835894073225 459.17209076852669"
-#!   BOUNDING_RECT="1178.0835894073225 459.17209076852669 430 71"
+#!   POSITION="1256.2093706651351 1023.1349137300899"
+#!   BOUNDING_RECT="1256.2093706651351 1023.1349137300899 430 71"
 #!   ORDER="500000000000111"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1761,17 +1743,17 @@
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="recalculateMinZ"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
-#!   IDENTIFIER="62"
-#!   TYPE="PointCloudComponentTypeCoercer"
-#!   VERSION="1"
-#!   POSITION="1140.0835894073225 1136.686190195235"
-#!   BOUNDING_RECT="1140.0835894073225 1136.686190195235 430 71"
-#!   ORDER="500000000000114"
+#!   IDENTIFIER="87"
+#!   TYPE="PointCloudExpressionEvaluator"
+#!   VERSION="3"
+#!   POSITION="1140.0835894073225 1577.8893512744653"
+#!   BOUNDING_RECT="1140.0835894073225 1577.8893512744653 -1 -1"
+#!   ORDER="500000000000121"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   LAST_PARM_EDIT="20200"
 #! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <OUTPUT_FEAT NAME="RESULT"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
 #!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1809,10 +1791,10 @@
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE" PARM_VALUE="x,Int32,BOUNDEDCAST,ROUND,y,Int32,BOUNDEDCAST,ROUND,z,UInt8,BOUNDEDCAST,FLOOR"/>
-#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_COERCE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="x Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;x&lt;closeparen&gt;&lt;closeparen&gt; y Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;y&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="castCoordsToInt"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="castXYToInt"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -1879,7 +1861,7 @@
 #! <FEAT_LINK
 #!   IDENTIFIER="59"
 #!   SOURCE_NODE="31"
-#!   TARGET_NODE="62"
+#!   TARGET_NODE="87"
 #!   SOURCE_PORT_DESC="fo 0 SCALED"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
@@ -2012,21 +1994,6 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="66"
-#!   SOURCE_NODE="62"
-#!   TARGET_NODE="57"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
 #!   IDENTIFIER="80"
 #!   SOURCE_NODE="65"
 #!   TARGET_NODE="49"
@@ -2056,6 +2023,21 @@
 #!   LINK_STYLE_NAME="&lt;Default&gt;"
 #!   EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#!   IDENTIFIER="66"
+#!   SOURCE_NODE="87"
+#!   TARGET_NODE="57"
+#!   SOURCE_PORT_DESC="fo 0 RESULT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
@@ -2071,7 +2053,7 @@ FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
 DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
 GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
-DEFAULT_MACRO worldName thisWillFail
+DEFAULT_MACRO worldName fail
 GUI STRING worldName Enter the name of the world to save this data as:
 DEFAULT_MACRO worldSize 64
 GUI RANGE_SLIDER worldSize "RANGE:_0,]" Enter world size to scale to (positive integer):
@@ -2302,7 +2284,7 @@ DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
 DEFAULT_MACRO DATASET_KEYWORD_MINECRAFT_1 MINECRAFT_1
 # -------------------------------------------------------------------------
 
-POINTCLOUDXYZ_1_READER_META_ATTRIBUTES fme_basename fme_feature_type
+POINTCLOUDXYZ_1_READER_META_ATTRIBUTES fme_feature_type fme_basename
 
 # -------------------------------------------------------------------------
 
@@ -2362,14 +2344,17 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler    INPUT  FEATURE_TYPE Scaler_Ex
 FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Scaler_Scaled       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_PointCloudScaler    INPUT FEATURE_TYPE Scaler_Scaled    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Scaler_SCALED       @TransformPointCloud(SCALE,)    OUTPUT FAILED FEATURE_TYPE Scaler_SCALED
 # -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory    FACTORY_NAME castCoordsToInt    INPUT  FEATURE_TYPE Scaler_SCALED    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @PointCloudInterpretation(REJECTABLE,CONVERT,x,Int32,BOUNDEDCAST,ROUND,y,Int32,BOUNDEDCAST,ROUND,z,UInt8,BOUNDEDCAST,FLOOR)
-FACTORY_DEF * TestFactory    FACTORY_NAME castCoordsToInt_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE castCoordsToInt_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+DEFAULT_MACRO castXYToInt_COMPONENT_LIST
+DEFAULT_MACRO castXYToInt_COMPONENT_TYPE_LIST
+DEFAULT_MACRO castXYToInt_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {x Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>x<closeparen><closeparen>,castXYToInt) y Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>y<closeparen><closeparen>,castXYToInt)}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO castXYToInt_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME castXYToInt    INPUT  FEATURE_TYPE Scaler_SCALED    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(castXYToInt_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(castXYToInt_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(castXYToInt_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE castXYToInt_RESULT
 # -------------------------------------------------------------------------
 DEFAULT_MACRO recalculateMinZ_EXISTENCE_LIST
 DEFAULT_MACRO recalculateMinZ_PROPERTIES_LIST
 DEFAULT_MACRO recalculateMinZ_MINMAX_LIST
 INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO recalculateMinZ_${listName}_LIST \"$lists($listName)\"";    }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME recalculateMinZ    INPUT  FEATURE_TYPE castCoordsToInt_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(recalculateMinZ_EXISTENCE_LIST),$(recalculateMinZ_PROPERTIES_LIST),$(recalculateMinZ_MINMAX_LIST),DoNotUpdateExtents)
+FACTORY_DEF * TeeFactory    FACTORY_NAME recalculateMinZ    INPUT  FEATURE_TYPE castXYToInt_RESULT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(recalculateMinZ_EXISTENCE_LIST),$(recalculateMinZ_PROPERTIES_LIST),$(recalculateMinZ_MINMAX_LIST),DoNotUpdateExtents)
 FACTORY_DEF * TestFactory    FACTORY_NAME recalculateMinZ_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE recalculateMinZ_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 # -------------------------------------------------------------------------
 INCLUDE [    if { {CARTESIAN} == {CARTESIAN} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } elseif { {CARTESIAN} == {POLAR} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>")};    } elseif { {CARTESIAN} == {SPHERICAL} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>","<Unused>")};    } else {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } ]
