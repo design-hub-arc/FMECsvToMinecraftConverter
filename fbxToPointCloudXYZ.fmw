@@ -1,0 +1,974 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\fbxToPointCloudXYZ.fmw"
+#              --SourceDataset_FBX "C:\Users\Matt\Documents\FME Projects\Converter\fbxData\DESGN100_Sample.fbx"
+#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
+#              --fileName "fbxToCsvTest"
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="2160.62 104.753"
+#!   DOC_TOP_LEFT="20 -152.251"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="20200"
+#!   FME_DOCUMENT_GUID="ec9a0eed-dc00-4578-b74c-8311877d80bb"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
+#!   LAST_SAVE_DATE="2020-03-31T13:10:12"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="37"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="YES"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="587.506 246.877"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="FBX"
+#!   DATASET="$(SourceDataset_FBX)"
+#!   KEYWORD="FBX_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fbx_type char(50) fme_sweep_angle number(31,15) fme_text_string char(50) fme_secondary_axis number(31,15) fme_fill_color char(50) fme_primary_axis number(31,15) fme_start_angle number(31,15) fme_text_size number(31,15) multi_reader_keyword char(50) multi_reader_type char(50) fme_geometry char(50) fme_rotation number(31,15) multi_reader_id number(11,0) fme_feature_type char(50) fme_type char(50) multi_reader_full_id number(11,0) fme_color char(50) fme_dataset char(50) fme_basename char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE="LISTBOX_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FEATURE_TYPES=""
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! />
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="POINTCLOUDXYZ"
+#!   DATASET="$(DestDataset_POINTCLOUDXYZ)"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="32"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="false"
+#!   EXPOSABLE_ATTRS="fme_feature_type char(50) fme_primary_axis number(31,15) fme_color char(50) fme_secondary_axis number(31,15) fme_basename char(50) fme_geometry char(50) fme_text_string char(50) pointcloudxyz_type char(32) fme_rotation number(31,15) fme_sweep_angle number(31,15) fme_type char(50) fme_text_size number(31,15) fme_dataset char(50) fme_fill_color char(50) fme_start_angle number(31,15)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEDIR"
+#!   FTTR_TYPE=""
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION=""
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="POINTCLOUDXYZ_IN_ENCODING POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS POINTCLOUDXYZ_OUT_ENCODING POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM POINTCLOUDXYZ_OUT_END_OF_LINE"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_FANOUT_ATTRIBUTE"
+#!   VALUE="fme_basename"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="xyz file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_DEFAULT_NAME"
+#!   VALUE="File1"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="FEATURE_TYPE_NAME"
+#!   VALUE="Point Cloud File"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="text/csv"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_AUTO_EXPOSE"
+#!   VALUE="fme_basename char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the Point Cloud XYZ file(s)"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a folder for the Point Cloud XYZ file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="FBX"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(254)"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(20)"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="char(12)"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(31,15)"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(15,7)"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(11,0)"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(20,0)"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="logical"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(6,0)"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(4,0)"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="number(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fbx_none"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="FBX"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="pointcloudxyz_point_cloud"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="fme_no_map"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="POINTCLOUDXYZ"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="DESGN100_Sample"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="2"
+#!   FEAT_GEOMTYPE="fbx_surface fbx_none"
+#!   POSITION="20 -47.498124981249816"
+#!   BOUNDING_RECT="20 -47.498124981249816 522.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="FBX_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER=""
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="false"
+#! >
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="File1"
+#!   FEATURE_TYPE_NAME="$(fileName)"
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="5"
+#!   FEAT_GEOMTYPE="&lt;NO_GEOMETRY&gt;"
+#!   POSITION="1512.5161251612517 -81.25081250812508"
+#!   BOUNDING_RECT="1512.5161251612517 -81.25081250812508 668.10000000000002 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="POINTCLOUDXYZ_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <READER_DATASETS>
+#! <DATASET
+#!   NAME="FBX_1"
+#!   OVERRIDE="-FBX_1_DATASET"
+#!   DATASET="FBX_1/DESGN100_Sample.fbx"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET
+#!   NAME="POINTCLOUDXYZ_1"
+#!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
+#!   DATASET="POINTCLOUDXYZ_1/converted"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_FBX Autodesk_FBX_Files(*.fbx)|*.fbx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source FBX File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)fbxData\DESGN100_Sample.fbx"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI STRING_OR_ATTR fileName enter a name for the resulting file:"
+#!   DEFAULT_VALUE="fbxToCsvTest"
+#!   IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="753.13253132531338 -81.25081250812508"
+#!   BOUNDING_RECT="753.13253132531338 -81.25081250812508 454 71"
+#!   ORDER="500000000000122"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="4"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="6"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 37
+GUI IGNORE SourceDataset_FBX_1,FBX_IN_FME_GROUP_NAMED1_FBX_1,FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1,FBX_IN_READER_PARAMS_FBX_1,FBX_IN_CONVERT_TO_METERS_FBX_1,FBX_IN_NETWORK_AUTHENTICATION_FBX_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
+DEFAULT_MACRO SourceDataset_FBX $(FME_MF_DIR)fbxData\DESGN100_Sample.fbx
+GUI MULTIFILE SourceDataset_FBX Autodesk_FBX_Files(*.fbx)|*.fbx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source FBX File(s):
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
+GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
+DEFAULT_MACRO fileName fbxToCsvTest
+GUI STRING fileName enter a name for the resulting file:
+INCLUDE [ if {{$(SourceDataset_FBX)} == {}} { puts_real {Parameter 'SourceDataset_FBX' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(fileName)} == {}} { puts_real {Parameter 'fileName' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+MULTI_READER_TYPE{0} FBX
+MULTI_READER_KEYWORD{0} FBX_1
+MULTI_READER_GEN_DIRECTIVES{0} CONVERT_TO_METERS,No,_MERGE_SCHEMAS,YES,MOVE_TO_WORLD_COORDSYS,Yes,EXPOSE_ATTRS_GROUP,,FBX_EXPOSE_FORMAT_ATTRS,
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} POINTCLOUDXYZ
+MULTI_WRITER_KEYWORD{0} POINTCLOUDXYZ_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "FBX_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER FBX FBX_1
+# ============================================================================
+# The following GUI line prompts for a folder to be used as the
+# source files.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be read.
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_FBX_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER FBX FBX_1
+DEFAULT_MACRO SourceDataset_FBX_1 $(SourceDataset_FBX)
+GUI MULTIFILE SourceDataset_FBX_1 Autodesk_FBX_Files(*.fbx)|*.fbx|All_Files|* Source FBX File(s):
+DEFAULT_MACRO FBX_IN_FME_GROUP_NAMED1_FBX_1 
+GUI OPTIONAL DISCLOSUREGROUP FBX_IN_FME_GROUP_NAMED1_FBX_1 FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1 Coordinate System
+DEFAULT_MACRO FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1 Yes
+FBX_1_MOVE_TO_WORLD_COORDSYS "$(FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1)"
+GUI CHOICE FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1 Yes%No Move to World Coordinate System:
+DEFAULT_MACRO FBX_IN_READER_PARAMS_FBX_1 
+GUI OPTIONAL DISCLOSUREGROUP FBX_IN_READER_PARAMS_FBX_1 FBX_IN_CONVERT_TO_METERS_FBX_1 Reader Parameters
+DEFAULT_MACRO FBX_IN_CONVERT_TO_METERS_FBX_1 No
+FBX_1_CONVERT_TO_METERS "$(FBX_IN_CONVERT_TO_METERS_FBX_1)"
+GUI CHOICE FBX_IN_CONVERT_TO_METERS_FBX_1 No%Yes Convert to Meters:
+DEFAULT_MACRO FBX_IN_EXPOSE_ATTRS_GROUP_FBX_1 
+FBX_1_EXPOSE_ATTRS_GROUP "$(FBX_IN_EXPOSE_ATTRS_GROUP_FBX_1)"
+# ===========================================================================
+DEFAULT_MACRO FBX_IN_NETWORK_AUTHENTICATION_FBX_1 
+FBX_1_NETWORK_AUTHENTICATION "$(FBX_IN_NETWORK_AUTHENTICATION_FBX_1)"
+GUI OPTIONAL AUTHENTICATOR FBX_IN_NETWORK_AUTHENTICATION_FBX_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO FBX_IN_ATTRIBUTE_READING_FBX_1 ALL
+FBX_1_ATTRIBUTE_READING "$(FBX_IN_ATTRIBUTE_READING_FBX_1)"
+# ============================================================================ 
+FBX_1_GENERATE_FME_BUILD_NUM 20200
+FBX_1_DATASET "$(SourceDataset_FBX_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+# ============================================================================
+# The following GUI line prompts for a folder where the
+# XYZ files will be stored
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_POINTCLOUDXYZ_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ_1 $(DestDataset_POINTCLOUDXYZ)
+GUI DIRNAME DestDataset_POINTCLOUDXYZ_1 Destination Point Cloud XYZ Folder:
+# ============================================================================
+# The following choice determines the extension
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1 xyz
+POINTCLOUDXYZ_1_EXTENSION "$(POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1)"
+GUI TEXT POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1 Extension:
+# ============================================================================
+# The following choice determines the separator
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1 space
+POINTCLOUDXYZ_1_SEPARATOR "$(POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1)"
+GUI STRING_OR_CHOICE POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1 ,%;%|%space%tab Separator Character:
+# ============================================================================
+# The following choice determines if field names should be output
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_INCLUDE_FIELD_NAME "$(POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1 yes%no Output Field Name on First Line:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 x,x,y,y,z,z,color_red,r,color_green,g,color_blue,b,intensity,a
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT "$(POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1)"
+GUI GUI_LINE_TABLE POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 NO_LABEL%COL_DELIM:,%ROW_DELIM:,%Component%"PC_COMPONENT_ENCODED comp x%y%z%*"%"Column name"%"STRING_ENCODED col_IDENTIFIER" Component mapping:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 Output File Parameters
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 Point Cloud Components To Output
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 Quote Settings
+# ============================================================================
+# The following choice determines whether to append to the destination file
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1 No
+POINTCLOUDXYZ_1_APPEND "$(POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1 Yes%No Append to File:
+# ============================================================================
+# The following choice determines if field names on the first row
+# should be quoted or not.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1 if_needed
+POINTCLOUDXYZ_1_QUOTE_FIELD_NAMES "$(POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1 yes%no%if_needed Quote Field Names:
+# ============================================================================
+# The following choice determines if field values should be quoted or not.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 if_needed
+POINTCLOUDXYZ_1_QUOTE_OUTPUT "$(POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1 yes%no%if_needed Quote Output Values:
+# =====================================================================
+# Allows to set Line termination type
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_END_OF_LINE "$(POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHOICE POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 Windows%Unix%Macintosh Line Termination:
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1%POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1 Advanced
+# ============================================================================
+# PR 15909
+# The following choice determines if the byte order mark should be written
+# when using UTF-8 encoding. By default BOM is written, so _WRITE_UTF8_BOM should be yes.
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_WRITE_UTF8_BOM "$(POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1 yes%no Write UTF-8 Byte Order Mark
+# =====================================================================
+# Allows to set one of the character encodings for output file
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1 UTF-8
+POINTCLOUDXYZ_1_ENCODING "$(POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1)"
+GUI STRING_OR_ENCODING POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1 fme-system%* Character Encoding:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_DESTINATION_DATASETTYPE_VALIDATION_POINTCLOUDXYZ_1 Yes
+POINTCLOUDXYZ_1_DESTINATION_DATASETTYPE_VALIDATION "$(POINTCLOUDXYZ_OUT_DESTINATION_DATASETTYPE_VALIDATION_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_OUT_COORDINATE_SYSTEM_GRANULARITY_POINTCLOUDXYZ_1 FEATURE
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM_GRANULARITY "$(POINTCLOUDXYZ_OUT_COORDINATE_SYSTEM_GRANULARITY_POINTCLOUDXYZ_1)"
+# ============================================================================ 
+POINTCLOUDXYZ_1_GENERATE_FME_BUILD_NUM 20200
+POINTCLOUDXYZ_1_DATASET "$(DestDataset_POINTCLOUDXYZ_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)fbxToPointCloudXYZ.log"
+LOG_APPEND NO
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_FBX_1 FBX_1
+DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
+# -------------------------------------------------------------------------
+
+FBX_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME fbxToPointCloudXYZ
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+FBX_1_DEF DESGN100_Sample
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_FBX_1)   INPUT FEATURE_TYPE *    ROUTE FBX FBX_1::DESGN100_Sample multi_reader_keyword,$(DATASET_KEYWORD_FBX_1) TO FME_GENERIC ::DESGN100_Sample ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+FBX_1_MERGE_DEF FBX_1::DESGN100_Sample EXACT DESGN100_Sample
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "DESGN100_Sample(FBX_1) Splitter"    INPUT FEATURE_TYPE DESGN100_Sample    OUTPUT FEATURE_TYPE DESGN100_Sample_FBX_1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE DESGN100_Sample_FBX_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
+DEFAULT_MACRO _WB_BYPASS_TERMINATION No
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCombiner_<Rejected> INPUT FEATURE_TYPE PointCloudCombiner_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCombiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(fileName$encode$encode)<comma>File1<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+POINTCLOUDXYZ_1_DEF File1
