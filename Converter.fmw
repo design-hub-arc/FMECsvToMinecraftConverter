@@ -3,11 +3,11 @@
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
 #              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
-#              --worldName "sampleDFX"
+#              --worldName "meters"
 #              --worldSize "128"
 #              --xyScaleWithZ "no"
 #              --worldHeight "64"
-#              --SourceDataset_POINTCLOUDXYZ_5 "C:\Users\Matt\Documents\FME Projects\Converter\converted\dfxToCsvTest.csv"
+#              --SourceDataset_POINTCLOUDXYZ_5 "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\csvData\pointsCsv.csv"
 #              --pointReduction "100"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
@@ -23,8 +23,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="98d655a0-5f5b-4c3e-be48-67ccf781c465"
-#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1,070a770d-be2f-4595-8b9b-bc9485955e71,4e68c10c-f837-4c48-9987-36a726b8736d,f0e193d1-8aaa-4b20-8b59-825ff1a2a450,185c9d88-42ef-4127-9686-623135982fda,71b28c26-9602-443a-a109-7bb9b7c8bfff"
+#!   FME_DOCUMENT_GUID="10f71eee-9916-4945-a62c-7e9c044c3e13"
+#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1,070a770d-be2f-4595-8b9b-bc9485955e71,4e68c10c-f837-4c48-9987-36a726b8736d,f0e193d1-8aaa-4b20-8b59-825ff1a2a450,185c9d88-42ef-4127-9686-623135982fda,71b28c26-9602-443a-a109-7bb9b7c8bfff,98d655a0-5f5b-4c3e-be48-67ccf781c465"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -33,7 +33,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-01T09:16:08"
+#!   LAST_SAVE_DATE="2020-04-01T10:42:57"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,7 +52,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-804.696 972.666"
+#!   VIEW_POSITION="-2328.15 1722.67"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="80"
@@ -71,7 +71,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_primary_axis number(31,15) fme_text_string char(50) multi_reader_full_id number(11,0) fme_type char(50) fme_color char(50) fme_rotation number(31,15) fme_fill_color char(50) fme_start_angle number(31,15) fme_sweep_angle number(31,15) fme_dataset char(50) multi_reader_keyword char(50) fme_basename char(50) multi_reader_type char(50) fme_feature_type char(50) fme_text_size number(31,15) fme_secondary_axis number(31,15) multi_reader_id number(11,0) pointcloudxyz_type char(32) fme_geometry char(50)"
+#!   EXPOSABLE_ATTRS="fme_color char(50) pointcloudxyz_type char(32) fme_rotation number(31,15) multi_reader_keyword char(50) fme_text_string char(50) fme_feature_type char(50) fme_sweep_angle number(31,15) fme_dataset char(50) fme_secondary_axis number(31,15) fme_primary_axis number(31,15) fme_type char(50) multi_reader_id number(11,0) fme_basename char(50) multi_reader_type char(50) fme_start_angle number(31,15) fme_geometry char(50) multi_reader_full_id number(11,0) fme_text_size number(31,15) fme_fill_color char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -81,7 +81,7 @@
 #!   DATASET_TYPE="FILEDIR"
 #!   FTTR_TYPE="LISTBOX_ENCODED"
 #!   GENERATE_FME_BUILD_NUM="20200"
-#!   COORDSYS="*XY-FT*"
+#!   COORDSYS="*XY-MT*"
 #!   FEATURE_TYPES=""
 #!   MAX_FEATURES=""
 #!   MAX_FEATURES_PER_FEATURE_TYPE=""
@@ -138,7 +138,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="minecraft_generator_name string fme_primary_axis double fme_text_string string fme_type string fme_color string fme_rotation double minecraft_world_name string fme_fill_color string minecraft_type string fme_start_angle double fme_sweep_angle double minecraft_fill_block short minecraft_center_point_cloud string minecraft_generator_seed long minecraft_fill_under string fme_dataset string minecraft_generator_options string fme_basename string fme_text_size double fme_feature_type string fme_secondary_axis double minecraft_populate_terrain string fme_geometry string"
+#!   EXPOSABLE_ATTRS="fme_color string fme_rotation double minecraft_world_name string minecraft_center_point_cloud string fme_text_string string fme_feature_type string fme_sweep_angle double minecraft_generator_seed long minecraft_populate_terrain string fme_dataset string minecraft_type string fme_secondary_axis double fme_primary_axis double fme_type string minecraft_fill_block short minecraft_generator_name string minecraft_fill_under string fme_basename string fme_start_angle double fme_geometry string minecraft_generator_options string fme_text_size double fme_fill_color string"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -687,7 +687,7 @@
 #! <DATASET
 #!   NAME="POINTCLOUDXYZ_1"
 #!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
-#!   DATASET="POINTCLOUDXYZ_1/dfxToCsvTest.csv"
+#!   DATASET="POINTCLOUDXYZ_1/pointsCsv.csv"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
@@ -706,7 +706,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
-#!   DEFAULT_VALUE="sampleDFX"
+#!   DEFAULT_VALUE="meters"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -726,7 +726,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)converted\dfxToCsvTest.csv"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\csvData\pointsCsv.csv"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1049,7 +1049,7 @@
 #!   BOUNDING_RECT="-1267.8698215553586 1756.2675626756268 750 2750.0275002750022"
 #!   STICKY="true"
 #!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,1"
-#!   CONTENTS="7 45 63 61 30 64 "
+#!   CONTENTS="61 7 64 45 63 30 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1063,7 +1063,7 @@
 #!   BOUNDING_RECT="-481.45631551553595 1757.5611846594652 660.92239589062535 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,1"
-#!   CONTENTS="49 54 51 71 81 55 65 80 "
+#!   CONTENTS="55 71 49 80 81 51 54 65 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1077,7 +1077,7 @@
 #!   BOUNDING_RECT="204.61514138950906 1757.5611846594652 750 3295.0765598132166"
 #!   STICKY="true"
 #!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,1"
-#!   CONTENTS="31 34 48 33 46 40 27 21 42 25 43 47 32 37 41 38 39 "
+#!   CONTENTS="40 31 39 48 38 32 41 27 46 33 34 42 37 43 47 21 25 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1091,7 +1091,7 @@
 #!   BOUNDING_RECT="998.37307896888524 1757.5611846594652 898.52088997080409 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,1"
-#!   CONTENTS="57 28 35 66 58 60 87 "
+#!   CONTENTS="28 58 87 57 66 35 60 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1105,7 +1105,7 @@
 #!   BOUNDING_RECT="2555.2343856771881 1757.5611846594652 899.95867146171668 2732.5709347569664"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="17 5 83 24 "
+#!   CONTENTS="83 24 17 5 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -2023,7 +2023,7 @@ FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
 DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
 GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
-DEFAULT_MACRO worldName sampleDFX
+DEFAULT_MACRO worldName meters
 GUI STRING worldName Enter the name of the world to save this data as:
 DEFAULT_MACRO worldSize 128
 GUI RANGE_SLIDER worldSize "RANGE:_0,]" Enter world size to scale to (positive integer):
@@ -2031,7 +2031,7 @@ DEFAULT_MACRO xyScaleWithZ no
 GUI CHOICE xyScaleWithZ yes%no Should the height axis be scaled the same as other axes?
 DEFAULT_MACRO worldHeight 64
 GUI RANGE_SLIDER worldHeight "RANGE:[1,128_" Enter the height to scale points to (1 to 127):
-DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_5 $(FME_MF_DIR)converted\dfxToCsvTest.csv
+DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_5 $(FME_MF_DIR)sourceData\csvData\pointsCsv.csv
 GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):
 DEFAULT_MACRO pointReduction 100
 GUI RANGE_SLIDER pointReduction "RANGE:_0,]" enter point reduction factor (larger number: fewer points, but faster; smaller number: keep more points, but slower):
@@ -2258,7 +2258,7 @@ POINTCLOUDXYZ_1_READER_META_ATTRIBUTES fme_feature_type fme_basename
 
 # -------------------------------------------------------------------------
 
-POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-FT*
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-MT*
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
 
 # -------------------------------------------------------------------------
