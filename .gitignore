@@ -7,5 +7,6 @@
 *.dxf
 *.dwfx
 *.rcp
+*.pcp
 *.recover
 *.log
