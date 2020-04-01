@@ -5,6 +5,7 @@
 *.rvt
 *.ffs
 *.dxf
+*.dwfx
 *.rcp
 *.recover
 *.log
