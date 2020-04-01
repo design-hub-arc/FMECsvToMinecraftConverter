@@ -29,7 +29,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-01T08:55:20"
+#!   LAST_SAVE_DATE="2020-04-01T09:06:00"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -763,10 +763,8 @@
 #! >
 #!     <OUTPUT_FEAT NAME="MESH"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="_geometry_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="_geometry_name" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="ACCUM_INPUT_ATTRS" PARM_VALUE="Use Attributes From One Feature"/>
 #!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
@@ -873,7 +871,7 @@
 #! <FEAT_LINK
 #!   IDENTIFIER="14"
 #!   SOURCE_NODE="13"
-#!   TARGET_NODE="11"
+#!   TARGET_NODE="7"
 #!   SOURCE_PORT_DESC="fo 0 EXTRACTED"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
@@ -1093,11 +1091,7 @@ FACTORY_DEF * GQueryFactory    FACTORY_NAME GeometryPropertyExtractor_GQuery    
 DEFAULT_MACRO _WB_BYPASS_TERMINATION No
 FACTORY_DEF * TeeFactory FACTORY_NAME GeometryPropertyExtractor_<Rejected> INPUT FEATURE_TYPE GeometryPropertyExtractor_UNTOUCHED  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, GeometryPropertyExtractor<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
 # -------------------------------------------------------------------------
-FACTORY_DEF {*} ConnectionFactory     FACTORY_NAME MeshMerger     INPUT  FEATURE_TYPE GeometryPropertyExtractor_EXTRACTED     FLUSH_WHEN_GROUPS_CHANGE No     ACCUM_INPUT_ATTRS One     LIST_ATTRS_TO_INCLUDE { <Unused> }     LIST_ATTRS_TO_INCLUDE_MODE <Unused>     MESH_MERGE_MODE YES     OUTPUT MESH FEATURE_TYPE MeshMerger_MESH     OUTPUT BAD_INPUT FEATURE_TYPE MeshMerger_<REJECTED>
-DEFAULT_MACRO _WB_BYPASS_TERMINATION No
-FACTORY_DEF * TeeFactory FACTORY_NAME MeshMerger_<Rejected> INPUT FEATURE_TYPE MeshMerger_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, MeshMerger<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
-# -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureTypeExtractor    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE MeshMerger_MESH    OUTPUT FEATURE_TYPE FeatureTypeExtractor_OUTPUT         @SupplyAttributes(_feature_type,&fme_feature_type)
+FACTORY_DEF * TeeFactory    FACTORY_NAME FeatureTypeExtractor    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE MeshMerger_MESH    INPUT  FEATURE_TYPE GeometryPropertyExtractor_EXTRACTED    OUTPUT FEATURE_TYPE FeatureTypeExtractor_OUTPUT         @SupplyAttributes(_feature_type,&fme_feature_type)
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE FeatureTypeExtractor_OUTPUT    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
 FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>

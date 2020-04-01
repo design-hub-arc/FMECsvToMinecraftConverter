@@ -4,5 +4,6 @@
 *.obj
 *.rvt
 *.ffs
+*.dxf
 *.recover
 *.log
