@@ -15,7 +15,7 @@ Steps to complete:
     [] Implement interpolation into (CSV)->(MC) conversion to fill in gaps in the data.
      \_(Current method leaves holes in the ground of the resulting world,
         so we will likely need a custom algorithm for this)
-    [] Scale everything appropriately (1 Minecraft block is one cubic meter)
+    [%] Scale everything appropriately (1 Minecraft block is one cubic meter)
      \_(this means the (FILE_TYPE)->(CSV) converters should scale their input to meters,
         so we will need to know the measurements their input is in)
     [] Set up a Minecraft server to host the converted ARC campus.
