@@ -1,0 +1,15 @@
+Project Goal:
+    Convert 3-dimensional data of the American River College into Minecraft,
+    allowing students to take a virtual tour of the campus,
+    and implement the Wayfinding project into the Minecraft world so students can find their way around campus.
+
+Steps to complete:
+    [*] Convert CSV [x, y, z] file to Minecraft.
+    [] Convert CSV [x, y, z, r, g, b] to Minecraft.
+    [] Convert other file formats to CSV [x, y, z, r, g, b] which can then be converted to Minecraft.
+      \_(Which formats do we want?)
+    [] Add more user-friendly method of converting files to Minecraft.
+        - Matt proposes a script which features a GUI asking for a file,
+          which then feeds the file into the appropriate (FILE_TYPE)->(CSV) converter,
+          and then the (CSV)->(MC) converter.
+An asterisk denotes the step is complete

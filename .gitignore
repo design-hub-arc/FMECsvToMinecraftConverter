@@ -1,13 +1,6 @@
-*.zip
-*.csv
-*.xyz
-*.obj
-*.rvt
-*.ffs
-*.fbx
-*.dxf
-*.dwfx
-*.rcp
-*.pcp
+/_saves/
+/convertedData/
+/sourceData/
 *.recover
 *.log
+*.ffs

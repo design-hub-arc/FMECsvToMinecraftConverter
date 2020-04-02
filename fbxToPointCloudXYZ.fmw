@@ -4,7 +4,7 @@
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\fbxToPointCloudXYZ.fmw"
 #              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
 #              --fileName "fbxToCsvTest"
-#              --SourceDataset_FBX "C:\Users\Matt\Documents\FME Projects\Converter\fbxData\DESGN100_Sample.fbx"
+#              --SourceDataset_FBX "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\fbxData\DESGN100_Sample.fbx"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -19,8 +19,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="f3e9dd40-5d6b-4023-b64a-149fc85f825c"
-#!   FME_DOCUMENT_PRIORGUID="ec9a0eed-dc00-4578-b74c-8311877d80bb,18135a8a-eff6-4bea-a695-a85b7ba3c7a5"
+#!   FME_DOCUMENT_GUID="8dba3bf7-78ca-47ec-9c1d-08d3b8978e45"
+#!   FME_DOCUMENT_PRIORGUID="ec9a0eed-dc00-4578-b74c-8311877d80bb,18135a8a-eff6-4bea-a695-a85b7ba3c7a5,f3e9dd40-5d6b-4023-b64a-149fc85f825c"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -29,7 +29,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-01T09:06:00"
+#!   LAST_SAVE_DATE="2020-04-02T08:58:41"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -48,7 +48,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-871.884 218.752"
+#!   VIEW_POSITION="-1421.89 190.627"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -67,7 +67,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_rotation number(31,15) fme_type char(50) multi_reader_keyword char(50) multi_reader_id number(11,0) fme_basename char(50) fme_geometry char(50) fme_feature_type char(50) fme_text_string char(50) fme_start_angle number(31,15) fme_fill_color char(50) fme_color char(50) fme_sweep_angle number(31,15) fme_text_size number(31,15) multi_reader_full_id number(11,0) multi_reader_type char(50) fme_dataset char(50) fme_primary_axis number(31,15) fbx_type char(50) fme_secondary_axis number(31,15)"
+#!   EXPOSABLE_ATTRS="fme_start_angle number(31,15) fme_basename char(50) fme_geometry char(50) fme_fill_color char(50) fme_color char(50) multi_reader_keyword char(50) fme_primary_axis number(31,15) fme_text_size number(31,15) fme_rotation number(31,15) fme_text_string char(50) fme_feature_type char(50) multi_reader_type char(50) multi_reader_id number(11,0) multi_reader_full_id number(11,0) fme_type char(50) fbx_type char(50) fme_sweep_angle number(31,15) fme_dataset char(50) fme_secondary_axis number(31,15)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -97,7 +97,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_secondary_axis number(31,15) fme_text_string char(50) pointcloudxyz_type char(32) fme_dataset char(50) fme_start_angle number(31,15) fme_primary_axis number(31,15) fme_feature_type char(50) fme_geometry char(50) fme_color char(50) fme_rotation number(31,15) fme_sweep_angle number(31,15) fme_type char(50) fme_text_size number(31,15) fme_basename char(50) fme_fill_color char(50)"
+#!   EXPOSABLE_ATTRS="fme_color char(50) fme_type char(50) fme_geometry char(50) fme_rotation number(31,15) pointcloudxyz_type char(32) fme_primary_axis number(31,15) fme_text_string char(50) fme_secondary_axis number(31,15) fme_start_angle number(31,15) fme_feature_type char(50) fme_sweep_angle number(31,15) fme_text_size number(31,15) fme_fill_color char(50) fme_dataset char(50) fme_basename char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -681,7 +681,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_FBX Autodesk_FBX_Files(*.fbx)|*.fbx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source FBX File(s):"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)fbxData\DESGN100_Sample.fbx"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\fbxData\DESGN100_Sample.fbx"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -900,7 +900,7 @@ DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
 GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
 DEFAULT_MACRO fileName fbxToCsvTest
 GUI STRING fileName enter a name for the resulting file:
-DEFAULT_MACRO SourceDataset_FBX $(FME_MF_DIR)fbxData\DESGN100_Sample.fbx
+DEFAULT_MACRO SourceDataset_FBX $(FME_MF_DIR)sourceData\fbxData\DESGN100_Sample.fbx
 GUI MULTIFILE SourceDataset_FBX Autodesk_FBX_Files(*.fbx)|*.fbx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source FBX File(s):
 INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(fileName)} == {}} { puts_real {Parameter 'fileName' must be given a value.}; exit 1; }; ]
