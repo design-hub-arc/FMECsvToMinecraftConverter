@@ -30,7 +30,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-02T10:58:36"
+#!   LAST_SAVE_DATE="2020-04-02T11:06:11"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -49,7 +49,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-757.82 511.724"
+#!   VIEW_POSITION="-757.82 347.66"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="80"
@@ -1298,21 +1298,27 @@
 #!   ENABLED="true"
 #!   LAST_PARM_EDIT="20200"
 #! >
-#!     <OUTPUT_FEAT NAME="inAllowedZRange"/>
+#!     <OUTPUT_FEAT NAME="tooHigh"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <OUTPUT_FEAT NAME="inAllowedZRange"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Component&lt;openparen&gt;z&lt;closeparen&gt;&lt;space&gt;&lt;lt&gt;&lt;space&gt;128 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST inAllowedZRange"/>
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Component&lt;openparen&gt;z&lt;closeparen&gt;&lt;gt&gt;=128 ; &lt;at&gt;Component&lt;openparen&gt;z&lt;closeparen&gt;&lt;lt&gt;128 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST tooHigh ; inAllowedZRange"/>
 #!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="No"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -1507,7 +1513,7 @@
 #!   IDENTIFIER="77"
 #!   SOURCE_NODE="59"
 #!   TARGET_NODE="82"
-#!   SOURCE_PORT_DESC="fo 0 inAllowedZRange"
+#!   SOURCE_PORT_DESC="fo 1 inAllowedZRange"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
@@ -1522,7 +1528,7 @@
 #!   IDENTIFIER="47"
 #!   SOURCE_NODE="59"
 #!   TARGET_NODE="46"
-#!   SOURCE_PORT_DESC="fo 0 inAllowedZRange"
+#!   SOURCE_PORT_DESC="fo 1 inAllowedZRange"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="1"
@@ -1826,8 +1832,10 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_Offsetter    INPUT FEATURE_TY
 FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Offsetter_Offset       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_PointCloudOffsetter    INPUT FEATURE_TYPE Offsetter_Offset    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Offsetter_OFFSET       @TransformPointCloud(OFFSET,)    OUTPUT FAILED FEATURE_TYPE Offsetter_OFFSET
 # -------------------------------------------------------------------------
-FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME zFilter    INPUT  FEATURE_TYPE Offsetter_OFFSET    MODE FILTER    REJECT_INVALID_FEATURES YES    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Component<openparen>z<closeparen><space><lt><space>128 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST inAllowedZRange    OUTPUT_UNFILTERED_POINTS "No"    OUTPUT RESULT FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_0    OUTPUT <REJECTED> FEATURE_TYPE zFilter_<REJECTED>
-FACTORY_DEF * TestFactory FACTORY_NAME zFilter_TestFactory_0 INPUT FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = inAllowedZRange OUTPUT PASSED FEATURE_TYPE zFilter_inAllowedZRange    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME zFilter    INPUT  FEATURE_TYPE Offsetter_OFFSET    MODE FILTER    REJECT_INVALID_FEATURES YES    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Component<openparen>z<closeparen><gt>=128 ; <at>Component<openparen>z<closeparen><lt>128 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST tooHigh ; inAllowedZRange    OUTPUT_UNFILTERED_POINTS "No"    OUTPUT RESULT FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_0    OUTPUT <REJECTED> FEATURE_TYPE zFilter_<REJECTED>
+FACTORY_DEF * TestFactory FACTORY_NAME zFilter_TestFactory_0 INPUT FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = tooHigh OUTPUT PASSED FEATURE_TYPE zFilter_tooHigh    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME zFilter_TestFactory_1 INPUT FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = inAllowedZRange OUTPUT PASSED FEATURE_TYPE zFilter_inAllowedZRange    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE zFilter_POINTCLOUDFILTERINPUTLINE_2
+FACTORY_DEF * TeeFactory   FACTORY_NAME "zFilter tooHigh Transformer Output Nuker"   INPUT FEATURE_TYPE zFilter_tooHigh
 FACTORY_DEF * TeeFactory   FACTORY_NAME "zFilter inAllowedZRange Splitter"   INPUT FEATURE_TYPE zFilter_inAllowedZRange   OUTPUT FEATURE_TYPE zFilter_inAllowedZRange_0_USfRoVIHPW0=   OUTPUT FEATURE_TYPE zFilter_inAllowedZRange_1_fv4HD4YRfH4=
 FACTORY_DEF * TeeFactory   FACTORY_NAME "zFilter <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE zFilter_<REJECTED>
 # -------------------------------------------------------------------------
