@@ -1,7 +1,11 @@
 Project Goal:
+    Convert Aerospace museum into Minecraft.
+
     Convert 3-dimensional data of the American River College into Minecraft,
     allowing students to take a virtual tour of the campus,
     and implement the Wayfinding project into the Minecraft world so students can find their way around campus.
+
+    Use Minecraft as a collaborative design space.
 
 Steps to complete:
     [/] Convert CSV [x, y, z] file to Minecraft.
