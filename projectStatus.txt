@@ -1,3 +1,5 @@
+This document will be revised as people are added to the project.
+
 Project Goal:
     Convert Aerospace museum into Minecraft.
 
@@ -18,10 +20,11 @@ Steps to complete:
         and then the (CSV)->(MC) converter.)
     [] Implement interpolation into (CSV)->(MC) conversion to fill in gaps in the data.
      \_(Current method leaves holes in the ground of the resulting world,
-        so we will likely need a custom algorithm for this)
-    [%] Scale everything appropriately (1 Minecraft block is one cubic meter)
+        so we will likely need a custom algorithm for this. Matt has an idea for how we can do this)
+    [% Matt Crow] Scale everything appropriately (1 Minecraft block is one cubic meter)
      \_(this means the (FILE_TYPE)->(CSV) converters should scale their input to meters,
-        so we will need to know the measurements their input is in)
+        so we will need to know the measurements their input is in.
+        Matt just needs to verify each converter is outputting in meters)
     [] Set up a Minecraft server to host the converted ARC campus.
     [] Have a group of people manipulate the ARC campus Minecraft world to make corrections.
     [] Convert the ARC campus Minecraft world back into CSV or other formats to save the more accurate
