@@ -3,12 +3,9 @@
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
 #              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
-#              --worldName "test"
-#              --worldSize "64"
-#              --xyScaleWithZ "no"
-#              --worldHeight "64"
-#              --SourceDataset_POINTCLOUDXYZ_5 "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\csvData\pointsCsv.csv"
+#              --worldName "unscaledDfx"
 #              --pointReduction "100"
+#              --SourceDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\convertedData\dfxToCsvTest.csv"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -17,14 +14,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="5394.68 3295.08"
-#!   DOC_TOP_LEFT="-1939.49 -1537.52"
+#!   DOC_EXTENTS="4839.99 2765.11"
+#!   DOC_TOP_LEFT="-1939.49 -1007.55"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="13555bd2-a0f2-4272-bdce-bb1d45b570cd"
-#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1,070a770d-be2f-4595-8b9b-bc9485955e71,4e68c10c-f837-4c48-9987-36a726b8736d,f0e193d1-8aaa-4b20-8b59-825ff1a2a450,185c9d88-42ef-4127-9686-623135982fda,71b28c26-9602-443a-a109-7bb9b7c8bfff,98d655a0-5f5b-4c3e-be48-67ccf781c465,10f71eee-9916-4945-a62c-7e9c044c3e13,57389470-1bf7-4a3d-929f-f0e79f99e42f"
+#!   FME_DOCUMENT_GUID="e2a51f54-70a5-430e-919f-d934d7b05b4f"
+#!   FME_DOCUMENT_PRIORGUID="1c7b2cc8-fe30-4b93-8b7d-694a6d50c7ef,87388dfa-7d11-4b63-8b42-2407ef15a6a9,5970e890-6c99-4470-ad7e-609203ddd488,4626d39d-755b-4fa5-a42d-569f280a67fd,c98176a2-665f-420f-bb2d-c31278b1add7,e6d7ff37-afcc-44a1-80cb-e30993506567,8f4232fd-94f3-43de-ad9e-2ab4a9875b09,7ab2df43-ebf4-47e0-8402-1f91ba2c65d1,64312829-9790-4142-92db-2c06022f01b2,13134a7c-9ffa-4b9d-9436-44eff23a5801,f2b5a7b2-6a52-4dfe-972a-e77373c00c5c,7bbf1672-b4b1-4e2d-92b1-3ab082171f08,66e24ae2-d281-4dd0-afab-cc49cd0ae4bc,dba9f77b-c32c-46d4-a1c0-bb363e499670,c4fed020-d962-40a6-a3db-8b1f6a72c536,f4a2d322-38ba-405c-a180-7adc5927eb97,5ac00ad0-6725-4e27-adae-cf95ecf09941,017824a8-89b0-46f1-b75f-d87fb414cab6,9e0e6ed0-2a2a-427b-b9b2-9d4d16c1cf6e,bd391c5e-8412-4fb3-8e16-10fb364e5d6c,edf44cb2-bac0-40be-8b90-03424f3c0190,6f3e7b4e-35fb-4a34-9057-9627e2aeef87,e4e2ee75-4848-4900-a26c-97fff7761101,7833c316-3c91-4504-931f-3406b77f7053,e485bf40-8eba-4c3a-9f6a-68bc0aa4f7be,aecb1ec8-e376-4bde-89e5-cec7c3be5bb8,c636cef5-c5a9-4396-917a-cc7d5d6852c5,45bb94df-e7a3-471d-8529-c753fc6acede,678ce536-a7e1-4f73-871e-4625ee74823e,a106e72b-4265-4446-b12b-bbe618ba2599,9db0a907-ec79-4230-9813-e7a4d57bccc0,87b620d8-204e-4a3c-8e43-219c9ed57240,70172755-456c-4e79-a90b-a27ce4060240,e23280b5-908b-4ea2-94bc-a60379d26349,0ceab8fc-c449-410a-9ac6-1cb2f11f00d1,070a770d-be2f-4595-8b9b-bc9485955e71,4e68c10c-f837-4c48-9987-36a726b8736d,f0e193d1-8aaa-4b20-8b59-825ff1a2a450,185c9d88-42ef-4127-9686-623135982fda,71b28c26-9602-443a-a109-7bb9b7c8bfff,98d655a0-5f5b-4c3e-be48-67ccf781c465,10f71eee-9916-4945-a62c-7e9c044c3e13,57389470-1bf7-4a3d-929f-f0e79f99e42f,13555bd2-a0f2-4272-bdce-bb1d45b570cd,78ed1db7-aff3-43da-904c-19c2e3b98610,e5d910ba-b2d0-444c-baa5-94f9f15304d2,84c40317-3888-4d3b-b183-5435c84b1682"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -33,7 +30,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-02T10:18:01"
+#!   LAST_SAVE_DATE="2020-04-03T10:25:58"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -52,7 +49,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-2539.09 1933.61"
+#!   VIEW_POSITION="-1941.43 2125.02"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="80"
@@ -62,8 +59,8 @@
 #!   IS_SOURCE="true"
 #!   ROLE="READER"
 #!   FORMAT="POINTCLOUDXYZ"
-#!   DATASET="$(SourceDataset_POINTCLOUDXYZ_5)"
-#!   KEYWORD="POINTCLOUDXYZ_2"
+#!   DATASET="$(SourceDataset_POINTCLOUDXYZ)"
+#!   KEYWORD="POINTCLOUDXYZ_1"
 #!   MULTI_GEOM_ALLOWED="false"
 #!   ATTR_MAX_LENGTH="0"
 #!   ATTR_CASE="ANY"
@@ -71,7 +68,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_primary_axis number(31,15) multi_reader_type char(50) pointcloudxyz_type char(32) fme_secondary_axis number(31,15) multi_reader_id number(11,0) fme_text_size number(31,15) fme_basename char(50) fme_fill_color char(50) multi_reader_keyword char(50) fme_sweep_angle number(31,15) fme_start_angle number(31,15) fme_rotation number(31,15) fme_color char(50) multi_reader_full_id number(11,0) fme_type char(50) fme_geometry char(50) fme_text_string char(50) fme_feature_type char(50) fme_dataset char(50)"
+#!   EXPOSABLE_ATTRS="fme_feature_type char(50) fme_rotation number(31,15) fme_color char(50) fme_dataset char(50) fme_text_string char(50) pointcloudxyz_type char(32) fme_fill_color char(50) fme_primary_axis number(31,15) fme_basename char(50) fme_type char(50) multi_reader_id number(11,0) multi_reader_full_id number(11,0) fme_start_angle number(31,15) fme_geometry char(50) fme_sweep_angle number(31,15) fme_secondary_axis number(31,15) multi_reader_keyword char(50) fme_text_size number(31,15) multi_reader_type char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -81,7 +78,6 @@
 #!   DATASET_TYPE="FILEDIR"
 #!   FTTR_TYPE="LISTBOX_ENCODED"
 #!   GENERATE_FME_BUILD_NUM="20200"
-#!   NAME="input [POINTCLOUDXYZ]"
 #!   COORDSYS="*XY-MT*"
 #!   FEATURE_TYPES=""
 #!   MAX_FEATURES=""
@@ -139,7 +135,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_primary_axis double fme_secondary_axis double minecraft_populate_terrain string minecraft_center_point_cloud string fme_text_size double fme_basename string minecraft_generator_seed long fme_fill_color string fme_sweep_angle double fme_start_angle double minecraft_type string fme_rotation double fme_color string fme_type string minecraft_fill_block short minecraft_generator_options string fme_geometry string fme_text_string string minecraft_world_name string minecraft_fill_under string fme_feature_type string minecraft_generator_name string fme_dataset string"
+#!   EXPOSABLE_ATTRS="minecraft_center_point_cloud string fme_feature_type string fme_rotation double fme_color string fme_dataset string minecraft_type string fme_text_string string fme_fill_color string minecraft_fill_under string fme_primary_axis double minecraft_generator_name string minecraft_generator_seed long minecraft_world_name string fme_basename string fme_type string fme_start_angle double minecraft_fill_block short fme_geometry string minecraft_generator_options string minecraft_populate_terrain string fme_sweep_angle double fme_secondary_axis double fme_text_size double"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -648,8 +644,8 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="5"
 #!   FEAT_GEOMTYPE="All"
-#!   POSITION="2751.5590155901564 1388.4013330609498"
-#!   BOUNDING_RECT="2751.5590155901564 1388.4013330609498 499.09999999999997 71"
+#!   POSITION="2196.8659686596884 1387.1077110771114"
+#!   BOUNDING_RECT="2196.8659686596884 1387.1077110771114 499.09999999999997 71"
 #!   ORDER="500000000000117"
 #!   COLLAPSED="true"
 #!   KEYWORD="MINECRAFT_1"
@@ -664,31 +660,30 @@
 #!   FEATURE_TYPE_NAME=""
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="false"
-#!   IDENTIFIER="66"
+#!   IDENTIFIER="43"
 #!   FEAT_GEOMTYPE="pointcloudxyz_point_cloud"
-#!   POSITION="-1864.3628874622084 1389.675208418751"
-#!   BOUNDING_RECT="-1864.3628874622084 1389.675208418751 488.09999999999997 71"
+#!   POSITION="-1837.018864021974 1439.3902262832153"
+#!   BOUNDING_RECT="-1837.018864021974 1439.3902262832153 488.09999999999997 71"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
-#!   KEYWORD="POINTCLOUDXYZ_2"
+#!   KEYWORD="POINTCLOUDXYZ_1"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
-#!   MERGE_FILTER="*"
+#!   MERGE_FILTER=""
 #!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
 #!   MERGE_FILTER_CASE_SENSITIVE="false"
 #!   DYNAMIC_SCHEMA="false"
 #! >
-#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
 #! <READER_DATASETS>
 #! <DATASET
-#!   NAME="POINTCLOUDXYZ_2"
-#!   OVERRIDE="-POINTCLOUDXYZ_2_DATASET"
-#!   DATASET="POINTCLOUDXYZ_2/pointsCsv.csv"
+#!   NAME="POINTCLOUDXYZ_1"
+#!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
+#!   DATASET="POINTCLOUDXYZ_1/dfxToCsvTest.csv"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
@@ -707,27 +702,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
-#!   DEFAULT_VALUE="test"
-#!   IS_STAND_ALONE="false"
-#! />
-#! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI RANGE_SLIDER_OR_ATTR worldSize &quot;RANGE:(0,]&quot; Enter world size to scale to (positive integer):"
-#!   DEFAULT_VALUE="64"
-#!   IS_STAND_ALONE="true"
-#! />
-#! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI LITERAL CHOICE xyScaleWithZ yes%no Should the height axis be scaled the same as other axes?"
-#!   DEFAULT_VALUE="no"
-#!   IS_STAND_ALONE="true"
-#! />
-#! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI RANGE_SLIDER_OR_ATTR worldHeight &quot;RANGE:[1,128)&quot; Enter the height to scale points to (1 to 127):"
-#!   DEFAULT_VALUE="64"
-#!   IS_STAND_ALONE="true"
-#! />
-#! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\csvData\pointsCsv.csv"
+#!   DEFAULT_VALUE="unscaledDfx"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -735,15 +710,20 @@
 #!   DEFAULT_VALUE="100"
 #!   IS_STAND_ALONE="true"
 #! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI MULTIFILE SourceDataset_POINTCLOUDXYZ XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData\dfxToCsvTest.csv"
+#!   IS_STAND_ALONE="false"
+#! />
 #! </GLOBAL_PARAMETERS>
 #! <COMMENTS>
 #! <COMMENT
 #!   IDENTIFIER="17"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use Minecraft version 1.7.* to play&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="2638.047213805472 1191.1053434343871"
-#!   TOP_LEFT="2638.047213805472 1191.1053434343871"
-#!   BOTTOM_RIGHT="3388.047213805472 1141.1053434343871"
-#!   BOUNDING_RECT="2638.047213805472 1191.1053434343871 750 50"
+#!   POSITION="2083.354166875004 1189.8117214505487"
+#!   TOP_LEFT="2083.354166875004 1189.8117214505487"
+#!   BOTTOM_RIGHT="2833.354166875004 1139.8117214505487"
+#!   BOUNDING_RECT="2083.354166875004 1189.8117214505487 750 50"
 #!   ORDER="500000000000008"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -755,10 +735,10 @@
 #! <COMMENT
 #!   IDENTIFIER="24"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Writer automatically handles axis swapping (Y and Z).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="2630.0393212265467 1644.033647479331"
-#!   TOP_LEFT="2630.0393212265467 1644.033647479331"
-#!   BOTTOM_RIGHT="3380.0393212265467 1594.033647479331"
-#!   BOUNDING_RECT="2630.0393212265467 1644.033647479331 750 50"
+#!   POSITION="2075.3462742960787 1642.7400254954925"
+#!   TOP_LEFT="2075.3462742960787 1642.7400254954925"
+#!   BOTTOM_RIGHT="2825.3462742960787 1592.7400254954925"
+#!   BOUNDING_RECT="2075.3462742960787 1642.7400254954925 750 50"
 #!   ORDER="500000000000033"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -783,27 +763,12 @@
 #!   ANCHORED_NODE="7"
 #! />
 #! <COMMENT
-#!   IDENTIFIER="34"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Find the minimum and maximum coordinates in the cloud along each axis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="328.07508932232122 1660.6417887988405"
-#!   TOP_LEFT="328.07508932232122 1660.6417887988405"
-#!   BOTTOM_RIGHT="758.07508932232122 1659.6417887988405"
-#!   BOUNDING_RECT="328.07508932232122 1660.6417887988405 430 1"
-#!   ORDER="500000000000057"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="21"
-#! />
-#! <COMMENT
 #!   IDENTIFIER="35"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Shift all the points up so that the lowest point is at z-coordinate 0, since Minecraft doesn&apos;t support negative heights.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1188.9837090335186 725.0071324522778"
-#!   TOP_LEFT="1188.9837090335186 725.0071324522778"
-#!   BOTTOM_RIGHT="1642.9837090335186 724.0071324522778"
-#!   BOUNDING_RECT="1188.9837090335186 725.0071324522778 454 1"
+#!   POSITION="831.73089650539328 998.18706520398496"
+#!   TOP_LEFT="831.73089650539328 998.18706520398496"
+#!   BOTTOM_RIGHT="1285.7308965053933 997.18706520398496"
+#!   BOUNDING_RECT="831.73089650539328 998.18706520398496 454 1"
 #!   ORDER="500000000000058"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -811,81 +776,6 @@
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
 #!   SIZE_POLICY="10"
 #!   ANCHORED_NODE="28"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="25"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Scale everything uniformly based on the optimal scale factor.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="359.60629675939583 -984.2519301383486"
-#!   TOP_LEFT="359.60629675939583 -984.2519301383486"
-#!   BOTTOM_RIGHT="813.60629675939583 -985.2519301383486"
-#!   BOUNDING_RECT="359.60629675939583 -984.2519301383486 454 1"
-#!   ORDER="500000000000059"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="31"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="37"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Find the current dimensions of the point cloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="352.07508932232122 1082.5110074910272"
-#!   TOP_LEFT="352.07508932232122 1082.5110074910272"
-#!   BOTTOM_RIGHT="782.07508932232122 1081.5110074910272"
-#!   BOUNDING_RECT="352.07508932232122 1082.5110074910272 430 1"
-#!   ORDER="500000000000061"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="32"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="40"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate the factors each axis would need to be multiplied by to scale them to their ideal size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="311.46541447557274 676.71939290821524"
-#!   TOP_LEFT="311.46541447557274 676.71939290821524"
-#!   BOTTOM_RIGHT="741.46541447557274 675.71939290821524"
-#!   BOUNDING_RECT="311.46541447557274 676.71939290821524 430 1"
-#!   ORDER="500000000000063"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="38"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="43"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate the best scale to size X and Y axis to such that they fit within the world bounds entered by the user. Ignore z-axis for now.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="352.09082072963542 163.21526786696444"
-#!   TOP_LEFT="352.09082072963542 163.21526786696444"
-#!   BOTTOM_RIGHT="782.09082072963542 162.21526786696444"
-#!   BOUNDING_RECT="352.09082072963542 163.21526786696444 430 1"
-#!   ORDER="500000000000065"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="41"
-#! />
-#! <COMMENT
-#!   IDENTIFIER="48"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Calculate how to scale x- and y-axes based on whether or not the z-axis should scale with them.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="359.60629675939583 -450.49724259147376"
-#!   TOP_LEFT="359.60629675939583 -450.49724259147376"
-#!   BOTTOM_RIGHT="813.60629675939583 -451.49724259147376"
-#!   BOUNDING_RECT="359.60629675939583 -450.49724259147376 454 1"
-#!   ORDER="500000000000067"
-#!   FOLLOW_ANCHOR="true"
-#!   INFO_NODE="false"
-#!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,0.78431372549019607"
-#!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="46"
 #! />
 #! <COMMENT
 #!   IDENTIFIER="54"
@@ -965,10 +855,10 @@
 #! <COMMENT
 #!   IDENTIFIER="85"
 #!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Currently, sets each block to an Emerald block, but this will be changed in later versions to convert RGB values to a block of approximately the same color.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1955.1746936516993 1472.1569287121433"
-#!   TOP_LEFT="1955.1746936516993 1472.1569287121433"
-#!   BOTTOM_RIGHT="2385.1746936516993 1471.1569287121433"
-#!   BOUNDING_RECT="1955.1746936516993 1472.1569287121433 430 1"
+#!   POSITION="1408.294224847011 1620.4403777371103"
+#!   TOP_LEFT="1408.294224847011 1620.4403777371103"
+#!   BOTTOM_RIGHT="1838.294224847011 1619.4403777371103"
+#!   BOUNDING_RECT="1408.294224847011 1620.4403777371103 430 1"
 #!   ORDER="500000000000107"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
@@ -978,13 +868,43 @@
 #!   ANCHORED_NODE="82"
 #! />
 #! <COMMENT
-#!   IDENTIFIER="60"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Since everything has been scaled, need to recalculate the lowest z-value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="1218.2093706651351 1288.1369137500899"
-#!   TOP_LEFT="1218.2093706651351 1288.1369137500899"
-#!   BOTTOM_RIGHT="1648.2093706651351 1287.1369137500899"
-#!   BOUNDING_RECT="1218.2093706651351 1288.1369137500899 430 1"
-#!   ORDER="500000000000112"
+#!   IDENTIFIER="83"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;still whines about having to cast from Real64, despite the fact that I have already casted to Int32&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="2075.3462742960787 987.10911918642955"
+#!   TOP_LEFT="2075.3462742960787 987.10911918642955"
+#!   BOTTOM_RIGHT="2833.3462742960787 986.10911918642955"
+#!   BOUNDING_RECT="2075.3462742960787 987.10911918642955 758 1"
+#!   ORDER="500000000000120"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="5"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="56"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Round all coordinates to integers, as Minecraft does not support decimal coordinates.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="831.73089650539328 1642.7400254954925"
+#!   TOP_LEFT="831.73089650539328 1642.7400254954925"
+#!   BOTTOM_RIGHT="1284.7308965053933 1641.7400254954925"
+#!   BOUNDING_RECT="831.73089650539328 1642.7400254954925 453 1"
+#!   ORDER="500000000000129"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="87"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="59"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Find the minimum z-coordinate in the point cloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="831.73089650539328 1277.3125964592989"
+#!   TOP_LEFT="831.73089650539328 1277.3125964592989"
+#!   BOTTOM_RIGHT="1285.7308965053933 1276.3125964592989"
+#!   BOUNDING_RECT="831.73089650539328 1277.3125964592989 454 1"
+#!   ORDER="500000000000130"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
 #!   CUSTOM_USER_COLOR="false"
@@ -993,19 +913,49 @@
 #!   ANCHORED_NODE="57"
 #! />
 #! <COMMENT
-#!   IDENTIFIER="83"
-#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;still whines about having to cast from Real64, despite the fact that I have already casted to Int32&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
-#!   POSITION="2630.0393212265467 988.40274117026797"
-#!   TOP_LEFT="2630.0393212265467 988.40274117026797"
-#!   BOTTOM_RIGHT="3388.0393212265467 987.40274117026797"
-#!   BOUNDING_RECT="2630.0393212265467 988.40274117026797 758 1"
-#!   ORDER="500000000000120"
+#!   IDENTIFIER="66"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Split the point cloud into two point clouds: one that is within the allowed z-range of Minecraft, the other... not so much.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="830.75432423967072 506.91914585812447"
+#!   TOP_LEFT="830.75432423967072 506.91914585812447"
+#!   BOTTOM_RIGHT="1284.7543242396707 505.91914585812447"
+#!   BOUNDING_RECT="830.75432423967072 506.91914585812447 454 1"
+#!   ORDER="500000000000131"
 #!   FOLLOW_ANCHOR="true"
 #!   INFO_NODE="false"
 #!   CUSTOM_USER_COLOR="false"
-#!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,0.78431372549019607"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
 #!   SIZE_POLICY="10"
-#!   ANCHORED_NODE="5"
+#!   ANCHORED_NODE="48"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="72"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Recalculate the minimum z-coordinates of both point clouds so we can identify which is which. Note that we are setting &amp;quot;Calculate and Update Extents&amp;quot; to true: this seems to prevent a lot of errors, as it updates the dimensions of the point cloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="830.75432423967072 113.16520831874902"
+#!   TOP_LEFT="830.75432423967072 113.16520831874902"
+#!   BOTTOM_RIGHT="1260.7543242396707 112.16520831874902"
+#!   BOUNDING_RECT="830.75432423967072 113.16520831874902 430 1"
+#!   ORDER="500000000000132"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="46"
+#! />
+#! <COMMENT
+#!   IDENTIFIER="75"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Only allow the in range point cloud to write to Minecraft. Commit the other one to flames.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="831.73089650539328 -648.4439844398446"
+#!   TOP_LEFT="831.73089650539328 -648.4439844398446"
+#!   BOTTOM_RIGHT="1285.7308965053933 -649.4439844398446"
+#!   BOUNDING_RECT="831.73089650539328 -648.4439844398446 454 1"
+#!   ORDER="500000000000133"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="42"
 #! />
 #! </COMMENTS>
 #! <CONSTANTS>
@@ -1022,21 +972,21 @@
 #!   BOUNDING_RECT="-1939.4897063553972 1756.2675626756268 650.98157231572304 2750.0275002750022"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="66 "
+#!   CONTENTS="43 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
 #!   IDENTIFIER="68"
 #!   NAME="Set block type"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="1903.6451564515664 1757.5611846594652"
+#!   TOP_LEFT="1345.0458204582067 1756.2675626756268"
 #!   ORDER="500000000000085"
 #!   PALETTE_COLOR="Color1"
-#!   BOTTOM_RIGHT="2521.6451564515664 -987.50987509875085"
-#!   BOUNDING_RECT="1903.6451564515664 1757.5611846594652 618 2745.0710597582161"
+#!   BOTTOM_RIGHT="1963.0458204582067 -988.80349708258927"
+#!   BOUNDING_RECT="1345.0458204582067 1756.2675626756268 618 2745.0710597582161"
 #!   STICKY="true"
 #!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
-#!   CONTENTS="85 82 "
+#!   CONTENTS="82 85 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1050,7 +1000,7 @@
 #!   BOUNDING_RECT="-1267.8698215553586 1756.2675626756268 750 2750.0275002750022"
 #!   STICKY="true"
 #!   COLOUR="0.24313725490196078,0.40784313725490196,0.20784313725490197,1"
-#!   CONTENTS="30 63 64 61 7 45 "
+#!   CONTENTS="63 64 7 45 30 61 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1064,49 +1014,35 @@
 #!   BOUNDING_RECT="-481.45631551553595 1757.5611846594652 660.92239589062535 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.60784313725490191,0.46274509803921571,0.20784313725490197,1"
-#!   CONTENTS="65 71 81 80 55 54 51 49 "
-#! >
-#! </BOOKMARK>
-#! <BOOKMARK
-#!   IDENTIFIER="72"
-#!   NAME="perform scaling"
-#!   DESCRIPTION=""
-#!   TOP_LEFT="204.61514138950906 1757.5611846594652"
-#!   ORDER="500000000000091"
-#!   PALETTE_COLOR="Color4"
-#!   BOTTOM_RIGHT="954.61514138950906 -1537.5153751537514"
-#!   BOUNDING_RECT="204.61514138950906 1757.5611846594652 750 3295.0765598132166"
-#!   STICKY="true"
-#!   COLOUR="0.45882352941176469,0.53725490196078429,0.21176470588235294,1"
-#!   CONTENTS="27 48 43 40 41 34 33 42 46 32 37 21 25 31 38 47 39 "
+#!   CONTENTS="51 55 71 49 65 54 80 81 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
 #!   IDENTIFIER="73"
-#!   NAME="perform shifting"
+#!   NAME="perform shifting and cut off points that are too high"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="998.37307896888524 1757.5611846594652"
+#!   TOP_LEFT="224.92784451654074 1756.2675626756268"
 #!   ORDER="500000000000093"
 #!   PALETTE_COLOR="Color5"
-#!   BOTTOM_RIGHT="1896.8939689396893 -1006.260062600626"
-#!   BOUNDING_RECT="998.37307896888524 1757.5611846594652 898.52088997080409 2763.8212472600912"
+#!   BOTTOM_RIGHT="1324.2319923199229 -1007.5536845844645"
+#!   BOUNDING_RECT="224.92784451654074 1756.2675626756268 1099.3041478033822 2763.8212472600912"
 #!   STICKY="true"
 #!   COLOUR="0.21568627450980393,0.52549019607843139,0.33333333333333331,1"
-#!   CONTENTS="35 57 28 87 60 62 58 "
+#!   CONTENTS="50 66 75 56 59 47 42 72 87 46 28 57 58 35 48 62 60 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
 #!   IDENTIFIER="74"
 #!   NAME="Create the world"
 #!   DESCRIPTION=""
-#!   TOP_LEFT="2555.2343856771881 1757.5611846594652"
+#!   TOP_LEFT="2000.5413387467202 1756.2675626756268"
 #!   ORDER="500000000000094"
 #!   PALETTE_COLOR="Reader/Writer"
-#!   BOTTOM_RIGHT="3455.1930571389048 -975.00975009750118"
-#!   BOUNDING_RECT="2555.2343856771881 1757.5611846594652 899.95867146171668 2732.5709347569664"
+#!   BOTTOM_RIGHT="2900.5000102084368 -976.3033720813396"
+#!   BOUNDING_RECT="2000.5413387467202 1756.2675626756268 899.95867146171668 2732.5709347569664"
 #!   STICKY="true"
 #!   COLOUR="0.44313725490196076,0.32549019607843138,0.18823529411764706,1"
-#!   CONTENTS="17 83 5 24 "
+#!   CONTENTS="83 5 17 24 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -1147,112 +1083,11 @@
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="convertToPointCloud"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
-#!   IDENTIFIER="31"
-#!   TYPE="Scaler"
-#!   VERSION="4"
-#!   POSITION="383.56541447557277 -1289.9232635183487"
-#!   BOUNDING_RECT="383.56541447557277 -1289.9232635183487 454 71"
-#!   ORDER="500000000000037"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="SCALED"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
-#!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_PARM PARM_NAME="COMPONENTS_TO_SCALE" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="POINT_CLOUD_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
-#!     <XFORM_PARM PARM_NAME="RASTER_SCALING" PARM_VALUE="Extents"/>
-#!     <XFORM_PARM PARM_NAME="SCALEFACTOR_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="SCALE_ORIGIN" PARM_VALUE="0,0"/>
-#!     <XFORM_PARM PARM_NAME="TEXT_LOC_ONLY" PARM_VALUE="Location and Size"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Scaler"/>
-#!     <XFORM_PARM PARM_NAME="XSCALE" PARM_VALUE="@Value(optimalScaleXY)"/>
-#!     <XFORM_PARM PARM_NAME="YSCALE" PARM_VALUE="@Value(optimalScaleXY)"/>
-#!     <XFORM_PARM PARM_NAME="ZSCALE" PARM_VALUE="@Value(zScale)"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="21"
-#!   TYPE="PointCloudPropertyExtractor"
-#!   VERSION="3"
-#!   POSITION="328.07508932232122 1347.7665700466525"
-#!   BOUNDING_RECT="328.07508932232122 1347.7665700466525 454 71"
-#!   ORDER="500000000000039"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
-#!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="CALCULATE_EXTENTS_DISPLAY" PARM_VALUE="No"/>
-#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS" PARM_VALUE="x   MINMAX y   MINMAX z   MINMAX"/>
-#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="findLimits"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
 #!   IDENTIFIER="28"
 #!   TYPE="Offsetter"
 #!   VERSION="1"
-#!   POSITION="1256.2093706651351 279.84042411852738"
-#!   BOUNDING_RECT="1256.2093706651351 279.84042411852738 454 71"
+#!   POSITION="333.31281294955761 873.64751314179853"
+#!   BOUNDING_RECT="333.31281294955761 873.64751314179853 454 71"
 #!   ORDER="500000000000051"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1260,37 +1095,13 @@
 #! >
 #!     <OUTPUT_FEAT NAME="OFFSET"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1312,158 +1123,6 @@
 #!     <XFORM_PARM PARM_NAME="XOFF" PARM_VALUE="0"/>
 #!     <XFORM_PARM PARM_NAME="YOFF" PARM_VALUE="0"/>
 #!     <XFORM_PARM PARM_NAME="ZOFF" PARM_VALUE="@Evaluate(-@Value(_z_min))"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="32"
-#!   TYPE="AttributeCreator"
-#!   VERSION="9"
-#!   POSITION="352.07508932232122 861.25944497540218"
-#!   BOUNDING_RECT="352.07508932232122 861.25944497540218 430 71"
-#!   ORDER="500000000000060"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; width SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_x_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_x_min&lt;closeparen&gt;&lt;closeparen&gt;  depth SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_y_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_y_min&lt;closeparen&gt;&lt;closeparen&gt;  height SET_TO &lt;at&gt;sub&lt;openparen&gt;&lt;at&gt;Value&lt;openparen&gt;_z_max&lt;closeparen&gt;&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;_z_min&lt;closeparen&gt;&lt;closeparen&gt;"/>
-#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Dimensions"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="38"
-#!   TYPE="AttributeCreator"
-#!   VERSION="9"
-#!   POSITION="352.07508932232122 317.34079912227696"
-#!   BOUNDING_RECT="352.07508932232122 317.34079912227696 430 71"
-#!   ORDER="500000000000062"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; xScale SET_TO &lt;at&gt;div&lt;openparen&gt;$(worldSize)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;width&lt;closeparen&gt;&lt;closeparen&gt;  yScale SET_TO &lt;at&gt;div&lt;openparen&gt;$(worldSize)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;depth&lt;closeparen&gt;&lt;closeparen&gt;  zScale SET_TO &lt;at&gt;Evaluate&lt;openparen&gt;&lt;at&gt;div&lt;openparen&gt;$(worldHeight)&lt;comma&gt;&lt;at&gt;Value&lt;openparen&gt;height&lt;closeparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;"/>
-#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CalculateScales"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="41"
-#!   TYPE="AttributeCreator"
-#!   VERSION="9"
-#!   POSITION="311.46541447557274 -295.16532593897352"
-#!   BOUNDING_RECT="311.46541447557274 -295.16532593897352 526.10000000000002 71"
-#!   ORDER="500000000000064"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; idealScaleXYNoZ SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Value&lt;openparen&gt;yScale&lt;closeparen&gt;&apos;BOOL_OP;AND;COMPOSITE_TEST;1;NUM_TEST &lt;at&gt;Value&lt;openparen&gt;xScale&lt;closeparen&gt; &lt; &lt;at&gt;Value&lt;openparen&gt;yScale&lt;closeparen&gt;&apos;&lt;at&gt;Value&lt;openparen&gt;xScale&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
-#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FindOptimalScaleIgnoreZ"/>
-#! </TRANSFORMER>
-#! <TRANSFORMER
-#!   IDENTIFIER="46"
-#!   TYPE="AttributeCreator"
-#!   VERSION="9"
-#!   POSITION="383.56541447557277 -806.12514887053646"
-#!   BOUNDING_RECT="383.56541447557277 -806.12514887053646 454 71"
-#!   ORDER="500000000000066"
-#!   PARMS_EDITED="true"
-#!   ENABLED="true"
-#!   LAST_PARM_EDIT="20200"
-#! >
-#!     <OUTPUT_FEAT NAME="OUTPUT"/>
-#!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; optimalScaleXY SET_TO &quot;FME_CONDITIONAL:DEFAULT_VALUE&apos;&lt;at&gt;Value&lt;openparen&gt;idealScaleXYNoZ&lt;closeparen&gt;&apos;BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST $(xyScaleWithZ) = yes;TEST &lt;at&gt;Value&lt;openparen&gt;idealScaleXYNoZ&lt;closeparen&gt; &gt;= &lt;at&gt;Value&lt;openparen&gt;zScale&lt;closeparen&gt;&apos;&lt;at&gt;Value&lt;openparen&gt;zScale&lt;closeparen&gt;&apos;FME_NUM_CONDITIONS2___&quot;"/>
-#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
-#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FindOptimalScaleXY"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #!   IDENTIFIER="49"
@@ -1572,7 +1231,7 @@
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="INTERVAL" PARM_VALUE="&lt;Unused&gt;"/>
-#!     <XFORM_PARM PARM_NAME="MAX_NUM_POINTS" PARM_VALUE="@mult($(worldSize),$(worldSize),$(worldHeight), @div(1.0,$(pointReduction)))"/>
+#!     <XFORM_PARM PARM_NAME="MAX_NUM_POINTS" PARM_VALUE="@mult(64,64,64, @div(1.0,$(pointReduction)))"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="THINNER_TYPE_DISPLAY" PARM_VALUE="Every Nth point (Maximum Number of Points)"/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
@@ -1606,8 +1265,8 @@
 #!   IDENTIFIER="82"
 #!   TYPE="PointCloudExpressionEvaluator"
 #!   VERSION="3"
-#!   POSITION="1993.1746936516993 988.40274117026797"
-#!   BOUNDING_RECT="1993.1746936516993 988.40274117026797 430 71"
+#!   POSITION="1446.294224847011 1136.686190195235"
+#!   BOUNDING_RECT="1446.294224847011 1136.686190195235 430 71"
 #!   ORDER="500000000000106"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1615,40 +1274,18 @@
 #! >
 #!     <OUTPUT_FEAT NAME="RESULT"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="blockID Preserve 133 blockData Preserve 0"/>
@@ -1660,8 +1297,8 @@
 #!   IDENTIFIER="57"
 #!   TYPE="PointCloudPropertyExtractor"
 #!   VERSION="3"
-#!   POSITION="1256.2093706651351 1023.1349137300899"
-#!   BOUNDING_RECT="1256.2093706651351 1023.1349137300899 430 71"
+#!   POSITION="333.31281294955761 1213.1091191864296"
+#!   BOUNDING_RECT="333.31281294955761 1213.1091191864296 454 71"
 #!   ORDER="500000000000111"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1669,56 +1306,31 @@
 #! >
 #!     <OUTPUT_FEAT NAME="OUTPUT"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="CALCULATE_EXTENTS_DISPLAY" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="CALCULATE_EXTENTS_DISPLAY" PARM_VALUE="Yes"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS" PARM_VALUE="x    y    z   MINMAX"/>
 #!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="recalculateMinZ"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="calculateMinZ"/>
 #! </TRANSFORMER>
 #! <TRANSFORMER
 #!   IDENTIFIER="87"
 #!   TYPE="PointCloudExpressionEvaluator"
 #!   VERSION="3"
-#!   POSITION="1211.9428267496958 1577.8893512744653"
-#!   BOUNDING_RECT="1211.9428267496958 1577.8893512744653 431 71"
+#!   POSITION="287.69382613468963 1610.9267709343762"
+#!   BOUNDING_RECT="287.69382613468963 1610.9267709343762 453 71"
 #!   ORDER="500000000000121"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1726,52 +1338,141 @@
 #! >
 #!     <OUTPUT_FEAT NAME="RESULT"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="x Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;x&lt;closeparen&gt;&lt;closeparen&gt; y Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;y&lt;closeparen&gt;&lt;closeparen&gt; z UInt16 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;z&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="castXYZToInt"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="46"
+#!   TYPE="PointCloudPropertyExtractor"
+#!   VERSION="3"
+#!   POSITION="333.31281294955761 47.218001023538818"
+#!   BOUNDING_RECT="333.31281294955761 47.218001023538818 430 71"
+#!   ORDER="500000000000111"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="optimalScaleXY" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="idealScaleXYNoZ" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="xScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="yScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="zScale" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="width" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="height" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_x_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_y_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CALCULATE_EXTENTS_DISPLAY" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS" PARM_VALUE="x    y    z   MINMAX"/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="reCalculateMinZ"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="48"
+#!   TYPE="PointCloudSplitter"
+#!   VERSION="2"
+#!   POSITION="287.69382613468963 460.94210942109441"
+#!   BOUNDING_RECT="287.69382613468963 460.94210942109441 454 71"
+#!   ORDER="500000000000127"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="SPLIT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="x Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;x&lt;closeparen&gt;&lt;closeparen&gt; y Int32 &lt;at&gt;floor&lt;openparen&gt;&lt;at&gt;Component&lt;openparen&gt;y&lt;closeparen&gt;&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_ATTR" PARM_VALUE="_split_value"/>
+#!     <XFORM_PARM PARM_NAME="RANGE_LIST" PARM_VALUE="0,255,0&lt;space&gt;..&lt;space&gt;255,255,,255&lt;space&gt;..&lt;space&gt;,,,"/>
+#!     <XFORM_PARM PARM_NAME="RANGE_LIST_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="SPLITBY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPLIT_BY_DISPLAY" PARM_VALUE="z"/>
+#!     <XFORM_PARM PARM_NAME="SPLIT_TYPE" PARM_VALUE="Range"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UNIQUE_LIST_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VALUE_LIST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudSplitter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="42"
+#!   TYPE="PointCloudFilter"
+#!   VERSION="2"
+#!   POSITION="333.31281294955761 -648.4439844398446"
+#!   BOUNDING_RECT="333.31281294955761 -648.4439844398446 454 71"
+#!   ORDER="500000000000128"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="tooHigh"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="inRange"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;UNFILTERED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_PARM PARM_NAME="FILTER_TABLE" PARM_VALUE="EXPRESSION_LIST &lt;at&gt;Value&lt;openparen&gt;_z_max&lt;closeparen&gt;&lt;gt&gt;255 ; &lt;at&gt;Value&lt;openparen&gt;_z_max&lt;closeparen&gt;&lt;lt&gt;=255 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST tooHigh ; inRange"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_UNFILTERED_POINTS" PARM_VALUE="Yes"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="castXYToInt"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudFilter"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
-#!   IDENTIFIER="76"
-#!   SOURCE_NODE="66"
+#!   IDENTIFIER="44"
+#!   SOURCE_NODE="43"
 #!   TARGET_NODE="7"
 #!   SOURCE_PORT_DESC="-1"
 #!   TARGET_PORT_DESC="fi 0 "
@@ -1800,85 +1501,10 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="27"
-#!   SOURCE_NODE="21"
-#!   TARGET_NODE="32"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="56"
+#!   IDENTIFIER="60"
 #!   SOURCE_NODE="28"
-#!   TARGET_NODE="82"
+#!   TARGET_NODE="48"
 #!   SOURCE_PORT_DESC="fo 0 OFFSET"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="59"
-#!   SOURCE_NODE="31"
-#!   TARGET_NODE="87"
-#!   SOURCE_PORT_DESC="fo 0 SCALED"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="33"
-#!   SOURCE_NODE="32"
-#!   TARGET_NODE="38"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="39"
-#!   SOURCE_NODE="38"
-#!   TARGET_NODE="41"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
-#!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
-#!   EXECUTION_IDX="0"
-#!   HIDDEN="false"
-#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
-#!   PEN_WIDTH="4"
-#!   PEN_STYLE="1"
-#!   LINK_STYLE_NAME="&lt;Default&gt;"
-#!   EXTRA_POINTS=""
-#! />
-#! <FEAT_LINK
-#!   IDENTIFIER="42"
-#!   SOURCE_NODE="41"
-#!   TARGET_NODE="46"
-#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
@@ -1905,10 +1531,25 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="47"
+#!   IDENTIFIER="50"
 #!   SOURCE_NODE="46"
-#!   TARGET_NODE="31"
+#!   TARGET_NODE="42"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="47"
+#!   SOURCE_NODE="48"
+#!   TARGET_NODE="46"
+#!   SOURCE_PORT_DESC="fo 0 SPLIT"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
@@ -1937,7 +1578,7 @@
 #! <FEAT_LINK
 #!   IDENTIFIER="53"
 #!   SOURCE_NODE="51"
-#!   TARGET_NODE="21"
+#!   TARGET_NODE="87"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
@@ -2009,6 +1650,21 @@
 #!   LINK_STYLE_NAME="&lt;Default&gt;"
 #!   EXTRA_POINTS=""
 #! />
+#! <FEAT_LINK
+#!   IDENTIFIER="52"
+#!   SOURCE_NODE="42"
+#!   TARGET_NODE="82"
+#!   SOURCE_PORT_DESC="fo 1 inRange"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
 #! </FEAT_LINKS>
 #! <BREAKPOINTS>
 #! </BREAKPOINTS>
@@ -2021,34 +1677,25 @@
 #! </WORKSPACE>
 
 FME_PYTHON_VERSION 37
-GUI IGNORE SourceDataset_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_2,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_2,SKIP_LINES_POINTCLOUDXYZ_2,SKIP_FOOTER_POINTCLOUDXYZ_2,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
+GUI IGNORE SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
 DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
 GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
-DEFAULT_MACRO worldName test
+DEFAULT_MACRO worldName unscaledDfx
 GUI STRING worldName Enter the name of the world to save this data as:
-DEFAULT_MACRO worldSize 64
-GUI RANGE_SLIDER worldSize "RANGE:_0,]" Enter world size to scale to (positive integer):
-DEFAULT_MACRO xyScaleWithZ no
-GUI CHOICE xyScaleWithZ yes%no Should the height axis be scaled the same as other axes?
-DEFAULT_MACRO worldHeight 64
-GUI RANGE_SLIDER worldHeight "RANGE:[1,128_" Enter the height to scale points to (1 to 127):
-DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_5 $(FME_MF_DIR)sourceData\csvData\pointsCsv.csv
-GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_5 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):
 DEFAULT_MACRO pointReduction 100
 GUI RANGE_SLIDER pointReduction "RANGE:_0,]" enter point reduction factor (larger number: fewer points, but faster; smaller number: keep more points, but slower):
+DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ $(FME_MF_DIR)convertedData\dfxToCsvTest.csv
+GUI MULTIFILE SourceDataset_POINTCLOUDXYZ XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):
 INCLUDE [ if {{$(DestDataset_MINECRAFT)} == {}} { puts_real {Parameter 'DestDataset_MINECRAFT' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(worldName)} == {}} { puts_real {Parameter 'worldName' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(worldSize)} == {}} { puts_real {Parameter 'worldSize' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(xyScaleWithZ)} == {}} { puts_real {Parameter 'xyScaleWithZ' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(worldHeight)} == {}} { puts_real {Parameter 'worldHeight' must be given a value.}; exit 1; }; ]
-INCLUDE [ if {{$(SourceDataset_POINTCLOUDXYZ_5)} == {}} { puts_real {Parameter 'SourceDataset_POINTCLOUDXYZ_5' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(pointReduction)} == {}} { puts_real {Parameter 'pointReduction' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'SourceDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
 MULTI_READER_TYPE{0} POINTCLOUDXYZ
-MULTI_READER_KEYWORD{0} POINTCLOUDXYZ_2
-MULTI_READER_GEN_DIRECTIVES{0} SEARCH_ENVELOPE_MAXX,0,FIELD_NAMES_AFTER_HEADER,no,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,READER_META_ATTRIBUTES,fme_dataset<space>fme_basename,SEARCH_ENVELOPE_MINX,0,UPDATE_FEATURE_TYPES,yes,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SKIP_LINES,0,SEPARATOR,auto,SEARCH_ENVELOPE_MAXY,0,FIELD_NAMES,NO,POINTCLOUDXYZ_EXPOSE_FORMAT_ATTRS,,STRIP_QUOTES,no,SEARCH_ENVELOPE_MINY,0,CLIP_TO_ENVELOPE,NO,ENCODING,windows-1252,PREVIEW_PLACEHOLDER,,STRING_DATA_CONTAINS_DELIMS,yes,COLUMN_TO_PCCOMPONENT_HAS_TYPES,yes,_MERGE_SCHEMAS,YES,SKIP_FOOTER,0,SCAN_MAX_LINES,10000,MAX_LINES,,FIELD_SEPARATION_GROUP,,DUPLICATE_DELIMS,no,SCAN_GROUP,FME_DISCLOSURE_OPEN,USE_SEARCH_ENVELOPE,NO,POINTCLOUDXYZ_RDR_ADV_PARM_GROUP,FME_DISCLOSURE_OPEN,COLUMN_TO_PCCOMPONENT,x<comma>col0<comma>Real64<comma>y<comma>col1<comma>Real64<comma>z<comma>col2<comma>Real64<comma>color_red<comma>col3<comma>UInt8<comma>color_green<comma>col4<comma>UInt8<comma>color_blue<comma>col5<comma>UInt8<comma><comma>col6<comma>String,LINES_TO_SKIP_GROUP,FME_DISCLOSURE_CLOSED
+MULTI_READER_KEYWORD{0} POINTCLOUDXYZ_1
+MULTI_READER_GEN_DIRECTIVES{0} FIELD_NAMES_AFTER_HEADER,no,STRING_DATA_CONTAINS_DELIMS,yes,PREVIEW_PLACEHOLDER,,SCAN_GROUP,FME_DISCLOSURE_OPEN,FIELD_SEPARATION_GROUP,,SEPARATOR,auto,SCAN_MAX_LINES,10000,READER_META_ATTRIBUTES,fme_dataset<space>fme_basename,STRIP_QUOTES,no,SEARCH_ENVELOPE_MAXY,0,POINTCLOUDXYZ_RDR_ADV_PARM_GROUP,FME_DISCLOSURE_OPEN,ENCODING,windows-1252,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,COLUMN_TO_PCCOMPONENT_HAS_TYPES,yes,SEARCH_ENVELOPE_MAXX,0,_MERGE_SCHEMAS,YES,USE_SEARCH_ENVELOPE,NO,MAX_LINES,,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,POINTCLOUDXYZ_EXPOSE_FORMAT_ATTRS,,SKIP_LINES,0,SEARCH_ENVELOPE_MINX,0,SKIP_FOOTER,0,LINES_TO_SKIP_GROUP,FME_DISCLOSURE_OPEN,COLUMN_TO_PCCOMPONENT,x<comma>col0<comma>Real64<comma>y<comma>col1<comma>Real64<comma>z<comma>col2<comma>Real64<comma>color_red<comma>col3<comma>UInt8<comma>color_green<comma>col4<comma>UInt8<comma>color_blue<comma>col5<comma>UInt8,SEARCH_ENVELOPE_MINY,0,DUPLICATE_DELIMS,no,FIELD_NAMES,NO,CLIP_TO_ENVELOPE,NO
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
@@ -2056,9 +1703,9 @@ MULTI_WRITER_TYPE{0} MINECRAFT
 MULTI_WRITER_KEYWORD{0} MINECRAFT_1
 #! END_WB_HEADER
 #! START_WB_HEADER
-MACRO WB_KEYWORD "POINTCLOUDXYZ_2"
+MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
 #! END_WB_HEADER
-#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_2
+#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
 # ============================================================================
 # The following GUI line prompts for a folder to be used as the
 # source of the CSV files.
@@ -2069,117 +1716,117 @@ MACRO WB_KEYWORD "POINTCLOUDXYZ_2"
 #! START_WB_HEADER
 DEFAULT_MACRO SourceDataset
 INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
- puts {DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_2 $(SourceDataset)}     \
+ puts {DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_1 $(SourceDataset)}     \
  } ]
 #! END_WB_HEADER
-#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_2
-DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_2 $(SourceDataset_POINTCLOUDXYZ_5)
-GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_2 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|All_Files|* Point Cloud XYZ File(s):
+#! START_SOURCE_HEADER POINTCLOUDXYZ POINTCLOUDXYZ_1
+DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ_1 $(SourceDataset_POINTCLOUDXYZ)
+GUI MULTIFILE SourceDataset_POINTCLOUDXYZ_1 XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|All_Files|* Point Cloud XYZ File(s):
 # ============================================================================
 # Hardcode the settings that were used to generate this mapping file
 #
-DEFAULT_MACRO SKIP_LINES_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SKIP_LINES $(SKIP_LINES_POINTCLOUDXYZ_2)
-DEFAULT_MACRO SKIP_FOOTER_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SKIP_FOOTER $(SKIP_FOOTER_POINTCLOUDXYZ_2)
+DEFAULT_MACRO SKIP_LINES_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SKIP_LINES $(SKIP_LINES_POINTCLOUDXYZ_1)
+DEFAULT_MACRO SKIP_FOOTER_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SKIP_FOOTER $(SKIP_FOOTER_POINTCLOUDXYZ_1)
 # =====================================================================
 # Provide some control over what attributes have the user-selected
 # encoding applied. Normally all attributes are updated after being
 # read, but the following lines exclude from this treatment all
 # attributes whose names start with fme_ or csv_.
-POINTCLOUDXYZ_2_UNENCODED_ATTR_PREFIX fme_ pointcloudxyz_
-DEFAULT_MACRO POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_2 fme_dataset fme_basename
-POINTCLOUDXYZ_2_READER_META_ATTRIBUTES "$(POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_2)"
-DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_2 
-GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_2 POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_2 Field Separation
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_2 auto
-POINTCLOUDXYZ_2_SEPARATOR "$(POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_2)"
-GUI STRING_OR_CHOICE_ENCODED POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_2 auto%,%;%|%space%tab Separator Character:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_2 no
-POINTCLOUDXYZ_2_DUPLICATE_DELIMS "$(POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_2)"
-GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_2 yes%no Remove Duplicate Separators:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_2 no
-POINTCLOUDXYZ_2_STRIP_QUOTES "$(POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_2)"
-GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_2 yes%no Strip Quotes:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_2 NO
-POINTCLOUDXYZ_2_FIELD_NAMES "$(POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_2)"
-GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_2 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2 File Has Field Names
-DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2 no
-POINTCLOUDXYZ_2_FIELD_NAMES_AFTER_HEADER "$(POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2)"
-GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2 yes%no Field Names Follow Header
-GUI LOOKUP POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_2 <Unused>,no 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_2 
-GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_2 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_SKIP_LINES%POINTCLOUDXYZ_IN_SKIP_FOOTER%POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_2 Lines to Skip
-DEFAULT_MACRO POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_2 
-POINTCLOUDXYZ_2_MAX_LINES "$(POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_2)"
-GUI OPTIONAL INTEGER POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_2 Maximum Lines to Read:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_2 
-GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_2 POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_2 Point Cloud Component Map
-DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_2 x,col0,Real64,y,col1,Real64,z,col2,Real64,color_red,col3,UInt8,color_green,col4,UInt8,color_blue,col5,UInt8,,col6,String
-POINTCLOUDXYZ_2_COLUMN_TO_PCCOMPONENT "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_2)"
-GUI OPTIONAL GUI_LINE_TABLE POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_2 NO_MOVE%NO_LABEL%ROW_DELIM:,%COL_DELIM:,%COL_DISPLAY_ORDER:1,0,2%"Component"%"PC_COMPONENT_ENCODED PC_COMPONENT x%y%z%*"%"Column Name"%"STRING_ENCODED COLUMN_NAME"%"Data Type"%"PC_TYPE PC_TYPE *%String" Component Mapping:
+POINTCLOUDXYZ_1_UNENCODED_ATTR_PREFIX fme_ pointcloudxyz_
+DEFAULT_MACRO POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_1 fme_dataset fme_basename
+POINTCLOUDXYZ_1_READER_META_ATTRIBUTES "$(POINTCLOUDXYZ_IN_READER_META_ATTRIBUTES_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 Field Separation
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1 auto
+POINTCLOUDXYZ_1_SEPARATOR "$(POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1)"
+GUI STRING_OR_CHOICE_ENCODED POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1 auto%,%;%|%space%tab Separator Character:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_DUPLICATE_DELIMS "$(POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1 yes%no Remove Duplicate Separators:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_STRIP_QUOTES "$(POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1 yes%no Strip Quotes:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_FIELD_NAMES "$(POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1)"
+GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 File Has Field Names
+DEFAULT_MACRO POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 no
+POINTCLOUDXYZ_1_FIELD_NAMES_AFTER_HEADER "$(POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 yes%no Field Names Follow Header
+GUI LOOKUP POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1 <Unused>,no 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1 FME_DISCLOSURE_CLOSED%POINTCLOUDXYZ_IN_SKIP_LINES%POINTCLOUDXYZ_IN_SKIP_FOOTER%POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 Lines to Skip
+DEFAULT_MACRO POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_MAX_LINES "$(POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1)"
+GUI OPTIONAL INTEGER POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1 Maximum Lines to Read:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 Point Cloud Component Map
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 x,col0,Real64,y,col1,Real64,z,col2,Real64,color_red,col3,UInt8,color_green,col4,UInt8,color_blue,col5,UInt8
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1)"
+GUI OPTIONAL GUI_LINE_TABLE POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1 NO_MOVE%NO_LABEL%ROW_DELIM:,%COL_DELIM:,%COL_DISPLAY_ORDER:1,0,2%"Component"%"PC_COMPONENT_ENCODED PC_COMPONENT x%y%z%*"%"Column Name"%"STRING_ENCODED COLUMN_NAME"%"Data Type"%"PC_TYPE PC_TYPE *%String" Component Mapping:
 # Include this file in source setting section to add external search envelope processing
 # Zero as a default means we don't do any search -- this makes workbench happier
-DEFAULT_MACRO POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_2 NO
-POINTCLOUDXYZ_2_USE_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_2)"
-GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_2 POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_SEARCH_METHOD%POINTCLOUDXYZ_IN_SEARCH_METHOD_FILTER%POINTCLOUDXYZ_IN_SEARCH_ORDER%POINTCLOUDXYZ_IN_SEARCH_FEATURE%POINTCLOUDXYZ_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
+DEFAULT_MACRO POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_USE_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1)"
+GUI ACTIVEDISCLOSUREGROUP POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_SEARCH_METHOD%POINTCLOUDXYZ_IN_SEARCH_METHOD_FILTER%POINTCLOUDXYZ_IN_SEARCH_ORDER%POINTCLOUDXYZ_IN_SEARCH_FEATURE%POINTCLOUDXYZ_IN_DUMMY_SEARCH_ENVELOPE_PARAMETER Use Search Envelope
 # ===========================================================================
-GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2 <Unused>,0 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2)"
-GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_2 Minimum X:
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1 Minimum X:
 # ===========================================================================
-GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2 <Unused>,0 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2)"
-GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_2 Minimum Y:
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1 Minimum Y:
 # ===========================================================================
-GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2 <Unused>,0 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2)"
-GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_2 Maximum X:
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1 Maximum X:
 # ===========================================================================
-GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2 <Unused>,0 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2 0
-POINTCLOUDXYZ_2_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2)"
-GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_2 Maximum Y:
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 <Unused>,0 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 0
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1)"
+GUI OPTIONAL FLOAT POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1 Maximum Y:
 # ===========================================================================
-GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2 <Unused>, 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2 
-POINTCLOUDXYZ_2_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2)"
-GUI OPTIONAL COORDSYS POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_2 Search Envelope Coordinate System:
+GUI LOOKUP POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 <Unused>, 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_SEARCH_ENVELOPE "$(POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1)"
+GUI OPTIONAL COORDSYS POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1 Search Envelope Coordinate System:
 # ===========================================================================
 # BUG18999: We now have a soft clip to fall back on like native spatial index
 # thus we are reintroducing the clip to envelop as an option for users.
 # Defualt to soft clip as per the existing database readers we are emulating
-GUI LOOKUP POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2 <Unused>,NO 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2 NO
-POINTCLOUDXYZ_2_CLIP_TO_ENVELOPE "$(POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2)"
-GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_2 YES%NO Clip to Search Envelope
-DEFAULT_MACRO POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_2 
-GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_2 POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_2%POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_2 Advanced
-DEFAULT_MACRO POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_2 windows-1252
-POINTCLOUDXYZ_2_ENCODING "$(POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_2)"
-GUI STRING_OR_ENCODING POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_2 fme-system%* Character Encoding:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_2 yes
-POINTCLOUDXYZ_2_STRING_DATA_CONTAINS_DELIMS "$(POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_2)"
-GUI CHOICE POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_2 yes%no String Data Contains Separators:
-DEFAULT_MACRO POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_2 FME_DISCLOSURE_OPEN
-POINTCLOUDXYZ_2_EXPOSE_ATTRS_GROUP "$(POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_2)"
-DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_2 yes
-POINTCLOUDXYZ_2_COLUMN_TO_PCCOMPONENT_HAS_TYPES "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_2)"
+GUI LOOKUP POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 <Unused>,NO 
+DEFAULT_MACRO POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 NO
+POINTCLOUDXYZ_1_CLIP_TO_ENVELOPE "$(POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1)"
+GUI OPTIONAL CHECKBOX POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1 YES%NO Clip to Search Envelope
+DEFAULT_MACRO POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1 
+GUI OPTIONAL DISCLOSUREGROUP POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1 POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1%POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 Advanced
+DEFAULT_MACRO POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1 windows-1252
+POINTCLOUDXYZ_1_ENCODING "$(POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1)"
+GUI STRING_OR_ENCODING POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1 fme-system%* Character Encoding:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_STRING_DATA_CONTAINS_DELIMS "$(POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1)"
+GUI CHOICE POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1 yes%no String Data Contains Separators:
+DEFAULT_MACRO POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_1 FME_DISCLOSURE_OPEN
+POINTCLOUDXYZ_1_EXPOSE_ATTRS_GROUP "$(POINTCLOUDXYZ_IN_EXPOSE_ATTRS_GROUP_POINTCLOUDXYZ_1)"
+DEFAULT_MACRO POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_1 yes
+POINTCLOUDXYZ_1_COLUMN_TO_PCCOMPONENT_HAS_TYPES "$(POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_HAS_TYPES_POINTCLOUDXYZ_1)"
 # ===========================================================================
-DEFAULT_MACRO POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_2 
-POINTCLOUDXYZ_2_NETWORK_AUTHENTICATION "$(POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_2)"
-GUI OPTIONAL AUTHENTICATOR POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_2 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+DEFAULT_MACRO POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1 
+POINTCLOUDXYZ_1_NETWORK_AUTHENTICATION "$(POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1)"
+GUI OPTIONAL AUTHENTICATOR POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
 # ============================================================================ 
-DEFAULT_MACRO POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_2 ALL
-POINTCLOUDXYZ_2_ATTRIBUTE_READING "$(POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_2)"
+DEFAULT_MACRO POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_1 ALL
+POINTCLOUDXYZ_1_ATTRIBUTE_READING "$(POINTCLOUDXYZ_IN_ATTRIBUTE_READING_POINTCLOUDXYZ_1)"
 # ============================================================================ 
-POINTCLOUDXYZ_2_GENERATE_FME_BUILD_NUM 20200
-GUI INTEGER SKIP_LINES_POINTCLOUDXYZ_2 Number of Lines to Skip:
-GUI INTEGER SKIP_FOOTER_POINTCLOUDXYZ_2 Number of Footer Lines to Skip:
-POINTCLOUDXYZ_2_DATASET "$(SourceDataset_POINTCLOUDXYZ_2)"
+POINTCLOUDXYZ_1_GENERATE_FME_BUILD_NUM 20200
+GUI INTEGER SKIP_LINES_POINTCLOUDXYZ_1 Number of Lines to Skip:
+GUI INTEGER SKIP_FOOTER_POINTCLOUDXYZ_1 Number of Footer Lines to Skip:
+POINTCLOUDXYZ_1_DATASET "$(SourceDataset_POINTCLOUDXYZ_1)"
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 MACRO WB_KEYWORD "MINECRAFT_1"
@@ -2251,15 +1898,15 @@ FME_REPROJECTION_ENGINE FME
 FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
-DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_2 POINTCLOUDXYZ_2
+DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
 DEFAULT_MACRO DATASET_KEYWORD_MINECRAFT_1 MINECRAFT_1
 # -------------------------------------------------------------------------
 
-POINTCLOUDXYZ_2_READER_META_ATTRIBUTES fme_basename fme_feature_type
+POINTCLOUDXYZ_1_READER_META_ATTRIBUTES fme_basename fme_feature_type
 
 # -------------------------------------------------------------------------
 
-POINTCLOUDXYZ_2_COORDINATE_SYSTEM *XY-MT*
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-MT*
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
 
 # -------------------------------------------------------------------------
@@ -2267,20 +1914,20 @@ MULTI_READER_CONTINUE_ON_READER_FAILURE No
 MACRO WORKSPACE_NAME Converter
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
-POINTCLOUDXYZ_2_DEF POINTCLOUDXYZ
+POINTCLOUDXYZ_1_DEF POINTCLOUDXYZ
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_POINTCLOUDXYZ_2)   INPUT FEATURE_TYPE *    ROUTE POINTCLOUDXYZ POINTCLOUDXYZ_2::POINTCLOUDXYZ multi_reader_keyword,$(DATASET_KEYWORD_POINTCLOUDXYZ_2) TO FME_GENERIC ::POINTCLOUDXYZ ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-POINTCLOUDXYZ_2_MERGE_DEF POINTCLOUDXYZ_2::POINTCLOUDXYZ EXACT POINTCLOUDXYZ
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_POINTCLOUDXYZ_1)   INPUT FEATURE_TYPE *    ROUTE POINTCLOUDXYZ POINTCLOUDXYZ_1::POINTCLOUDXYZ multi_reader_keyword,$(DATASET_KEYWORD_POINTCLOUDXYZ_1) TO FME_GENERIC ::POINTCLOUDXYZ ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+POINTCLOUDXYZ_1_MERGE_DEF POINTCLOUDXYZ_1::POINTCLOUDXYZ EXACT POINTCLOUDXYZ
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "POINTCLOUDXYZ(POINTCLOUDXYZ_2) Splitter"    INPUT FEATURE_TYPE POINTCLOUDXYZ    OUTPUT FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_2
+FACTORY_DEF * TeeFactory    FACTORY_NAME "POINTCLOUDXYZ(POINTCLOUDXYZ_1) Splitter"    INPUT FEATURE_TYPE POINTCLOUDXYZ    OUTPUT FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_1
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
-FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME convertToPointCloud___VectorMerger    INPUT  FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_2    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA yes    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE convertToPointCloud___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,convertToPointCloud)
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME convertToPointCloud___VectorMerger    INPUT  FEATURE_TYPE POINTCLOUDXYZ_POINTCLOUDXYZ_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA yes    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE convertToPointCloud___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,convertToPointCloud)
 FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME convertToPointCloud___Combiner    INPUT FEATURE_TYPE convertToPointCloud___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE convertToPointCloud_OUTPUT
 # -------------------------------------------------------------------------
-INCLUDE [ if {[string equal {MAXNUMPOINTS} {KEEPNPOINT}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"<Unused>"}; } elseif {[string equal {MAXNUMPOINTS} {MAXNUMPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {FIRSTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {LASTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>$(worldSize$encode)<comma>$(worldSize$encode)<comma>$(worldHeight$encode)<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; }; ]
+INCLUDE [ if {[string equal {MAXNUMPOINTS} {KEEPNPOINT}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"<Unused>"}; } elseif {[string equal {MAXNUMPOINTS} {MAXNUMPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>64<comma>64<comma>64<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {FIRSTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>64<comma>64<comma>64<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; } elseif {[string equal {MAXNUMPOINTS} {LASTNPOINTS}]} {    puts {MACRO THIN_ARGS MAXNUMPOINTS,"@EvaluateExpression(FDIV,FLOAT,<at>mult<openparen>64<comma>64<comma>64<comma><space><at>div<openparen>1.0<comma>$(pointReduction$encode)<closeparen><closeparen>,PointCloudThinner)"}; }; ]
 FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudThinner    INPUT  FEATURE_TYPE convertToPointCloud_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ThinPointCloud(REJECTABLE, $(THIN_ARGS))
 FACTORY_DEF * TestFactory    FACTORY_NAME PointCloudThinner_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE PointCloudThinner_THINNED       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 # -------------------------------------------------------------------------
@@ -2292,53 +1939,48 @@ FACTORY_DEF * PointCloudManipulatorFactory    FACTORY_NAME PointCloudSurfaceBuil
 FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE PointCloudSurfaceBuilder_SURFACE    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)
 FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT
 # -------------------------------------------------------------------------
-DEFAULT_MACRO findLimits_EXISTENCE_LIST
-DEFAULT_MACRO findLimits_PROPERTIES_LIST
-DEFAULT_MACRO findLimits_MINMAX_LIST
-INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x   MINMAX y   MINMAX z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO findLimits_${listName}_LIST \"$lists($listName)\"";    }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME findLimits    INPUT  FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(findLimits_EXISTENCE_LIST),$(findLimits_PROPERTIES_LIST),$(findLimits_MINMAX_LIST),DoNotUpdateExtents)
-FACTORY_DEF * TestFactory    FACTORY_NAME findLimits_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE findLimits_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+DEFAULT_MACRO castXYZToInt_COMPONENT_LIST
+DEFAULT_MACRO castXYZToInt_COMPONENT_TYPE_LIST
+DEFAULT_MACRO castXYZToInt_EXPRESSION_LIST
+INCLUDE [    foreach {component componenttype expression} [split {x Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>x<closeparen><closeparen>,castXYZToInt) y Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>y<closeparen><closeparen>,castXYZToInt) z UInt16 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>z<closeparen><closeparen>,castXYZToInt)}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO castXYZToInt_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME castXYZToInt    INPUT  FEATURE_TYPE PointCloudCombiner_OUTPUT    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(castXYZToInt_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(castXYZToInt_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(castXYZToInt_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE castXYZToInt_RESULT
 # -------------------------------------------------------------------------
-FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME Dimensions    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE findLimits_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "width" "SET_TO" "<at>sub<openparen><at>Value<openparen>_x_max<closeparen><comma><at>Value<openparen>_x_min<closeparen><closeparen>" }      ATTR_ACTION { "" "depth" "SET_TO" "<at>sub<openparen><at>Value<openparen>_y_max<closeparen><comma><at>Value<openparen>_y_min<closeparen><closeparen>" }      ATTR_ACTION { "" "height" "SET_TO" "<at>sub<openparen><at>Value<openparen>_z_max<closeparen><comma><at>Value<openparen>_z_min<closeparen><closeparen>" }    OUTPUT OUTPUT FEATURE_TYPE Dimensions_OUTPUT
-# -------------------------------------------------------------------------
-FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME CalculateScales    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE Dimensions_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "xScale" "SET_TO" "<at>div<openparen>$(worldSize$encode)<comma><at>Value<openparen>width<closeparen><closeparen>" }      ATTR_ACTION { "" "yScale" "SET_TO" "<at>div<openparen>$(worldSize$encode)<comma><at>Value<openparen>depth<closeparen><closeparen>" }      ATTR_ACTION { "" "zScale" "SET_TO" "<at>Evaluate<openparen><at>div<openparen>$(worldHeight$encode)<comma><at>Value<openparen>height<closeparen><closeparen><closeparen>" }    OUTPUT OUTPUT FEATURE_TYPE CalculateScales_OUTPUT
-# -------------------------------------------------------------------------
-FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME FindOptimalScaleIgnoreZ    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE CalculateScales_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "idealScaleXYNoZ" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Value<openparen>yScale<closeparen>'BOOL_OP;AND;COMPOSITE_TEST;1;NUM_TEST <at>Value<openparen>xScale<closeparen> < <at>Value<openparen>yScale<closeparen>'<at>Value<openparen>xScale<closeparen>'FME_NUM_CONDITIONS2___" }    OUTPUT OUTPUT FEATURE_TYPE FindOptimalScaleIgnoreZ_OUTPUT
-# -------------------------------------------------------------------------
-FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME FindOptimalScaleXY    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE FindOptimalScaleIgnoreZ_OUTPUT    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "optimalScaleXY" "SET_TO" "FME_CONDITIONAL:DEFAULT_VALUE'<at>Value<openparen>idealScaleXYNoZ<closeparen>'BOOL_OP;AND;COMPOSITE_TEST;1 AND 2;TEST $(xyScaleWithZ$encode) = yes;TEST <at>Value<openparen>idealScaleXYNoZ<closeparen> >= <at>Value<openparen>zScale<closeparen>'<at>Value<openparen>zScale<closeparen>'FME_NUM_CONDITIONS2___" }    OUTPUT OUTPUT FEATURE_TYPE FindOptimalScaleXY_OUTPUT
-# -------------------------------------------------------------------------
-FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler_ScalerInput    INPUT  FEATURE_TYPE FindOptimalScaleXY_OUTPUT    OUTPUT FEATURE_TYPE ___TOINPUT___
-FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler_Input    INPUT FEATURE_TYPE ___TOINPUT___    @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)    OUTPUT FEATURE_TYPE Scaler_ExecuteScale
-FACTORY_DEF __DISABLED__ TeeFactory    FACTORY_NAME Scaler_Geometry_CenterPointCalculator    INPUT  FEATURE_TYPE Scaler_ExecuteScale    OUTPUT FEATURE_TYPE Scaler_ExecuteCenterPointScale         @ConvertToPoint(CENTER_OF_GRAVITY, __CPx__, __CPy__, __CPz__)
-FACTORY_DEF __DISABLED__ TeeFactory    FACTORY_NAME Scaler_CenterPointScaler    INPUT  FEATURE_TYPE Scaler_ExecuteCenterPointScale         @Scale(REJECTABLE,ALLOW_NULLS,"@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>zScale<closeparen>,Scaler)",@Value(__CPx__),@Value(__CPy__),@Value(__CPz__),RASTER_EXTENTS)    OUTPUT FEATURE_TYPE ___TOREJECTOR___        @RemoveAttributes(__CPx__,__CPy__,__CPz__)
-FACTORY_DEF * TeeFactory    FACTORY_NAME Scaler    INPUT  FEATURE_TYPE Scaler_ExecuteScale    OUTPUT FEATURE_TYPE ___TOREJECTOR___         @Scale(REJECTABLE,ALLOW_NULLS,"@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>optimalScaleXY<closeparen>,Scaler)","@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>zScale<closeparen>,Scaler)",RASTER_EXTENTS)
-FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Scaler_Scaled       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
-FACTORY_DEF * TestFactory    FACTORY_NAME Scaler_PointCloudScaler    INPUT FEATURE_TYPE Scaler_Scaled    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Scaler_SCALED       @TransformPointCloud(SCALE,)    OUTPUT FAILED FEATURE_TYPE Scaler_SCALED
-# -------------------------------------------------------------------------
-DEFAULT_MACRO castXYToInt_COMPONENT_LIST
-DEFAULT_MACRO castXYToInt_COMPONENT_TYPE_LIST
-DEFAULT_MACRO castXYToInt_EXPRESSION_LIST
-INCLUDE [    foreach {component componenttype expression} [split {x Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>x<closeparen><closeparen>,castXYToInt) y Int32 @EvaluateExpression(FDIV,STRING_ENCODED,<at>floor<openparen><at>Component<openparen>y<closeparen><closeparen>,castXYToInt)}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO castXYToInt_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
-FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME castXYToInt    INPUT  FEATURE_TYPE Scaler_SCALED    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(castXYToInt_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(castXYToInt_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(castXYToInt_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE castXYToInt_RESULT
-# -------------------------------------------------------------------------
-DEFAULT_MACRO recalculateMinZ_EXISTENCE_LIST
-DEFAULT_MACRO recalculateMinZ_PROPERTIES_LIST
-DEFAULT_MACRO recalculateMinZ_MINMAX_LIST
-INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO recalculateMinZ_${listName}_LIST \"$lists($listName)\"";    }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME recalculateMinZ    INPUT  FEATURE_TYPE castXYToInt_RESULT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(recalculateMinZ_EXISTENCE_LIST),$(recalculateMinZ_PROPERTIES_LIST),$(recalculateMinZ_MINMAX_LIST),DoNotUpdateExtents)
-FACTORY_DEF * TestFactory    FACTORY_NAME recalculateMinZ_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE recalculateMinZ_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+DEFAULT_MACRO calculateMinZ_EXISTENCE_LIST
+DEFAULT_MACRO calculateMinZ_PROPERTIES_LIST
+DEFAULT_MACRO calculateMinZ_MINMAX_LIST
+INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO calculateMinZ_${listName}_LIST \"$lists($listName)\"";    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME calculateMinZ    INPUT  FEATURE_TYPE castXYZToInt_RESULT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(calculateMinZ_EXISTENCE_LIST),$(calculateMinZ_PROPERTIES_LIST),$(calculateMinZ_MINMAX_LIST),UpdateExtents)
+FACTORY_DEF * TestFactory    FACTORY_NAME calculateMinZ_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE calculateMinZ_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 # -------------------------------------------------------------------------
 INCLUDE [    if { {CARTESIAN} == {CARTESIAN} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } elseif { {CARTESIAN} == {POLAR} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>")};    } elseif { {CARTESIAN} == {SPHERICAL} } {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"CARTESIAN","<Unused>","<Unused>","<Unused>")};    } else {       puts {MACRO Offsetter_OFFSET @Offset(REJECTABLE,"0","0","@EvaluateExpression(FDIV,FLOAT,<at>Evaluate<openparen>-<at>Value<openparen>_z_min<closeparen><closeparen>,Offsetter)")};    } ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_OffsetterInput    INPUT  FEATURE_TYPE recalculateMinZ_OUTPUT    OUTPUT FEATURE_TYPE ___TOOFFSETTER___
+FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_OffsetterInput    INPUT  FEATURE_TYPE calculateMinZ_OUTPUT    OUTPUT FEATURE_TYPE ___TOOFFSETTER___
 FACTORY_DEF * TeeFactory    FACTORY_NAME Offsetter_Offsetter    INPUT FEATURE_TYPE ___TOOFFSETTER___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)    OUTPUT FEATURE_TYPE ___TOREJECTOR___       $(Offsetter_OFFSET)
 FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE Offsetter_Offset       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
 FACTORY_DEF * TestFactory    FACTORY_NAME Offsetter_PointCloudOffsetter    INPUT FEATURE_TYPE Offsetter_Offset    TEST &fme_type == "fme_point_cloud"    TEST "" != ""    BOOLEAN_OPERATOR AND    OUTPUT PASSED FEATURE_TYPE Offsetter_OFFSET       @TransformPointCloud(OFFSET,)    OUTPUT FAILED FEATURE_TYPE Offsetter_OFFSET
+# -------------------------------------------------------------------------
+INCLUDE [ if {[string equal {0,255,0<space>..<space>255,255,,255<space>..<space>,,,} {<Unused>}]} {    puts {MACRO RANGE_LIST_CLAUSE}; } else {    puts "MACRO RANGE_LIST_CLAUSE RANGE_LIST \"[string map {"\"" "\\\""} {0,255,0<space>..<space>255,255,,255<space>..<space>,,,}]\""; }; ]
+FACTORY_DEF * PointCloudSplitterFactory    FACTORY_NAME PointCloudSplitter    INPUT  FEATURE_TYPE Offsetter_OFFSET    SPLIT_BY z    $(RANGE_LIST_CLAUSE)    REJECT_INVALID_FEATURES YES    OUTPUT_ATTR "_split_value"    OUTPUT SPLIT FEATURE_TYPE PointCloudSplitter_SPLIT
+# -------------------------------------------------------------------------
+DEFAULT_MACRO reCalculateMinZ_EXISTENCE_LIST
+DEFAULT_MACRO reCalculateMinZ_PROPERTIES_LIST
+DEFAULT_MACRO reCalculateMinZ_MINMAX_LIST
+INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z   MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO reCalculateMinZ_${listName}_LIST \"$lists($listName)\"";    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME reCalculateMinZ    INPUT  FEATURE_TYPE PointCloudSplitter_SPLIT    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(reCalculateMinZ_EXISTENCE_LIST),$(reCalculateMinZ_PROPERTIES_LIST),$(reCalculateMinZ_MINMAX_LIST),UpdateExtents)
+FACTORY_DEF * TestFactory    FACTORY_NAME reCalculateMinZ_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT FAILED FEATURE_TYPE reCalculateMinZ_OUTPUT       @RenameAttributes(FME_STRICT,fme_rejection_code,___fme_rejection_code___)
+# -------------------------------------------------------------------------
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME PointCloudFilter    INPUT  FEATURE_TYPE reCalculateMinZ_OUTPUT    MODE FILTER    REJECT_INVALID_FEATURES YES    FORCE_FLOAT_DIVISION yes    EXPRESSION_LIST <at>Value<openparen>_z_max<closeparen><gt>255 ; <at>Value<openparen>_z_max<closeparen><lt>=255 FILTER_ATTRIBUTE __pc_internal_filter_attribute__ FILTER_ATTRIBUTE_VALUES_LIST tooHigh ; inRange    OUTPUT_UNFILTERED_POINTS "Yes"    OUTPUT RESULT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_0    OUTPUT <REJECTED> FEATURE_TYPE PointCloudFilter_<REJECTED>
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_0 INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_0 STRING_TEST @Value(__pc_internal_filter_attribute__) = tooHigh OUTPUT PASSED FEATURE_TYPE PointCloudFilter_tooHigh    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_1
+FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = inRange OUTPUT PASSED FEATURE_TYPE PointCloudFilter_inRange    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_2
+FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_2 OUTPUT FEATURE_TYPE PointCloudFilter_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter tooHigh Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_tooHigh
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter <UNFILTERED> Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_<UNFILTERED>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_<REJECTED>
 # -------------------------------------------------------------------------
 DEFAULT_MACRO setBlockId_COMPONENT_LIST
 DEFAULT_MACRO setBlockId_COMPONENT_TYPE_LIST
 DEFAULT_MACRO setBlockId_EXPRESSION_LIST
 INCLUDE [    foreach {component componenttype expression} [split {blockID Preserve 133 blockData Preserve 0}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO setBlockId_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
-FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME setBlockId    INPUT  FEATURE_TYPE Offsetter_OFFSET    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(setBlockId_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(setBlockId_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(setBlockId_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE setBlockId_RESULT
+FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME setBlockId    INPUT  FEATURE_TYPE PointCloudFilter_inRange    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(setBlockId_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(setBlockId_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(setBlockId_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE setBlockId_RESULT
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC setBlockId_RESULT TO MINECRAFT __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>civilSectionShiftUp<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(worldName$encode$encode)<comma>civilSectionShiftUp<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
