@@ -2,8 +2,8 @@
 #! <WORKSPACE
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\fbxToPointCloudXYZ.fmw"
-#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
-#              --fileName "fbxToCsvTest"
+#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\convertedData"
+#              --fileName "fbxToCsvMT"
 #              --SourceDataset_FBX "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\fbxData\DESGN100_Sample.fbx"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
@@ -13,14 +13,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="2960.62 502.254"
+#!   DOC_EXTENTS="2960.62 582.879"
 #!   DOC_TOP_LEFT="-780.008 -530.38"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="8dba3bf7-78ca-47ec-9c1d-08d3b8978e45"
-#!   FME_DOCUMENT_PRIORGUID="ec9a0eed-dc00-4578-b74c-8311877d80bb,18135a8a-eff6-4bea-a695-a85b7ba3c7a5,f3e9dd40-5d6b-4023-b64a-149fc85f825c"
+#!   FME_DOCUMENT_GUID="2b423f4f-bea9-4dee-80ab-220a0cf14c6c"
+#!   FME_DOCUMENT_PRIORGUID="ec9a0eed-dc00-4578-b74c-8311877d80bb,18135a8a-eff6-4bea-a695-a85b7ba3c7a5,f3e9dd40-5d6b-4023-b64a-149fc85f825c,8dba3bf7-78ca-47ec-9c1d-08d3b8978e45,6daa0024-aba6-458c-882e-1a99b78eebab"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -29,7 +29,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-02T08:58:41"
+#!   LAST_SAVE_DATE="2020-04-13T09:30:19"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -48,7 +48,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-1421.89 190.627"
+#!   VIEW_POSITION="-759.383 209.377"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -67,7 +67,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_start_angle number(31,15) fme_basename char(50) fme_geometry char(50) fme_fill_color char(50) fme_color char(50) multi_reader_keyword char(50) fme_primary_axis number(31,15) fme_text_size number(31,15) fme_rotation number(31,15) fme_text_string char(50) fme_feature_type char(50) multi_reader_type char(50) multi_reader_id number(11,0) multi_reader_full_id number(11,0) fme_type char(50) fbx_type char(50) fme_sweep_angle number(31,15) fme_dataset char(50) fme_secondary_axis number(31,15)"
+#!   EXPOSABLE_ATTRS="fbx_type char(50) fme_rotation number(31,15) fme_fill_color char(50) fme_secondary_axis number(31,15) fme_primary_axis number(31,15) multi_reader_id number(11,0) fme_text_string char(50) fme_text_size number(31,15) fme_type char(50) fme_dataset char(50) fme_sweep_angle number(31,15) multi_reader_keyword char(50) fme_basename char(50) multi_reader_full_id number(11,0) fme_color char(50) fme_feature_type char(50) multi_reader_type char(50) fme_start_angle number(31,15) fme_geometry char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -97,7 +97,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_color char(50) fme_type char(50) fme_geometry char(50) fme_rotation number(31,15) pointcloudxyz_type char(32) fme_primary_axis number(31,15) fme_text_string char(50) fme_secondary_axis number(31,15) fme_start_angle number(31,15) fme_feature_type char(50) fme_sweep_angle number(31,15) fme_text_size number(31,15) fme_fill_color char(50) fme_dataset char(50) fme_basename char(50)"
+#!   EXPOSABLE_ATTRS="fme_primary_axis number(31,15) fme_text_size number(31,15) fme_text_string char(50) fme_color char(50) pointcloudxyz_type char(32) fme_rotation number(31,15) fme_fill_color char(50) fme_sweep_angle number(31,15) fme_geometry char(50) fme_type char(50) fme_dataset char(50) fme_secondary_axis number(31,15) fme_start_angle number(31,15) fme_feature_type char(50) fme_basename char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -107,7 +107,7 @@
 #!   DATASET_TYPE="FILEDIR"
 #!   FTTR_TYPE=""
 #!   GENERATE_FME_BUILD_NUM="20200"
-#!   COORDSYS=""
+#!   COORDSYS="*XY-MT*"
 #!   FANOUT_EXPRESSION="&lt;Unused&gt;"
 #!   FANOUT_GROUP="NO"
 #! >
@@ -664,19 +664,19 @@
 #! <DATASET
 #!   NAME="POINTCLOUDXYZ_1"
 #!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
-#!   DATASET="POINTCLOUDXYZ_1/converted"
+#!   DATASET="POINTCLOUDXYZ_1/convertedData"
 #! />
 #! </WRITER_DATASETS>
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR fileName enter a name for the resulting file:"
-#!   DEFAULT_VALUE="fbxToCsvTest"
+#!   DEFAULT_VALUE="fbxToCsvMT"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -686,6 +686,21 @@
 #! />
 #! </GLOBAL_PARAMETERS>
 #! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="15"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Not currently working&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="715.13253132531338 52.499874998749988"
+#!   TOP_LEFT="715.13253132531338 52.499874998749988"
+#!   BOTTOM_RIGHT="1169.1325313253133 51.499874998749988"
+#!   BOUNDING_RECT="715.13253132531338 52.499874998749988 454 1"
+#!   ORDER="500000000000127"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="3"
+#! />
 #! </COMMENTS>
 #! <CONSTANTS>
 #! </CONSTANTS>
@@ -896,9 +911,9 @@
 
 FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_FBX_1,FBX_IN_FME_GROUP_NAMED1_FBX_1,FBX_IN_MOVE_TO_WORLD_COORDSYS_FBX_1,FBX_IN_READER_PARAMS_FBX_1,FBX_IN_CONVERT_TO_METERS_FBX_1,FBX_IN_NETWORK_AUTHENTICATION_FBX_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
-DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)convertedData
 GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
-DEFAULT_MACRO fileName fbxToCsvTest
+DEFAULT_MACRO fileName fbxToCsvMT
 GUI STRING fileName enter a name for the resulting file:
 DEFAULT_MACRO SourceDataset_FBX $(FME_MF_DIR)sourceData\fbxData\DESGN100_Sample.fbx
 GUI MULTIFILE SourceDataset_FBX Autodesk_FBX_Files(*.fbx)|*.fbx|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source FBX File(s):
@@ -1068,6 +1083,7 @@ FBX_1_READER_META_ATTRIBUTES fme_feature_type
 # -------------------------------------------------------------------------
 
 FBX_1_COORDINATE_SYSTEM *XY-FT*
+POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-MT*
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
 
 # -------------------------------------------------------------------------
@@ -1099,7 +1115,7 @@ DEFAULT_MACRO _WB_BYPASS_TERMINATION No
 FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCombiner_<Rejected> INPUT FEATURE_TYPE PointCloudCombiner_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCombiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(fileName$encode$encode)<comma>File1<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(fileName$encode$encode)<comma>File1<closeparen> COORDINATE_SYSTEM *XY-MT* GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__

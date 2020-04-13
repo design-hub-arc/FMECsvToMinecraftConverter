@@ -2,9 +2,9 @@
 #! <WORKSPACE
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\revitNativeToPointCloudXYZ.fmw"
-#              --SourceDataset_REVITNATIVE "C:\Users\Matt\Documents\FME Projects\Converter\revitData\DESGN100_Sample.rvt"
-#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\converted"
-#              --file_name "revitTest2"
+#              --SourceDataset_REVITNATIVE "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\revitData\DESGN100_Sample.rvt"
+#              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\convertedData"
+#              --file_name "revitToCsvMT"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -19,8 +19,8 @@
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="d9bf911d-a90b-41d8-a244-31fe7ab81ad1"
-#!   FME_DOCUMENT_PRIORGUID="24028cbd-4f9a-4f5d-a93f-3a07afe3689b,c5702db2-bbc3-4bac-bd8c-4e1c6e0a7349,be997ec9-a87c-4a59-9961-630392a05406,4b448e2e-90d9-4c14-9e12-ef7318895260"
+#!   FME_DOCUMENT_GUID="aea8b159-3fc9-41cb-bc9b-d5b75bc486aa"
+#!   FME_DOCUMENT_PRIORGUID="24028cbd-4f9a-4f5d-a93f-3a07afe3689b,c5702db2-bbc3-4bac-bd8c-4e1c6e0a7349,be997ec9-a87c-4a59-9961-630392a05406,4b448e2e-90d9-4c14-9e12-ef7318895260,d9bf911d-a90b-41d8-a244-31fe7ab81ad1"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -29,7 +29,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-03-31T13:01:16"
+#!   LAST_SAVE_DATE="2020-04-13T09:29:12"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -48,7 +48,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-775.008 -284.378"
+#!   VIEW_POSITION="903.134 -146.876"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -67,7 +67,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="multi_reader_full_id int32 fme_fill_color string(50) fme_type string(50) multi_reader_keyword string(50) fme_feature_type string(50) fme_text_string string(50) fme_geometry string(50) fme_basename string(50) fme_color string(50) fme_dataset string(50) multi_reader_id int32 fme_sweep_angle float64 multi_reader_type string(50) fme_text_size float64 fme_start_angle float64 fme_primary_axis float64 fme_rotation float64 fme_secondary_axis float64"
+#!   EXPOSABLE_ATTRS="fme_sweep_angle float64 fme_color string(50) multi_reader_type string(50) fme_fill_color string(50) fme_geometry string(50) multi_reader_id int32 multi_reader_keyword string(50) fme_rotation float64 fme_dataset string(50) multi_reader_full_id int32 fme_start_angle float64 fme_text_string string(50) fme_basename string(50) fme_feature_type string(50) fme_secondary_axis float64 fme_text_size float64 fme_type string(50) fme_primary_axis float64"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -118,7 +118,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="fme_rotation number(31,15) fme_dataset char(50) fme_sweep_angle number(31,15) fme_start_angle number(31,15) fme_geometry char(50) fme_color char(50) fme_text_size number(31,15) fme_fill_color char(50) fme_primary_axis number(31,15) fme_secondary_axis number(31,15) fme_feature_type char(50) pointcloudxyz_type char(32) fme_type char(50) fme_basename char(50) fme_text_string char(50)"
+#!   EXPOSABLE_ATTRS="fme_geometry char(50) fme_secondary_axis number(31,15) fme_start_angle number(31,15) fme_text_size number(31,15) fme_feature_type char(50) fme_text_string char(50) fme_color char(50) fme_fill_color char(50) fme_primary_axis number(31,15) pointcloudxyz_type char(32) fme_type char(50) fme_rotation number(31,15) fme_basename char(50) fme_dataset char(50) fme_sweep_angle number(31,15)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -1119,24 +1119,24 @@
 #! <DATASET
 #!   NAME="POINTCLOUDXYZ_1"
 #!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
-#!   DATASET="POINTCLOUDXYZ_1/converted"
+#!   DATASET="POINTCLOUDXYZ_1/convertedData"
 #! />
 #! </WRITER_DATASETS>
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_REVITNATIVE RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Revit Project File(s):"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)revitData\DESGN100_Sample.rvt"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\revitData\DESGN100_Sample.rvt"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)converted"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR file_name Enter file name to export as:"
-#!   DEFAULT_VALUE="revitTest2"
+#!   DEFAULT_VALUE="revitToCsvMT"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -1166,26 +1166,18 @@
 #!     <XFORM_ATTR ATTR_NAME="BuildingLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="BaseCategory" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Category" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="CreatedPhase" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Discipline" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="ElementType" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Family" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="FamilyType" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="InExteriorShell" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="WorksetName" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="BuildingLevel" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.BaseExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.TopExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.UnconnectedHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Function" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="0" />
@@ -1200,36 +1192,44 @@
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearance" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearanceProperties" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.TypeComments" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.CutoffOffset" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.FasciaDepth" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.MaximumRidgeHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.RafterCut" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.RafterorTruss" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BaseMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FieldMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Lettering" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="Text.SignText" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
@@ -1239,26 +1239,18 @@
 #!     <XFORM_ATTR ATTR_NAME="BuildingLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="BaseCategory" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Category" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="CreatedPhase" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Discipline" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="ElementType" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Family" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="FamilyType" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="InExteriorShell" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="WorksetName" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="BuildingLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.BaseExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.TopExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.UnconnectedHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
@@ -1273,36 +1265,44 @@
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearance" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.RenderAppearanceProperties" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="IdentityData.TypeComments" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Constraints.CutoffOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.FasciaDepth" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.MaximumRidgeHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.RafterCut" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Construction.RafterorTruss" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BaseMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FieldMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Lettering" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="Text.SignText" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downarrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downlabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Downtext" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.ShowUparrowinallviews" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uparrow" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uplabel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Uptext" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Material" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
@@ -1516,11 +1516,11 @@
 
 FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_REVITNATIVE_1,REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1,REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1,REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1,REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1,REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1,REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1
-DEFAULT_MACRO SourceDataset_REVITNATIVE $(FME_MF_DIR)revitData\DESGN100_Sample.rvt
+DEFAULT_MACRO SourceDataset_REVITNATIVE $(FME_MF_DIR)sourceData\revitData\DESGN100_Sample.rvt
 GUI MULTIFILE SourceDataset_REVITNATIVE RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Revit Project File(s):
-DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)converted
+DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)convertedData
 GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
-DEFAULT_MACRO file_name revitTest2
+DEFAULT_MACRO file_name revitToCsvMT
 GUI STRING file_name Enter file name to export as:
 INCLUDE [ if {{$(SourceDataset_REVITNATIVE)} == {}} { puts_real {Parameter 'SourceDataset_REVITNATIVE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
@@ -1764,47 +1764,47 @@ MULTI_READER_CONTINUE_ON_READER_FAILURE No
 MACRO WORKSPACE_NAME revitNativeToPointCloudXYZ
 MACRO FME_VIEWER_APP fmedatainspector
 # -------------------------------------------------------------------------
-REVITNATIVE_1_DEF SurveyPoint
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Doors   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(5)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Construction.Function        number(10,0)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Thickness         number(31,15)   Dimensions.TrimProjectionExt number(31,15)   Dimensions.TrimProjectionInt number(31,15)   Dimensions.TrimWidth         number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(12)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   IdentityData.OmniclassNumber char(11)   IdentityData.OmniclassTitle  char(5)   InExteriorShell              char(3)   MaterialsandFinishes.DoorMaterial char(12)   MaterialsandFinishes.FrameMaterial char(12)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.GenericModels   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(14)   BuildingLevel                char(7)   Category                     char(14)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(13)   FamilyType                   char(13)   Function                     char(8)   InExteriorShell              char(3)   MaterialsandFinishes.BaseMaterial char(29)   MaterialsandFinishes.FieldMaterial char(12)   MaterialsandFinishes.Lettering char(13)   Text.SignText                char(9)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Windows   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(32)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(7)   BuildingLevel                char(7)   Category                     char(7)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.DefaultSillHeight number(31,15)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Dimensions.WindowInset       number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(5)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(7)   IdentityData.Mark            char(1)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(13)   InExteriorShell              char(3)   MaterialsandFinishes.GlassPaneMaterial char(5)   MaterialsandFinishes.SashMaterial char(4)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Planting   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(8)   BuildingLevel                char(7)   Category                     char(8)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(20)   FamilyType                   char(22)   Function                     char(8)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(8)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(15)   IdentityData.RenderAppearance char(39)   IdentityData.RenderAppearanceProperties char(2198)   IdentityData.TypeComments    char(16)   InExteriorShell              char(3)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Site   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(4)   BuildingLevel                char(7)   Category                     char(4)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(15)   FamilyType                   char(15)   Function                     char(8)   InExteriorShell              char(3)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Metadata.FileInformation   DocVer                       char(18)   DocUpdate                    char(14)   AuthorUsername               char(0)   CreatedBy                    char(14)   CentralModelPath             char(0)   IsCentralModel               boolean   IsCreatedLocally             boolean   "LevelElevationInfo.Level 1" number(31,15)   "LevelElevationInfo.Level 2" number(31,15)   IdentityData.Author          char(0)   IdentityData.BuildingName    char(0)   IdentityData.OrganizationDescription char(0)   IdentityData.OrganizationName char(0)   Other.ClientName             char(5)   Other.ProjectAddress         char(18)   Other.ProjectIssueDate       char(10)   Other.ProjectName            char(12)   Other.ProjectNumber          char(14)   Other.ProjectStatus          char(14)
+REVITNATIVE_1_DEF Metadata.ViewInformation   DetailLevel                  char(6)   Discipline                   char(13)   IsTemplateView               boolean   Name                         char(36)   Orientation                  char(13)   Scale                        char(7)   Template                     char(4)   Type                         char(16)   ViewDepth.Level              char(21)   ViewDepth.Offset             number(31,15)   ViewRangeBottom.Level        char(21)   ViewRangeBottom.Offset       number(31,15)   ViewRangeCutPlane.Level      char(21)   ViewRangeCutPlane.Offset     number(31,15)   ViewRangeTop.Level           char(21)   ViewRangeTop.Offset          number(31,15)
 # -------------------------------------------------------------------------
 REVITNATIVE_1_DEF Architectural.Roofs   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Constraints.BaseOffsetFromLevel number(31,15)   Constraints.CutoffOffset     number(31,15)   Construction.FasciaDepth     number(31,15)   Construction.MaximumRidgeHeight number(31,15)   Construction.RafterCut       number(10,0)   Construction.RafterorTruss   number(10,0)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(11)   Family                       char(10)   FamilyType                   char(13)   Function                     char(8)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(17)   InExteriorShell              char(3)   WorksetName                  char(40)
 # -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Lines   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   Category                     char(5)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(9)   Family                       char(0)   FamilyType                   char(0)   InExteriorShell              char(3)   WorksetName                  char(40)
-# -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Architectural.Walls   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Constraints.BaseExtensionDistance number(31,15)   Constraints.BaseOffset       number(31,15)   Constraints.TopExtensionDistance number(31,15)   Constraints.TopOffset        number(31,15)   Constraints.UnconnectedHeight number(31,15)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(5)   Family                       char(10)   FamilyType                   char(18)   Function                     char(8)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   InExteriorShell              char(3)   Other.WALL_BASE_OFFSET_COMPUTED number(31,15)   Other.WALL_HEIGHT_PARAM      number(31,15)   WorksetName                  char(40)
+REVITNATIVE_1_DEF Architectural.Doors   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(5)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Construction.Function        number(10,0)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Thickness         number(31,15)   Dimensions.TrimProjectionExt number(31,15)   Dimensions.TrimProjectionInt number(31,15)   Dimensions.TrimWidth         number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(12)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   IdentityData.OmniclassNumber char(11)   IdentityData.OmniclassTitle  char(5)   InExteriorShell              char(3)   MaterialsandFinishes.DoorMaterial char(12)   MaterialsandFinishes.FrameMaterial char(12)   WorksetName                  char(40)
 # -------------------------------------------------------------------------
 REVITNATIVE_1_DEF Architectural.Ramps   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   Category                     char(5)   Constraints.BaseOffset       number(31,15)   Constraints.TopOffset        number(31,15)   CreatedPhase                 char(16)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(4)   Family                       char(0)   FamilyType                   char(6)   Graphics.Downarrow           boolean   Graphics.Downlabel           boolean   Graphics.Downtext            char(2)   Graphics.ShowUparrowinallviews boolean   Graphics.Uparrow             boolean   Graphics.Uplabel             boolean   Graphics.Uptext              char(0)   InExteriorShell              char(3)   WorksetName                  char(40)
 # -------------------------------------------------------------------------
-REVITNATIVE_1_DEF Metadata.ViewInformation   DetailLevel                  char(6)   Discipline                   char(13)   IsTemplateView               boolean   Name                         char(36)   Orientation                  char(13)   Scale                        char(7)   Template                     char(4)   Type                         char(16)   ViewDepth.Level              char(21)   ViewDepth.Offset             number(31,15)   ViewRangeBottom.Level        char(21)   ViewRangeBottom.Offset       number(31,15)   ViewRangeCutPlane.Level      char(21)   ViewRangeCutPlane.Offset     number(31,15)   ViewRangeTop.Level           char(21)   ViewRangeTop.Offset          number(31,15)
-# -------------------------------------------------------------------------
 REVITNATIVE_1_DEF Architectural.Topography   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(10)   Category                     char(10)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(11)   Family                       char(0)   FamilyType                   char(0)   InExteriorShell              char(3)   MaterialsandFinishes.Material char(21)   WorksetName                  char(40)
 # -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Planting   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(8)   BuildingLevel                char(7)   Category                     char(8)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(20)   FamilyType                   char(22)   Function                     char(8)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(8)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(15)   IdentityData.RenderAppearance char(39)   IdentityData.RenderAppearanceProperties char(2198)   IdentityData.TypeComments    char(16)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Lines   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   Category                     char(5)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(9)   Family                       char(0)   FamilyType                   char(0)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Site   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(4)   BuildingLevel                char(7)   Category                     char(4)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(15)   FamilyType                   char(15)   Function                     char(8)   InExteriorShell              char(3)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.GenericModels   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(14)   BuildingLevel                char(7)   Category                     char(14)   Constraints.DefaultElevation number(31,15)   CreatedPhase                 char(16)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(13)   FamilyType                   char(13)   Function                     char(8)   InExteriorShell              char(3)   MaterialsandFinishes.BaseMaterial char(29)   MaterialsandFinishes.FieldMaterial char(12)   MaterialsandFinishes.Lettering char(13)   Text.SignText                char(9)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Metadata.FileInformation   DocVer                       char(18)   DocUpdate                    char(14)   AuthorUsername               char(0)   CreatedBy                    char(14)   CentralModelPath             char(0)   IsCentralModel               boolean   IsCreatedLocally             boolean   "LevelElevationInfo.Level 1" number(31,15)   "LevelElevationInfo.Level 2" number(31,15)   IdentityData.Author          char(0)   IdentityData.BuildingName    char(0)   IdentityData.OrganizationDescription char(0)   IdentityData.OrganizationName char(0)   Other.ClientName             char(5)   Other.ProjectAddress         char(18)   Other.ProjectIssueDate       char(10)   Other.ProjectName            char(12)   Other.ProjectNumber          char(14)   Other.ProjectStatus          char(14)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Windows   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   AnalyticalProperties.AnalyticConstruction char(32)   AnalyticalProperties.ConstructionTypeId char(5)   AnalyticalProperties.SolarHeatGainCoefficient number(31,15)   AnalyticalProperties.VisualLightTransmittance number(31,15)   BaseCategory                 char(7)   BuildingLevel                char(7)   Category                     char(7)   Construction.WallClosure     number(10,0)   CreatedPhase                 char(16)   Dimensions.DefaultSillHeight number(31,15)   Dimensions.Height            number(31,15)   Dimensions.Width             number(31,15)   Dimensions.WindowInset       number(31,15)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(5)   FamilyType                   char(9)   Function                     char(8)   HostFeatureType              char(19)   HostId                       number(10,0)   IdentityData.AssemblyCode    char(8)   IdentityData.AssemblyDescription char(7)   IdentityData.Mark            char(1)   IdentityData.OmniclassNumber char(14)   IdentityData.OmniclassTitle  char(13)   InExteriorShell              char(3)   MaterialsandFinishes.GlassPaneMaterial char(5)   MaterialsandFinishes.SashMaterial char(4)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF SurveyPoint
+# -------------------------------------------------------------------------
+REVITNATIVE_1_DEF Architectural.Walls   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(5)   BuildingLevel                char(7)   Category                     char(5)   Constraints.BaseExtensionDistance number(31,15)   Constraints.BaseOffset       number(31,15)   Constraints.TopExtensionDistance number(31,15)   Constraints.TopOffset        number(31,15)   Constraints.UnconnectedHeight number(31,15)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(5)   Family                       char(10)   FamilyType                   char(18)   Function                     char(8)   IdentityData.AssemblyCode    char(5)   IdentityData.AssemblyDescription char(14)   InExteriorShell              char(3)   Other.WALL_BASE_OFFSET_COMPUTED number(31,15)   Other.WALL_HEIGHT_PARAM      number(31,15)   WorksetName                  char(40)
+# -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_REVITNATIVE_1)   INPUT FEATURE_TYPE *    ROUTE REVITNATIVE REVITNATIVE_1::SurveyPoint multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::SurveyPoint ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Doors multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Doors ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.GenericModels multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.GenericModels ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Windows multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Windows ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Planting multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Planting ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Site multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Site ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.FileInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.FileInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Roofs multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Roofs ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Lines multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Lines ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Walls multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Walls ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Ramps multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Ramps ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.ViewInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.ViewInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Topography multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Topography ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::SurveyPoint EXACT SurveyPoint
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Doors EXACT Architectural.Doors
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.GenericModels EXACT Architectural.GenericModels
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Windows EXACT Architectural.Windows
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Planting EXACT Architectural.Planting
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Site EXACT Architectural.Site
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Metadata.FileInformation EXACT Metadata.FileInformation
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Roofs EXACT Architectural.Roofs
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Lines EXACT Architectural.Lines
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Walls EXACT Architectural.Walls
-REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Ramps EXACT Architectural.Ramps
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_REVITNATIVE_1)   INPUT FEATURE_TYPE *    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.ViewInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.ViewInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Roofs multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Roofs ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Doors multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Doors ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Ramps multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Ramps ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Topography multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Topography ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Planting multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Planting ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Lines multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Lines ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Site multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Site ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.GenericModels multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.GenericModels ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.FileInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.FileInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Windows multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Windows ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::SurveyPoint multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::SurveyPoint ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Walls multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Walls ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Metadata.ViewInformation EXACT Metadata.ViewInformation
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Roofs EXACT Architectural.Roofs
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Doors EXACT Architectural.Doors
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Ramps EXACT Architectural.Ramps
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Topography EXACT Architectural.Topography
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Planting EXACT Architectural.Planting
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Lines EXACT Architectural.Lines
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Site EXACT Architectural.Site
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.GenericModels EXACT Architectural.GenericModels
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Metadata.FileInformation EXACT Metadata.FileInformation
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Windows EXACT Architectural.Windows
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::SurveyPoint EXACT SurveyPoint
+REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Walls EXACT Architectural.Walls
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.FileInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.FileInformation
