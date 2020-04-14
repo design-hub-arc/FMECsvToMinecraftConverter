@@ -20,6 +20,15 @@ def printFile(file):
     for line in file:
         print(line)
 
+def printMatrix(twoD):
+    for line in twoD:
+        for column in line:
+            if column is None:
+                print("  ", end="")
+            else:
+                print(" " + str(column[2]), end="") #print z-coord
+        print("")
+
 def interpolate(inputFilePath, outputFilePath):
     inF = open(inputFilePath, mode="r", encoding="utf-8-sig")
     outF = open(outputFilePath, mode="w")
@@ -37,17 +46,43 @@ def interpolate(inputFilePath, outputFilePath):
         fLines = []
         minX = None
         minY = None
-        minZ = None
         for line in inF:
             if "x" in line:
                 continue # skip first line if it hasn't been read yet
             line = line.strip().replace(",", " ") # FME output doesn't contain commas, so make sure all data stays that way
             if not containsRGB:
                 line = line + " 0 0 0"
-            fLines.append(line)
-            # next, need to split lines, and update minimums (integers)
-            print(line)
-        # shift everything to (0,0,0) being the lowest coordinate. Use 2D array for O(1) lookup
+            line = line.split(" ")
+            newline = [];
+            # all lines should contain 6 cells now
+            x = int(float(line[0]))
+            y = int(float(line[1]))
+            z = int(float(line[2]))
+            if minX == None or minX > x:
+                minX = x
+            if minY == None or minY > y:
+                minY = y
+            newline.extend([x, y, z])
+            newline.extend(line[3:6])
+            fLines.append(newline)
+        twoD = []
+        for line in fLines:
+            newX = line[0] - minX
+            newY = line[1] - minY
+            # Make sure there is a spot in the twoD array for the new coordinate
+            while len(twoD) <= newY:
+                newRow = []
+                if len(twoD) is not 0:
+                    for i in range(0, len(twoD[0])):
+                        newRow.append(None)
+                twoD.append(newRow)
+            while len(twoD[0]) <= newX:
+                for row in twoD:
+                    row.append(None)
+            twoD[newY][newX] = line # need to preserve not only z, but color as well
+        printMatrix(twoD)
+
+        # shift everything to (0,0) being the lowest xy coordinate. Use 2D array for O(1) lookup
         # interpolate, write to output file (don't forget "x y z r g b"!)
     inF.close()
     outF.close()
