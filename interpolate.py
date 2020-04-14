@@ -83,7 +83,7 @@ def interpolate(inputFilePath, outputFilePath):
         printMatrix(twoD)
 
         # shift everything to (0,0) being the lowest xy coordinate. Use 2D array for O(1) lookup
-        # interpolate, write to output file (don't forget "x y z r g b"!)
+        # interpolate, write to output file (don't forget "x y z r g b"!) also, shift everything back to old coordinate system
     inF.close()
     outF.close()
 
