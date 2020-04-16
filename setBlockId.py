@@ -20,7 +20,17 @@ class Block:
         self.data = data
 
     def __str__(self):
-        return "Block#{0}.{1}({2}, {3}, {4})".format(self.id, self.data, self.r, self.g, self.b)
+        return "Block#{0}.{1} ({2}, {3}, {4})".format(self.id, self.data, self.r, self.g, self.b)
+
+def extractBlockHeaders(headerArray):
+    required = ["r", "g", "b", "blockID", "blockData"]
+    headerToCol = {}
+    for header in required:
+        if header in headerArray:
+            headerToCol[header] = headerArray.index(header)
+        else:
+            raise Exception("Header array is missing the required header '{0}', instead, it contains the headers [{1}].".format(header, ", ".join(headerArray)));
+    return headerToCol
 
 def getBlockTable():
     filePath = "./colorToBlockTable.csv" # may need to make this a cmd line arg if relative paths don't work out
@@ -28,7 +38,11 @@ def getBlockTable():
     file = None
     try:
         file = open(filePath, "r")
+        headers = file.readline().strip().split(",")
+        headerCols = extractBlockHeaders(headers)
+        print(headerCols)
         for line in file:
+            line = line.strip().split(",") # the block table file uses proper CSV format, unlike FME
             print(line)
     except Exception as e:
         print("Failed to read " + filePath)
