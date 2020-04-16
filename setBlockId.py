@@ -82,7 +82,7 @@ def parseFile(inFilePath, outFilePath):
     outF = open(outFilePath, mode="w")
 
     blockList = getBlockList()
-    inHeaders = inF.readline()
+    inHeaders = inF.readline().strip()
     # todo: identify header columns in in file
 
     #              currently a string
@@ -92,6 +92,7 @@ def parseFile(inFilePath, outFilePath):
         line = line.strip().replace(",", " ").split(" ") # FME point cloud files don't contain commas, using spaces instead
         closestBlock = closestBlockColor((int(line[3]), int(line[4]), int(line[5])), blockList);
         line.extend([closestBlock.id, closestBlock.data])
+        outF.write("\n")
         outF.write(" ".join((str(item) for item in line)))
 
     inF.close()
