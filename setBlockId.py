@@ -1,4 +1,5 @@
 import argparse
+import math
 
 '''
 Takes an input file in CVS [x, y, z, r, g, b] format,
@@ -20,7 +21,7 @@ class Block:
         self.data = data
 
     def __str__(self):
-        return "Block#{0}.{1} ({2}, {3}, {4})".format(self.id, self.data, self.r, self.g, self.b)
+        return "Block #{0}/{1} ({2}, {3}, {4})".format(self.id, self.data, self.r, self.g, self.b)
 
 def extractBlockHeaders(headerArray):
     required = ["r", "g", "b", "blockID", "blockData"]
@@ -32,24 +33,48 @@ def extractBlockHeaders(headerArray):
             raise Exception("Header array is missing the required header '{0}', instead, it contains the headers [{1}].".format(header, ", ".join(headerArray)));
     return headerToCol
 
-def getBlockTable():
+def getBlockList():
     filePath = "./colorToBlockTable.csv" # may need to make this a cmd line arg if relative paths don't work out
-    #blockTable = {}
+    blockList = []
     file = None
     try:
         file = open(filePath, "r")
         headers = file.readline().strip().split(",")
         headerCols = extractBlockHeaders(headers)
-        print(headerCols)
         for line in file:
             line = line.strip().split(",") # the block table file uses proper CSV format, unlike FME
-            print(line)
+            blockList.append(Block(
+                int(line[headerCols["r"]]),
+                int(line[headerCols["g"]]),
+                int(line[headerCols["b"]]),
+                int(line[headerCols["blockID"]]),
+                int(line[headerCols["blockData"]])
+            ))
     except Exception as e:
         print("Failed to read " + filePath)
         print(e)
 
     if file is not None:
         file.close()
+
+    return blockList
+
+def dist(point1, point2):
+    return math.sqrt(
+        math.pow(point1[0] - point2[0], 2)
+        + math.pow(point1[1] - point2[1], 2)
+        + math.pow(point1[2] - point2[2], 2)
+    )
+
+def closestBlockColor(rgb, blockList):
+    shortestDist = None
+    closestBlock = None
+    for block in blockList:
+        distance = dist(rgb, (block.r, block.g, block.b))
+        if shortestDist is None or distance < shortestDist:
+            shortestDist = distance
+            closestBlock = block
+    return closestBlock
 
 def getCmdLineArgs():
     desc = """
@@ -65,4 +90,6 @@ def getCmdLineArgs():
 
 if __name__ == "__main__":
     #getCmdLineArgs()
-    getBlockTable()
+    for block in getBlockList():
+        print(block)
+    print(closestBlockColor((0, 255, 0), getBlockList()))
