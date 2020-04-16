@@ -2,17 +2,6 @@ import argparse
 import math
 import os
 
-'''
-Takes an input file in CVS [x, y, z, r, g, b] format,
-and outputs a new file with the the columns [blockID, blockData]
-appended to the end, containing the id and data of the block in
-colorToBlockTable.csv that most closely matches the r, g, b value
-of that point.
-
-FME probably has some way of doing this,
-but I'd have to do some research into it.
-'''
-
 class Block:
     def __init__(self, r, g, b, id, data):
         self.r = r
