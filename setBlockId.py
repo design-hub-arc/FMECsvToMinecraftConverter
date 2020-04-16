@@ -1,5 +1,6 @@
 import argparse
 import math
+import os
 
 '''
 Takes an input file in CVS [x, y, z, r, g, b] format,
@@ -76,6 +77,26 @@ def closestBlockColor(rgb, blockList):
             closestBlock = block
     return closestBlock
 
+def parseFile(inFilePath, outFilePath):
+    inF = open(inFilePath, mode="r", encoding="utf-8-sig")
+    outF = open(outFilePath, mode="w")
+
+    blockList = getBlockList()
+    inHeaders = inF.readline()
+    # todo: identify header columns in in file
+
+    #              currently a string
+    outF.write(inHeaders + " blockID blockData")
+
+    for line in inF:
+        line = line.strip().replace(",", " ").split(" ") # FME point cloud files don't contain commas, using spaces instead
+        closestBlock = closestBlockColor((int(line[3]), int(line[4]), int(line[5])), blockList);
+        line.extend([closestBlock.id, closestBlock.data])
+        outF.write(" ".join((str(item) for item in line)))
+
+    inF.close()
+    outF.close()
+
 def getCmdLineArgs():
     desc = """
         Sets the blockID and blockData of each point in a point cloud.
@@ -89,7 +110,9 @@ def getCmdLineArgs():
 
 
 if __name__ == "__main__":
-    #getCmdLineArgs()
-    for block in getBlockList():
-        print(block)
-    print(closestBlockColor((0, 255, 0), getBlockList()))
+    args = getCmdLineArgs()
+    spath = os.path.abspath(args.sourcefile[0].name)
+    print(spath)
+    rpath = os.path.abspath(args.resultfile[0].name)
+    print(rpath)
+    parseFile(spath, rpath)
