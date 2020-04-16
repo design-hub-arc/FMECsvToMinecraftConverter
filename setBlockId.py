@@ -11,6 +11,32 @@ FME probably has some way of doing this,
 but I'd have to do some research into it.
 '''
 
+class Block:
+    def __init__(self, r, g, b, id, data):
+        self.r = r
+        self.g = g
+        self.b = b
+        self.id = id
+        self.data = data
+
+    def __str__(self):
+        return "Block#{0}.{1}({2}, {3}, {4})".format(self.id, self.data, self.r, self.g, self.b)
+
+def getBlockTable():
+    filePath = "./colorToBlockTable.csv" # may need to make this a cmd line arg if relative paths don't work out
+    #blockTable = {}
+    file = None
+    try:
+        file = open(filePath, "r")
+        for line in file:
+            print(line)
+    except Exception as e:
+        print("Failed to read " + filePath)
+        print(e)
+
+    if file is not None:
+        file.close()
+
 def getCmdLineArgs():
     desc = """
         Sets the blockID and blockData of each point in a point cloud.
@@ -24,4 +50,5 @@ def getCmdLineArgs():
 
 
 if __name__ == "__main__":
-    getCmdLineArgs()
+    #getCmdLineArgs()
+    getBlockTable()
