@@ -70,12 +70,12 @@ class Cache:
         else:
            shortestDist = None
            for block in self.blockList:
-               distance = dist(rgb, (block.r, block.g, block.b))
+               distance = dist(tuple, (block.r, block.g, block.b))
                if shortestDist is None or distance < shortestDist:
                    shortestDist = distance
                    ret = block
            self.cachedMatches[tuple] = ret
-           print("cached " + str(tuple)) 
+           print("cached " + str(tuple))
         return ret
 
 def dist(point1, point2):
