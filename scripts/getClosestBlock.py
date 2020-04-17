@@ -57,6 +57,27 @@ def getBlockList():
 
     return blockList
 
+class Cache:
+    def __init__(self):
+        self.blockList = getBlockList()
+        self.cachedMatches = {}
+
+    def getBlock(self, r, g, b):
+        tuple = (r, g, b)
+        ret = None
+        if tuple in self.cachedMatches.keys():
+            ret = self.cachedMatches[tuple]
+        else:
+           shortestDist = None
+           for block in self.blockList:
+               distance = dist(rgb, (block.r, block.g, block.b))
+               if shortestDist is None or distance < shortestDist:
+                   shortestDist = distance
+                   ret = block
+           self.cachedMatches[tuple] = ret
+           print("cached " + str(tuple)) 
+        return ret
+
 def dist(point1, point2):
     return math.sqrt(
         math.pow(point1[0] - point2[0], 2)
@@ -72,4 +93,4 @@ def closestBlockColor(rgb, blockList):
         if shortestDist is None or distance < shortestDist:
             shortestDist = distance
             closestBlock = block
-    return closestBlock  
+    return closestBlock
