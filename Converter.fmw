@@ -3,10 +3,10 @@
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw"
 #              --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves"
-#              --worldName "aerospaceRVT"
+#              --worldName "splitCloud"
 #              --pointReduction "50"
 #              --SourceDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\convertedData\aerospaceRvt.csv"
-#              --SourceDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\convertedData\objToCsvMTPlane.csv"
+#              --SourceDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\convertedData\aerospaceRvt.csv"
 #              --FEATURE_TYPES ""
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
@@ -32,7 +32,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-17T10:35:12"
+#!   LAST_SAVE_DATE="2020-04-17T11:02:24"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -51,7 +51,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-324.222 2527.37"
+#!   VIEW_POSITION="667.975 2527.37"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="80"
@@ -1096,14 +1096,14 @@
 #! <FMESERVER>
 #! <READER_DATASETS>
 #! <DATASET
+#!   NAME="CSV2_1"
+#!   OVERRIDE="-CSV2_1_DATASET"
+#!   DATASET="CSV2_1/aerospaceRvt.csv"
+#! />
+#! <DATASET
 #!   NAME="POINTCLOUDXYZ_1"
 #!   OVERRIDE="-POINTCLOUDXYZ_1_DATASET"
 #!   DATASET="POINTCLOUDXYZ_1/aerospaceRvt.csv"
-#! />
-#! <DATASET
-#!   NAME="CSV2_1"
-#!   OVERRIDE="-CSV2_1_DATASET"
-#!   DATASET="CSV2_1/objToCsvMTPlane.csv"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
@@ -1122,7 +1122,7 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR worldName Enter the name of the world to save this data as:"
-#!   DEFAULT_VALUE="aerospaceRVT"
+#!   DEFAULT_VALUE="splitCloud"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
@@ -1137,11 +1137,11 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_CSV2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData\objToCsvMTPlane.csv"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData\aerospaceRvt.csv"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES &quot;C:&lt;backslash&gt;Users&lt;backslash&gt;Matt&lt;backslash&gt;Documents&lt;backslash&gt;FME&lt;space&gt;Projects&lt;backslash&gt;Converter&lt;backslash&gt;convertedData&lt;backslash&gt;objToCsvMTPlane.csv,_FORMAT_OVERRIDE_,CSV2,_DATASET_OVERRIDE_,SourceDataset_CSV2,DELIMITER,auto,FIELD_NAMES_LINE,1,DATA_START_LINE,2,SKIP_DUPLICATE_DELIMITERS,No,FIELD_QUALIFIER_CHARACTER,&lt;quote&gt;,FIELD_QUALIFIER_ESCAPE_CHARACTER,&lt;quote&gt;,CASE_SENSITIVE_FIELD_NAMES,Yes,ENFORCE_STRICT_SCHEMA,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,ENCODING,windows-1252,PRESERVE_SOURCE_ENCODING,No,READ_SKIPPED_LINES,No,COORDSYS,*XY-MT*,_MERGE_SCHEMAS,YES,SCHEMA_GENERATION_GROUP,FME_DISCLOSURE_CLOSED,FIELD_SEPARATION_GROUP,FME_DISCLOSURE_CLOSED,FEATURE_TYPE_NAME,FORMAT_NAME,FIELD_VALUES_GROUP,FME_DISCLOSURE_CLOSED,USE_CUSTOM_SCHEMA,YES,FIELD_NAMES_GROUP,FME_DISCLOSURE_CLOSED,SCHEMA,\&quot;x,x_coordinate,YES;y,y_coordinate,YES;z,z_coordinate,YES;r,uint8,YES;g,uint8,YES;b,uint8,YES\&quot;,DYNAMIC_WORKFLOW,yes,ADVANCED_GROUP,FME_DISCLOSURE_OPEN,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SCAN_ADDITIONAL_FIELDS,No,SCAN_TYPES,Yes,TRIM_FIELD_NAME_QUALIFIERS,Yes,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
+#!   GUI_LINE="GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES &quot;C:&lt;backslash&gt;Users&lt;backslash&gt;Matt&lt;backslash&gt;Documents&lt;backslash&gt;FME&lt;space&gt;Projects&lt;backslash&gt;Converter&lt;backslash&gt;convertedData&lt;backslash&gt;aerospaceRvt.csv,_FORMAT_OVERRIDE_,CSV2,_DATASET_OVERRIDE_,SourceDataset_CSV2,DELIMITER,auto,FIELD_NAMES_LINE,1,DATA_START_LINE,2,SKIP_DUPLICATE_DELIMITERS,No,FIELD_QUALIFIER_CHARACTER,&lt;quote&gt;,FIELD_QUALIFIER_ESCAPE_CHARACTER,&lt;quote&gt;,CASE_SENSITIVE_FIELD_NAMES,Yes,ENFORCE_STRICT_SCHEMA,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,ENCODING,windows-1252,PRESERVE_SOURCE_ENCODING,No,READ_SKIPPED_LINES,No,COORDSYS,*XY-MT*,_MERGE_SCHEMAS,YES,SCHEMA_GENERATION_GROUP,FME_DISCLOSURE_CLOSED,FIELD_SEPARATION_GROUP,FME_DISCLOSURE_CLOSED,FEATURE_TYPE_NAME,FORMAT_NAME,FIELD_VALUES_GROUP,FME_DISCLOSURE_CLOSED,USE_CUSTOM_SCHEMA,YES,FIELD_NAMES_GROUP,FME_DISCLOSURE_CLOSED,SCHEMA,\&quot;x,x_coordinate,YES;y,y_coordinate,YES;z,z_coordinate,YES;r,uint8,YES;g,uint8,YES;b,uint8,YES\&quot;,DYNAMIC_WORKFLOW,yes,ADVANCED_GROUP,FME_DISCLOSURE_OPEN,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SCAN_ADDITIONAL_FIELDS,No,SCAN_TYPES,Yes,TRIM_FIELD_NAME_QUALIFIERS,Yes,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,_MERGE_SCHEMAS,YES&quot; Feature Types to Read:"
 #!   DEFAULT_VALUE=""
 #!   IS_STAND_ALONE="false"
 #! />
@@ -1787,32 +1787,8 @@
 #! >
 #!     <OUTPUT_FEAT NAME="RESULT"/>
 #!     <FEAT_COLLAPSED COLLAPSED="0"/>
-#!     <XFORM_ATTR ATTR_NAME="x" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="y" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="z" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="r" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="g" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="b" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
-#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
 #!     <FEAT_COLLAPSED COLLAPSED="1"/>
-#!     <XFORM_ATTR ATTR_NAME="x" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="y" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="z" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="r" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="g" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="b" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
-#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
 #!     <XFORM_PARM PARM_NAME="EXPRESSION_TABLE" PARM_VALUE="blockID Preserve 133 blockData Preserve 0"/>
@@ -2106,12 +2082,14 @@
 #!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="fme_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_ATTR ATTR_NAME="_part_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
 #!     <XFORM_PARM PARM_NAME="ADVANCED_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="HIDE_ATTRIBUTES" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="LIST_ATTRS" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="blockID blockData"/>
 #!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
-#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;from&lt;space&gt;scripts.getClosestBlock&lt;space&gt;import&lt;space&gt;getBlockList&lt;comma&gt;&lt;space&gt;closestBlockColor&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;log&lt;openparen&gt;msg&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;fmeobjects.FMELogFile&lt;openparen&gt;&lt;closeparen&gt;.logMessageString&lt;openparen&gt;str&lt;openparen&gt;msg&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;#&lt;space&gt;When&lt;space&gt;using&lt;space&gt;this&lt;space&gt;function&lt;comma&gt;&lt;space&gt;make&lt;space&gt;sure&lt;space&gt;its&lt;space&gt;name&lt;space&gt;is&lt;space&gt;set&lt;space&gt;as&lt;space&gt;the&lt;space&gt;value&lt;space&gt;of&lt;lf&gt;#&lt;space&gt;the&lt;space&gt;&lt;apos&gt;Class&lt;space&gt;or&lt;space&gt;Function&lt;space&gt;to&lt;space&gt;Process&lt;space&gt;Features&lt;apos&gt;&lt;space&gt;transformer&lt;space&gt;parameter&lt;lf&gt;def&lt;space&gt;processFeature&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Class&lt;space&gt;Interface:&lt;lf&gt;#&lt;space&gt;When&lt;space&gt;using&lt;space&gt;this&lt;space&gt;class&lt;comma&gt;&lt;space&gt;make&lt;space&gt;sure&lt;space&gt;its&lt;space&gt;name&lt;space&gt;is&lt;space&gt;set&lt;space&gt;as&lt;space&gt;the&lt;space&gt;value&lt;space&gt;of&lt;lf&gt;#&lt;space&gt;the&lt;space&gt;&lt;apos&gt;Class&lt;space&gt;or&lt;space&gt;Function&lt;space&gt;to&lt;space&gt;Process&lt;space&gt;Features&lt;apos&gt;&lt;space&gt;transformer&lt;space&gt;parameter&lt;lf&gt;class&lt;space&gt;FeatureProcessor&lt;openparen&gt;object&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;__init__&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;input&lt;openparen&gt;self&lt;comma&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#for&lt;space&gt;i&lt;space&gt;in&lt;space&gt;dir&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;log&lt;openparen&gt;i&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#for&lt;space&gt;point&lt;space&gt;in&lt;space&gt;feature:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;log&lt;openparen&gt;point&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#log&lt;openparen&gt;feature.getAllCoordinates&lt;openparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;log&lt;openparen&gt;feature.getAllAttributeNames&lt;openparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;self.pyoutput&lt;openparen&gt;feature&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;close&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass"/>
+#!     <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE="import&lt;space&gt;fme&lt;lf&gt;import&lt;space&gt;fmeobjects&lt;lf&gt;&lt;lf&gt;from&lt;space&gt;scripts.getClosestBlock&lt;space&gt;import&lt;space&gt;getBlockList&lt;comma&gt;&lt;space&gt;closestBlockColor&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;&lt;lf&gt;def&lt;space&gt;log&lt;openparen&gt;msg&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;fmeobjects.FMELogFile&lt;openparen&gt;&lt;closeparen&gt;.logMessageString&lt;openparen&gt;str&lt;openparen&gt;msg&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;BLOCKS&lt;space&gt;=&lt;space&gt;getBlockList&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;log&lt;openparen&gt;&lt;quote&gt;cached&lt;space&gt;blocks&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Function&lt;space&gt;interface:&lt;lf&gt;#&lt;space&gt;When&lt;space&gt;using&lt;space&gt;this&lt;space&gt;function&lt;comma&gt;&lt;space&gt;make&lt;space&gt;sure&lt;space&gt;its&lt;space&gt;name&lt;space&gt;is&lt;space&gt;set&lt;space&gt;as&lt;space&gt;the&lt;space&gt;value&lt;space&gt;of&lt;lf&gt;#&lt;space&gt;the&lt;space&gt;&lt;apos&gt;Class&lt;space&gt;or&lt;space&gt;Function&lt;space&gt;to&lt;space&gt;Process&lt;space&gt;Features&lt;apos&gt;&lt;space&gt;transformer&lt;space&gt;parameter&lt;lf&gt;def&lt;space&gt;processFeature&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;lf&gt;#&lt;space&gt;Template&lt;space&gt;Class&lt;space&gt;Interface:&lt;lf&gt;#&lt;space&gt;When&lt;space&gt;using&lt;space&gt;this&lt;space&gt;class&lt;comma&gt;&lt;space&gt;make&lt;space&gt;sure&lt;space&gt;its&lt;space&gt;name&lt;space&gt;is&lt;space&gt;set&lt;space&gt;as&lt;space&gt;the&lt;space&gt;value&lt;space&gt;of&lt;lf&gt;#&lt;space&gt;the&lt;space&gt;&lt;apos&gt;Class&lt;space&gt;or&lt;space&gt;Function&lt;space&gt;to&lt;space&gt;Process&lt;space&gt;Features&lt;apos&gt;&lt;space&gt;transformer&lt;space&gt;parameter&lt;lf&gt;class&lt;space&gt;FeatureProcessor&lt;openparen&gt;object&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;__init__&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;input&lt;openparen&gt;self&lt;comma&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#for&lt;space&gt;i&lt;space&gt;in&lt;space&gt;dir&lt;openparen&gt;feature&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;log&lt;openparen&gt;i&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#for&lt;space&gt;point&lt;space&gt;in&lt;space&gt;feature:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;log&lt;openparen&gt;point&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;#log&lt;openparen&gt;feature.getAllCoordinates&lt;openparen&gt;&lt;closeparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;r&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;quote&gt;r&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;g&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;quote&gt;g&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;b&lt;space&gt;=&lt;space&gt;feature.getAttribute&lt;openparen&gt;&lt;quote&gt;b&lt;quote&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;block&lt;space&gt;=&lt;space&gt;closestBlockColor&lt;openparen&gt;&lt;openbracket&gt;r&lt;comma&gt;&lt;space&gt;g&lt;comma&gt;&lt;space&gt;b&lt;closebracket&gt;&lt;comma&gt;&lt;space&gt;BLOCKS&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;newFeature&lt;space&gt;=&lt;space&gt;feature.clone&lt;openparen&gt;&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;newFeature.setAttribute&lt;openparen&gt;&lt;quote&gt;blockID&lt;quote&gt;&lt;comma&gt;&lt;space&gt;block.id&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;newFeature.setAttribute&lt;openparen&gt;&lt;quote&gt;blockData&lt;quote&gt;&lt;comma&gt;&lt;space&gt;block.data&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;self.pyoutput&lt;openparen&gt;newFeature&lt;closeparen&gt;&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;def&lt;space&gt;close&lt;openparen&gt;self&lt;closeparen&gt;:&lt;lf&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;&lt;space&gt;pass"/>
 #!     <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="FeatureProcessor"/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PythonCaller"/>
@@ -2170,6 +2148,71 @@
 #!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_PRESERVE_DISPLAY" PARM_VALUE="Attributes"/>
 #!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
 #!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCoercer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="90"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="2210.8659686596884 2254.7117971179709"
+#!   BOUNDING_RECT="2210.8659686596884 2254.7117971179709 485.09999999999997 71"
+#!   ORDER="500000000000142"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="r" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="g" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="b" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_part_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="x" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="y" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="r" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="g" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="b" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_min" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_z_max" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_num_points" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_split_value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_color" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_part_number" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="blockID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="blockData" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner_2"/>
 #! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
@@ -2339,11 +2382,11 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="84"
-#!   SOURCE_NODE="82"
-#!   TARGET_NODE="5"
-#!   SOURCE_PORT_DESC="fo 0 RESULT"
-#!   TARGET_PORT_DESC="-1"
+#!   IDENTIFIER="91"
+#!   SOURCE_NODE="77"
+#!   TARGET_NODE="90"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
@@ -2369,11 +2412,11 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="52"
-#!   SOURCE_NODE="42"
-#!   TARGET_NODE="82"
-#!   SOURCE_PORT_DESC="fo 1 inRange"
-#!   TARGET_PORT_DESC="fi 0 "
+#!   IDENTIFIER="92"
+#!   SOURCE_NODE="90"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
 #!   ENABLED="true"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
@@ -2390,7 +2433,7 @@
 #!   SOURCE_PORT_DESC="fo 1 inRange"
 #!   TARGET_PORT_DESC="fi 0 "
 #!   ENABLED="true"
-#!   EXECUTION_IDX="1"
+#!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
 #!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
 #!   PEN_WIDTH="4"
@@ -2413,16 +2456,16 @@ FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_SEPARATION_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_DUPLICATE_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRIP_QUOTES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_FIELD_NAMES_AFTER_HEADER_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_LINES_TO_SKIP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_MAX_LINES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COMPONENT_MAP_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_USE_SEARCH_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MINY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXX_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_MAXY_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_CLIP_TO_ENVELOPE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_POINTCLOUDXYZ_RDR_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_ENCODING_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_STRING_DATA_CONTAINS_DELIMS_POINTCLOUDXYZ_1,POINTCLOUDXYZ_IN_NETWORK_AUTHENTICATION_POINTCLOUDXYZ_1,SKIP_LINES_POINTCLOUDXYZ_1,SKIP_FOOTER_POINTCLOUDXYZ_1,SourceDataset_CSV2_1,CSV2_IN_FIELDS_GROUP_CSV2_1,CSV2_IN_DELIMITER_CSV2_1,CSV2_IN_FIELD_NAMES_LINE_CSV2_1,CSV2_IN_DATA_START_LINE_CSV2_1,CSV2_IN_ADVANCED_GROUP_CSV2_1,CSV2_IN_FIELD_SEPARATION_GROUP_CSV2_1,CSV2_IN_SKIP_DUPLICATE_DELIMITERS_CSV2_1,CSV2_IN_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_IN_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_IN_FIELD_NAMES_GROUP_CSV2_1,CSV2_IN_CASE_SENSITIVE_FIELD_NAMES_CSV2_1,CSV2_IN_ENFORCE_STRICT_SCHEMA_CSV2_1,CSV2_IN_FIELD_VALUES_GROUP_CSV2_1,CSV2_IN_TRIM_FIELD_VALUE_QUALIFIERS_CSV2_1,CSV2_IN_ENCODING_GROUP_CSV2_1,CSV2_IN_ENCODING_CSV2_1,CSV2_IN_PRESERVE_SOURCE_ENCODING_CSV2_1,CSV2_IN_SKIPPED_LINES_GROUP_CSV2_1,CSV2_IN_READ_SKIPPED_LINES_CSV2_1,CSV2_IN_NETWORK_AUTHENTICATION_CSV2_1,DestDataset_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED1_MINECRAFT_1,MINECRAFT_OUT_POPULATE_TERRAIN_MINECRAFT_1,MINECRAFT_OUT_FILL_UNDER_MINECRAFT_1,MINECRAFT_OUT_CENTER_POINT_CLOUD_MINECRAFT_1,MINECRAFT_OUT_FME_GROUP_NAMED2_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_NAME_MINECRAFT_1,MINECRAFT_OUT_GENERATOR_OPTIONS_MINECRAFT_1,MINECRAFT_OUT_BIOME_MINECRAFT_1,MINECRAFT_OUT_ADVANCED_MINECRAFT_1,MINECRAFT_OUT_FILL_BLOCK_MINECRAFT_1
 DEFAULT_MACRO DestDataset_MINECRAFT C:\Users\Matt\AppData\Roaming\.minecraft\saves
 GUI DIRNAME DestDataset_MINECRAFT Destination Minecraft Folder:
-DEFAULT_MACRO worldName aerospaceRVT
+DEFAULT_MACRO worldName splitCloud
 GUI STRING worldName Enter the name of the world to save this data as:
 DEFAULT_MACRO pointReduction 50
 GUI RANGE_SLIDER pointReduction "RANGE:_0,]" enter point reduction factor (larger number: fewer points, but faster; smaller number: keep more points, but slower):
 DEFAULT_MACRO SourceDataset_POINTCLOUDXYZ $(FME_MF_DIR)convertedData\aerospaceRvt.csv
 GUI MULTIFILE SourceDataset_POINTCLOUDXYZ XYZ/CSV/Text_Files(*.xyz;*.csv;*.txt)|*.xyz;*.csv;*.txt|XYZ_Files(*.xyz)|*.xyz|CSV_Files(*.csv)|*.csv|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Point Cloud XYZ File(s):
-DEFAULT_MACRO SourceDataset_CSV2 $(FME_MF_DIR)convertedData\objToCsvMTPlane.csv
+DEFAULT_MACRO SourceDataset_CSV2 $(FME_MF_DIR)convertedData\aerospaceRvt.csv
 GUI MULTIFILE SourceDataset_CSV2 CSV/Compressed_CSV/TEXT_Files(*.csv;*.gz;*.txt)|*.csv;*.gz;*.txt|CSV_Files(*.csv)|*.csv|Compressed_CSV_Files(*.gz)|*.gz|Text_Files(*.txt)|*.txt|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Source CSV (Comma Separated Value) File(s):
 DEFAULT_MACRO FEATURE_TYPES 
-GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES "C:<backslash>Users<backslash>Matt<backslash>Documents<backslash>FME<space>Projects<backslash>Converter<backslash>convertedData<backslash>objToCsvMTPlane.csv,_FORMAT_OVERRIDE_,CSV2,_DATASET_OVERRIDE_,SourceDataset_CSV2,DELIMITER,auto,FIELD_NAMES_LINE,1,DATA_START_LINE,2,SKIP_DUPLICATE_DELIMITERS,No,FIELD_QUALIFIER_CHARACTER,<quote>,FIELD_QUALIFIER_ESCAPE_CHARACTER,<quote>,CASE_SENSITIVE_FIELD_NAMES,Yes,ENFORCE_STRICT_SCHEMA,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,ENCODING,windows-1252,PRESERVE_SOURCE_ENCODING,No,READ_SKIPPED_LINES,No,COORDSYS,*XY-MT*,_MERGE_SCHEMAS,YES,SCHEMA_GENERATION_GROUP,FME_DISCLOSURE_CLOSED,FIELD_SEPARATION_GROUP,FME_DISCLOSURE_CLOSED,FEATURE_TYPE_NAME,FORMAT_NAME,FIELD_VALUES_GROUP,FME_DISCLOSURE_CLOSED,USE_CUSTOM_SCHEMA,YES,FIELD_NAMES_GROUP,FME_DISCLOSURE_CLOSED,SCHEMA,\"x,x_coordinate,YES;y,y_coordinate,YES;z,z_coordinate,YES;r,uint8,YES;g,uint8,YES;b,uint8,YES\",DYNAMIC_WORKFLOW,yes,ADVANCED_GROUP,FME_DISCLOSURE_OPEN,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SCAN_ADDITIONAL_FIELDS,No,SCAN_TYPES,Yes,TRIM_FIELD_NAME_QUALIFIERS,Yes,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,_MERGE_SCHEMAS,YES" Feature Types to Read:
+GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES "C:<backslash>Users<backslash>Matt<backslash>Documents<backslash>FME<space>Projects<backslash>Converter<backslash>convertedData<backslash>aerospaceRvt.csv,_FORMAT_OVERRIDE_,CSV2,_DATASET_OVERRIDE_,SourceDataset_CSV2,DELIMITER,auto,FIELD_NAMES_LINE,1,DATA_START_LINE,2,SKIP_DUPLICATE_DELIMITERS,No,FIELD_QUALIFIER_CHARACTER,<quote>,FIELD_QUALIFIER_ESCAPE_CHARACTER,<quote>,CASE_SENSITIVE_FIELD_NAMES,Yes,ENFORCE_STRICT_SCHEMA,No,TRIM_FIELD_VALUE_QUALIFIERS,Yes,ENCODING,windows-1252,PRESERVE_SOURCE_ENCODING,No,READ_SKIPPED_LINES,No,COORDSYS,*XY-MT*,_MERGE_SCHEMAS,YES,SCHEMA_GENERATION_GROUP,FME_DISCLOSURE_CLOSED,FIELD_SEPARATION_GROUP,FME_DISCLOSURE_CLOSED,FEATURE_TYPE_NAME,FORMAT_NAME,FIELD_VALUES_GROUP,FME_DISCLOSURE_CLOSED,USE_CUSTOM_SCHEMA,YES,FIELD_NAMES_GROUP,FME_DISCLOSURE_CLOSED,SCHEMA,\"x,x_coordinate,YES;y,y_coordinate,YES;z,z_coordinate,YES;r,uint8,YES;g,uint8,YES;b,uint8,YES\",DYNAMIC_WORKFLOW,yes,ADVANCED_GROUP,FME_DISCLOSURE_OPEN,SCAN_MAX_ROWS,10000,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,SCAN_ADDITIONAL_FIELDS,No,SCAN_TYPES,Yes,TRIM_FIELD_NAME_QUALIFIERS,Yes,QUERY_FEATURE_TYPES_FOR_MERGE_FILTERS,Yes,_MERGE_SCHEMAS,YES" Feature Types to Read:
 INCLUDE [ if {{$(DestDataset_MINECRAFT)} == {}} { puts_real {Parameter 'DestDataset_MINECRAFT' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(worldName)} == {}} { puts_real {Parameter 'worldName' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(pointReduction)} == {}} { puts_real {Parameter 'pointReduction' must be given a value.}; exit 1; }; ]
@@ -2821,24 +2864,19 @@ FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_0 INPUT FEAT
 FACTORY_DEF * TestFactory FACTORY_NAME PointCloudFilter_TestFactory_1 INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_1 STRING_TEST @Value(__pc_internal_filter_attribute__) = inRange OUTPUT PASSED FEATURE_TYPE PointCloudFilter_inRange    @RemoveAttributes(__pc_internal_filter_attribute__) OUTPUT FAILED FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_2
 FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudFilter_UNFILTERED INPUT FEATURE_TYPE PointCloudFilter_POINTCLOUDFILTERINPUTLINE_2 OUTPUT FEATURE_TYPE PointCloudFilter_<UNFILTERED>    @RemoveAttributes(__pc_internal_filter_attribute__)
 FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter tooHigh Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_tooHigh
-FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter inRange Splitter"   INPUT FEATURE_TYPE PointCloudFilter_inRange   OUTPUT FEATURE_TYPE PointCloudFilter_inRange_0_vnX9evgc+3Y=   OUTPUT FEATURE_TYPE PointCloudFilter_inRange_1_YTG3AVfJcNU=
 FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter <UNFILTERED> Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_<UNFILTERED>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudFilter <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE PointCloudFilter_<REJECTED>
 # -------------------------------------------------------------------------
-FACTORY_DEF * PointCloudCoercerFactory    FACTORY_NAME PointCloudCoercer    INPUT  FEATURE_TYPE PointCloudFilter_inRange_1_YTG3AVfJcNU=    CONVERT_TO POINT    POINT_COMPONENTS color_red color_green color_blue    ACCUM_ATTRS YES    POINT_COMPONENTS_PRESERVE_TYPE ATTRIBUTES    PART_NUMBER_ATTR_NAME "_part_number"    REJECT_INVALID_FEATURES YES    OUTPUT COERCED FEATURE_TYPE PointCloudCoercer_COERCED
+FACTORY_DEF * PointCloudCoercerFactory    FACTORY_NAME PointCloudCoercer    INPUT  FEATURE_TYPE PointCloudFilter_inRange    CONVERT_TO POINT    POINT_COMPONENTS color_red color_green color_blue    ACCUM_ATTRS YES    POINT_COMPONENTS_PRESERVE_TYPE ATTRIBUTES    PART_NUMBER_ATTR_NAME "_part_number"    REJECT_INVALID_FEATURES YES    OUTPUT COERCED FEATURE_TYPE PointCloudCoercer_COERCED
 # -------------------------------------------------------------------------
 FME_PYTHON_PATH "$(FME_MF_DIR)"
-FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller    INPUT  FEATURE_TYPE PointCloudCoercer_COERCED    SYMBOL_NAME FeatureProcessor    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fme<lf>import<space>fmeobjects<lf><lf>from<space>scripts.getClosestBlock<space>import<space>getBlockList<comma><space>closestBlockColor<lf><lf>def<space>log<openparen>msg<closeparen>:<lf><space><space><space><space>fmeobjects.FMELogFile<openparen><closeparen>.logMessageString<openparen>str<openparen>msg<closeparen><closeparen><lf><lf>#<space>Template<space>Function<space>interface:<lf>#<space>When<space>using<space>this<space>function<comma><space>make<space>sure<space>its<space>name<space>is<space>set<space>as<space>the<space>value<space>of<lf>#<space>the<space><apos>Class<space>or<space>Function<space>to<space>Process<space>Features<apos><space>transformer<space>parameter<lf>def<space>processFeature<openparen>feature<closeparen>:<lf><space><space><space><space>pass<lf><lf>#<space>Template<space>Class<space>Interface:<lf>#<space>When<space>using<space>this<space>class<comma><space>make<space>sure<space>its<space>name<space>is<space>set<space>as<space>the<space>value<space>of<lf>#<space>the<space><apos>Class<space>or<space>Function<space>to<space>Process<space>Features<apos><space>transformer<space>parameter<lf>class<space>FeatureProcessor<openparen>object<closeparen>:<lf><space><space><space><space>def<space>__init__<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space><space>pass<lf><space><space><space><space>def<space>input<openparen>self<comma>feature<closeparen>:<lf><space><space><space><space><space><space><space><space>#for<space>i<space>in<space>dir<openparen>feature<closeparen>:<lf><space><space><space><space><space><space><space><space>#<space><space><space><space>log<openparen>i<closeparen><lf><space><space><space><space><space><space><space><space>#for<space>point<space>in<space>feature:<lf><space><space><space><space><space><space><space><space>#<space><space><space><space>log<openparen>point<closeparen><lf><space><space><space><space><space><space><space><space>#log<openparen>feature.getAllCoordinates<openparen><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>log<openparen>feature.getAllAttributeNames<openparen><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>self.pyoutput<openparen>feature<closeparen><lf><space><space><space><space>def<space>close<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space><space>pass    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_OUTPUT
-FACTORY_DEF * TeeFactory   FACTORY_NAME "PythonCaller OUTPUT Transformer Output Nuker"   INPUT FEATURE_TYPE PythonCaller_OUTPUT
+FACTORY_DEF * PythonFactory    FACTORY_NAME PythonCaller    INPUT  FEATURE_TYPE PointCloudCoercer_COERCED    SYMBOL_NAME FeatureProcessor    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE import<space>fme<lf>import<space>fmeobjects<lf><lf>from<space>scripts.getClosestBlock<space>import<space>getBlockList<comma><space>closestBlockColor<lf><lf><lf><lf>def<space>log<openparen>msg<closeparen>:<lf><space><space><space><space>fmeobjects.FMELogFile<openparen><closeparen>.logMessageString<openparen>str<openparen>msg<closeparen><closeparen><lf><lf>BLOCKS<space>=<space>getBlockList<openparen><closeparen><lf>log<openparen><quote>cached<space>blocks<quote><closeparen><lf><lf>#<space>Template<space>Function<space>interface:<lf>#<space>When<space>using<space>this<space>function<comma><space>make<space>sure<space>its<space>name<space>is<space>set<space>as<space>the<space>value<space>of<lf>#<space>the<space><apos>Class<space>or<space>Function<space>to<space>Process<space>Features<apos><space>transformer<space>parameter<lf>def<space>processFeature<openparen>feature<closeparen>:<lf><space><space><space><space>pass<lf><lf>#<space>Template<space>Class<space>Interface:<lf>#<space>When<space>using<space>this<space>class<comma><space>make<space>sure<space>its<space>name<space>is<space>set<space>as<space>the<space>value<space>of<lf>#<space>the<space><apos>Class<space>or<space>Function<space>to<space>Process<space>Features<apos><space>transformer<space>parameter<lf>class<space>FeatureProcessor<openparen>object<closeparen>:<lf><space><space><space><space>def<space>__init__<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space><space>pass<lf><space><space><space><space>def<space>input<openparen>self<comma>feature<closeparen>:<lf><space><space><space><space><space><space><space><space>#for<space>i<space>in<space>dir<openparen>feature<closeparen>:<lf><space><space><space><space><space><space><space><space>#<space><space><space><space>log<openparen>i<closeparen><lf><space><space><space><space><space><space><space><space>#for<space>point<space>in<space>feature:<lf><space><space><space><space><space><space><space><space>#<space><space><space><space>log<openparen>point<closeparen><lf><space><space><space><space><space><space><space><space>#log<openparen>feature.getAllCoordinates<openparen><closeparen><closeparen><lf><space><space><space><space><space><space><space><space>r<space>=<space>feature.getAttribute<openparen><quote>r<quote><closeparen><lf><space><space><space><space><space><space><space><space>g<space>=<space>feature.getAttribute<openparen><quote>g<quote><closeparen><lf><space><space><space><space><space><space><space><space>b<space>=<space>feature.getAttribute<openparen><quote>b<quote><closeparen><lf><space><space><space><space><space><space><space><space>block<space>=<space>closestBlockColor<openparen><openbracket>r<comma><space>g<comma><space>b<closebracket><comma><space>BLOCKS<closeparen><lf><space><space><space><space><space><space><space><space>newFeature<space>=<space>feature.clone<openparen><closeparen><lf><space><space><space><space><space><space><space><space>newFeature.setAttribute<openparen><quote>blockID<quote><comma><space>block.id<closeparen><lf><space><space><space><space><space><space><space><space>newFeature.setAttribute<openparen><quote>blockData<quote><comma><space>block.data<closeparen><lf><space><space><space><space><space><space><space><space>self.pyoutput<openparen>newFeature<closeparen><lf><space><space><space><space>def<space>close<openparen>self<closeparen>:<lf><space><space><space><space><space><space><space><space>pass    OUTPUT PYOUTPUT FEATURE_TYPE PythonCaller_OUTPUT
 # -------------------------------------------------------------------------
-DEFAULT_MACRO setBlockId_COMPONENT_LIST
-DEFAULT_MACRO setBlockId_COMPONENT_TYPE_LIST
-DEFAULT_MACRO setBlockId_EXPRESSION_LIST
-INCLUDE [    foreach {component componenttype expression} [split {blockID Preserve 133 blockData Preserve 0}] {       lappend lists(COMPONENT) $component;       lappend lists(COMPONENT_TYPE) $componenttype;       if [regexp {@EvaluateExpression\(STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } elseif [regexp {@EvaluateExpression\(FDIV,STRING_ENCODED,(.*),.+\)} $expression -> unwrapped] {          lappend lists(EXPRESSION) $unwrapped;       } else {          lappend lists(EXPRESSION) $expression;       };    };    foreach {listName} [array names lists] {       puts "MACRO setBlockId_${listName}_LIST \"[join $lists($listName) {;}]\"";    }; ]
-FACTORY_DEF * PointCloudEvaluationFactory    FACTORY_NAME setBlockId    INPUT  FEATURE_TYPE PointCloudFilter_inRange_0_vnX9evgc+3Y=    MODE SET_COMPONENT_VALUES    COMPONENT_LIST $(setBlockId_COMPONENT_LIST)    COMPONENT_TYPE_LIST $(setBlockId_COMPONENT_TYPE_LIST)    EXPRESSION_LIST $(setBlockId_EXPRESSION_LIST)    FORCE_FLOAT_DIVISION yes    REJECT_INVALID_FEATURES YES    OUTPUT RESULT FEATURE_TYPE setBlockId_RESULT
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner_2___VectorMerger    INPUT  FEATURE_TYPE PythonCaller_OUTPUT    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner_2___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner_2)
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner_2___Combiner    INPUT FEATURE_TYPE PointCloudCombiner_2___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_2_OUTPUT
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC setBlockId_RESULT TO MINECRAFT __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>civilSectionShiftUp<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(worldName$encode$encode)<comma>civilSectionShiftUp<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC PointCloudCombiner_2_OUTPUT TO MINECRAFT __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>civilSectionShiftUp<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(worldName$encode$encode)<comma>civilSectionShiftUp<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
