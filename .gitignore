@@ -1,7 +1,7 @@
 /_saves/
 /convertedData/
 /sourceData/
-/__pycache__/
+*__pycache__/
 *.recover
 *.log
 *.ffs
