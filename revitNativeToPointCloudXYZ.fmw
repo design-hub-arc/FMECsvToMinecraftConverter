@@ -4,8 +4,10 @@
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\revitNativeToPointCloudXYZ.fmw"
 #              --SourceDataset_REVITNATIVE "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\revitData\Copy of AEROSPACE MUSEUM .rvt"
 #              --DestDataset_POINTCLOUDXYZ "C:\Users\Matt\Documents\FME Projects\Converter\convertedData"
-#              --file_name "aerospaceRvtMaybeColor"
+#              --file_name "aerospaceRvtNew"
 #              --DestDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\convertedData"
+#              --SourceDataset_GENERIC "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\revitData\Copy of AEROSPACE MUSEUM .rvt"
+#              --FEATURE_TYPES ""
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -14,14 +16,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="3623.53 1958.88"
-#!   DOC_TOP_LEFT="-132 -2022"
+#!   DOC_EXTENTS="4362.06 2275.75"
+#!   DOC_TOP_LEFT="-553.53 -2022"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="56a338d5-a255-4c32-88a1-d47e9c2e4b00"
-#!   FME_DOCUMENT_PRIORGUID="24028cbd-4f9a-4f5d-a93f-3a07afe3689b,c5702db2-bbc3-4bac-bd8c-4e1c6e0a7349,be997ec9-a87c-4a59-9961-630392a05406,4b448e2e-90d9-4c14-9e12-ef7318895260,d9bf911d-a90b-41d8-a244-31fe7ab81ad1,aea8b159-3fc9-41cb-bc9b-d5b75bc486aa,8b732c40-1561-4b8f-9071-f1304992c2a4,964d08a8-141e-44e5-80db-e431dde53446,b17b96b3-d899-4059-b404-36734282a02d"
+#!   FME_DOCUMENT_GUID="b00e4ef3-ad99-4d43-9649-63553793a9a5"
+#!   FME_DOCUMENT_PRIORGUID="24028cbd-4f9a-4f5d-a93f-3a07afe3689b,c5702db2-bbc3-4bac-bd8c-4e1c6e0a7349,be997ec9-a87c-4a59-9961-630392a05406,4b448e2e-90d9-4c14-9e12-ef7318895260,d9bf911d-a90b-41d8-a244-31fe7ab81ad1,aea8b159-3fc9-41cb-bc9b-d5b75bc486aa,8b732c40-1561-4b8f-9071-f1304992c2a4,964d08a8-141e-44e5-80db-e431dde53446,b17b96b3-d899-4059-b404-36734282a02d,56a338d5-a255-4c32-88a1-d47e9c2e4b00"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -30,7 +32,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-20T08:52:03"
+#!   LAST_SAVE_DATE="2020-04-20T09:05:34"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -45,11 +47,11 @@
 #!   SHOW_INFO_NODES="true"
 #!   SOURCE="NONE"
 #!   SOURCE_ROUTING_FILE=""
-#!   TERMINATE_REJECTED="YES"
+#!   TERMINATE_REJECTED="NO"
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="715.632 218.752"
+#!   VIEW_POSITION="-906.259 -109.376"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -104,6 +106,49 @@
 #! <METAFILE_PARAMETER
 #!   NAME="WRITER_DATASET_HINT"
 #!   VALUE="Specify the Revit Project (RVT) file"
+#! />
+#! </DATASET>
+#! <DATASET
+#!   IS_SOURCE="true"
+#!   ROLE="READER"
+#!   FORMAT="GENERIC"
+#!   DATASET="$(SourceDataset_GENERIC)"
+#!   KEYWORD="GENERIC_1"
+#!   MULTI_GEOM_ALLOWED="false"
+#!   ATTR_MAX_LENGTH="0"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE="fme_type {FME_GEN_GEOMETRY}"
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_format_short_name char(255) fme_primary_axis real64 fme_sweep_angle real64 fme_fill_color char(50) multi_reader_full_id int32 fme_text_size real64 fme_text_string char(50) fme_type char(50) fme_start_angle real64 fme_color char(50) fme_secondary_axis real64 fme_dataset char(50) multi_reader_type char(50) fme_format_long_name char(255) fme_geometry char(50) fme_rotation real64 multi_reader_keyword char(50) fme_basename char(50) multi_reader_id int32 fme_feature_type char(50)"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILEURLDIR"
+#!   FTTR_TYPE="FEATURE_TYPES_ENCODED"
+#!   GENERATE_FME_BUILD_NUM="20200"
+#!   COORDSYS=""
+#!   FEATURE_TYPES="$(FEATURE_TYPES)"
+#!   MAX_FEATURES=""
+#!   MAX_FEATURES_PER_FEATURE_TYPE=""
+#!   MIN_FEATURES=""
+#!   START_FEATURE=""
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="ADVANCED_PARMS"
+#!   VALUE="READER_SCHEMAS_TO_SKIP"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="AUTO_PUBLISH"
+#!   VALUE="SourceDataset DestDataset GENERIC_OUT_FORMAT"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE=""
 #! />
 #! </DATASET>
 #! <DATASET
@@ -267,6 +312,150 @@
 #!   FORMAT_TYPE="number(width,decimal)"
 #!   FME_TYPE="fme_decimal(width,decimal)"
 #!   FORMAT="REVITNATIVE"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char(width)"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varchar(width)"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="buffer"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="xml"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binary(width)"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="varbinary(width)"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="binarybuffer"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="datetime"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="date"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="time"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="decimal(width,decimal)"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real32"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="real64"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int32"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint32"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int64"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint64"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="int16"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint16"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="char"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="uint8"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GENERIC"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="copied"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GENERIC"
 #! />
 #! <DATA_TYPE
 #!   IS_SOURCE="false"
@@ -727,6 +916,102 @@
 #!   FORMAT="REVITNATIVE"
 #! />
 #! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_area"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_solid"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_surface"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_any"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_area"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="true"
+#!   FORMAT_TYPE="fme_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GENERIC"
+#! />
+#! <GEOM_TYPE
 #!   IS_SOURCE="false"
 #!   FORMAT_TYPE="csv_feature_table"
 #!   FME_TYPE="fme_feature_table"
@@ -928,13 +1213,13 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="29"
 #!   FEAT_GEOMTYPE="All"
-#!   POSITION="1428.1402814028138 -63.123281232812587"
-#!   BOUNDING_RECT="1428.1402814028138 -63.123281232812587 668.10000000000002 71"
+#!   POSITION="1371.8897188971887 -385.87384373843781"
+#!   BOUNDING_RECT="1371.8897188971887 -385.87384373843781 668.10000000000002 71"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
 #!   KEYWORD="POINTCLOUDXYZ_1"
 #!   PARMS_EDITED="true"
-#!   ENABLED="false"
+#!   ENABLED="true"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
 #!     <FEAT_ATTRIBUTE ATTR_NAME="fme_basename" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
@@ -1499,13 +1784,13 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="46"
 #!   FEAT_GEOMTYPE="All"
-#!   POSITION="3037.5313753137534 -248.37246872468768"
-#!   BOUNDING_RECT="3037.5313753137534 -248.37246872468768 454 71"
+#!   POSITION="3262.5336253362539 -768.37646876468807"
+#!   BOUNDING_RECT="3262.5336253362539 -768.37646876468807 454 71"
 #!   ORDER="500000000000000"
 #!   COLLAPSED="true"
 #!   KEYWORD="CSV2_1"
 #!   PARMS_EDITED="true"
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   SCHEMA_ATTRIBUTE_SOURCE="1"
 #! >
 #!     <FEAT_ATTRIBUTE ATTR_NAME="x" ATTR_TYPE="real64" ATTR_HAS_PORT="false" ATTR_VALUE="&lt;at&gt;Value&lt;openparen&gt;_indices&lt;opencurly&gt;0&lt;closecurly&gt;.x&lt;closeparen&gt;"/>
@@ -1519,9 +1804,310 @@
 #!     <DEFLINE_PARM PARM_NAME="csv_fields_group" PARM_VALUE=""/>
 #!     <DEFLINE_PARM PARM_NAME="csv_write_field_names" PARM_VALUE="firstrow"/>
 #! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="true"
+#!   NODE_NAME="Metadata.FileInformation"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="false"
+#!   IDENTIFIER="51"
+#!   FEAT_GEOMTYPE="fme_no_geom"
+#!   POSITION="-461.53040630406292 106.2510625106251"
+#!   BOUNDING_RECT="-461.53040630406292 106.2510625106251 454 71"
+#!   ORDER="500000000000000"
+#!   COLLAPSED="true"
+#!   KEYWORD="GENERIC_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   HIDDEN_USER_ATTRS=""
+#!   MERGE_FILTER="*"
+#!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#!   MERGE_FILTER_CASE_SENSITIVE="true"
+#!   DYNAMIC_SCHEMA="true"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DocVer" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DocUpdate" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AuthorUsername" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedBy" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CentralModelPath" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsCentralModel" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsCreatedLocally" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 2 (Second Floor)" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 04 - T.O. Fnd. Wall" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 03 - T.O. Basement Slab" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 02 - T.O. Footing" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Level 01 - B.O. Footing" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="LevelElevationInfo.Roof" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Author" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.BuildingName" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OrganizationDescription" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OrganizationName" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ClientName" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectAddress" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectIssueDate" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectName" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectNumber" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ProjectStatus" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.AnalyticConstruction" ATTR_TYPE="char(32)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.ConstructionTypeId" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseCategory" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseLevelElevation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BaseLevelRoomOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelElevation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="BuildingLevelRoomOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Category" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseExtensionDistance" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.BaseOffsetFromLevel" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.CutoffOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.DefaultElevation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.HeightOffsetFromLevel" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.TopExtensionDistance" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.TopOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Constraints.UnconnectedHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.AngledJoins" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.BalusterOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.FasciaDepth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.FixtureType" ATTR_TYPE="char(9)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.Function" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.LandingHeightAdjustment" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.MaximumRidgeHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RafterCut" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RafterorTruss" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RailConnections" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.RailingHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.ShowEndBracket" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.ShowStartBracket" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.TangentJoins" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.TrimlessFlange" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.TwoSided" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.UseLandingHeightAdjustment" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Construction.WallClosure" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="CreatedPhase" ATTR_TYPE="char(18)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="DetailLevel" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.BottomRail" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.CosAng" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.CounterThickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.DefaultSillHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Depth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Diagonal" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Distance" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.FountainLength" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.FountainWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.H" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Height" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.HoopSpace" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.InsideDiameter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.InsideRadius" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.L" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Offset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.OutsideDiameter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.PanelWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.RoomArea" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.RoughHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.RoughWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.RungLength" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.RungSpace" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.SinAng" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Stiles" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Thickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TopOfCounter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TopRail" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjection" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionExt" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionExt." ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionInt" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimProjectionInt." ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimWidthExt." ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.TrimWidthInt." ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.UrinalHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.UrinalLength" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.UrinalWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.Width" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Dimensions.WindowInset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Discipline" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ElementType" ATTR_TYPE="char(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Elevation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Family" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="FamilyType" ATTR_TYPE="char(20)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Function" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Graphics.Stand" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostFeatureType" ATTR_TYPE="char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="HostId" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyCode" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.AssemblyDescription" ATTR_TYPE="char(23)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Description" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Manufacturer" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Mark" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.Model" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassNumber" ATTR_TYPE="char(17)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.OmniclassTitle" ATTR_TYPE="char(17)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.RoomName" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.RoomNumber" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.SectionNameKey" ATTR_TYPE="char(6)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.TypeComments" ATTR_TYPE="char(47)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IdentityData.URL" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="InExteriorShell" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="IsTemplateView" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.BasinMaterial" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.BenchMaterial" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.BracketMaterial" ATTR_TYPE="char(21)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.CounterTopMaterial" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.DiffuserMaterial" ATTR_TYPE="char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.DoorHandleMaterial" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.DoorMaterial" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.EdgeMaterial" ATTR_TYPE="char(41)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.FaucetMaterial" ATTR_TYPE="char(15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.FrameMaterial" ATTR_TYPE="char(10)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.Glazing" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.PanelMaterial" ATTR_TYPE="char(33)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.SashMaterial" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.ShadeMaterial" ATTR_TYPE="char(34)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.Toilet-Bowl/BasinMaterial" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.Toilet-SeatMaterial" ATTR_TYPE="char(22)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.TrimMaterial" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="MaterialsandFinishes.WorkSurfaceMaterial" ATTR_TYPE="char(28)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Mechanical.CWFU" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Mechanical.HWFU" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Mechanical.WFU" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Name" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ObjectId" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Orientation" ATTR_TYPE="char(13)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalusterLength" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalusterSeparation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalusterShape" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalusterSpacingType(StairRailingOnly)" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalusterWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BalustersPerTread(StairRailingOnly)" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BottomHoopHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.BottomHoopRadius" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.CenterDistance" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ConnectorPos.x1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ConnectorPos.x2" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ConnectorPos.y1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.ConnectorPos.y2" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.GuardrailHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HalfFountainWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HalfUrinalWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HalfWallWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.Height1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HookRadius" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HoopRadius" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HoopThickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.HoopWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.None" ATTR_TYPE="char(1710)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.PanelWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.R" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.RailShape" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.RailingThickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.RailingWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.RungRadius" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.SideRailThickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.SideRailWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.VerticalBarCenter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.VerticalBarCenter1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.VerticalBarThickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.VerticalBarWidth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.W" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_BASE_OFFSET_COMPUTED" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_FAKE_END_PARAM_0" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_FAKE_END_PARAM_1" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other.WALL_HEIGHT_PARAM" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RoomAreabyDepartment.Area" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RoomAreabyDepartment.Perimeter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RoomAreabyDepartment.RoomNumber" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="RoomAreabyDepartment.RoomType" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Scale" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Structural.NumberofCages" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Structural.NumberofRungs" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Structural.Structural" ATTR_TYPE="boolean" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Template" ATTR_TYPE="char(4)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TopLevel" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TopLevelElevation" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TopLevelIsStory" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="TopLevelRoomOffset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Type" ATTR_TYPE="char(16)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewDepth.Level" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewDepth.Offset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeBottom.Level" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeBottom.Offset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeCutPlane.Level" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeCutPlane.Offset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeTop.Level" ATTR_TYPE="char(29)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="ViewRangeTop.Offset" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="WorksetName" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CaseworkQuantities.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CaseworkQuantities.AssemblyDescription" ATTR_TYPE="char(30)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CaseworkQuantities.Depth" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CaseworkQuantities.Height" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CurtainWallMullionQuantities.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CurtainWallPanelQuantities.Area" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CurtainWallPanelQuantities.Height" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-CurtainWallPanelQuantities.Width" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.AssemblyDescription" ATTR_TYPE="char(32)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.DoorType" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.Height" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.Thickness" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-DoorQuantities.Width" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FloorFinishes.Area" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FloorFinishes.Perimeter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FloorFinishes.RoomNumber" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FloorFinishes.RoomType" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FurnitureQuantities.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FurnitureQuantities.AssemblyDescription" ATTR_TYPE="char(23)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-FurnitureSystemQuantities.Comments" ATTR_TYPE="char(47)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-RailingQuantities.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-RoomWallFinishes.Perimeter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-RoomWallFinishes.RoomNumber" ATTR_TYPE="char(1)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-RoomWallFinishes.RoomType" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-StairQuantities.ActualNumberofRisers" ATTR_TYPE="decimal(10,0)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-StairQuantities.ActualRiserHeight" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-WindowQuantities.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-WindowQuantities.AssemblyDescription" ATTR_TYPE="char(7)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-WindowQuantities.Height" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-WindowQuantities.Width" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qa-WindowQuantities.WindowType" ATTR_TYPE="char(2)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qe-LightingFixtureQuantities.Lamp" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qe-LightingFixtureQuantities.Lumens" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qp-PlumbingFixtureQuantities.AssemblyCode" ATTR_TYPE="char(8)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qp-PlumbingFixtureQuantities.AssemblyDescription" ATTR_TYPE="char(5)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-FloorQuantitiesbyAssembly.Area(DefinedByModeler)" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-FloorQuantitiesbyAssembly.Perimeter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-RoofQuantitiesbyAssembly.Area" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.AssemblyCode" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.AssemblyDescription" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralColumnSchedule.AssemblyCode" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralColumnSchedule.AssemblyDescription" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralColumnSchedule.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralFramingSchedule.AssemblyCode" ATTR_TYPE="char(3)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralFramingSchedule.AssemblyDescription" ATTR_TYPE="char(14)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralFramingSchedule.Length" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-StructuralFramingSchedule.Volume" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-WallQuantitiesbyAssembly.Area" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-WallQuantitiesbyAssembly.Length-CenterToCenter" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="qs-WallQuantitiesbyAssembly.Volume" ATTR_TYPE="decimal(31,15)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
 #! <READER_DATASETS>
+#! <DATASET
+#!   NAME="GENERIC_1"
+#!   OVERRIDE="-GENERIC_1_DATASET"
+#!   DATASET="GENERIC_1/Copy of AEROSPACE MUSEUM .rvt"
+#! />
 #! <DATASET
 #!   NAME="REVITNATIVE_1"
 #!   OVERRIDE="-REVITNATIVE_1_DATASET"
@@ -1554,12 +2140,22 @@
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI STRING_OR_ATTR file_name Enter file name to export as:"
-#!   DEFAULT_VALUE="aerospaceRvtMaybeColor"
+#!   DEFAULT_VALUE="aerospaceRvtNew"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_CSV2 Destination CSV (Comma Separated Value) Folder:"
 #!   DEFAULT_VALUE="$(FME_MF_DIR)convertedData"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI FILE_OR_URL SourceDataset_GENERIC All_files|* Source Dataset:"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\revitData\Copy of AEROSPACE MUSEUM .rvt"
+#!   IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:&lt;backslash&gt;Users&lt;backslash&gt;Matt&lt;backslash&gt;Documents&lt;backslash&gt;FME&lt;space&gt;Projects&lt;backslash&gt;Converter&lt;backslash&gt;sourceData&lt;backslash&gt;revitData&lt;backslash&gt;Copy&lt;space&gt;of&lt;space&gt;AEROSPACE&lt;space&gt;MUSEUM&lt;space&gt;.rvt,_FORMAT_OVERRIDE_,GENERIC,_DATASET_OVERRIDE_,SourceDataset_GENERIC,REAL_FORMAT,GUESS_FROM_EXTENSION,DYNAMIC_WORKFLOW,yes,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,_MERGE_SCHEMAS,YES,_MERGE_SCHEMAS,YES Feature Types to Read:"
+#!   DEFAULT_VALUE=""
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -1568,6 +2164,34 @@
 #! <CONSTANTS>
 #! </CONSTANTS>
 #! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="57"
+#!   NAME="Doesn&apos;t work"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-553.53040630406292 253.75143751437514"
+#!   ORDER="500000000000011"
+#!   PALETTE_COLOR="Color9"
+#!   BOTTOM_RIGHT="1644.636406364064 -119.7489374893749"
+#!   BOUNDING_RECT="-553.53040630406292 253.75143751437514 2198.166812668127 373.50037500375004"
+#!   STICKY="true"
+#!   COLOUR="0.42352941176470588,0.16862745098039217,0.46666666666666667,1"
+#!   CONTENTS="52 55 51 53 56 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="59"
+#!   NAME="Doesn&apos;t work either"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="1583.8917189171889 -538.37646876468807"
+#!   ORDER="500000000000012"
+#!   PALETTE_COLOR="Color1"
+#!   BOTTOM_RIGHT="3808.5336253362539 -1215.6371563715636"
+#!   BOUNDING_RECT="1583.8917189171889 -538.37646876468807 2224.641906419065 677.26068760687554"
+#!   STICKY="true"
+#!   COLOUR="0.20784313725490197,0.40784313725490196,0.40784313725490196,1"
+#!   CONTENTS="49 48 44 46 54 50 "
+#! >
+#! </BOOKMARK>
 #! </BOOKMARKS>
 #! <TRANSFORMERS>
 #! <TRANSFORMER
@@ -1752,7 +2376,7 @@
 #!   BOUNDING_RECT="1800.0180001800018 -973 580.10000000000002 71"
 #!   ORDER="500000000000003"
 #!   PARMS_EDITED="true"
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   LAST_PARM_EDIT="20200"
 #! >
 #!     <OUTPUT_FEAT NAME="OUTPUT"/>
@@ -1934,7 +2558,7 @@
 #!   BOUNDING_RECT="1671.8917189171889 -648.37646876468807 454 71"
 #!   ORDER="500000000000005"
 #!   PARMS_EDITED="true"
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   LAST_PARM_EDIT="20200"
 #! >
 #!     <OUTPUT_FEAT NAME="COERCED"/>
@@ -2103,11 +2727,11 @@
 #!   IDENTIFIER="50"
 #!   TYPE="CoordinateExtractor"
 #!   VERSION="4"
-#!   POSITION="2290.6479064790656 -385.87384373843781"
-#!   BOUNDING_RECT="2290.6479064790656 -385.87384373843781 454 71"
+#!   POSITION="2418.774187741878 -648.37646876468807"
+#!   BOUNDING_RECT="2418.774187741878 -648.37646876468807 454 71"
 #!   ORDER="500000000000006"
 #!   PARMS_EDITED="true"
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   LAST_PARM_EDIT="20200"
 #! >
 #!     <OUTPUT_FEAT NAME="OUTPUT"/>
@@ -2277,6 +2901,347 @@
 #!     <XFORM_PARM PARM_NAME="Z_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
 #!     <XFORM_PARM PARM_NAME="Z_DEFAULT" PARM_VALUE=""/>
 #! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="52"
+#!   TYPE="PointCloudCombiner"
+#!   VERSION="6"
+#!   POSITION="393.75393753937533 106.2510625106251"
+#!   BOUNDING_RECT="393.75393753937533 106.2510625106251 485.09999999999997 71"
+#!   ORDER="500000000000008"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="DocVer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DocUpdate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AuthorUsername" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedBy" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CentralModelPath" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsCentralModel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsCreatedLocally" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 2 (Second Floor)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 04 - T.O. Fnd. Wall" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 03 - T.O. Basement Slab" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 02 - T.O. Footing" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Level 01 - B.O. Footing" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="LevelElevationInfo.Roof" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Author" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.BuildingName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OrganizationName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ClientName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectAddress" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectIssueDate" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ProjectStatus" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.AnalyticConstruction" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.ConstructionTypeId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.SolarHeatGainCoefficient" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="AnalyticalProperties.VisualLightTransmittance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseCategory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseLevelElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BaseLevelRoomOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BuildingLevelRoomOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Category" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.BaseOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.CutoffOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.DefaultElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.HeightOffsetFromLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopExtensionDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.TopOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Constraints.UnconnectedHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.AngledJoins" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.BalusterOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.FasciaDepth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.FixtureType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.LandingHeightAdjustment" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.MaximumRidgeHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterCut" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RafterorTruss" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RailConnections" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.RailingHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.ShowEndBracket" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.ShowStartBracket" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.TangentJoins" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.TrimlessFlange" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.TwoSided" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.UseLandingHeightAdjustment" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Construction.WallClosure" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="CreatedPhase" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="DetailLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.BottomRail" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.CosAng" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.CounterThickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.DefaultSillHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Diagonal" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Distance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.FountainLength" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.FountainWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.H" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.HoopSpace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.InsideDiameter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.InsideRadius" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.L" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.OutsideDiameter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.PanelWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.RoomArea" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.RoughHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.RoughWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.RungLength" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.RungSpace" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.SinAng" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Stiles" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Thickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TopOfCounter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TopRail" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjection" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionExt." IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimProjectionInt." IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidthExt." IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.TrimWidthInt." IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.UrinalHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.UrinalLength" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.UrinalWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Dimensions.WindowInset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Discipline" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ElementType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Elevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Family" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="FamilyType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Function" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Graphics.Stand" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostFeatureType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="HostId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Description" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Manufacturer" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Mark" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.Model" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.OmniclassTitle" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RoomName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.RoomNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.SectionNameKey" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.TypeComments" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IdentityData.URL" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="InExteriorShell" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="IsTemplateView" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BasinMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BenchMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.BracketMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.CounterTopMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DiffuserMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorHandleMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.DoorMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.EdgeMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FaucetMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.FrameMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.GlassPaneMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Glazing" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.PanelMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.SashMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.ShadeMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Toilet-Bowl/BasinMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.Toilet-SeatMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.TrimMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="MaterialsandFinishes.WorkSurfaceMaterial" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Mechanical.CWFU" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Mechanical.HWFU" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Mechanical.WFU" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ObjectId" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Orientation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalusterLength" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalusterSeparation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalusterShape" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalusterSpacingType(StairRailingOnly)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalusterWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BalustersPerTread(StairRailingOnly)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BottomHoopHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.BottomHoopRadius" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.CenterDistance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ConnectorPos.x1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ConnectorPos.x2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ConnectorPos.y1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.ConnectorPos.y2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.GuardrailHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HalfFountainWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HalfUrinalWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HalfWallWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.Height1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HookRadius" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HoopRadius" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HoopThickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.HoopWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.None" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.PanelWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.R" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.RailShape" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.RailingThickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.RailingWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.RungRadius" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.SideRailThickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.SideRailWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.VerticalBarCenter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.VerticalBarCenter1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.VerticalBarThickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.VerticalBarWidth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.W" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_BASE_OFFSET_COMPUTED" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_FAKE_END_PARAM_0" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_FAKE_END_PARAM_1" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Other.WALL_HEIGHT_PARAM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="RoomAreabyDepartment.Area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="RoomAreabyDepartment.Perimeter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="RoomAreabyDepartment.RoomNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="RoomAreabyDepartment.RoomType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Scale" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Structural.NumberofCages" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Structural.NumberofRungs" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Structural.Structural" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Template" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TopLevel" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TopLevelElevation" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TopLevelIsStory" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TopLevelRoomOffset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="Type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewDepth.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeBottom.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeCutPlane.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Level" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="ViewRangeTop.Offset" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="WorksetName" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CaseworkQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CaseworkQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CaseworkQuantities.Depth" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CaseworkQuantities.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CurtainWallMullionQuantities.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CurtainWallPanelQuantities.Area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CurtainWallPanelQuantities.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-CurtainWallPanelQuantities.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.DoorType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.Thickness" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-DoorQuantities.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FloorFinishes.Area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FloorFinishes.Perimeter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FloorFinishes.RoomNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FloorFinishes.RoomType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FurnitureQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FurnitureQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-FurnitureSystemQuantities.Comments" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-RailingQuantities.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-RoomWallFinishes.Perimeter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-RoomWallFinishes.RoomNumber" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-RoomWallFinishes.RoomType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-StairQuantities.ActualNumberofRisers" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-StairQuantities.ActualRiserHeight" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-WindowQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-WindowQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-WindowQuantities.Height" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-WindowQuantities.Width" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qa-WindowQuantities.WindowType" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qe-LightingFixtureQuantities.Lamp" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qe-LightingFixtureQuantities.Lumens" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qp-PlumbingFixtureQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qp-PlumbingFixtureQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-FloorQuantitiesbyAssembly.Area(DefinedByModeler)" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-FloorQuantitiesbyAssembly.Perimeter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-RoofQuantitiesbyAssembly.Area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralBeams&amp;BracingQuantities.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralColumnSchedule.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralColumnSchedule.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralColumnSchedule.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralFramingSchedule.AssemblyCode" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralFramingSchedule.AssemblyDescription" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralFramingSchedule.Length" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-StructuralFramingSchedule.Volume" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-WallQuantitiesbyAssembly.Area" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-WallQuantitiesbyAssembly.Length-CenterToCenter" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="qs-WallQuantitiesbyAssembly.Volume" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COUNT_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_RASTER_NODATA_NAME" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MEASURES_TO_PRESERVE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SPACING" PARM_VALUE="1.0"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VECTOR_PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCombiner_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="55"
+#!   TYPE="PointCloudCoercer"
+#!   VERSION="3"
+#!   POSITION="1140.636406364064 143.75143751437514"
+#!   BOUNDING_RECT="1140.636406364064 143.75143751437514 454 71"
+#!   ORDER="500000000000010"
+#!   PARMS_EDITED="true"
+#!   ENABLED="false"
+#!   LAST_PARM_EDIT="20200"
+#! >
+#!     <OUTPUT_FEAT NAME="COERCED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_color" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_part_number" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_basename" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_message" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_ATTRS_NAME" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CONVERT_TO_DISPLAY" PARM_VALUE="Individual Points"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPOINT_SIZE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PART_NUMBER_ATTR_NAME" PARM_VALUE="_part_number"/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS" PARM_VALUE="color_red color_green color_blue"/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="POINT_COMPONENTS_PRESERVE_DISPLAY" PARM_VALUE="Attributes"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="PointCloudCoercer_2"/>
+#! </TRANSFORMER>
 #! </TRANSFORMERS>
 #! <FEAT_LINKS>
 #! <FEAT_LINK
@@ -2445,6 +3410,21 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="53"
+#!   SOURCE_NODE="51"
+#!   TARGET_NODE="52"
+#!   SOURCE_PORT_DESC="-1"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="false"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="45"
 #!   SOURCE_NODE="15"
 #!   TARGET_NODE="44"
@@ -2475,12 +3455,27 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
+#!   IDENTIFIER="58"
+#!   SOURCE_NODE="15"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="2"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
 #!   IDENTIFIER="49"
 #!   SOURCE_NODE="48"
 #!   TARGET_NODE="50"
 #!   SOURCE_PORT_DESC="fo 0 COERCED"
 #!   TARGET_PORT_DESC="fi 0 "
-#!   ENABLED="true"
+#!   ENABLED="false"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
 #!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
@@ -2495,7 +3490,22 @@
 #!   TARGET_NODE="46"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
 #!   TARGET_PORT_DESC="-1"
-#!   ENABLED="true"
+#!   ENABLED="false"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
+#!   PEN_WIDTH="4"
+#!   PEN_STYLE="1"
+#!   LINK_STYLE_NAME="&lt;Default&gt;"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="56"
+#!   SOURCE_NODE="52"
+#!   TARGET_NODE="55"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="false"
 #!   EXECUTION_IDX="0"
 #!   HIDDEN="false"
 #!   COLOUR="0.82352941176470584,0.82352941176470584,0.82352941176470584,1"
@@ -2516,25 +3526,34 @@
 #! </WORKSPACE>
 
 FME_PYTHON_VERSION 37
-GUI IGNORE SourceDataset_REVITNATIVE_1,REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1,REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1,REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1,REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1,REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1,REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1,DestDataset_CSV2_1,CSV2_OUT_DATASET_GROUP_CSV2_1,CSV2_OUT_EXTENSION_CSV2_1,CSV2_OUT_FIELDS_GROUP_CSV2_1,CSV2_OUT_DELIMITER_CSV2_1,CSV2_OUT_ENCODING_GROUP_CSV2_1,CSV2_OUT_ENCODING_CSV2_1,CSV2_OUT_WRITE_BOM_FOR_UNICODE_CSV2_1,CSV2_OUT_ADVANCED_GROUP_CSV2_1,CSV2_OUT_QUALIFY_FIELD_NAMES_CSV2_1,CSV2_OUT_QUALIFY_FIELD_VALUES_CSV2_1,CSV2_OUT_UNQUALIFIED_FIELD_VALUE_HANDLING_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_OUT_ROW_TERMINATION_CSV2_1,CSV2_OUT_WRITE_SCHEMA_FILE_CSV2_1,CSV2_OUT_EXISTING_SCHEMA_FILE_HANDLING_CSV2_1
+GUI IGNORE SourceDataset_REVITNATIVE_1,REVITNATIVE_IN_READER_PARAMETERS_REVITNATIVE_1,REVITNATIVE_IN_ONLY_READ_EXTERIOR_SHELL_REVITNATIVE_1,REVITNATIVE_IN_GEOM_HANDLING_MODE_REVITNATIVE_1,REVITNATIVE_IN_DETAIL_LEVEL_SETTING_REVITNATIVE_1,REVITNATIVE_IN_COORD_SYS_MODE_REVITNATIVE_1,REVITNATIVE_IN_PERFORM_OCCLUSION_REVITNATIVE_1,REVITNATIVE_IN_READ_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_SELECTED_VIEW_REVITNATIVE_1,REVITNATIVE_IN_USE_SEARCH_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MINY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXX_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_MAXY_REVITNATIVE_1,REVITNATIVE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_REVITNATIVE_1,REVITNATIVE_IN_CLIP_TO_ENVELOPE_REVITNATIVE_1,REVITNATIVE_IN_NETWORK_AUTHENTICATION_REVITNATIVE_1,SourceDataset_GENERIC_1,GENERIC_IN_FME_GROUP_NAMED1_GENERIC_1,GENERIC_IN_REAL_FORMAT_GENERIC_1,GENERIC_IN_NETWORK_AUTHENTICATION_GENERIC_1,DestDataset_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_EXTENSION_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_SEPARATOR_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_INCLUDE_FIELD_NAME_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_COLUMN_TO_PCCOMPONENT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_FME_GROUP_NAMED1_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_pcComponentOutputGroup_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTEGROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_APPEND_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_FIELD_NAMES_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_QUOTE_OUTPUT_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_END_OF_LINE_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_POINTCLOUDXYZ_WRT_ADV_PARM_GROUP_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_WRITE_UTF8_BOM_POINTCLOUDXYZ_1,POINTCLOUDXYZ_OUT_ENCODING_POINTCLOUDXYZ_1,DestDataset_CSV2_1,CSV2_OUT_DATASET_GROUP_CSV2_1,CSV2_OUT_EXTENSION_CSV2_1,CSV2_OUT_FIELDS_GROUP_CSV2_1,CSV2_OUT_DELIMITER_CSV2_1,CSV2_OUT_ENCODING_GROUP_CSV2_1,CSV2_OUT_ENCODING_CSV2_1,CSV2_OUT_WRITE_BOM_FOR_UNICODE_CSV2_1,CSV2_OUT_ADVANCED_GROUP_CSV2_1,CSV2_OUT_QUALIFY_FIELD_NAMES_CSV2_1,CSV2_OUT_QUALIFY_FIELD_VALUES_CSV2_1,CSV2_OUT_UNQUALIFIED_FIELD_VALUE_HANDLING_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_OUT_ROW_TERMINATION_CSV2_1,CSV2_OUT_WRITE_SCHEMA_FILE_CSV2_1,CSV2_OUT_EXISTING_SCHEMA_FILE_HANDLING_CSV2_1
 DEFAULT_MACRO SourceDataset_REVITNATIVE $(FME_MF_DIR)sourceData\revitData\Copy of AEROSPACE MUSEUM .rvt
 GUI MULTIFILE SourceDataset_REVITNATIVE RevitNative_Files/Revit_Template_Files(*.rvt;*.rte)|*.rvt;*rte|RevitNative_Files(*.rvt)|*.rvt|Revit_Template_Files(*.rte)|*.rte|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files|* Revit Project File(s):
 DEFAULT_MACRO DestDataset_POINTCLOUDXYZ $(FME_MF_DIR)convertedData
 GUI DIRNAME DestDataset_POINTCLOUDXYZ Destination Point Cloud XYZ Folder:
-DEFAULT_MACRO file_name aerospaceRvtMaybeColor
+DEFAULT_MACRO file_name aerospaceRvtNew
 GUI STRING file_name Enter file name to export as:
 DEFAULT_MACRO DestDataset_CSV2 $(FME_MF_DIR)convertedData
 GUI DIRNAME DestDataset_CSV2 Destination CSV (Comma Separated Value) Folder:
+DEFAULT_MACRO SourceDataset_GENERIC $(FME_MF_DIR)sourceData\revitData\Copy of AEROSPACE MUSEUM .rvt
+GUI FILE_OR_URL SourceDataset_GENERIC All_files|* Source Dataset:
+DEFAULT_MACRO FEATURE_TYPES 
+GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:<backslash>Users<backslash>Matt<backslash>Documents<backslash>FME<space>Projects<backslash>Converter<backslash>sourceData<backslash>revitData<backslash>Copy<space>of<space>AEROSPACE<space>MUSEUM<space>.rvt,_FORMAT_OVERRIDE_,GENERIC,_DATASET_OVERRIDE_,SourceDataset_GENERIC,REAL_FORMAT,GUESS_FROM_EXTENSION,DYNAMIC_WORKFLOW,yes,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,_MERGE_SCHEMAS,YES,_MERGE_SCHEMAS,YES Feature Types to Read:
 INCLUDE [ if {{$(SourceDataset_REVITNATIVE)} == {}} { puts_real {Parameter 'SourceDataset_REVITNATIVE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_POINTCLOUDXYZ)} == {}} { puts_real {Parameter 'DestDataset_POINTCLOUDXYZ' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(file_name)} == {}} { puts_real {Parameter 'file_name' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_CSV2)} == {}} { puts_real {Parameter 'DestDataset_CSV2' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(SourceDataset_GENERIC)} == {}} { puts_real {Parameter 'SourceDataset_GENERIC' must be given a value.}; exit 1; }; ]
 #! START_HEADER
 #! START_WB_HEADER
 READER_TYPE MULTI_READER
 MULTI_READER_TYPE{0} REVITNATIVE
 MULTI_READER_KEYWORD{0} REVITNATIVE_1
 MULTI_READER_GEN_DIRECTIVES{0} COORD_SYS_MODE,Project,ONLY_READ_EXTERIOR_SHELL,No,USE_SEARCH_ENVELOPE,NO,_MERGE_SCHEMAS,YES,DETAIL_LEVEL_SETTING,Use_view_setting,GEOM_HANDLING_MODE,Surface,SEARCH_ENVELOPE_COORDINATE_SYSTEM,,READ_FILE_AND_VIEW_METADATA,Yes,PERFORM_OCCLUSION,<lt>Unused<gt>,SEARCH_ENVELOPE_MAXY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MINX,0,REVITNATIVE_EXPOSE_FORMAT_ATTRS,,CREATE_FEATURE_TABLES_FROM_DATA,Yes,CLIP_TO_ENVELOPE,NO,SEARCH_ENVELOPE_MINY,0,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,UPDATE_FEATURE_TYPES,yes,SELECTED_VIEW,<lt>Unused<gt>,READ_SELECTED_VIEW,NO
+MULTI_READER_TYPE{1} NULL
+MULTI_READER_FORMAT{1} GENERIC
+MULTI_READER_KEYWORD{1} GENERIC_1
+MULTI_READER_GEN_DIRECTIVES{1} DYNAMIC_WORKFLOW,yes,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_OPEN,GENERIC_EXPOSE_FORMAT_ATTRS,,_MERGE_SCHEMAS,YES,REAL_FORMAT,GUESS_FROM_EXTENSION
 WRITER_TYPE MULTI_WRITER
 MULTI_WRITER_DATASET_ORDER BY_ID
 MULTI_WRITER_FIRST_WRITER_ID 0
@@ -2653,6 +3672,41 @@ REVITNATIVE_1_ATTRIBUTE_READING "$(REVITNATIVE_IN_ATTRIBUTE_READING_REVITNATIVE_
 # ============================================================================ 
 REVITNATIVE_1_GENERATE_FME_BUILD_NUM 20200
 REVITNATIVE_1_DATASET "$(SourceDataset_REVITNATIVE_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GENERIC_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GENERIC GENERIC_1
+GENERIC_1_DYNAMIC_WORKFLOW YES
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_GENERIC_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER GENERIC GENERIC_1
+DEFAULT_MACRO SourceDataset_GENERIC_1 $(SourceDataset_GENERIC)
+GUI FILE_OR_URL SourceDataset_GENERIC_1 All_files|* Source Dataset:
+GENERIC_1_EXTENSION
+DEFAULT_MACRO GENERIC_IN_FME_GROUP_NAMED1_GENERIC_1 
+GUI OPTIONAL DISCLOSUREGROUP GENERIC_IN_FME_GROUP_NAMED1_GENERIC_1 GENERIC_IN_REAL_FORMAT_GENERIC_1 Input
+DEFAULT_MACRO GENERIC_IN_REAL_FORMAT_GENERIC_1 GUESS_FROM_EXTENSION
+GENERIC_1_REAL_FORMAT "$(GENERIC_IN_REAL_FORMAT_GENERIC_1)"
+GUI READERPICK GENERIC_IN_REAL_FORMAT_GENERIC_1 Input Format:
+DEFAULT_MACRO GENERIC_IN_EXPOSE_ATTRS_GROUP_GENERIC_1 FME_DISCLOSURE_OPEN
+GENERIC_1_EXPOSE_ATTRS_GROUP "$(GENERIC_IN_EXPOSE_ATTRS_GROUP_GENERIC_1)"
+# ===========================================================================
+DEFAULT_MACRO GENERIC_IN_NETWORK_AUTHENTICATION_GENERIC_1 
+GENERIC_1_NETWORK_AUTHENTICATION "$(GENERIC_IN_NETWORK_AUTHENTICATION_GENERIC_1)"
+GUI OPTIONAL AUTHENTICATOR GENERIC_IN_NETWORK_AUTHENTICATION_GENERIC_1 CONTAINER%GROUP%CONTAINER_TITLE%"Network Authentication"%PROMPT_TYPE%NETWORK Network Authentication
+# ============================================================================ 
+DEFAULT_MACRO GENERIC_IN_ATTRIBUTE_READING_GENERIC_1 ALL
+GENERIC_1_ATTRIBUTE_READING "$(GENERIC_IN_ATTRIBUTE_READING_GENERIC_1)"
+# ============================================================================ 
+GENERIC_1_GENERATE_FME_BUILD_NUM 20200
+GENERIC_1_DATASET "$(SourceDataset_GENERIC_1)"
 #! END_SOURCE_HEADER
 #! START_WB_HEADER
 MACRO WB_KEYWORD "POINTCLOUDXYZ_1"
@@ -2825,6 +3879,7 @@ FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
 FME_GEOMETRY_HANDLING Enhanced
 FME_STROKE_MAX_DEVIATION 0
 DEFAULT_MACRO DATASET_KEYWORD_REVITNATIVE_1 REVITNATIVE_1
+DEFAULT_MACRO DATASET_KEYWORD_GENERIC_1 GENERIC_1
 DEFAULT_MACRO DATASET_KEYWORD_POINTCLOUDXYZ_1 POINTCLOUDXYZ_1
 DEFAULT_MACRO DATASET_KEYWORD_CSV2_1 CSV2_1
 # -------------------------------------------------------------------------
@@ -2833,7 +3888,12 @@ REVITNATIVE_1_READER_META_ATTRIBUTES fme_feature_type
 
 # -------------------------------------------------------------------------
 
+GENERIC_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
 REVITNATIVE_1_COORDINATE_SYSTEM *XY-FT*
+GENERIC_1_FEATURE_TYPES $(FEATURE_TYPES)
 POINTCLOUDXYZ_1_COORDINATE_SYSTEM *XY-FT*
 CSV2_1_COORDINATE_SYSTEM *XY-MT*
 MULTI_READER_CONTINUE_ON_READER_FAILURE No
@@ -2870,7 +3930,7 @@ REVITNATIVE_1_DEF Architectural.Planting   ObjectId                     number(1
 REVITNATIVE_1_DEF Architectural.Site   ObjectId                     number(10,0)   BuildingLevelElevation       number(31,15)   BuildingLevelRoomOffset      number(31,15)   BuildingLevelIsStory         char(3)   BaseCategory                 char(4)   BuildingLevel                char(7)   Category                     char(4)   CreatedPhase                 char(16)   Discipline                   char(13)   ElementType                  char(14)   Elevation                    number(31,15)   Family                       char(15)   FamilyType                   char(15)   Function                     char(8)   InExteriorShell              char(3)   WorksetName                  char(40)
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_REVITNATIVE_1)   INPUT FEATURE_TYPE *    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Windows multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Windows ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Roofs multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Roofs ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.GenericModels multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.GenericModels ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.FileInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.FileInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.ViewInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.ViewInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Ramps multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Ramps ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Topography multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Topography ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Walls multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Walls ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Lines multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Lines ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::SurveyPoint multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::SurveyPoint ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Doors multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Doors ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Planting multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Planting ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Site multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Site ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
+FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Windows multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Windows ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Roofs multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Roofs ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.GenericModels multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.GenericModels ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.FileInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.FileInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Metadata.ViewInformation multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Metadata.ViewInformation ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Ramps multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Ramps ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Topography multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Topography ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Walls multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Walls ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Lines multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Lines ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::SurveyPoint multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::SurveyPoint ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Doors multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Doors ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Planting multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Planting ALIAS_GEOMETRY    ROUTE REVITNATIVE REVITNATIVE_1::Architectural.Site multi_reader_keyword,$(DATASET_KEYWORD_REVITNATIVE_1) TO FME_GENERIC ::Architectural.Site ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Windows EXACT Architectural.Windows
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Roofs EXACT Architectural.Roofs
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.GenericModels EXACT Architectural.GenericModels
@@ -2884,9 +3944,14 @@ REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::SurveyPoint EXACT SurveyPoint
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Doors EXACT Architectural.Doors
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Planting EXACT Architectural.Planting
 REVITNATIVE_1_MERGE_DEF REVITNATIVE_1::Architectural.Site EXACT Architectural.Site
+GENERIC_1_MERGE_DEF GENERIC_1::Metadata.FileInformation GLOB *
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.FileInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.FileInformation
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.FileInformation(GENERIC_1) Splitter"    INPUT FEATURE_TYPE Metadata.FileInformation      multi_reader_keyword $(DATASET_KEYWORD_GENERIC_1)    OUTPUT FEATURE_TYPE Metadata.FileInformation_GENERIC_1
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Metadata.FileInformation_GENERIC_1 Disabled Nuker -1 53"   INPUT FEATURE_TYPE Metadata.FileInformation_GENERIC_1
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.FileInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.FileInformation      multi_reader_keyword $(DATASET_KEYWORD_REVITNATIVE_1)
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME "Metadata.ViewInformation(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Metadata.ViewInformation
@@ -2925,41 +3990,28 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Site(REVITNATIVE_1) Spli
 FACTORY_DEF * TeeFactory    FACTORY_NAME "Architectural.Topography(REVITNATIVE_1) Splitter"    INPUT FEATURE_TYPE Architectural.Topography    OUTPUT FEATURE_TYPE Architectural.Topography_REVITNATIVE_1
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
-FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE SurveyPoint_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Roofs_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Doors_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Windows_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Walls_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.GenericModels_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Ramps_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Planting_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Lines_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Site_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Topography_REVITNATIVE_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
-FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCombiner_<REJECTED>
-FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCombiner OUTPUT Splitter"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_0_v+SUa3pTN2o=   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_1_C11bLlOJphI=
-DEFAULT_MACRO _WB_BYPASS_TERMINATION No
-FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCombiner_<Rejected> INPUT FEATURE_TYPE PointCloudCombiner_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCombiner<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCombiner_2 (Disabled) Nuker"   INPUT FEATURE_TYPE Metadata.FileInformation_GENERIC_1
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCombiner_2_OUTPUT Disabled Nuker -1 56"   INPUT FEATURE_TYPE PointCloudCombiner_2_OUTPUT
 # -------------------------------------------------------------------------
-FACTORY_DEF * PointCloudCoercerFactory    FACTORY_NAME PointCloudCoercer    INPUT  FEATURE_TYPE PointCloudCombiner_OUTPUT_1_C11bLlOJphI=    CONVERT_TO POINT    POINT_COMPONENTS color_red color_green color_blue    ACCUM_ATTRS YES    POINT_COMPONENTS_PRESERVE_TYPE ATTRIBUTES    PART_NUMBER_ATTR_NAME "_part_number"    REJECT_INVALID_FEATURES YES    OUTPUT COERCED FEATURE_TYPE PointCloudCoercer_COERCED    OUTPUT <REJECTED> FEATURE_TYPE PointCloudCoercer_<REJECTED>
-DEFAULT_MACRO _WB_BYPASS_TERMINATION No
-FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudCoercer_<Rejected> INPUT FEATURE_TYPE PointCloudCoercer_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudCoercer<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCoercer_2 (Disabled) Nuker"   INPUT FEATURE_TYPE PointCloudCombiner_2_OUTPUT
 # -------------------------------------------------------------------------
-INCLUDE [    set supplyZFunc {};    if { {} != {} }    {    };    puts "MACRO CoordinateExtractor_SUPPLY_Z ${supplyZFunc}"; ]
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_TESTZDEFAULT    INPUT  FEATURE_TYPE PointCloudCoercer_COERCED    TEST "" = "" ENCODED    TEST "" TYPE NUM ENCODED    BOOLEAN_OPERATOR OR    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_TESTMODE_INPUT    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_<REJECTED>       @SupplyAttributes(fme_rejection_code, INVALID_PARAMETER_DEFAULT_Z)
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_TESTMODE    INPUT FEATURE_TYPE CoordinateExtractor_TESTMODE_INPUT    TEST "All Coordinates" == "All Coordinates"    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_LIST_INPUT    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_SPECIFIC_INPUT
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_LIST    INPUT FEATURE_TYPE CoordinateExtractor_LIST_INPUT    TEST @Dimension() == 2    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_OUTPUT         @ZValue("")         @Coordinate(x,ALL,"_indices"{}.x,FLATTEN_AGGREGATE,YES)         @Coordinate(y,ALL,"_indices"{}.y,FLATTEN_AGGREGATE,NO)         @Coordinate(z,ALL,"_indices"{}.z,FLATTEN_AGGREGATE,NO)         @Dimension(2)    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_OUTPUT         @Coordinate(x,ALL,"_indices"{}.x,FLATTEN_AGGREGATE,YES)         @Coordinate(y,ALL,"_indices"{}.y,FLATTEN_AGGREGATE,NO)         @Coordinate(z,ALL,"_indices"{}.z,FLATTEN_AGGREGATE,NO)
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_SPECIFIC    INPUT FEATURE_TYPE CoordinateExtractor_SPECIFIC_INPUT    TEST "<Unused>" TYPE INT ENCODED    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_SPECIFIC_2D_3D_INPUT    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_<REJECTED>       @SupplyAttributes(fme_rejection_code, INVALID_PARAMETER_INDEX)
-FACTORY_DEF * TestFactory    FACTORY_NAME CoordinateExtractor_SPECIFIC_2D_3D    INPUT FEATURE_TYPE CoordinateExtractor_SPECIFIC_2D_3D_INPUT    TEST @Dimension() == 2    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT PASSED FEATURE_TYPE CoordinateExtractor_SPECIFIC_2D_INPUT    OUTPUT FAILED FEATURE_TYPE CoordinateExtractor_SPECIFIC_3D_INPUT
-FACTORY_DEF * ExecuteFunctionFactory    FACTORY_NAME CoordinateExtractor_SPECIFIC_2D    INPUT FEATURE_TYPE CoordinateExtractor_SPECIFIC_2D_INPUT    FUNCTION_DEFINITION @Concatenate(          )    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT COMPLETE FEATURE_TYPE CoordinateExtractor_OUTPUT          $(CoordinateExtractor_SUPPLY_Z)    OUTPUT REJECTED FEATURE_TYPE CoordinateExtractor_<REJECTED>
-FACTORY_DEF * ExecuteFunctionFactory    FACTORY_NAME CoordinateExtractor_SPECIFIC_3D    INPUT FEATURE_TYPE CoordinateExtractor_SPECIFIC_3D_INPUT    FUNCTION_DEFINITION @Concatenate(       )    FEATURE_TABLE_SHIM_SUPPORT Yes    OUTPUT COMPLETE FEATURE_TYPE CoordinateExtractor_OUTPUT    OUTPUT REJECTED FEATURE_TYPE CoordinateExtractor_<REJECTED>
-DEFAULT_MACRO _WB_BYPASS_TERMINATION No
-FACTORY_DEF * TeeFactory FACTORY_NAME CoordinateExtractor_<Rejected> INPUT FEATURE_TYPE CoordinateExtractor_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, CoordinateExtractor<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+FACTORY_DEF {*} VectorToPointCloudFactory    FACTORY_NAME PointCloudCombiner___VectorMerger    INPUT  FEATURE_TYPE SurveyPoint_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Roofs_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Doors_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Windows_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Walls_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.GenericModels_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Ramps_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Planting_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Lines_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Site_REVITNATIVE_1    INPUT  FEATURE_TYPE Architectural.Topography_REVITNATIVE_1    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    EXTRACT_RASTER_NODATA no    SPACING "1.0"    MEASURES_TO_PRESERVE    ATTRIBUTES_TO_PRESERVE    REJECT_INVALID_FEATURES yes    OUTPUT COERCED FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__       @SupplyAttributes(?,fme_basename,PointCloudCombiner)
+FACTORY_DEF {*} PointCloudCombinerFactory    FACTORY_NAME PointCloudCombiner___Combiner    INPUT FEATURE_TYPE PointCloudCombiner___MergedVectorFeatures__    FLUSH_WHEN_GROUPS_CHANGE No    ACCUMULATE_ATTRIBUTES yes    REJECT_INVALID_FEATURES yes    OUTPUT MERGED FEATURE_TYPE PointCloudCombiner_OUTPUT
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCombiner OUTPUT Splitter"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_0_v+SUa3pTN2o=   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_1_C11bLlOJphI=   OUTPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_2_sOjGuo0OwzU=
 # -------------------------------------------------------------------------
-DEFAULT_MACRO PointCloudPropertyExtractor_EXISTENCE_LIST
-DEFAULT_MACRO PointCloudPropertyExtractor_PROPERTIES_LIST
-DEFAULT_MACRO PointCloudPropertyExtractor_MINMAX_LIST
-INCLUDE [    set listNames [list EXISTENCE PROPERTIES MINMAX];    set currElemName {};    foreach {elem} [split {x    y    z    color_red EXISTENCE PROPERTIES MINMAX}] {       if {"$elem" ne ""} {          set i [lsearch -exact $listNames $elem];          if {$i >= 0} {             lappend lists($elem) $currElemName;          } else {             set currElemName $elem;          };       };    };    foreach {listName} [array names lists] {       puts "MACRO PointCloudPropertyExtractor_${listName}_LIST \"$lists($listName)\"";    }; ]
-FACTORY_DEF * TeeFactory    FACTORY_NAME PointCloudPropertyExtractor    INPUT  FEATURE_TYPE PointCloudCombiner_OUTPUT_0_v+SUa3pTN2o=    OUTPUT FEATURE_TYPE ___TOREJECTOR___       @RenameAttributes(FME_STRICT,___fme_rejection_code___,fme_rejection_code)       @ExtractPointCloudProperties(REJECTABLE,V2,,$(PointCloudPropertyExtractor_EXISTENCE_LIST),$(PointCloudPropertyExtractor_PROPERTIES_LIST),$(PointCloudPropertyExtractor_MINMAX_LIST),DoNotUpdateExtents)
-FACTORY_DEF * TestFactory    FACTORY_NAME PointCloudPropertyExtractor_Rejector    INPUT FEATURE_TYPE ___TOREJECTOR___    TEST @Value(fme_rejection_code) != ""    OUTPUT PASSED FEATURE_TYPE PointCloudPropertyExtractor_<REJECTED>       @RemoveAttributes(___fme_rejection_code___)
-DEFAULT_MACRO _WB_BYPASS_TERMINATION No
-FACTORY_DEF * TeeFactory FACTORY_NAME PointCloudPropertyExtractor_<Rejected> INPUT FEATURE_TYPE PointCloudPropertyExtractor_<REJECTED>  OUTPUT FAILED FEATURE_TYPE * @Abort(ENCODED, PointCloudPropertyExtractor<space>output<space>a<space><lt>Rejected<gt><space>feature.<space><space>To<space>continue<space>translation<space>when<space>features<space>are<space>rejected<comma><space>change<space><apos>Workspace<space>Parameters<apos><space><gt><space>Translation<space><gt><space><apos>Rejected<space>Feature<space>Handling<apos><space>to<space><apos>Continue<space>Translation<apos>)
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCoercer (Disabled) Nuker"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_1_C11bLlOJphI=
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudCoercer_COERCED Disabled Nuker -1 49"   INPUT FEATURE_TYPE PointCloudCoercer_COERCED
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CoordinateExtractor (Disabled) Nuker"   INPUT FEATURE_TYPE PointCloudCoercer_COERCED
+FACTORY_DEF * TeeFactory   FACTORY_NAME "CoordinateExtractor_OUTPUT Disabled Nuker -1 54"   INPUT FEATURE_TYPE CoordinateExtractor_OUTPUT
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "PointCloudPropertyExtractor (Disabled) Nuker"   INPUT FEATURE_TYPE PointCloudCombiner_OUTPUT_0_v+SUa3pTN2o=
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC CoordinateExtractor_OUTPUT TO CSV2 __GO_TO_FINAL_OUTPUT_ROUTER__ <at>EvaluateExpression<openparen>ATTR_CREATE_EXPR_PROPAGATE_MISSING_FDIV<comma>x<comma><lt>at<gt>Value<lt>openparen<gt>_indices<lt>opencurly<gt>0<lt>closecurly<gt>.x<lt>closeparen<gt><comma>y<comma><lt>at<gt>Value<lt>openparen<gt>_indices<lt>opencurly<gt>0<lt>closecurly<gt>.y<lt>closeparen<gt><comma>z<comma><lt>at<gt>Value<lt>openparen<gt>_indices<lt>opencurly<gt>0<lt>closecurly<gt>.z<lt>closeparen<gt><comma>r<comma><lt>at<gt>Value<lt>openparen<gt>fme_color<lt>closeparen<gt><comma>g<comma><lt>at<gt>Value<lt>openparen<gt>fme_color<lt>closeparen<gt><comma>b<comma><lt>at<gt>Value<lt>openparen<gt>fme_color<lt>closeparen<gt><comma><space>ATTR_SET<closeparen>,multi_writer_id,1,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(file_name$encode$encode)<comma>File1<closeparen> COORDINATE_SYSTEM *XY-MT* GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC CoordinateExtractor_OUTPUT TO CSV2 __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,1,__wb_out_feat_type__,__nuke_me__ COORDINATE_SYSTEM *XY-MT* GEOMETRY    ROUTE FME_GENERIC PointCloudCombiner_OUTPUT_2_sOjGuo0OwzU= TO POINTCLOUDXYZ __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>fme_template_feature_type<comma>File1<closeparen>,<at>EvaluateExpression<openparen>ATTR_CREATE_EXPR<comma>__wb_out_feat_type__<comma>$(file_name$encode$encode)<comma>File1<closeparen> COORDINATE_SYSTEM *XY-FT* GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-CSV2_1_DEF File1   csv_existing_file_handling   No   csv_write_field_names        firstrow   x                            real64   y                            real64   z                            real64   r                            uint8   g                            uint8   b                            uint8
+POINTCLOUDXYZ_1_DEF File1
