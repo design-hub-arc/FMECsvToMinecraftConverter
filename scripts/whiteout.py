@@ -2,6 +2,8 @@ import argparse
 import os
 import re
 
+# FME currently handles all of this, so we don't really need this file
+
 def getCmdLineArgs():
     desc = """
         Replaces all color in a CSV [x, y, z, r, g, b] file with white
