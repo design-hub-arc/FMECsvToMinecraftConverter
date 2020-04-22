@@ -26,7 +26,7 @@ def convert(srcPath, resultPath):
     lineCount = 0
     with open(srcPath, "r") as inf:
         with open(resultPath, "w") as outf:
-            outf.write("x, y, z, r, g, b\n")
+            outf.write("x,y,z,r,g,b\n") # FME can't handle ', ' between each header (...)
             for line in inf:
                 lineCount += 1
                 if lineCount % 1000 == 0:
@@ -35,7 +35,7 @@ def convert(srcPath, resultPath):
                     split = line.strip().split(" ")
                     if len(split) >= 4:
                         x, y, z = split[1:4]
-                        outf.write(str(x) + ", " + str(y) + ", " + str(z) + ", 255, 255, 255\n") # no color yet
+                        outf.write(str(x) + "," + str(y) + "," + str(z) + ",255,255,255\n") # no color yet
     print("Done writing to " + resultPath)
 
 if __name__ == "__main__":
