@@ -1,20 +1,34 @@
 import argparse
 import os
 
+def isPathOrFile(strPath):
+    path = os.path.abspath(strPath)
+    if os.path.isdir(path):
+        pass # is directory, so it's accepted
+    else:
+        try:
+            open(path, "w").close()
+        except Exception as e:
+            raise Exception(strPath + " is not a valid path to a file or directory")
+    return path
+
 def getCmdLineArgs():
     desc = """
         converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b]
     """
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("sourcefile", metavar="sourcefile", type=argparse.FileType("r"), nargs=1, help="the obj file to convert")
-    parser.add_argument("resultfile", metavar="resultfile", type=argparse.FileType("w"), nargs="?", help="the csv file to write to")
+    parser.add_argument("resultfile", metavar="resultfile", type=isPathOrFile, nargs="?", help="the csv file to write to")
     parsedArgs = parser.parse_args()
 
     srcPath = os.path.abspath(parsedArgs.sourcefile[0].name)
     if parsedArgs.resultfile is None:
         resultPath = srcPath.replace(".obj", ".csv")
     else:
-        resultPath = os.path.abspath(parsedArgs.resultfile.name)
+        resultPath = os.path.abspath(parsedArgs.resultfile)
+        if os.path.isdir(resultPath):
+            fname = os.path.basename(srcPath)
+            resultPath = os.path.join(resultPath, fname.replace(".obj", ".csv"))
 
     args = {
         "sourceFilePath" : srcPath,
