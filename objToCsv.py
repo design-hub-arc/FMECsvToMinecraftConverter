@@ -14,7 +14,7 @@ def getCmdLineArgs():
     if parsedArgs.resultfile is None:
         resultPath = srcPath.replace(".obj", ".csv")
     else:
-        resultPath = os.path.abspath(parsedArgs.resultfile[0].name)
+        resultPath = os.path.abspath(parsedArgs.resultfile.name)
 
     args = {
         "sourceFilePath" : srcPath,
@@ -32,7 +32,7 @@ def convert(srcPath, resultPath):
                 if lineCount % 1000 == 0:
                     print("Read " + str(lineCount) + " lines")
                 if line[0] == "v":
-                    split = line.split(" ")
+                    split = line.strip().split(" ")
                     if len(split) >= 4:
                         x, y, z = split[1:4]
                         outf.write(str(x) + ", " + str(y) + ", " + str(z) + ", 255, 255, 255\n") # no color yet
