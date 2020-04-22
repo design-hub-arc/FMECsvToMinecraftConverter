@@ -14,7 +14,12 @@ def isPathOrFile(strPath):
 
 def getCmdLineArgs():
     desc = """
-        converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b]
+        converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b].
+
+        If the result file is not specified, outputs the csv file in the same directory
+        as the source file, with the same name, but with a .csv extension instead of a .obj.
+
+        If the result file is a directory, creates a new file in that directory, named after the source file
     """
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("sourcefile", metavar="sourcefile", type=argparse.FileType("r"), nargs=1, help="the obj file to convert")
