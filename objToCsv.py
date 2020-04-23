@@ -13,29 +13,37 @@ but as for now, we are not interested in including color.
 """
 
 
-
 """
-Input validation functions.
-Used for command line arguments.
+Checks to see if a string represents
+a valid path on the user's computer.
+This path is considered valid if it is one of three things:
+(a) a directory that exists
+(b) a file that exists
+or (c) a file that can be created
+
+If the path meets none of these conditions, throws an exception,
+otherwise, returns the absolute version of the path
 """
-
-def isValidFilePath(strPath):
-    pass
-
-def isValidDirPath(dirPath):
-    pass
-
-def isPathOrFile(strPath):
+def validatePath(strPath):
     path = os.path.abspath(strPath)
     if os.path.isdir(path):
         pass # is directory, so it's accepted
     else:
+        # May be a file, so see if it
+        # (a) already exists
+        # or (b) is a valid file path
         try:
-            open(path, "w").close()
+            #           open for writing and appending
+            #           if the file already exists, 'a' prevents it from being erased
+            #           if it doesn't exist, 'w' creates it.
+            open(path, "wa").close()
         except Exception as e:
             raise Exception(strPath + " is not a valid path to a file or directory")
     return path
 
+"""
+
+"""
 def getCmdLineArgs():
     desc = """
         converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b].
@@ -47,7 +55,7 @@ def getCmdLineArgs():
     """
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("sourcefile", metavar="sourcefile", type=argparse.FileType("r"), nargs=1, help="the obj file to convert")
-    parser.add_argument("resultfile", metavar="resultfile", type=isPathOrFile, nargs="?", help="the csv file to write to")
+    parser.add_argument("resultfile", metavar="resultfile", type=validatePath, nargs="?", help="the csv file to write to")
     parsedArgs = parser.parse_args()
 
     srcPath = os.path.abspath(parsedArgs.sourcefile[0].name)
