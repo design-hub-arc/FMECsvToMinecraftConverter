@@ -14,6 +14,21 @@ but as for now, we are not interested in including color.
 
 
 """
+Verifies that the given path
+leads to an existing OBJ file.
+"""
+def validateIsObj(strPath):
+    strPath = os.path.abspath(strPath)
+    if os.path.isdir(strPath):
+        raise Exception("Input must be a file, not a directory")
+    if not os.path.isfile(strPath):
+        raise Exception("Input must be an existing file")
+    if strPath.split(".")[-1] != "obj":
+        raise Exception("Input file must be in .obj format")
+    return strPath
+
+
+"""
 Checks to see if a string represents
 a valid path on the user's computer.
 This path is considered valid if it is one of three things:
@@ -43,6 +58,13 @@ def validatePath(strPath):
 
 """
 
+DOCUMENT HERE
+
+
+
+Extracts arguments from the command line.
+Returns a dictionary containing 2 keys:
+["sourceFilePath"] : (string) the absolute path to an existing obj file.
 """
 def getCmdLineArgs():
     desc = """
@@ -54,11 +76,11 @@ def getCmdLineArgs():
         If the result file is a directory, creates a new file in that directory, named after the source file
     """
     parser = argparse.ArgumentParser(description=desc)
-    parser.add_argument("sourcefile", metavar="sourcefile", type=argparse.FileType("r"), nargs=1, help="the obj file to convert")
+    parser.add_argument("sourcefile", metavar="sourcefile", type=validateIsObj, nargs=1, help="the obj file to convert")
     parser.add_argument("resultfile", metavar="resultfile", type=validatePath, nargs="?", help="the csv file to write to")
     parsedArgs = parser.parse_args()
 
-    srcPath = os.path.abspath(parsedArgs.sourcefile[0].name)
+    srcPath = os.path.abspath(parsedArgs.sourcefile[0])
     if parsedArgs.resultfile is None:
         resultPath = srcPath.replace(".obj", ".csv")
     else:
