@@ -43,28 +43,30 @@ def validatePath(strPath):
     path = os.path.abspath(strPath)
     if os.path.isdir(path):
         pass # is directory, so it's accepted
+    elif os.path.isfile(path):
+        pass # exists, so it's accepted
     else:
-        # May be a file, so see if it
-        # (a) already exists
-        # or (b) is a valid file path
+        # see if we can create it as a file
         try:
-            #           open for writing and appending
-            #           if the file already exists, 'a' prevents it from being erased
-            #           if it doesn't exist, 'w' creates it.
-            open(path, "wa").close()
+            open(path, "w").close()
         except Exception as e:
             raise Exception(strPath + " is not a valid path to a file or directory")
     return path
 
 """
-
-DOCUMENT HERE
-
-
-
 Extracts arguments from the command line.
 Returns a dictionary containing 2 keys:
 ["sourceFilePath"] : (string) the absolute path to an existing obj file.
+["resultFilePath"] : (string) the absolute path to where the resulting CSV file should be written.
+
+the sourceFilePath is required in the command line, but the resultFilePath is optional.
+The resultFilePath returned is based on what the user enters for the second argument:
+(a) python objToCsv.py /path/to/source/filename.obj:
+    will set the resultFilePath to "/path/to/source/filename.csv".
+(b) python objToCsv.py /path/to/source/filename.obj /path/to/resultfile.csv
+    will set the resultFilePath to "/path/to/resultfile.csv"
+(c) python objToCsv.py /path/to/source/filename.obj /path/to/directory
+    will set the resultFilePath to "/path/to/directory/filename.csv"
 """
 def getCmdLineArgs():
     desc = """
@@ -95,6 +97,13 @@ def getCmdLineArgs():
     }
     return args
 
+"""
+Converts the contents of the file at srcPath
+to a csv file at resultPath.
+
+Currently, this just extracts vertices from the OBJ file.
+Future versions may add support for color.
+"""
 def convert(srcPath, resultPath):
     lineCount = 0
     with open(srcPath, "r") as inf:
