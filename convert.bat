@@ -1,7 +1,20 @@
 @echo off
 
+REM %1 means the first parameter
+IF [%1] == [] GOTO help
+IF [%2] == [] GOTO help
+GOTO convert
+
+:help
+echo Usage: convert.bat inputCsvFile resultWorldName
+GOTO end
+
+:convert
+REM %~f1 means full path name
 echo Converting %~f1
-echo this isn't implemented yet
 
 REM this line is a comment, or REMark
-REM "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\Converter.fmw" --DestDataset_MINECRAFT "C:\Users\Matt\AppData\Roaming\.minecraft\saves" --worldName "temp" --pointReduction "100" --SourceDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\convertedData\aerospaceRvtMaybeColor.csv" --FEATURE_TYPES ""
+
+"C:\Program Files\FME\fme.exe" ".\Converter.fmw" --DestDataset_MINECRAFT "%HOMEDRIVE%%HOMEPATH%\AppData\Roaming\.minecraft\saves" --worldName "%~2" --pointReduction "100" --SourceDataset_CSV2 "%~f1" --FEATURE_TYPES "" --shouldColor "no"
+
+:end
