@@ -1,6 +1,30 @@
 import argparse
 import os
 
+"""
+objToCsv.py is used to extract coordinated data from an OBJ file,
+and output a CSV file containing the headers [x, y, z, r, g, b].
+
+Currently, this does not extract color information from the OBJ file,
+instead, it count the r, g, b values of every point it extracts as being
+white (255, 255, 255).
+Future versions will need to reference an MTL file to extract color,
+but as for now, we are not interested in including color.
+"""
+
+
+
+"""
+Input validation functions.
+Used for command line arguments.
+"""
+
+def isValidFilePath(strPath):
+    pass
+
+def isValidDirPath(dirPath):
+    pass
+
 def isPathOrFile(strPath):
     path = os.path.abspath(strPath)
     if os.path.isdir(path):
