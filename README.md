@@ -1,4 +1,4 @@
-# Feature Manipulation Engine Comma Separated Values to Minecraft Converter
+# Feature Manipulation Engine Minecraft Converter
 
 A conversion program used to import 3D coordinate files into Minecraft.
 
@@ -8,9 +8,29 @@ Three dimensional coordinate files are used frequently in the American River Col
 
 ## Getting Started
 
-In order to run the converter program, you will need FME Desktop installed. You can start a free trial of FME Desktop [here](https://www.safe.com/fme/fme-desktop/), but it will require purchasing a license to continue using the application after the free trial expires. Contact a Design Hub supervisor for more details.
+Several components of this project require Python 3, which you can download [here](https://www.python.org/downloads/).
 
-In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this). The files created by the program have only been tested in Minecraft version 1.7.10, which you can download and enable in the "installations" section of the Minecraft launcher.
+In order to run the FME converter workspaces, you will need FME Desktop installed. You can start a free trial of FME Desktop [here](https://www.safe.com/fme/fme-desktop/), but it will require purchasing a license to continue using the application after the free trial expires. Contact a Design Hub supervisor for more details.
+
+In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this).
+
+## Converting OBJ files to CSV
+
+1. Open a command prompt, and navigate to the project root directory.
+2. Run the following command to convert the OBJ file to a csv file:
+`python objToCsv.py /path/to/filename.obj`
+which will output the converted file to your current directory as `filename_obj.csv`.
+
+## Converting RVT files to CSV
+
+Open `revitNativeToCsv.fme` in FME Desktop, and run the workspace with the Revit file you wish to convert. Given an input file of `filename.rvt`, the converter will output `filename_rvt.csv`.
+
+## Converting CSV files to Minecraft
+
+Choose 1:
+(a): Open `Converter.fmw` in FME Desktop, and run it with a CSV file with the headers x, y, z, r, g, b (no space between headers!).
+or (b): run `convert.bat` from the command prompt as shown:
+`convert.bat /path/to/csvFile.csv`
 
 ## User Parameters
 When running the program, the user will be asked for a series of parameters.
