@@ -55,7 +55,7 @@ def getCmdLineArgs():
         converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b].
 
         If the result file is not specified, outputs the csv file in the directory
-        this script is run from, with the same name as the source file, but with a .csv extension instead of a .obj.
+        this script is run from, with the same name as the source file, but with a "_obj.csv" appended to the end instead of ".obj".
 
         If the result file is a directory, creates a new file in that directory, named after the source file
     """
@@ -65,7 +65,7 @@ def getCmdLineArgs():
     parsedArgs = parser.parse_args()
 
     srcPath = os.path.abspath(parsedArgs.sourcefile[0])
-    csvFileName = os.path.basename(srcPath).replace(".obj", ".csv")
+    csvFileName = os.path.basename(srcPath).replace(".obj", "_obj.csv")
     if parsedArgs.resultdir is None:
         resultPath = os.path.abspath(csvFileName)
         print(resultPath)
