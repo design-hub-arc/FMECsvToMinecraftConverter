@@ -1,3 +1,7 @@
-*.zip
-*.csv
-*.xyz
+/_saves/
+/convertedData/
+/sourceData/
+*__pycache__/
+*.recover
+*.log
+*.ffs
