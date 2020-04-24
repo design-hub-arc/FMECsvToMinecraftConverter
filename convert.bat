@@ -1,4 +1,5 @@
 @echo off
+REM this line is a comment, or REMark
 
 REM %1 means the first parameter
 IF [%1] == [] GOTO help
@@ -13,7 +14,7 @@ GOTO end
 REM %~f1 means full path name
 echo Converting %~f1
 
-REM this line is a comment, or REMark
+
 
 "C:\Program Files\FME\fme.exe" ".\Converter.fmw" --DestDataset_MINECRAFT "%HOMEDRIVE%%HOMEPATH%\AppData\Roaming\.minecraft\saves" --worldName "%~2" --pointReduction "100" --SourceDataset_CSV2 "%~f1" --FEATURE_TYPES "" --shouldColor "no"
 
