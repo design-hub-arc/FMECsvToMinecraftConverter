@@ -27,69 +27,50 @@ def validateIsObj(strPath):
         raise Exception("Input file must be in .obj format")
     return strPath
 
-
 """
-Checks to see if a string represents
-a valid path on the user's computer.
-This path is considered valid if it is one of three things:
-(a) a directory that exists
-(b) a file that exists
-or (c) a file that can be created
-
-If the path meets none of these conditions, throws an exception,
-otherwise, returns the absolute version of the path
+Verifies that the given path
+leads to an existing directory.
 """
-def validatePath(strPath):
-    path = os.path.abspath(strPath)
-    if os.path.isdir(path):
-        pass # is directory, so it's accepted
-    elif os.path.isfile(path):
-        pass # exists, so it's accepted
-    else:
-        # see if we can create it as a file
-        try:
-            open(path, "w").close()
-        except Exception as e:
-            raise Exception(strPath + " is not a valid path to a file or directory")
-    return path
+def validateIsDir(strPath):
+    strPath = os.path.abspath(strPath)
+    if not os.path.isdir(strPath):
+        raise Exception("Input must be a directory")
+    return strPath
 
 """
 Extracts arguments from the command line.
 Returns a dictionary containing 2 keys:
 ["sourceFilePath"] : (string) the absolute path to an existing obj file.
-["resultFilePath"] : (string) the absolute path to where the resulting CSV file should be written.
+["resultFilePath"] : (string) the absolute path to the directory where the resulting CSV file should be written.
 
 the sourceFilePath is required in the command line, but the resultFilePath is optional.
 The resultFilePath returned is based on what the user enters for the second argument:
 (a) python objToCsv.py /path/to/source/filename.obj:
-    will set the resultFilePath to "/path/to/source/filename.csv".
-(b) python objToCsv.py /path/to/source/filename.obj /path/to/resultfile.csv
-    will set the resultFilePath to "/path/to/resultfile.csv"
-(c) python objToCsv.py /path/to/source/filename.obj /path/to/directory
+    will set the resultFilePath to "./filename.csv".
+(b) python objToCsv.py /path/to/source/filename.obj /path/to/directory
     will set the resultFilePath to "/path/to/directory/filename.csv"
 """
 def getCmdLineArgs():
     desc = """
         converts an OBJ file to a CSV file with the headers [x, y, z, r, g, b].
 
-        If the result file is not specified, outputs the csv file in the same directory
-        as the source file, with the same name, but with a .csv extension instead of a .obj.
+        If the result file is not specified, outputs the csv file in the directory
+        this script is run from, with the same name as the source file, but with a .csv extension instead of a .obj.
 
         If the result file is a directory, creates a new file in that directory, named after the source file
     """
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument("sourcefile", metavar="sourcefile", type=validateIsObj, nargs=1, help="the obj file to convert")
-    parser.add_argument("resultfile", metavar="resultfile", type=validatePath, nargs="?", help="the csv file to write to")
+    parser.add_argument("resultdir", metavar="resultdir", type=validateIsDir, nargs="?", help="the directory to write the resulting csv file to")
     parsedArgs = parser.parse_args()
 
     srcPath = os.path.abspath(parsedArgs.sourcefile[0])
-    if parsedArgs.resultfile is None:
-        resultPath = srcPath.replace(".obj", ".csv")
+    csvFileName = os.path.basename(srcPath).replace(".obj", ".csv")
+    if parsedArgs.resultdir is None:
+        resultPath = os.path.abspath(csvFileName)
+        print(resultPath)
     else:
-        resultPath = os.path.abspath(parsedArgs.resultfile)
-        if os.path.isdir(resultPath):
-            fname = os.path.basename(srcPath)
-            resultPath = os.path.join(resultPath, fname.replace(".obj", ".csv"))
+        resultPath = os.path.join(os.path.abspath(parsedArgs.resultdir), csvFileName)
 
     args = {
         "sourceFilePath" : srcPath,
