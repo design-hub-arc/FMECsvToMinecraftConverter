@@ -16,6 +16,7 @@ def launch():
         print(args)
         # needs to be nested to access input
         print("Input is " + input.get())
+        print(importColor.get())
 
     root = Tk() # what does this do? Is it like a JFrame?
     root.title("Minecraft Converter")
@@ -27,12 +28,18 @@ def launch():
     root.rowconfigure(0, weight=1)
 
     # Add info text
-    text = ttk.Label(content, text=desc).grid(column=1, row=1, sticky=N)
+    text = ttk.Label(content, text=desc)
+    text.grid(column=0, row=0, sticky=N)
 
     # Add input to the GUI
     input = StringVar() #         using textvariable allows this to auto-update when input changes
     inputGui = ttk.Entry(content, textvariable=input)
     inputGui.grid(column=1, row=2, sticky=N)
+
+    #
+    importColor = BooleanVar()
+    checkbox = ttk.Checkbutton(content, text="Color the Minecraft world", variable=importColor, onvalue=True, offvalue=False)
+    checkbox.grid(column=2, row=2, sticky=N)
 
     # Add button
     button = ttk.Button(content, text="Convert", command=convert)
