@@ -5,13 +5,17 @@ DEFAULT_FME_LOCATION = "C:\\Program Files\\FME\\fme.exe"
 def wrapInQuotes(str):
     return "\"{0}\"".format(str)
 
-def runRevitConverter(fmeLocation, workspaceLocation, sourceDataset, outputDir):
-    command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\""
+def runRevitConverter(fmeLocation, workspaceLocation, sourceDataset, outputDir, resultFileName=None):
+    if resultFileName is None:
+        resultFileName = "ImTheResult"
+        
+    command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
     command = command.format(
         wrapInQuotes(fmeLocation),
         wrapInQuotes(workspaceLocation),
         wrapInQuotes(sourceDataset),
-        wrapInQuotes(outputDir)
+        wrapInQuotes(outputDir),
+        wrapInQuotes(resultFileName)
     )
 
     # https://stackoverflow.com/questions/4417546/constantly-print-subprocess-output-while-process-is-running
