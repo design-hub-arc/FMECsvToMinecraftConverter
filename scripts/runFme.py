@@ -1,11 +1,6 @@
 import subprocess # Used to interact with command line
-"""
-This is the command to run the revit converter. Still need to implement
-"C:\\Program Files\\FME\\fme.exe" "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\revitNativeToCsv.fmw"
-              --SourceDataset_REVITNATIVE_3 "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\sourceData\\revitData\\SampleWithDoors_Accessories.rvt"
-              --FEATURE_TYPES ""
-              --DestDataset_CSV2 "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData"
-"""
+
+DEFAULT_FME_LOCATION = "C:\\Program Files\\FME\\fme.exe"
 
 def wrapInQuotes(str):
     return "\"{0}\"".format(str)
@@ -27,11 +22,11 @@ def runRevitConverter(fmeLocation, workspaceLocation, sourceDataset, outputDir):
         universal_newlines=True
     )
     for line in iter(process.stdout.readline, ""):
-        print(line.trim())
+        print(line.strip())
 
     process.stdout.close()
     result = process.wait()
-    print(result)
+    print("Process returned {0}".format(result))
 
 if __name__ == "__main__":
-    runRevitConverter("C:\\Program Files\\FME\\fme.exe", "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\revitNativeToCsv.fmw", "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\sourceData\\revitData\\SampleWithDoors_Accessories.rvt", "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData")
+    runRevitConverter(DEFAULT_FME_LOCATION, "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\revitNativeToCsv.fmw", "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\sourceData\\revitData\\SampleWithDoors_Accessories.rvt", "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData")

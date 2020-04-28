@@ -1,6 +1,8 @@
-from tkinter import *
+from tkinter import Tk, N, W, E, S, filedialog, StringVar, BooleanVar
 from tkinter import ttk # "Themed widgets". Whatever that means
-
+import tkinter
+import threading
+from runFme import DEFAULT_FME_LOCATION, runRevitConverter
 
 
 # Following the example at https://tkdocs.com/tutorial
@@ -12,11 +14,12 @@ def launch():
         will be formatted
     """
 
-    def convert(*args):
-        print(args)
+    def convert():
         # needs to be nested to access input
         print("Input is " + input.get())
         print(importColor.get())
+        threading.Thread(target= lambda: runRevitConverter(DEFAULT_FME_LOCATION, "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\revitNativeToCsv.fmw", input.get(), "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData")).start()
+
 
     root = Tk() # what does this do? Is it like a JFrame?
     root.title("Minecraft Converter")
@@ -32,26 +35,32 @@ def launch():
     text.grid(column=0, row=0, sticky=N)
 
     # Add input to the GUI
-    input = StringVar() #         using textvariable allows this to auto-update when input changes
-    inputGui = ttk.Entry(content, textvariable=input)
-    inputGui.grid(column=1, row=2, sticky=N)
+    input = StringVar()
+
+    def openChooseFile():
+        fname = filedialog.askopenfilename()
+        input.set(fname)
+    chooseFileButton = ttk.Button(content, text="Choose file to convert", command=openChooseFile)
+    chooseFileButton.grid(column=1, row=2, sticky=N)
 
     #
     importColor = BooleanVar()
     checkbox = ttk.Checkbutton(content, text="Color the Minecraft world", variable=importColor, onvalue=True, offvalue=False)
     checkbox.grid(column=2, row=2, sticky=N)
 
+    # Display selected file
+    file = ttk.Label(content, textvariable=input)
+    file.grid(column=1, row=3, sticky=N)
+
     # Add button
     button = ttk.Button(content, text="Convert", command=convert)
-    button.grid(column=1, row=3, sticky=N)
+    button.grid(column=2, row=3, sticky=N)
 
     # Output
     output = StringVar()
     outputPane = ttk.Label(content, textvariable=output)
     outputPane.grid(column=1, row=4, sticky=N)
 
-    inputGui.focus()
-    root.bind("<Return>", convert) # Press enter to convert
     root.mainloop()
 
 if __name__ == "__main__":
