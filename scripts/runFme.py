@@ -7,21 +7,30 @@ This is the command to run the revit converter. Still need to implement
               --DestDataset_CSV2 "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData"
 """
 
+def wrapInQuotes(str):
+    return "\"{0}\"".format(str)
+
 def runRevitConverter(fmeLocation, workspaceLocation, sourceDataset, outputDir):
-    """
-    result = subprocess.run(
-        '"{0}"'.format(fmeLocation),
-        '"{0}"'.format(workspaceLocation),
-        "--SourceDataset_REVITNATIVE_3",
-        '"{0}"'.format(sourceDataset),
-        "--DestDataset_CSV2",
-        '"{0}"'.format(outputDir),
-        "--FEATURE_TYPES",
-        "",
-        capture_output=True,
-        shell=True
-    )"""
-    result = subprocess.run("echo {0}".format(fmeLocation), capture_output=True, shell=True)
+    command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\""
+    command = command.format(
+        wrapInQuotes(fmeLocation),
+        wrapInQuotes(workspaceLocation),
+        wrapInQuotes(sourceDataset),
+        wrapInQuotes(outputDir)
+    )
+
+    # https://stackoverflow.com/questions/4417546/constantly-print-subprocess-output-while-process-is-running
+    process = subprocess.Popen(
+        command,
+        stdout=subprocess.PIPE,
+        shell=True,
+        universal_newlines=True
+    )
+    for line in iter(process.stdout.readline, ""):
+        print(line.trim())
+
+    process.stdout.close()
+    result = process.wait()
     print(result)
 
 if __name__ == "__main__":
