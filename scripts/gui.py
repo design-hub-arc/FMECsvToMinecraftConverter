@@ -2,7 +2,7 @@ from tkinter import Tk, N, W, E, S, filedialog, StringVar, BooleanVar
 from tkinter import ttk # "Themed widgets". Whatever that means
 import tkinter
 import threading
-from runFme import DEFAULT_FME_LOCATION, runRevitConverter
+from runFme import DEFAULT_FME_LOCATION, convert
 
 
 # Following the example at https://tkdocs.com/tutorial
@@ -14,11 +14,11 @@ def launch():
         will be formatted
     """
 
-    def convert():
+    def runConversion():
         # needs to be nested to access input
         print("Input is " + input.get())
         print(importColor.get())
-        threading.Thread(target= lambda: runRevitConverter(DEFAULT_FME_LOCATION, "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\revitNativeToCsv.fmw", input.get(), "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData")).start()
+        threading.Thread(target= lambda: convert(DEFAULT_FME_LOCATION, input.get(), "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData")).start()
 
 
     root = Tk() # what does this do? Is it like a JFrame?
@@ -53,7 +53,7 @@ def launch():
     file.grid(column=1, row=3, sticky=N)
 
     # Add button
-    button = ttk.Button(content, text="Convert", command=convert)
+    button = ttk.Button(content, text="Convert", command=runConversion)
     button.grid(column=2, row=3, sticky=N)
 
     # Output
