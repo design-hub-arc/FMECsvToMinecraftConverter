@@ -36,6 +36,33 @@ def runRevitConverter(fmeLocation, sourceDataset, outputDir, resultFileName=None
     print("Process returned {0}".format(result))
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
+def runCsvConverter(fmeLocation, sourceDataset, shouldColor=False):
+    workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "Converter.fmw"))
+    outputDir = "%HOMEDRIVE%%HOMEPATH%\\AppData\\Roaming\\.minecraft\\saves"
+    command = "{0} {1} --SourceDataset_CSV2 {2} --DestDataset_MINECRAFT {3} --shouldColor {4} --FEATURE_TYPES \"\""
+    command = command.format(
+        wrapInQuotes(fmeLocation),
+        wrapInQuotes(workspaceLocation),
+        wrapInQuotes(sourceDataset),
+        wrapInQuotes(outputDir),
+        wrapInQuotes("yes" if shouldColor else "no")
+    )
+    print("Running command " + command)
+
+    # https://stackoverflow.com/questions/4417546/constantly-print-subprocess-output-while-process-is-running
+    process = subprocess.Popen(
+        command,
+        stdout=subprocess.PIPE,
+        shell=True,
+        universal_newlines=True
+    )
+    for line in iter(process.stdout.readline, ""):
+        print(line.strip())
+
+    process.stdout.close()
+    result = process.wait()
+    print("Process returned {0}".format(result))
+
 def convert(fmeLocation, sourceDataset, outputDir, resultFileName=None):
     extention = os.path.splitext(os.path.basename(sourceDataset))[1]
     output = None
@@ -45,3 +72,5 @@ def convert(fmeLocation, sourceDataset, outputDir, resultFileName=None):
         raise ValueError("Don't have a converter for file type \"{0}\"".format(extention))
 
     print("Wrote to {0}".format(output))
+
+    runCsvConverter(fmeLocation, output)

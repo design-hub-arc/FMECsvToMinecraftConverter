@@ -15,6 +15,6 @@ echo Converting %~f1
 
 
 
-"C:\Program Files\FME\fme.exe" ".\Converter.fmw" --DestDataset_MINECRAFT "%HOMEDRIVE%%HOMEPATH%\AppData\Roaming\.minecraft\saves" --pointReduction "100" --SourceDataset_CSV2 "%~f1" --FEATURE_TYPES "" --shouldColor "yes"
+"C:\Program Files\FME\fme.exe" ".\Converter.fmw" --DestDataset_MINECRAFT "%HOMEDRIVE%%HOMEPATH%\AppData\Roaming\.minecraft\saves" --SourceDataset_CSV2 "%~f1" --FEATURE_TYPES "" --shouldColor "yes"
 
 :end
