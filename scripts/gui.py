@@ -18,7 +18,7 @@ def launch():
         # needs to be nested to access input
         print("Input is " + input.get())
         print(importColor.get())
-        threading.Thread(target= lambda: convert(input.get(), "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData", shouldColor=importColor.get())).start()
+        threading.Thread(target= lambda: convert(input.get(), shouldColor=importColor.get())).start()
 
 
     root = Tk() # what does this do? Is it like a JFrame?

@@ -3,6 +3,7 @@ import os
 
 DEFAULT_FME_LOCATION = "C:\\Program Files\\FME\\fme.exe"
 WORKSPACE_RELATIVE_PATH = ".\\" # located in the same directory
+OUTPUT_DIRECTORY_RELATIVE_PATH = ".\\convertedData"
 
 def wrapInQuotes(str):
     return "\"{0}\"".format(str)
@@ -23,10 +24,11 @@ def runCommand(command, outputListener=print):
     result = process.wait()
     print("Process returned {0}".format(result))
 
-def runRevitConverter(sourceDataset, outputDir, resultFileName=None):
+def runRevitConverter(sourceDataset, resultFileName=None):
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".rvt", "_rvt")
     workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "revitNativeToCsv.fmw"))
+    outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
     command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
     command = command.format(
         wrapInQuotes(DEFAULT_FME_LOCATION),
@@ -53,11 +55,11 @@ def runCsvConverter(sourceDataset, shouldColor=False):
     print("Running command " + command)
     runCommand(command)
 
-def convert(sourceDataset, outputDir, shouldColor=False, resultFileName=None):
+def convert(sourceDataset, shouldColor=False, resultFileName=None):
     extention = os.path.splitext(os.path.basename(sourceDataset))[1]
     output = None
     if extention == ".rvt":
-        output = runRevitConverter(sourceDataset, outputDir, resultFileName)
+        output = runRevitConverter(sourceDataset, resultFileName)
     else:
         raise ValueError("Don't have a converter for file type \"{0}\"".format(extention))
 
