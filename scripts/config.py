@@ -13,10 +13,9 @@ def loadDefaultConfig():
     }
     CONFIG["DIRS"] = dirs
 def loadConfigFile(path):
-    with open(path, "r") as file:
-        CONFIG.read(file)
-        print(os.path.abspath(path))
-        print(CONFIG.sections())
+    CONFIG.read(path)
+    print(os.path.abspath(path))
+    print(CONFIG.sections())
 def saveConfigFile(path):
     with open(path, "w") as file:
         CONFIG.write(file)
