@@ -1,8 +1,7 @@
 from tkinter import Tk, N, W, E, S, filedialog, StringVar, BooleanVar
 from tkinter import ttk # "Themed widgets". Whatever that means
 import tkinter
-import threading
-from runFme import convert
+from runFme import convertAsync
 
 
 # Following the example at https://tkdocs.com/tutorial
@@ -14,11 +13,14 @@ def launch():
         will be formatted
     """
 
+    def out(str):
+        output.set(output.get() + str)
+
     def runConversion():
         # needs to be nested to access input
         print("Input is " + input.get())
         print(importColor.get())
-        threading.Thread(target= lambda: convert(input.get(), shouldColor=importColor.get())).start()
+        convertAsync(input.get(), shouldColor=importColor.get(), outputListener=out, onDone=lambda:print("done"))
 
 
     root = Tk() # what does this do? Is it like a JFrame?
