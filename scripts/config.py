@@ -13,9 +13,13 @@ def loadDefaultConfig():
     }
     CONFIG["DIRS"] = dirs
 def loadConfigFile(path):
-    pass
+    with open(path, "r") as file:
+        CONFIG.read(file)
+        print(os.path.abspath(path))
+        print(CONFIG.sections())
 def saveConfigFile(path):
-    pass
+    with open(path, "w") as file:
+        CONFIG.write(file)
 
 
 
@@ -23,7 +27,9 @@ if os.path.isfile("config.ini"):
     loadConfigFile("config.ini")
 else:
     loadDefaultConfig()
+    saveConfigFile("config.ini")
 
+print(CONFIG.sections())
 FME_PATH = CONFIG["DIRS"]["fme"]
 WORKSPACE_RELATIVE_PATH = CONFIG["DIRS"]["workspace"]
 OUTPUT_DIRECTORY_RELATIVE_PATH = CONFIG["DIRS"]["output"]
