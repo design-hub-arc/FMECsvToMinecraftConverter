@@ -1,6 +1,17 @@
 import configparser
 import os
 
+"""
+This file is used to load user-dependant configuration
+information, such as where certain files are located.
+
+The first time this file is run,
+it will save the default configuration
+information to .\\config.ini.
+All subsequent runs will read the
+config file.
+"""
+
 #https://docs.python.org/3/library/configparser.html
 CONFIG = configparser.ConfigParser()
 
@@ -14,8 +25,6 @@ def loadDefaultConfig():
     CONFIG["DIRS"] = dirs
 def loadConfigFile(path):
     CONFIG.read(path)
-    print(os.path.abspath(path))
-    print(CONFIG.sections())
 def saveConfigFile(path):
     with open(path, "w") as file:
         CONFIG.write(file)
@@ -23,12 +32,16 @@ def saveConfigFile(path):
 
 
 if os.path.isfile("config.ini"):
-    loadConfigFile("config.ini")
+    try:
+        loadConfigFile("config.ini")
+    except Exception as e:
+        print("Failed to load config.ini. Using default configuration")
+        print(e)
+        loadDefaultConfig()
 else:
     loadDefaultConfig()
     saveConfigFile("config.ini")
 
-print(CONFIG.sections())
 FME_PATH = CONFIG["DIRS"]["fme"]
 WORKSPACE_RELATIVE_PATH = CONFIG["DIRS"]["workspace"]
 OUTPUT_DIRECTORY_RELATIVE_PATH = CONFIG["DIRS"]["output"]

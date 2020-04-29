@@ -14,6 +14,14 @@ In order to run the FME converter workspaces, you will need FME Desktop installe
 
 In addition, you will need Minecraft Java Edition installed. You can download the Minecraft trial [here](https://www.minecraft.net/en-us/download/), after doing so, you will need to purchase access to the full game (I don't have the URL for this).
 
+## Converting files to Minecraft (the easy way)
+
+1. Double click on `launch.bat`
+2. Once Python launches, follow the onscreen prompt.
+3. You're done!
+
+
+
 ## Converting OBJ files to CSV
 
 1. Open a command prompt, and navigate to the project root directory.
@@ -23,27 +31,26 @@ which will output the converted file to your current directory as `filename_obj.
 
 ## Converting RVT files to CSV
 
-Open `revitNativeToCsv.fme` in FME Desktop, and run the workspace with the Revit file you wish to convert. Given an input file of `filename.rvt`, the converter will output `filename_rvt.csv`.
+Open `revitNativeToCsv.fme` in FME Desktop, and run the workspace with the Revit file you wish to convert.
+
+## User Parameters (revitNativeToCsv.fmw)
+* Revit Project Files: the .rvt file to convert.
+* Feature Types to Read: Unknown what this does. You should ignore it.
+* Destination CSV folder: the directory to write output files to.
+* resultFileName: the name to save the resulting csv file as. Given a source file name of filename.rvt, the resultFileName defaults to filename_rvt.
 
 ## Converting CSV files to Minecraft
 
 Choose 1:
-(a): Open `Converter.fmw` in FME Desktop, and run it with a CSV file with the headers x, y, z, r, g, b (no space between headers!).
-or (b): run `convert.bat` from the command prompt as shown:
-`convert.bat /path/to/csvFile.csv`
+Open `Converter.fmw` in FME Desktop, and run it with a CSV file with the headers x, y, z, r, g, b (no space between headers!).
 
 ## User Parameters (Converter.fmw)
 When running `Converter.fmw`, the user will be asked for a series of parameters.
 * Destination Minecraft Folder: the "saves" folder under the user's minecraft folder. Be sure to change this value when you first download the program from GitHub.
 * Source CSV: the CSV file to convert. It must contain the headers [x, y, z, r, g, b], with no spaces between headers. Coordinates are measured in meters (blocks in Minecraft).
-* Feature Types to read: Unknown what this does.
-* Point reduction factor: Currently unused.
+* Feature Types to read: Unknown what this does. You should ignore it.
 * Should the world read color from the source file?: If set to yes, for every point in the source CSV file, assigns the block from `colorToBlockTable.csv` with the closest matching color to that point. If set to no, every point is converted to a block of Quartz.
 
-## User Parameters (revitNativeToCsv.fmw)
-* Revit Project Files: the .rvt file to convert.
-* Feature Types to Read: Unknown what this does.
-* Destination CSV folder: the directory to write output files to.
 
 
 ## Contributing
