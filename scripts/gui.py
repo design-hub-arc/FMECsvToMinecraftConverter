@@ -22,13 +22,22 @@ def launch():
         outputPane.see(INSERT)
         outputPane.config(state=DISABLED)
 
+    def done():
+        chooseFileButton.config(state=NORMAL)
+        checkbox.config(state=NORMAL)
+        convertButton.config(state=NORMAL)
+        out("Done")
+
     def runConversion():
         # needs to be nested to access input
+        chooseFileButton.config(state=DISABLED)
+        checkbox.config(state=DISABLED)
+        convertButton.config(state=DISABLED)
         convertAsync(
             input.get(),
             shouldColor=importColor.get(),
             outputListener=out,
-            onDone=lambda:print("done")
+            onDone=done
         )
 
 
@@ -36,14 +45,14 @@ def launch():
     root.title("Minecraft Converter")
     # Create the content pane
     #                   root is the parent
-    content = ttk.Frame(root)#, padding="10 10 10 10")
-    content.grid(column=0, row=0)#, sticky=(N, W, E, S)) # What does this do? Does it make the content "stick" to 0,0?
+    content = ttk.Frame(root)
+    content.grid(column=0, row=0)# What does this do? Does it make the content "stick" to 0,0?
     root.columnconfigure(0, weight=1) # fill available space in the window
     root.rowconfigure(0, weight=1)
 
     # Add info text
     descLabel = ttk.Label(content, text=desc)
-    descLabel.grid(column=0, row=0, columnspan=2)#, sticky=N)
+    descLabel.grid(column=0, row=0, columnspan=2)
 
     # Add input to the GUI
     input = StringVar()
@@ -51,23 +60,23 @@ def launch():
         fname = tkinter.filedialog.askopenfilename()
         input.set(fname)
     chooseFileButton = ttk.Button(content, text="Choose file to convert", command=openChooseFile)
-    chooseFileButton.grid(column=1, row=1)#, sticky=N)
+    chooseFileButton.grid(column=1, row=1)
 
     importColor = BooleanVar()
     checkbox = ttk.Checkbutton(content, text="Color the Minecraft world", variable=importColor, onvalue=True, offvalue=False)
-    checkbox.grid(column=2, row=1)#, sticky=N)
+    checkbox.grid(column=2, row=1)
 
     # Display selected file
     file = ttk.Label(content, textvariable=input)
-    file.grid(column=1, row=2, sticky=N)
+    file.grid(column=1, row=2)
 
     # Add button
     convertButton = ttk.Button(content, text="Convert", command=runConversion)
-    convertButton.grid(column=2, row=2)#, sticky=N)
+    convertButton.grid(column=2, row=2)
 
     # Output
     outputPane = tkinter.scrolledtext.ScrolledText(content)
-    outputPane.grid(column=1, row=3, columnspan=2)#, sticky=N)
+    outputPane.grid(column=1, row=3, columnspan=2)
     outputPane.config(state=DISABLED)
 
     root.mainloop()
