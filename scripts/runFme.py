@@ -1,16 +1,7 @@
 import subprocess # Used to interact with command line
 import os
 import threading
-
-"""
-move these to a text file
-"""
-DEFAULT_FME_LOCATION = "C:\\Program Files\\FME\\fme.exe"
-WORKSPACE_RELATIVE_PATH = ".\\" # located in the same directory
-OUTPUT_DIRECTORY_RELATIVE_PATH = ".\\convertedData"
-MC_SAVE_DIR = "%HOMEDRIVE%%HOMEPATH%\\AppData\\Roaming\\.minecraft\\saves"
-
-
+from config import FME_PATH, WORKSPACE_RELATIVE_PATH, OUTPUT_DIRECTORY_RELATIVE_PATH, MC_SAVE_DIR
 
 """
 Puts quote marks around a string.
@@ -67,7 +58,7 @@ def runRevitConverter(sourceDataset: str, resultFileName=None, outputListener=pr
     outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
     command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
     command = command.format(
-        wrapInQuotes(DEFAULT_FME_LOCATION),
+        wrapInQuotes(FME_PATH),
         wrapInQuotes(workspaceLocation),
         wrapInQuotes(sourceDataset),
         wrapInQuotes(outputDir),
@@ -91,7 +82,7 @@ def runCsvConverter(sourceDataset, shouldColor=False, outputListener=print):
     outputDir = MC_SAVE_DIR
     command = "{0} {1} --SourceDataset_CSV2 {2} --DestDataset_MINECRAFT {3} --shouldColor {4} --FEATURE_TYPES \"\""
     command = command.format(
-        wrapInQuotes(DEFAULT_FME_LOCATION),
+        wrapInQuotes(FME_PATH),
         wrapInQuotes(workspaceLocation),
         wrapInQuotes(sourceDataset),
         wrapInQuotes(outputDir),
