@@ -1,6 +1,7 @@
-from tkinter import Tk, N, W, E, S, filedialog, StringVar, BooleanVar
+from tkinter import Tk, N, W, E, S, filedialog, StringVar, BooleanVar, INSERT
 from tkinter import ttk # "Themed widgets". Whatever that means
 import tkinter
+import tkinter.scrolledtext
 from runFme import convertAsync
 
 
@@ -14,7 +15,7 @@ def launch():
     """
 
     def out(str):
-        output.set(output.get() + str)
+        outputPane.insert(INSERT, str + "\n")
 
     def runConversion():
         # needs to be nested to access input
@@ -34,7 +35,7 @@ def launch():
 
     # Add info text
     text = ttk.Label(content, text=desc)
-    text.grid(column=0, row=0, sticky=N)
+    text.grid(column=0, row=0, columnspan=2, sticky=N)
 
     # Add input to the GUI
     input = StringVar()
@@ -43,25 +44,24 @@ def launch():
         fname = filedialog.askopenfilename()
         input.set(fname)
     chooseFileButton = ttk.Button(content, text="Choose file to convert", command=openChooseFile)
-    chooseFileButton.grid(column=1, row=2, sticky=N)
+    chooseFileButton.grid(column=1, row=1, sticky=N)
 
     #
     importColor = BooleanVar()
     checkbox = ttk.Checkbutton(content, text="Color the Minecraft world", variable=importColor, onvalue=True, offvalue=False)
-    checkbox.grid(column=2, row=2, sticky=N)
+    checkbox.grid(column=2, row=1, sticky=N)
 
     # Display selected file
     file = ttk.Label(content, textvariable=input)
-    file.grid(column=1, row=3, sticky=N)
+    file.grid(column=1, row=2, sticky=N)
 
     # Add button
     button = ttk.Button(content, text="Convert", command=runConversion)
-    button.grid(column=2, row=3, sticky=N)
+    button.grid(column=2, row=2, sticky=N)
 
     # Output
-    output = StringVar()
-    outputPane = ttk.Label(content, textvariable=output)
-    outputPane.grid(column=1, row=4, sticky=N)
+    outputPane = tkinter.scrolledtext.ScrolledText(content)
+    outputPane.grid(column=1, row=3, columnspan=2, sticky=N)
 
     root.mainloop()
 
