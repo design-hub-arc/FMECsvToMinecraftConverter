@@ -26,7 +26,7 @@ def launch():
         chooseFileButton.config(state=NORMAL)
         checkbox.config(state=NORMAL)
         convertButton.config(state=NORMAL)
-        out("Done")
+        out("Done converting file")
 
     def runConversion():
         # needs to be nested to access input
