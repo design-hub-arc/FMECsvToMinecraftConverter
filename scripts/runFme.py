@@ -2,9 +2,15 @@ import subprocess # Used to interact with command line
 import os
 import threading
 
+"""
+move these to a text file
+"""
 DEFAULT_FME_LOCATION = "C:\\Program Files\\FME\\fme.exe"
 WORKSPACE_RELATIVE_PATH = ".\\" # located in the same directory
 OUTPUT_DIRECTORY_RELATIVE_PATH = ".\\convertedData"
+MC_SAVE_DIR = "%HOMEDRIVE%%HOMEPATH%\\AppData\\Roaming\\.minecraft\\saves"
+
+
 
 """
 Puts quote marks around a string.
@@ -25,6 +31,7 @@ and will receive each line of output the command
 produces in the console.
 """
 def runCommand(command: str, outputListener=print):
+    outputListener("Running command " + command)
     # https://stackoverflow.com/questions/4417546/constantly-print-subprocess-output-while-process-is-running
     process = subprocess.Popen(
         command,
@@ -40,7 +47,20 @@ def runCommand(command: str, outputListener=print):
     result = process.wait()
     outputListener("Process returned {0}".format(result))
 
-def runRevitConverter(sourceDataset, resultFileName=None, outputListener=print):
+"""
+Runs the given sourceDataset through revitNativeToCsv.fmw.
+
+sourceDataset should be the path to a .rvt file.
+
+resultFileName is what to name the csv file produced by fme,
+defaulting to the original file name, but with the '.' before its extension replaced with an '_'.
+outputListener should accept a single argument,
+and will receive each line of output the command
+produces in the console.
+
+returns the path to the file produced by fme.
+"""
+def runRevitConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".rvt", "_rvt")
     workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "revitNativeToCsv.fmw"))
@@ -53,13 +73,22 @@ def runRevitConverter(sourceDataset, resultFileName=None, outputListener=print):
         wrapInQuotes(outputDir),
         wrapInQuotes(resultFileName)
     )
-    outputListener("Running command " + command)
+
     runCommand(command, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
+"""
+Runs the given sourceDataset through Converter.fmw.
+
+sourceDataset should be the path to the csv file to convert.
+If shouldColor is set to true, color data from the given file will be converted to block data in the created
+Minecraft world. If set to false, the resulting world will be colored white.
+OutputListener is a function accepting a single string argument,
+and will receive the console output from the conversion process.
+"""
 def runCsvConverter(sourceDataset, shouldColor=False, outputListener=print):
     workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "Converter.fmw"))
-    outputDir = "%HOMEDRIVE%%HOMEPATH%\\AppData\\Roaming\\.minecraft\\saves"
+    outputDir = MC_SAVE_DIR
     command = "{0} {1} --SourceDataset_CSV2 {2} --DestDataset_MINECRAFT {3} --shouldColor {4} --FEATURE_TYPES \"\""
     command = command.format(
         wrapInQuotes(DEFAULT_FME_LOCATION),
@@ -68,9 +97,20 @@ def runCsvConverter(sourceDataset, shouldColor=False, outputListener=print):
         wrapInQuotes(outputDir),
         wrapInQuotes("yes" if shouldColor else "no")
     )
-    outputListener("Running command " + command)
     runCommand(command, outputListener)
 
+"""
+Converts the given file to Minecraft, running all the necessary conversions.
+
+If shouldColor is set to true, color data from the given file will be converted to block data in the created
+Minecraft world. If set to false, the resulting world will be colored white.
+
+ResultFileName is what the program will name the intermediate csv file created from the source dataset.
+This defaults to the name of the orginal file, but with the '.' in its file extention replaced with an '_'.
+
+OutputListener is a function accepting a single string argument,
+and will receive the console output from the conversion process.
+"""
 def convert(sourceDataset, shouldColor=False, resultFileName=None, outputListener=print):
     extention = os.path.splitext(os.path.basename(sourceDataset))[1]
     output = None
