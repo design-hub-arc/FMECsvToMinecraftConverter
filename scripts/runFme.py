@@ -68,6 +68,27 @@ def runRevitConverter(sourceDataset: str, resultFileName=None, outputListener=pr
     runCommand(command, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
+
+
+def runObjConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
+    if resultFileName is None:
+        resultFileName = os.path.basename(sourceDataset).replace(".obj", "_obj")
+    workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "objToCsv.fmw"))
+    outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
+    command = "{0} {1} --SourceDataset_OBJ {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
+    command = command.format(
+        wrapInQuotes(FME_PATH),
+        wrapInQuotes(workspaceLocation),
+        wrapInQuotes(sourceDataset),
+        wrapInQuotes(outputDir),
+        wrapInQuotes(resultFileName)
+    )
+
+    runCommand(command, outputListener)
+    return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
+
+
+
 """
 Runs the given sourceDataset through Converter.fmw.
 
@@ -107,6 +128,8 @@ def convert(sourceDataset, shouldColor=False, resultFileName=None, outputListene
     output = None
     if extention == ".rvt":
         output = runRevitConverter(sourceDataset, resultFileName, outputListener)
+    elif extension == ".obj":
+        output = runObjConverter(sourceDataset, resultFileName, outputListener)
     else:
         raise ValueError("Don't have a converter for file type \"{0}\"".format(extention))
 

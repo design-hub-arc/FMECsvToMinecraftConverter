@@ -14,6 +14,7 @@ def launch():
         Choose a file to convert to Minecraft.
         Currently supported formats are:
         (*) RVT
+        (*) OBJ
     """
 
     def out(str):
