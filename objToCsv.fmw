@@ -2,7 +2,7 @@
 #! <WORKSPACE
 #    Command-line to run this workspace:
 #        "C:\Program Files\FME\fme.exe" "C:\Users\Matt\Documents\FME Projects\Converter\objToCsv.fmw"
-#              --SourceDataset_OBJ "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\objData\aerospaceMuseumAirplane.obj"
+#              --SourceDataset_OBJ "C:\Users\Matt\Documents\FME Projects\Converter\sourceData\objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #              --FEATURE_TYPES ""
 #              --DestDataset_CSV2 "C:\Users\Matt\Documents\FME Projects\Converter\convertedData"
 #              --resultFileName "@Trim(@Value(_filename))"
@@ -14,14 +14,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="1782.12 1774.14"
-#!   DOC_TOP_LEFT="-26.8755 -1934.14"
+#!   DOC_EXTENTS="2236.26 1748.52"
+#!   DOC_TOP_LEFT="-361.254 -1908.52"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="20200"
-#!   FME_DOCUMENT_GUID="7e987cf3-aa5b-47dc-81c8-47515a6da773"
-#!   FME_DOCUMENT_PRIORGUID="5ca1284b-7016-41c9-8fab-e614ccc7ce24,13d574b5-d5f4-493d-abf9-a9ae4c456f4b"
+#!   FME_DOCUMENT_GUID="55282016-02c8-4b05-a6d5-3027b6dd297a"
+#!   FME_DOCUMENT_PRIORGUID="5ca1284b-7016-41c9-8fab-e614ccc7ce24,13d574b5-d5f4-493d-abf9-a9ae4c456f4b,7e987cf3-aa5b-47dc-81c8-47515a6da773"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -30,7 +30,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2020.0.0.0 (20200309 - Build 20200 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-30T11:43:20"
+#!   LAST_SAVE_DATE="2020-04-30T14:46:56"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -49,7 +49,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="-621.881 59.3756"
+#!   VIEW_POSITION="-568.756 -984.385"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -68,7 +68,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE=""
 #!   DEFLINE_ATTRS="false"
-#!   EXPOSABLE_ATTRS="multi_reader_type string fme_sweep_angle string multi_reader_full_id string fme_text_size string fme_feature_type string fme_geometry string fme_color string multi_reader_id string fme_basename string fme_dataset string fme_primary_axis string fme_secondary_axis string fme_rotation string fme_fill_color string fme_type string fme_text_string string obj_type string multi_reader_keyword string fme_start_angle string"
+#!   EXPOSABLE_ATTRS="fme_dataset string fme_primary_axis string fme_sweep_angle string multi_reader_type string multi_reader_id string multi_reader_keyword string fme_text_size string fme_start_angle string obj_type string fme_type string fme_basename string fme_text_string string fme_geometry string fme_rotation string fme_secondary_axis string multi_reader_full_id string fme_fill_color string fme_color string fme_feature_type string"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -123,7 +123,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="csv_existing_file_handling Yes csv_write_field_names firstrow"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_sweep_angle string fme_text_size string fme_start_angle string fme_type string fme_color string fme_secondary_axis string fme_primary_axis string csv_type string fme_text_string string fme_dataset string fme_basename string fme_fill_color string fme_rotation string fme_geometry string fme_feature_type string"
+#!   EXPOSABLE_ATTRS="fme_rotation string fme_type string fme_basename string fme_geometry string fme_text_string string fme_fill_color string fme_sweep_angle string fme_primary_axis string csv_type string fme_secondary_axis string fme_dataset string fme_color string fme_start_angle string fme_text_size string fme_feature_type string"
 #!   DEFLINE_PARMS="&quot;GUI OPTIONAL NAMEDGROUP csv_dataset_group csv_existing_file_handling Dataset&quot; &quot;&quot; &quot;GUI CHOICE csv_existing_file_handling Yes%No Overwrite Existing File&quot; Yes &quot;GUI OPTIONAL NAMEDGROUP csv_fields_group csv_write_field_names Fields&quot; &quot;&quot; &quot;GUI LOOKUP_CHOICE csv_write_field_names If&lt;space&gt;Writing&lt;space&gt;First&lt;space&gt;Row,firstrow%Yes,yes%No,no Write Field Names Row&quot; firstrow "
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS="&quot;*{}$"
@@ -736,9 +736,9 @@
 #!   IS_EDITABLE="false"
 #!   IDENTIFIER="2"
 #!   FEAT_GEOMTYPE="obj_point obj_line obj_face obj_collection"
-#!   POSITION="-26.875468754687574 -159.99924999249993"
-#!   BOUNDING_RECT="-26.875468754687574 -159.99924999249993 454 71"
-#!   ORDER="500000000000000"
+#!   POSITION="-361.25381253812543 -159.99924999249993"
+#!   BOUNDING_RECT="-361.25381253812543 -159.99924999249993 454 71"
+#!   ORDER="500000000000048"
 #!   COLLAPSED="true"
 #!   KEYWORD="OBJ_1"
 #!   PARMS_EDITED="true"
@@ -760,8 +760,8 @@
 #!   IS_EDITABLE="true"
 #!   IDENTIFIER="15"
 #!   FEAT_GEOMTYPE="All"
-#!   POSITION="1301.2458124581249 -1863.1412814128144"
-#!   BOUNDING_RECT="1301.2458124581249 -1863.1412814128144 454 71"
+#!   POSITION="1276.2455624556248 -1281.885468854689"
+#!   BOUNDING_RECT="1276.2455624556248 -1281.885468854689 454 71"
 #!   ORDER="500000000000046"
 #!   COLLAPSED="true"
 #!   KEYWORD="CSV2_1"
@@ -786,7 +786,7 @@
 #! <DATASET
 #!   NAME="OBJ_1"
 #!   OVERRIDE="-OBJ_1_DATASET"
-#!   DATASET="OBJ_1/aerospaceMuseumAirplane.obj"
+#!   DATASET="OBJ_1/AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
@@ -800,11 +800,11 @@
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_OBJ OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:"
-#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\objData\aerospaceMuseumAirplane.obj"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)sourceData\objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
-#!   GUI_LINE="GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:&lt;backslash&gt;Users&lt;backslash&gt;Matt&lt;backslash&gt;Documents&lt;backslash&gt;FME&lt;space&gt;Projects&lt;backslash&gt;Converter&lt;backslash&gt;sourceData&lt;backslash&gt;objData&lt;backslash&gt;aerospaceMuseumAirplane.obj,_FORMAT_OVERRIDE_,OBJ,_DATASET_OVERRIDE_,SourceDataset_OBJ,MERGE_MESH_PARTS,No,MOVE_TO_WORLD_COORDSYS,Yes,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,_MERGE_SCHEMAS,YES,DYNAMIC_WORKFLOW,yes,VARIABLE_FEATURE_TYPES,yes,_MERGE_SCHEMAS,YES Feature Types to Read:"
+#!   GUI_LINE="GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:&lt;backslash&gt;Users&lt;backslash&gt;Matt&lt;backslash&gt;Documents&lt;backslash&gt;FME&lt;space&gt;Projects&lt;backslash&gt;Converter&lt;backslash&gt;sourceData&lt;backslash&gt;objData&lt;backslash&gt;AnyConv.com__DESGN100_Sample&lt;space&gt;-&lt;space&gt;3D&lt;space&gt;View&lt;space&gt;-&lt;space&gt;&lt;opencurly&gt;3D&lt;closecurly&gt;.obj,_FORMAT_OVERRIDE_,OBJ,_DATASET_OVERRIDE_,SourceDataset_OBJ,MERGE_MESH_PARTS,No,MOVE_TO_WORLD_COORDSYS,Yes,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,_MERGE_SCHEMAS,YES,DYNAMIC_WORKFLOW,yes,VARIABLE_FEATURE_TYPES,yes,_MERGE_SCHEMAS,YES Feature Types to Read:"
 #!   DEFAULT_VALUE=""
 #!   IS_STAND_ALONE="false"
 #! />
@@ -820,6 +820,21 @@
 #! />
 #! </GLOBAL_PARAMETERS>
 #! <COMMENTS>
+#! <COMMENT
+#!   IDENTIFIER="19"
+#!   COMMENT_VALUE="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Default name should be @Trim(@Value(_filename))&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+#!   POSITION="812.00950009500093 -223.37571875718757"
+#!   TOP_LEFT="812.00950009500093 -223.37571875718757"
+#!   BOTTOM_RIGHT="1875.0095000950009 -224.37571875718757"
+#!   BOUNDING_RECT="812.00950009500093 -223.37571875718757 1063 1"
+#!   ORDER="500000000000050"
+#!   FOLLOW_ANCHOR="true"
+#!   INFO_NODE="false"
+#!   CUSTOM_USER_COLOR="false"
+#!   COLOUR="0.28627450980392155,0.29803921568627451,0.0078431372549019607,0.78431372549019607"
+#!   SIZE_POLICY="10"
+#!   ANCHORED_NODE="0"
+#! />
 #! </COMMENTS>
 #! <CONSTANTS>
 #! </CONSTANTS>
@@ -830,8 +845,8 @@
 #!   IDENTIFIER="3"
 #!   TYPE="PointCloudCombiner"
 #!   VERSION="6"
-#!   POSITION="646.88146881468833 -159.99924999249993"
-#!   BOUNDING_RECT="646.88146881468833 -159.99924999249993 454 71"
+#!   POSITION="275.0027500275005 -159.99924999249993"
+#!   BOUNDING_RECT="275.0027500275005 -159.99924999249993 454 71"
 #!   ORDER="500000000000039"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -980,8 +995,8 @@
 #!   IDENTIFIER="11"
 #!   TYPE="FilenamePartExtractor"
 #!   VERSION="3"
-#!   POSITION="646.88146881468833 -1618.7661876618768"
-#!   BOUNDING_RECT="646.88146881468833 -1618.7661876618768 473.09999999999997 71"
+#!   POSITION="421.879218792188 -1575.015750157502"
+#!   BOUNDING_RECT="421.879218792188 -1575.015750157502 473.09999999999997 71"
 #!   ORDER="500000000000043"
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
@@ -1081,7 +1096,7 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="6"
+#!   IDENTIFIER="12"
 #!   SOURCE_NODE="3"
 #!   TARGET_NODE="5"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
@@ -1126,7 +1141,7 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="12"
+#!   IDENTIFIER="20"
 #!   SOURCE_NODE="9"
 #!   TARGET_NODE="11"
 #!   SOURCE_PORT_DESC="fo 0 Output"
@@ -1156,7 +1171,7 @@
 #!   EXTRA_POINTS=""
 #! />
 #! <FEAT_LINK
-#!   IDENTIFIER="16"
+#!   IDENTIFIER="18"
 #!   SOURCE_NODE="13"
 #!   TARGET_NODE="15"
 #!   SOURCE_PORT_DESC="fo 0 OUTPUT"
@@ -1270,7 +1285,7 @@
 #!   BOUNDING_RECT="184.75299999999999 -415.755 1076.01 236"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="5 33 4 "
+#!   CONTENTS="5 4 33 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1284,7 +1299,7 @@
 #!   BOUNDING_RECT="184.75299999999999 -727.75599999999997 1076.01 236"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="9 37 8 "
+#!   CONTENTS="37 8 9 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1298,7 +1313,7 @@
 #!   BOUNDING_RECT="173.50399999999999 -1022.01 1605.51 574.00300000000004"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="15 10 42 43 11 14 40 13 41 12 39 "
+#!   CONTENTS="43 39 13 42 11 15 14 12 40 10 41 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1340,7 +1355,7 @@
 #!   BOUNDING_RECT="2730.2800000000002 -1001.01 1705.26 548.00300000000004"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="21 23 19 20 48 52 22 51 47 49 18 "
+#!   CONTENTS="22 52 23 48 47 49 21 20 18 19 51 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1354,7 +1369,7 @@
 #!   BOUNDING_RECT="173.50399999999999 -1634.02 1590.51 414.00299999999999"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="55 53 25 27 26 24 "
+#!   CONTENTS="24 53 25 27 26 55 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1368,7 +1383,7 @@
 #!   BOUNDING_RECT="2730.2800000000002 -1605.02 1679.76 516.00400000000002"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="31 30 58 29 60 57 28 "
+#!   CONTENTS="58 30 57 60 31 29 28 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1382,7 +1397,7 @@
 #!   BOUNDING_RECT="123.504 -325.755 1705.51 1737.26"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="42 8 33 72 13 73 37 25 53 14 24 41 12 26 40 39 5 10 27 11 71 15 55 77 43 4 9 "
+#!   CONTENTS="24 27 14 8 72 73 25 39 5 77 26 10 11 13 71 43 9 40 37 12 42 41 15 33 53 4 55 "
 #! >
 #! </BOOKMARK>
 #! <BOOKMARK
@@ -1396,7 +1411,7 @@
 #!   BOUNDING_RECT="2680.2800000000002 -383.755 1805.26 1752.27"
 #!   STICKY="true"
 #!   COLOUR="0.72156862745098038,0.72156862745098038,0.72156862745098038,0.39215686274509803"
-#!   CONTENTS="60 21 75 17 19 20 74 48 22 51 28 31 76 57 30 6 52 29 47 49 78 58 23 18 "
+#!   CONTENTS="60 74 18 22 30 51 19 28 47 75 57 17 6 49 52 31 48 21 29 58 76 23 78 20 "
 #! >
 #! </BOOKMARK>
 #! </BOOKMARKS>
@@ -2807,10 +2822,10 @@
 
 FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_OBJ_1,OBJ_IN_FME_GROUP_NAMED1_OBJ_1,OBJ_IN_MERGE_MESH_PARTS_OBJ_1,OBJ_IN_FME_GROUP_NAMED2_OBJ_1,OBJ_IN_MOVE_TO_WORLD_COORDSYS_OBJ_1,OBJ_IN_USE_SEARCH_ENVELOPE_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MINX_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MINY_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MAXX_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_MAXY_OBJ_1,OBJ_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_OBJ_1,OBJ_IN_CLIP_TO_ENVELOPE_OBJ_1,OBJ_IN_NETWORK_AUTHENTICATION_OBJ_1,DestDataset_CSV2_1,CSV2_OUT_DATASET_GROUP_CSV2_1,CSV2_OUT_EXTENSION_CSV2_1,CSV2_OUT_FIELDS_GROUP_CSV2_1,CSV2_OUT_DELIMITER_CSV2_1,CSV2_OUT_ENCODING_GROUP_CSV2_1,CSV2_OUT_ENCODING_CSV2_1,CSV2_OUT_WRITE_BOM_FOR_UNICODE_CSV2_1,CSV2_OUT_ADVANCED_GROUP_CSV2_1,CSV2_OUT_QUALIFY_FIELD_NAMES_CSV2_1,CSV2_OUT_QUALIFY_FIELD_VALUES_CSV2_1,CSV2_OUT_UNQUALIFIED_FIELD_VALUE_HANDLING_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_CHARACTER_CSV2_1,CSV2_OUT_FIELD_QUALIFIER_ESCAPE_CHARACTER_CSV2_1,CSV2_OUT_ROW_TERMINATION_CSV2_1,CSV2_OUT_WRITE_SCHEMA_FILE_CSV2_1,CSV2_OUT_EXISTING_SCHEMA_FILE_HANDLING_CSV2_1
-DEFAULT_MACRO SourceDataset_OBJ $(FME_MF_DIR)sourceData\objData\aerospaceMuseumAirplane.obj
+DEFAULT_MACRO SourceDataset_OBJ $(FME_MF_DIR)sourceData\objData\AnyConv.com__DESGN100_Sample - 3D View - {3D}.obj
 GUI MULTIFILE SourceDataset_OBJ OBJ_Files(*.obj)|*.obj|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source OBJ File:
 DEFAULT_MACRO FEATURE_TYPES 
-GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:<backslash>Users<backslash>Matt<backslash>Documents<backslash>FME<space>Projects<backslash>Converter<backslash>sourceData<backslash>objData<backslash>aerospaceMuseumAirplane.obj,_FORMAT_OVERRIDE_,OBJ,_DATASET_OVERRIDE_,SourceDataset_OBJ,MERGE_MESH_PARTS,No,MOVE_TO_WORLD_COORDSYS,Yes,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,_MERGE_SCHEMAS,YES,DYNAMIC_WORKFLOW,yes,VARIABLE_FEATURE_TYPES,yes,_MERGE_SCHEMAS,YES Feature Types to Read:
+GUI OPTIONAL FEATURE_TYPES_ENCODED FEATURE_TYPES C:<backslash>Users<backslash>Matt<backslash>Documents<backslash>FME<space>Projects<backslash>Converter<backslash>sourceData<backslash>objData<backslash>AnyConv.com__DESGN100_Sample<space>-<space>3D<space>View<space>-<space><opencurly>3D<closecurly>.obj,_FORMAT_OVERRIDE_,OBJ,_DATASET_OVERRIDE_,SourceDataset_OBJ,MERGE_MESH_PARTS,No,MOVE_TO_WORLD_COORDSYS,Yes,USE_SEARCH_ENVELOPE,NO,SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0,CLIP_TO_ENVELOPE,NO,EXPOSE_ATTRS_GROUP,FME_DISCLOSURE_CLOSED,_MERGE_SCHEMAS,YES,DYNAMIC_WORKFLOW,yes,VARIABLE_FEATURE_TYPES,yes,_MERGE_SCHEMAS,YES Feature Types to Read:
 DEFAULT_MACRO DestDataset_CSV2 $(FME_MF_DIR)convertedData
 GUI DIRNAME DestDataset_CSV2 Destination CSV (Comma Separated Value) Folder:
 DEFAULT_MACRO resultFileName @Trim(@Value(_filename))
@@ -3057,7 +3072,7 @@ MACRO $(ColorConverter_WORKSPACE_NAME)_InputModel FME
 MACRO $(ColorConverter_WORKSPACE_NAME)_OutputModel RGB
 DEFAULT_MACRO ColorConverter_WORKSPACE_NAME ""
 INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(ColorConverter_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(ColorConverter_WORKSPACE_NAME)}]
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(ColorConverter_WORKSPACE_NAME)_Input1588272200 Input Splitter"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Input"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(ColorConverter_WORKSPACE_NAME)_Input1588283216 Input Splitter"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Input"   OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Input"
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_TestFilter    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Input"    OUTPUT FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0
 FACTORY_DEF * TestFactory FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_TestFilter_Condition_1 INPUT FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_0 TEST @EvaluateExpression(FDIV,STRING_ENCODED,$($(ColorConverter_WORKSPACE_NAME)_InputModel$encode),$(ColorConverter_WORKSPACE_NAME)_TestFilter) = FME ENCODED BOOLEAN_OPERATOR OR COMPOSITE_TEST_EXPR <Unused> OUTPUT PASSED FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_FME OUTPUT FAILED FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_1
@@ -3068,22 +3083,22 @@ FACTORY_DEF * TestFactory FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_TestFilt
 FACTORY_DEF * TeeFactory FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt> INPUT FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_TESTFILTERINPUTLINE_5 OUTPUT FEATURE_TYPE $(ColorConverter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>
 FACTORY_DEF * TeeFactory   FACTORY_NAME "$(ColorConverter_WORKSPACE_NAME)_TestFilter <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_<lt>UNFILTERED<gt>"
 # -------------------------------------------------------------------------
-Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_d5e50a60_a278_470c_b49a_dbbb3a91d0ba5_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_0e065db5_6aba_4c1f_ae35_10e7df2f51542_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_CMYK<space><openparen>0..1<closeparen>"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_OUTPUT"         @Tcl2($(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_8    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_4_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "_input_red" "<at>Evaluate<openparen><openparen>1-<at>Value<openparen>_list<opencurly>0<closecurly><closeparen><closeparen>*<openparen>1-<at>Value<openparen>_list<opencurly>3<closecurly><closeparen><closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_green" "<at>Evaluate<openparen><openparen>1-<at>Value<openparen>_list<opencurly>1<closecurly><closeparen><closeparen>*<openparen>1-<at>Value<openparen>_list<opencurly>3<closecurly><closeparen><closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_blue" "<at>Evaluate<openparen><openparen>1-<at>Value<openparen>_list<opencurly>2<closecurly><closeparen><closeparen>*<openparen>1-<at>Value<openparen>_list<opencurly>3<closecurly><closeparen><closeparen><closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_8_OUTPUT"
 # -------------------------------------------------------------------------
-Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_4e92ead0_83a7_4434_abf5_7d7285b1e7755_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_5bb45711_1b00_4fa9_a7dd_17adbe2abec62_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_CMYK<space><openparen>0..100<closeparen>"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_OUTPUT"         @Tcl2($(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_9    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_5_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "_input_red" "<at>Evaluate<openparen><openparen>1-<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><solidus>100<closeparen><closeparen>*<openparen>1-<openparen><at>Value<openparen>_list<opencurly>3<closecurly><closeparen><solidus>100<closeparen><closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_green" "<at>Evaluate<openparen><openparen>1-<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><solidus>100<closeparen><closeparen>*<openparen>1-<openparen><at>Value<openparen>_list<opencurly>3<closecurly><closeparen><solidus>100<closeparen><closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_blue" "<at>Evaluate<openparen><openparen>1-<openparen><at>Value<openparen>_list<opencurly>2<closecurly><closeparen><solidus>100<closeparen><closeparen>*<openparen>1-<openparen><at>Value<openparen>_list<opencurly>3<closecurly><closeparen><solidus>100<closeparen><closeparen><closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_9_OUTPUT"
 # -------------------------------------------------------------------------
 MACRO casemac
 INCLUDE [ if { {NO} == {NO} } { puts {MACRO casemac -nocase}} ]
-Tcl2 proc $(ColorConverter_WORKSPACE_NAME)_StringReplacer_a7eb0ef6_f742_40bf_9503_a3863f203c685_replacer { findText replaceText invalidValue} {     set attrs [split \"$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set noMatch true;       if {{YES} == {YES}} {         set newAttrVal [FME_ReplaceRegex $(casemac) $findValue $attrVal $replaceValue];       } else {         set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];       };       if { $newAttrVal ne $attrVal } {         set noMatch false;         FME_SetAttribute $attr $newAttrVal;       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
-FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_Web<space>RGB"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(ColorConverter_WORKSPACE_NAME)_StringReplacer_a7eb0ef6_f742_40bf_9503_a3863f203c685_replacer {^#} {} {_FME_NO_OP_}")
+Tcl2 proc $(ColorConverter_WORKSPACE_NAME)_StringReplacer_7851302e_a889_41e5_bf68_9f6d9364f9572_replacer { findText replaceText invalidValue} {     set attrs [split \"$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)\" {,}];     set findValue [FME_DecodeText $findText];     set replaceValue [FME_DecodeText $replaceText];     foreach attr $attrs {       set attrVal [FME_GetAttribute $attr];       set noMatch true;       if {{YES} == {YES}} {         set newAttrVal [FME_ReplaceRegex $(casemac) $findValue $attrVal $replaceValue];       } else {         set newAttrVal [string map $(casemac) [list $findValue $replaceValue] $attrVal];       };       if { $newAttrVal ne $attrVal } {         set noMatch false;         FME_SetAttribute $attr $newAttrVal;       };       if {$noMatch} {          if { $invalidValue == {FME_NULL_VALUE} } {             FME_SetAttributeNull $attr;          } elseif { $invalidValue != {_FME_NO_OP_} }  {             FME_SetAttribute $attr [FME_DecodeText $invalidValue];          };       };     }; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_StringReplacer    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_Web<space>RGB"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_StringReplacer_OUTPUT"         @Tcl2("$(ColorConverter_WORKSPACE_NAME)_StringReplacer_7851302e_a889_41e5_bf68_9f6d9364f9572_replacer {^#} {} {_FME_NO_OP_}")
 # -------------------------------------------------------------------------
-Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitDelim [FME_DecodeText {2s2s2s}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitWidths [split [regsub -all {s$} {2s2s2s} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_68c1aa4e_b32a_4a01_9b1e_69e944000a605_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitDelim [FME_DecodeText {2s2s2s}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitWidths [split [regsub -all {s$} {2s2s2s} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_3a1bcb16_c66f_45c2_b695_37c082f707442_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_StringReplacer_OUTPUT"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_OUTPUT"         @Tcl2($(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_BaseConverter    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_3_OUTPUT"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_BaseConverter_OUTPUT"         "_input_red" @ConvertBase("@Value(_list{0})",16,10,3)
@@ -3094,12 +3109,12 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_BaseCo
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_4    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_BaseConverter_3_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "_input_red" "_input_red" "<at>Evaluate<openparen><at>Value<openparen>_input_red<closeparen><solidus>255<closeparen>" "SET_TO" }      ATTR_ACTION { "_input_green" "_input_green" "<at>Evaluate<openparen><at>Value<openparen>_input_green<closeparen><solidus>255<closeparen>" "SET_TO" }      ATTR_ACTION { "_input_blue" "_input_blue" "<at>Evaluate<openparen><at>Value<openparen>_input_blue<closeparen><solidus>255<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_4_OUTPUT"
 # -------------------------------------------------------------------------
-Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_8cbffdcd_1959_4593_a459_b71d94e2744f5_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_64b6e3e1_d1a5_4427_b40e_e058a489e8cb2_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_RGB"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT"         @Tcl2($(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_3    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_2_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "_input_red" "<at>Evaluate<openparen><at>Value<openparen>_list<opencurly>0<closecurly><closeparen><solidus>255<closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_green" "<at>Evaluate<openparen><at>Value<openparen>_list<opencurly>1<closecurly><closeparen><solidus>255<closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_blue" "<at>Evaluate<openparen><at>Value<openparen>_list<opencurly>2<closecurly><closeparen><solidus>255<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_3_OUTPUT"
 # -------------------------------------------------------------------------
-Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_df68e4a7_7b52_4b48_bec9_1a84fd8234485_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
+Tcl2 set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitDelim [FME_DecodeText {<comma>}];      if { [regexp {^([1-9][0-9]*s)+$} [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitDelim]] }      {         set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitWidths [split [regsub -all {s$} {<comma>} {}] s];         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitWidths;            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set attrNum 0;            set listName [FME_DecodeText {_list}];            set attrPos 0;            set keepEmptyParts [string equal {No} {No}];            foreach width [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitWidths]            {               set endPos [expr $attrPos + $width - 1];               set bit [string range $source $attrPos $endPos];               set part [string trim $bit];               if { $keepEmptyParts || $part != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $part;                  incr attrNum;               };               incr attrPos $width;            };         };      }      else      {         proc $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_doSplit {}         {            global $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitDelim;            set delim [set $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_9362c671_418e_45b3_8590_f282a71dcf842_splitDelim];            set delimLength [string length $delim];            set source [FME_GetAttribute [FME_DecodeText {$($(ColorConverter_WORKSPACE_NAME)_InputAttribute)}]];            set keepEmptyParts [string equal {No} {No}];            set bits {};            set startIndex 0;            set nextIndex [string first $delim $source $startIndex];            while {$nextIndex >= 0} {              lappend bits [string range $source $startIndex [expr $nextIndex-1]];              set startIndex [expr $nextIndex + $delimLength];              set nextIndex [string first $delim $source $startIndex];            };            lappend bits [string range $source $startIndex end];            set listName [FME_DecodeText {_list}];            set attrNum 0;            foreach bit $bits            {               set trimmedPart [string trim $bit];               if { $keepEmptyParts || $trimmedPart != \"\" } {                  FME_SetAttribute "$listName{$attrNum}" $trimmedPart;                  incr attrNum;               };            }          }       }
 FACTORY_DEF * TeeFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeSplitter    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_FME"    OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"         @Tcl2($(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_doSplit)
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeSplitter_OUTPUT"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "_input_red" "<at>Value<openparen>_list<opencurly>0<closecurly><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_green" "<at>Value<openparen>_list<opencurly>1<closecurly><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_input_blue" "<at>Value<openparen>_list<opencurly>2<closecurly><closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_OUTPUT"
@@ -3152,7 +3167,7 @@ FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_2    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_2_RGB"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "" "_output_red" "<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_input_red<closeparen>*255<closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_output_green" "<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_input_green<closeparen>*255<closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_output_blue" "<at>Evaluate<openparen><at>int<openparen><at>Value<openparen>_input_blue<closeparen>*255<closeparen><closeparen>" "SET_TO" }      ATTR_ACTION { "" "_output_color" "<at>Value<openparen>_output_red<closeparen><comma><at>Value<openparen>_output_green<closeparen><comma><at>Value<openparen>_output_blue<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"
 # -------------------------------------------------------------------------
 FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(ColorConverter_WORKSPACE_NAME)_AttributeManager_5    INPUT  FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_TestFilter_2_FME"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "_input_red" "_output_red" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "_input_green" "_output_green" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "_input_blue" "_output_blue" "" "RENAME_SET_VALUE" }      ATTR_ACTION { "" "_output_color" "<at>Value<openparen>_output_red<closeparen><comma><at>Value<openparen>_output_green<closeparen><comma><at>Value<openparen>_output_blue<closeparen>" "SET_TO" }    OUTPUT OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_5_OUTPUT"
-FACTORY_DEF * TeeFactory   FACTORY_NAME "$(ColorConverter_WORKSPACE_NAME)_Output1588272200 Output Collector"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_5_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_6_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_12_OUTPUT"   OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Output" @RemoveAttributes(_input_red,_input_green,_input_blue) @RemoveAttributes(fme_regexp_match,_list{})
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(ColorConverter_WORKSPACE_NAME)_Output1588283216 Output Collector"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_5_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_6_OUTPUT"   INPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_AttributeManager_12_OUTPUT"   OUTPUT FEATURE_TYPE "$(ColorConverter_WORKSPACE_NAME)_Output" @RemoveAttributes(_input_red,_input_green,_input_blue) @RemoveAttributes(fme_regexp_match,_list{})
 INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(ColorConverter_WORKSPACE_NAME))}]
 FACTORY_DEF * TeeFactory   FACTORY_NAME "ColorConverter Output Output Renamer/Nuker"   INPUT FEATURE_TYPE ColorConverter_Output   OUTPUT FEATURE_TYPE ColorConverter_Output
 # -------------------------------------------------------------------------
