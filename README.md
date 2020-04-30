@@ -23,11 +23,14 @@ In addition, you will need Minecraft Java Edition installed. You can download th
 
 
 ## Converting OBJ files to CSV
-
+    There are currently two ways to convert OBJ files to CSV:
+(a) Use `objToCsv.fmw`: this will produce a more accurate CSV file,
+but it extremely slow, at least on my laptop.
+(b) Use the Python script: significantly faster, but it just extracts vertices from the OBJ file, so it's less accurate.
 1. Open a command prompt, and navigate to the project root directory.
 2. Run the following command to convert the OBJ file to a csv file:
 `python objToCsv.py /path/to/filename.obj`
-which will output the converted file to your current directory as `filename_obj.csv`. 
+which will output the converted file to your current directory as `filename_obj.csv`.
 
 ## Converting RVT files to CSV
 
