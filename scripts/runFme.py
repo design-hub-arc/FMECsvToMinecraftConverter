@@ -124,14 +124,14 @@ OutputListener is a function accepting a single string argument,
 and will receive the console output from the conversion process.
 """
 def convert(sourceDataset, shouldColor=False, resultFileName=None, outputListener=print):
-    extention = os.path.splitext(os.path.basename(sourceDataset))[1]
+    ext = os.path.splitext(os.path.basename(sourceDataset))[1]
     output = None
-    if extention == ".rvt":
+    if ext == ".rvt":
         output = runRevitConverter(sourceDataset, resultFileName, outputListener)
-    elif extension == ".obj":
+    elif ext == ".obj":
         output = runObjConverter(sourceDataset, resultFileName, outputListener)
     else:
-        raise ValueError("Don't have a converter for file type \"{0}\"".format(extention))
+        raise ValueError("Don't have a converter for file type \"{0}\"".format(ext))
 
     outputListener("Wrote to {0}".format(output))
 
