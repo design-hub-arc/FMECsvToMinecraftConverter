@@ -69,7 +69,19 @@ def runRevitConverter(sourceDataset: str, resultFileName=None, outputListener=pr
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
 
+"""
+Runs the given sourceDataset through objToCsv.fmw.
 
+sourceDataset should be the path to a .obj file.
+
+resultFileName is what to name the csv file produced by fme,
+defaulting to the original file name, but with the '.' before its extension replaced with an '_'.
+outputListener should accept a single argument,
+and will receive each line of output the command
+produces in the console.
+
+returns the path to the file produced by fme.
+"""
 def runObjConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".obj", "_obj")
