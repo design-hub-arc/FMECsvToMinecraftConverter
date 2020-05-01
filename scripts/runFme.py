@@ -109,7 +109,7 @@ def runObjConverter(sourceDataset: str, resultFileName=None, outputListener=prin
         "DestDataset_CSV2" : outputDir,
         "resultFileName" : resultFileName
     }, outputListener)
-    #runCommand(command, outputListener)
+    #runCommand(command, outputListener) 
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
 def runXyzConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
