@@ -47,6 +47,20 @@ def runCommand(command: str, outputListener=print):
     outputListener("Process returned {0}".format(result))
 
 """
+Runs the FME workspace with the given name located in the WORKSPACE_RELATIVE_PATH directory,
+passing fmeArgs to the command line.
+Output from the command will be passed to outputListener.
+"""
+def runFme(workspaceName: str, fmeArgs: dict, outputListener=print):
+    workspacePath = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, workspaceName))
+    outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
+    command = "{0} {1}".format(wrapInQuotes(FME_PATH), wrapInQuotes(workspacePath))
+    fmeArgs["FEATURE_TYPES"] = ""
+    for k, v in fmeArgs.items():
+        command = command + " --" + k + " " + wrapInQuotes(v)
+    runCommand(command, outputListener)
+
+"""
 Runs the given sourceDataset through revitNativeToCsv.fmw.
 
 sourceDataset should be the path to a .rvt file.
@@ -62,18 +76,12 @@ returns the path to the file produced by fme.
 def runRevitConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".rvt", "_rvt")
-    workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "revitNativeToCsv.fmw"))
     outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
-    command = "{0} {1} --SourceDataset_REVITNATIVE_3 {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
-    command = command.format(
-        wrapInQuotes(FME_PATH),
-        wrapInQuotes(workspaceLocation),
-        wrapInQuotes(sourceDataset),
-        wrapInQuotes(outputDir),
-        wrapInQuotes(resultFileName)
-    )
-
-    runCommand(command, outputListener)
+    runFme("revitNativeToCsv.fmw", {
+        "SourceDataset_REVITNATIVE_3": sourceDataset,
+        "DestDataset_CSV2": outputDir,
+        "resultFileName": resultFileName
+    }, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
 
