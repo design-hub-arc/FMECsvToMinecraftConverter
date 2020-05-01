@@ -3,13 +3,6 @@ import os
 import threading
 from config import FME_PATH, WORKSPACE_RELATIVE_PATH, OUTPUT_DIRECTORY_RELATIVE_PATH, MC_SAVE_DIR
 
-"""
- "C:\\Program Files\\FME\\fme.exe" "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\xyzToCsv.fmw"
-              --SourceDataset_POINTCLOUDXYZ "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\sourceData\\xyzData\\points.xyz"
-              --DestDataset_CSV2 "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData"
-              --resultFileName "@Trim(@Value(_filename))"
-"""
-
 
 """
 Puts quote marks around a string.
@@ -101,20 +94,34 @@ returns the path to the file produced by fme.
 def runObjConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".obj", "_obj")
-    workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "objToCsv.fmw"))
+    #workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "objToCsv.fmw"))
     outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
-    command = "{0} {1} --SourceDataset_OBJ {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
-    command = command.format(
-        wrapInQuotes(FME_PATH),
-        wrapInQuotes(workspaceLocation),
-        wrapInQuotes(sourceDataset),
-        wrapInQuotes(outputDir),
-        wrapInQuotes(resultFileName)
-    )
-
-    runCommand(command, outputListener)
+    #command = "{0} {1} --SourceDataset_OBJ {2} --DestDataset_CSV2 {3} --FEATURE_TYPES \"\" --resultFileName {4}"
+    #command = command.format(
+    #    wrapInQuotes(FME_PATH),
+    #    wrapInQuotes(workspaceLocation),
+    #    wrapInQuotes(sourceDataset),
+    #    wrapInQuotes(outputDir),
+    #    wrapInQuotes(resultFileName)
+    #)
+    runFme("objToCsv.fmw", {
+        "SourceDataset_OBJ" : sourceDataset,
+        "DestDataset_CSV2" : outputDir,
+        "resultFileName" : resultFileName
+    }, outputListener)
+    #runCommand(command, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
+def runXyzConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
+    if resultFileName is None:
+        resultFileName = os.path.basename(sourceDataset).replace(".xyz", "_xyz")
+    outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
+    runFme("xyzToCsv.fmw", {
+        "SourceDataset_POINTCLOUDXYZ" : sourceDataset,
+        "DestDataset_CSV2" : outputDir,
+        "resultFileName" : resultFileName
+    }, outputListener)
+    return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
 
 """
@@ -127,17 +134,22 @@ OutputListener is a function accepting a single string argument,
 and will receive the console output from the conversion process.
 """
 def runCsvConverter(sourceDataset, shouldColor=False, outputListener=print):
-    workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "Converter.fmw"))
-    outputDir = MC_SAVE_DIR
-    command = "{0} {1} --SourceDataset_CSV2 {2} --DestDataset_MINECRAFT {3} --shouldColor {4} --FEATURE_TYPES \"\""
-    command = command.format(
-        wrapInQuotes(FME_PATH),
-        wrapInQuotes(workspaceLocation),
-        wrapInQuotes(sourceDataset),
-        wrapInQuotes(outputDir),
-        wrapInQuotes("yes" if shouldColor else "no")
-    )
-    runCommand(command, outputListener)
+    #workspaceLocation = os.path.abspath(os.path.join(WORKSPACE_RELATIVE_PATH, "Converter.fmw"))
+    #outputDir = MC_SAVE_DIR
+    #command = "{0} {1} --SourceDataset_CSV2 {2} --DestDataset_MINECRAFT {3} --shouldColor {4} --FEATURE_TYPES \"\""
+    #command = command.format(
+    #    wrapInQuotes(FME_PATH),
+    #    wrapInQuotes(workspaceLocation),
+    #    wrapInQuotes(sourceDataset),
+    #    wrapInQuotes(outputDir),
+    #    wrapInQuotes("yes" if shouldColor else "no")
+    #)
+    #runCommand(command, outputListener)
+    runFme("Converter.fmw", {
+        "SourceDataset_CSV2" : sourceDataset,
+        "DestDataset_MINECRAFT" : MC_SAVE_DIR,
+        "shouldColor" : "yes" if shouldColor else "no"
+    }, outputListener)
 
 """
 Converts the given file to Minecraft, running all the necessary conversions.
