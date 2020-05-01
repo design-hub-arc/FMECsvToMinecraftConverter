@@ -4,6 +4,14 @@ import threading
 from config import FME_PATH, WORKSPACE_RELATIVE_PATH, OUTPUT_DIRECTORY_RELATIVE_PATH, MC_SAVE_DIR
 
 """
+ "C:\\Program Files\\FME\\fme.exe" "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\xyzToCsv.fmw"
+              --SourceDataset_POINTCLOUDXYZ "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\sourceData\\xyzData\\points.xyz"
+              --DestDataset_CSV2 "C:\\Users\\Matt\\Documents\\FME Projects\\Converter\\convertedData"
+              --resultFileName "@Trim(@Value(_filename))"
+"""
+
+
+"""
 Puts quote marks around a string.
 Used to ensure console commands
 don't contain extraneous spaces.
