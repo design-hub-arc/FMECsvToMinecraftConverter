@@ -127,29 +127,35 @@ def runCsvRepair(sourceDataset: str, resultFileName=None, outputListener=print)-
     repairCsv(sourceDataset, outPath)
     return outPath
 
+# assume the csv is either no headers, [x, y, z], [x, y, z, r, g, b], or more headers
 def repairCsv(inPath: str, outPath: str):
     with open(inPath, mode="rt") as inFile:
         with open(outPath, mode="wt") as outFile:
+            reqColumns = ["x", "y", "z", "r", "g", "b"]
             headers = [header.strip().lower() for header in inFile.readline().strip().split(",")]
+            hasHeaders = False
             hasColor = False
-            if not ("x" in headers and "y" in headers and "z" in headers):
-                # no headers present, so we must write them ourselves.
-                outFile.write("x,y,z,r,g,b\n")
-                # but, this means the first line is data, so don't forget to write it.
-                if len(headers) == 3:
-                    hasColor = False
+
+            # check which headers the inFile has
+            hasHeaders = "x" in headers
+            hasColor = len(headers) >= 6
+            # write headers
+            outFile.write(",".join(reqColumns) + "\n")
+
+            if not hasHeaders: # first line is data, so we should write it
+                if not hasColor:
+                    headers = headers[0:3]
                     headers.extend(["255", "255", "255"])
-                else:
-                    hasColor = True
-                outFile.write(",".join(headers) + "\n")
-            # more here
+                outFile.write(",".join(headers[0:6]) + "\n")
 
             for line in inFile:
-                line = line.strip()
+                line = line.strip().split(",")
                 if not hasColor:
-                    #        don't forget the comma at the start
-                    line += ",255,255,255"
-                outFile.write(line + "\n")
+                    line = line[0:3]
+                    line.extend(["255", "255", "255"])
+                else:
+                    line = line[0:6] # chop off excess columns
+                outFile.write(",".join(line) + "\n")
 
 
 

@@ -15,7 +15,7 @@ def launch():
         Currently supported formats are:
         (*) RVT
         (*) OBJ (warning! Very slow!)
-        (*) CSV (with headers [x,y,z,r,g,b], no spaces between headers)
+        (*) CSV (with columns [x, y, z, r, g, b] or [x, y, z], but you can exclude the header row if you want)
     """
 
     def out(str):
