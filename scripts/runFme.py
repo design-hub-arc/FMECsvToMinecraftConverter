@@ -102,6 +102,7 @@ def runObjConverter(sourceDataset: str, resultFileName=None, outputListener=prin
     }, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
 
+# not tested
 def runXyzConverter(sourceDataset: str, resultFileName=None, outputListener=print)->str:
     if resultFileName is None:
         resultFileName = os.path.basename(sourceDataset).replace(".xyz", "_xyz")
@@ -112,6 +113,30 @@ def runXyzConverter(sourceDataset: str, resultFileName=None, outputListener=prin
         "resultFileName" : resultFileName
     }, outputListener)
     return os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
+
+
+
+
+
+
+def runCsvRepair(sourceDataset: str, resultFileName=None, outputListener=print)->str:
+    if resultFileName is None:
+        resultFileName = os.path.basename(sourceDataset).replace(".csv", "_csv")
+    outputDir = os.path.abspath(OUTPUT_DIRECTORY_RELATIVE_PATH)
+    outPath = os.path.join(os.path.abspath(outputDir), resultFileName + ".csv")
+    repairCsv(sourceDataset, outPath)
+    return outPath
+
+def repairCsv(inPath: str, outPath: str):
+    with open(inPath, mode="rt") as inFile:
+        with open(outPath, mode="wt") as outFile:
+            for line in inFile:
+                line = line.strip()
+                print(line)
+                outFile.write(line + "\n")
+
+
+
 
 
 """
@@ -149,6 +174,8 @@ def convert(sourceDataset, shouldColor=False, resultFileName=None, outputListene
         output = runRevitConverter(sourceDataset, resultFileName, outputListener)
     elif ext == ".obj":
         output = runObjConverter(sourceDataset, resultFileName, outputListener)
+    elif ext == ".csv":
+        output = runCsvRepair(sourceDataset, resultFileName, outputListener)
     else:
         raise ValueError("Don't have a converter for file type \"{0}\"".format(ext))
 

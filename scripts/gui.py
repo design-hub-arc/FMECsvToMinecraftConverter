@@ -14,7 +14,8 @@ def launch():
         Choose a file to convert to Minecraft.
         Currently supported formats are:
         (*) RVT
-        (*) OBJ
+        (*) OBJ (warning! Very slow!)
+        (*) CSV (with headers [x,y,z,r,g,b], no spaces between headers)
     """
 
     def out(str):
