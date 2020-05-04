@@ -45,7 +45,8 @@ Open `revitNativeToCsv.fme` in FME Desktop, and run the workspace with the Revit
 ## Converting CSV files to Minecraft
 
 Choose 1:
-Open `Converter.fmw` in FME Desktop, and run it with a CSV file with the headers x, y, z, r, g, b (no space between headers!).
+(1) Select the CSV file in launch.bat (you won't need to worry about headers)
+or (2) Open `Converter.fmw` in FME Desktop, and run it with a CSV file with the headers x, y, z, r, g, b (no space between headers!).
 
 ## User Parameters (Converter.fmw)
 When running `Converter.fmw`, the user will be asked for a series of parameters.
