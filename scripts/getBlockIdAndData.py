@@ -62,20 +62,29 @@ class Cache:
         self.blockList = getBlockList()
         self.cachedMatches = {}
 
+    def tryCast(self, i):
+        try:
+            i = int(i)
+        except:
+            print("Failed to cast {0} to an integer. Defaulting to 255".format(i))
+            i = 255
+        return i
+
     def getBlock(self, r, g, b):
         tuple = (r, g, b)
         ret = None
         if tuple in self.cachedMatches.keys():
             ret = self.cachedMatches[tuple]
         else:
-           shortestDist = None
-           for block in self.blockList:
-               distance = dist(tuple, (block.r, block.g, block.b))
-               if shortestDist is None or distance < shortestDist:
-                   shortestDist = distance
-                   ret = block
-           self.cachedMatches[tuple] = ret
-           print("cached " + str(tuple))
+            casted = (self.tryCast(tuple[0]), self.tryCast(tuple[1]), self.tryCast(tuple[2]))
+            shortestDist = None
+            for block in self.blockList:
+                distance = dist(casted, (block.r, block.g, block.b))
+                if shortestDist is None or distance < shortestDist:
+                    shortestDist = distance
+                    ret = block
+            self.cachedMatches[tuple] = ret
+            print("cached " + str(tuple))
         return ret
 
 def dist(point1, point2):
