@@ -56,7 +56,6 @@ When running `Converter.fmw`, the user will be asked for a series of parameters.
 * Should the world read color from the source file?: If set to yes, for every point in the source CSV file, assigns the block from `colorToBlockTable.csv` with the closest matching color to that point. If set to no, every point is converted to a block of Quartz.
 
 
-
 ## Contributing
 
 Since this project is the property of the American River College Design Hub, it is not open to contributions by developers outside the company. If you are an intern or employee of the Design Hub, and are interested in working on the project, please contact Matt Crow (w# is 1599227), and he can get you set up.
